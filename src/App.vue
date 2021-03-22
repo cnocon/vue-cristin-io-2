@@ -217,23 +217,28 @@ footer.app-container {
 
     // Buttons
     &.button {
-      display: inline-block;
-      padding: 2px 12px;
-      border-radius: 4px;
-      transition: all 0.4s ease;
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: $box-shadow-md;
-      }
-
       &.button-primary {
-        font-weight: 700;
+        display: inline-block;
+        font-weight: 900;
+        font-family: $font-secondary;
         text-transform: uppercase;
-        background-color: $white;
+        background-color: $color-primary;
+        color: $white;
         background-image: none;
-        font-size: 0.875rem;
-        border: 2px solid $color-primary;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        box-shadow: $box-shadow-md;
+        border: 1px solid lighten($color-primary, 5%);
+        padding: 4px 14px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: all 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: $white;
+          color: $black;
+        }
       }
 
       span {

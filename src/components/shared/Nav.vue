@@ -21,9 +21,6 @@ export default {
 <style scoped lang="scss">
 @import '../../scss/_variables.scss';
 
-$nav-text-hover: lighten($black, 17.5%);
-$nav-text: lighten($border-dark-gray, 7.5%);
-
 #nav {
   padding: 1.5rem 0 0;
   text-align: center;
@@ -60,11 +57,9 @@ $nav-text: lighten($border-dark-gray, 7.5%);
       letter-spacing: 2px;
       text-align: center;
       display: inline-block;
-      padding: 1px 7px;
+      padding: 4px 7px;
       border-radius: 4px;
-      // transform: scale(1);
       transition: all 0.3s ease;
-      // margin: 0 0.03488372095em;
       box-sizing: border-box;
     }
 
@@ -73,7 +68,6 @@ $nav-text: lighten($border-dark-gray, 7.5%);
         color: $black;
         font-weight: 800;
         box-shadow: $box-shadow-md;
-        // transform: scale(1.075);
         border: 1px solid lighten($color-primary, 5%);
         border-radius: 4px;
       }

@@ -78,3 +78,6 @@ $rainbow-gradient-darker: linear-gradient(
   $link-blue-darker 67.5%,
   $link-purple-darker 82.5%
 );
+
+$nav-text-hover: lighten($black, 17.5%);
+$nav-text: lighten($border-dark-gray, 7.5%);
