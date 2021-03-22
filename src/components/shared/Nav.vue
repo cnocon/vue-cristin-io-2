@@ -68,7 +68,7 @@ export default {
         color: $black;
         font-weight: 800;
         box-shadow: $box-shadow-md;
-        border: 1px solid lighten($color-primary, 5%);
+        // border: 1px solid lighten($color-primary, 5%);
         border-radius: 4px;
       }
     }

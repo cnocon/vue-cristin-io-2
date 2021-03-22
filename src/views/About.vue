@@ -147,7 +147,6 @@
 import moment from 'moment'
 import { mapState } from 'vuex'
 import { ref } from 'vue'
-// import PostService from '@/services/PostService'
 import PageHeader from '@/components/shared/PageHeader.vue'
 import Icon from '@/components/shared/Icon.vue'
 
@@ -168,7 +167,7 @@ export default {
   },
   methods: {
     formattedDate(isoString) {
-      return moment(isoString).format('MMMM Do YYYY')
+      return moment(isoString).format('dddd, MMMM D, YYYY')
     },
   },
   computed: mapState('post', ['posts']),
@@ -249,10 +248,12 @@ export default {
 
   .testimonial {
     position: absolute;
-    background-color: darken($bg-light-gray, 1.5%);
+    background-color: $bg-light-gray;
     // border: 1px solid $border-light-gray;
-    box-shadow: $box-shadow-md;
-    border-radius: 5px;
+    // border: 1px solid $color-primary;
+    // border: 1px solid $color-primary-light;
+    // box-shadow: $box-shadow-sm;
+    border-radius: 4px;
     padding: 0 15px 10px 30px;
     margin: 0 15px 10px;
     max-width: calc(50% - 30px);
@@ -312,14 +313,25 @@ export default {
       display: flex;
       flex-direction: column;
       padding: 15px;
-      box-shadow: $box-shadow-sm;
+      border-radius: 4px;
+      // box-shadow: $box-shadow-sm;
+      // border: 1px solid $color-primary-light;
+      border-radius: 4px;
+      box-shadow: $box-shadow-md;
+      background-image: $rainbow-gradient-dark;
+      // border: 1px solid $border-light-gray;
       height: 100%;
-      background-size: 100% 3px;
+      background-size: 100% 2px;
+      // background-image: $rainbow-gradient-radial-light;
+      background-position: top;
       transition: all 0.3s ease;
 
       &:hover {
-        box-shadow: $box-shadow-lg;
+        // background-color: $bg-light-gray;
+        border-radius: 4px;
+        box-shadow: $box-shadow-md;
         transform: scale(1.015);
+
 
         span {
           text-decoration: none;

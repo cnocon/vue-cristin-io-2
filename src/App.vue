@@ -55,6 +55,8 @@ html {
 }
 body {
   font-family: $font-primary;
+  font-weight: 300;
+  line-height: $line-height-gr;
   flex-direction: column;
   margin: 0;
   width: 100%;
@@ -82,42 +84,6 @@ header + .app-container {
 .app-container-inner {
   max-width: 62.5rem;
   margin: 0 auto;
-}
-.text-center {
-  text-align: center;
-}
-.font-weight-300 {
-  font-weight: 300 !important;
-}
-.font-weight-500 {
-  font-weight: 500 !important;
-}
-.font-weight-600 {
-  font-weight: 600 !important;
-}
-.font-weight-700 {
-  font-weight: 700 !important;
-}
-.font-primary {
-  font-family: $font-primary !important;
-}
-.font-secondary {
-  font-family: $font-secondary !important;
-}
-.font-tertiary {
-  font-family: $font-tertiary !important;
-}
-.inline-block {
-  display: inline-block !important;
-}
-.block {
-  display: block !important;
-}
-.mt-0 {
-  margin-top: 0 !important;
-}
-.mt-15 {
-  margin-top: 15px !important;
 }
 header.app-container {
   height: 21.125rem;
@@ -152,8 +118,9 @@ footer.app-container {
   p,
   li {
     font-size: 1rem;
-    font-family: $font-primary;
-    font-weight: 400;
+    // line-height: 32px;
+    // font-family: $font-primary;
+    font-weight: 300;
   }
   p,
   ul,
@@ -206,7 +173,7 @@ footer.app-container {
     color: $color-primary;
     font-weight: 500;
     text-decoration: none;
-    background-image: $rainbow-gradient-dark;
+    background-image: $rainbow-gradient-light;
     background-size: 100% 1px;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -375,5 +342,41 @@ footer.app-container {
       }
     }
   }
+}
+.text-center {
+  text-align: center;
+}
+.font-weight-300 {
+  font-weight: 300 !important;
+}
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+.font-weight-700 {
+  font-weight: 700 !important;
+}
+.font-primary {
+  font-family: $font-primary !important;
+}
+.font-secondary {
+  font-family: $font-secondary !important;
+}
+.font-tertiary {
+  font-family: $font-tertiary !important;
+}
+.inline-block {
+  display: inline-block !important;
+}
+.block {
+  display: block !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-15 {
+  margin-top: 15px !important;
 }
 </style>
