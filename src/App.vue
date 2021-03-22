@@ -23,6 +23,7 @@ export default {
   },
   created() {
     JSONBinService.getGlobals().then((res) => {
+      console.log(res.data)
       this.globals = res.data
     })
   },
@@ -53,7 +54,7 @@ html {
   position: relative;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-primary;
   flex-direction: column;
   margin: 0;
   width: 100%;
@@ -212,6 +213,32 @@ footer.app-container {
 
     &:hover {
       background-size: 0;
+    }
+
+    // Buttons
+    &.button {
+      display: inline-block;
+      padding: 2px 12px;
+      border-radius: 4px;
+      transition: all 0.4s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: $box-shadow-md;
+      }
+
+      &.button-primary {
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: $white;
+        background-image: none;
+        font-size: 0.875rem;
+        border: 2px solid $color-primary;
+      }
+
+      span {
+        display: block;
+      }
     }
   }
   ol,

@@ -2,42 +2,27 @@
   <main class="posts-page site-content">
     <PageHeader iconClass="fad fa-rss" text="Blog"></PageHeader>
     <transition name="fade">
-      <div class="container app-container" v-if="posts">
-        <div class="row">
-          <div class="col-sm-6">
-            <router-link
-              :to="{
-                name: 'posts',
-                query: { page: parseInt(page) - 1 },
-              }"
-            >
-              Previous Posts
-            </router-link>
-          </div>
-          <div class="col-sm-6">
-            <router-link
-              :to="{
-                name: 'posts',
-                query: { page: parseInt(page) + 1 },
-              }"
-              >Next Posts</router-link
-            >
-          </div>
-        </div>
+      <div class="container app-container">
         <div class="row" v-if="posts">
-          <div class="col-md-9 col-sm-12">
-            <article v-for="post in posts" :key="post.slug">
-              <header>
-                <h3>{{ post.title }}</h3>
-              </header>
-              <p>{{ post.summary }}</p>
-            </article>
+          <div class="col-md-9 col-sm-12 post-summary-list">
+            <PostSummary
+              v-for="post in posts"
+              class="post-summary"
+              :post="post"
+              :key="post.slug"
+              prevText="Newer Posts"
+              nextText="Older Posts"
+            />
+            <Pagination
+              :perPage="perPage"
+              :currentPage="page"
+              :totalItems="totalPosts"
+              routeName="posts"
+            />
           </div>
-          <div class="col-md-3 col-sm-12">
-            <aside>
-              <p>I'm a side column</p>
-            </aside>
-          </div>
+          <aside class="col-md-3 col-sm-12">
+            <p>I'm a side column</p>
+          </aside>
         </div>
       </div>
     </transition>
@@ -45,28 +30,25 @@
 </template>
 
 <script>
-import moment from 'moment'
 import { mapState } from 'vuex'
 import PageHeader from '@/components/shared/PageHeader.vue'
+import PostSummary from '@/components/post/PostSummary.vue'
+import Pagination from '@/components/shared/Pagination.vue'
 
 export default {
   name: 'Posts',
   data() {
     return {
-      perPage: 4,
+      perPage: 3,
     }
   },
   components: {
     PageHeader,
-  },
-  methods: {
-    formattedDate(isoString) {
-      return moment(isoString).format('MMMM Do YYYY')
-    },
+    PostSummary,
+    Pagination,
   },
   computed: {
     page() {
-      console.log('this.$route', this.$route)
       return parseInt(this.$route.query.page) || 1
     },
     ...mapState('post', ['posts', 'totalPosts']),
@@ -80,7 +62,7 @@ export default {
         excludeBody: true,
       })
       .then((response) => {
-        console.log('in component', response)
+        console.log('what am i doing', !!response)
       })
   },
 }
