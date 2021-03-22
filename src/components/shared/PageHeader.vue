@@ -115,6 +115,13 @@ h2 {
       transform: translate(-50%, -50%);
       color: $border-med-gray;
     }
+
+    &.darker {
+      &::before,
+      &::after {
+        color: $color-primary;
+      }
+    }
   }
 }
 </style>

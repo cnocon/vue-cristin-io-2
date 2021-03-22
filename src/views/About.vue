@@ -93,7 +93,13 @@
             :key="index"
             class="col-lg-4 col-md-6 col-sm-12 post"
           >
-            <a :href="post.url" class="post-link" target="_blank">
+            <router-link
+              :to="{
+                name: 'post',
+                params: { slug: post.slug },
+              }"
+              class="post-link"
+            >
               <div class="post-header">
                 <div class="img-wrapper">
                   <img
@@ -109,7 +115,7 @@
                 <b>{{ formattedDate(post.published) }}</b>
                 {{ post.summary }}
               </p>
-            </a>
+            </router-link>
           </div>
         </div>
 

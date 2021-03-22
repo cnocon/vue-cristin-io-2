@@ -1,7 +1,7 @@
 <template>
   <Header :globals="globals"></Header>
   <div v-if="globals?.name" class="app-container">
-    <router-view :globals="globals"></router-view>
+    <router-view :globals="globals" :key="$route.fullPath"></router-view>
   </div>
   <Footer :globals="globals"></Footer>
 </template>

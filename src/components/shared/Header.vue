@@ -7,9 +7,9 @@
       />
     </div>
     <div class="site-title">
-      <h1 class="title">
-        <router-link :to="{ name: 'About' }">{{ globals.name }}</router-link>
-      </h1>
+      <h2 class="title">
+        <router-link :to="{ name: 'about' }">{{ globals.name }}</router-link>
+      </h2>
       <p class="subtitle">{{ globals.jobTitle }}</p>
     </div>
     <Nav></Nav>

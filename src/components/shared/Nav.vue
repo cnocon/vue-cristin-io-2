@@ -1,9 +1,12 @@
 <template>
   <nav id="nav">
-    <router-link :to="{ name: 'About' }"><span>About</span></router-link>
-    <router-link :to="{ name: 'Docs' }"><span>Docs</span></router-link>
+    <router-link :to="{ name: 'about' }"><span>About</span></router-link>
+    <router-link :to="{ name: 'posts', query: { page: '1' } }">
+      <span>Blog</span>
+    </router-link>
+    <router-link :to="{ name: 'docs' }"><span>Docs</span></router-link>
     <!-- | <router-link to="/blog">Blog</router-link> -->
-    <router-link :to="{ name: 'Resume' }"><span>Resumé</span></router-link>
+    <router-link :to="{ name: 'resume' }"><span>Resumé</span></router-link>
     <!-- | <router-link to="/portfolio">Portfolio</router-link> -->
   </nav>
 </template>
@@ -39,9 +42,6 @@ $nav-text: lighten($border-dark-gray, 7.5%);
       }
 
       span {
-        // transform: scale(1.075);
-        // font-size: 0.9302325581rem;
-        // background-color: lighten($bg-med-gray, 1%);
         box-shadow: $box-shadow-md;
         color: $nav-text-hover;
         border: 1px solid lighten($color-primary, 30%);
