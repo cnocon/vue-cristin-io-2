@@ -313,7 +313,6 @@ export default {
       display: flex;
       flex-direction: column;
       padding: 15px;
-      border-radius: 4px;
       // box-shadow: $box-shadow-sm;
       // border: 1px solid $color-primary-light;
       border-radius: 4px;
@@ -331,7 +330,6 @@ export default {
         border-radius: 4px;
         box-shadow: $box-shadow-md;
         transform: scale(1.015);
-
 
         span {
           text-decoration: none;

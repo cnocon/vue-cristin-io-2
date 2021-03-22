@@ -40,17 +40,16 @@ export default {
 
       span {
         box-shadow: $box-shadow-md;
+        text-decoration: none;
         color: $nav-text-hover;
-        border: 1px solid lighten($color-primary, 30%);
       }
     }
 
     span {
-      color: $nav-text;
+      color: $color-primary;
+      // text-decoration: underline;
       background-color: $white;
       text-transform: uppercase;
-      line-height: $line-height-gr;
-      border: 1px solid transparent;
       font-weight: 900;
       font-family: $font-secondary;
       box-shadow: $box-shadow-md-transparent;
@@ -67,6 +66,7 @@ export default {
       span {
         color: $black;
         font-weight: 800;
+        text-decoration: none;
         box-shadow: $box-shadow-md;
         // border: 1px solid lighten($color-primary, 5%);
         border-radius: 4px;

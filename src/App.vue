@@ -62,7 +62,7 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $black;
+  color: $color-primary;
   line-height: $line-height-gr;
 }
 #app > div:first-of-type {
@@ -72,7 +72,7 @@ body {
   flex-wrap: wrap;
 }
 header + .app-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -96,7 +96,8 @@ footer.app-container {
   display: flex;
   flex-direction: column;
   padding-bottom: 3.75rem;
-
+}
+main {
   p,
   li,
   div,
@@ -118,8 +119,6 @@ footer.app-container {
   p,
   li {
     font-size: 1rem;
-    // line-height: 32px;
-    // font-family: $font-primary;
     font-weight: 300;
   }
   p,
@@ -135,6 +134,7 @@ footer.app-container {
   h6 {
     margin-top: 1.875rem;
     margin-bottom: 10px;
+    color: $color-primary;
   }
   h2 {
     font-family: $font-secondary;
@@ -212,6 +212,10 @@ footer.app-container {
         display: block;
       }
     }
+  }
+  img {
+    display: block;
+    max-width: 100%;
   }
   ol,
   ul {

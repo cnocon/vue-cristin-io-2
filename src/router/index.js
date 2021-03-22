@@ -23,15 +23,15 @@ const routes = [
     component: Resume,
   },
   {
-    path: '/post/:slug',
-    name: 'post',
-    component: Post,
-    props: true,
-  },
-  {
     path: '/posts',
     name: 'posts',
     component: Posts,
+  },
+  {
+    path: '/posts/:slug',
+    name: 'post',
+    component: Post,
+    props: true,
   },
   // {
   //   path: '/:badurl(.*)',

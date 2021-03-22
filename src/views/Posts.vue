@@ -4,7 +4,7 @@
     <transition name="fade">
       <div class="container app-container">
         <div class="row" v-if="posts">
-          <div class="col-md-9 col-sm-12 post-summary-list">
+          <div class="col-12 post-summary-list">
             <PostSummary
               v-for="post in posts"
               class="post-summary"
@@ -20,9 +20,6 @@
               routeName="posts"
             />
           </div>
-          <aside class="col-md-3 col-sm-12">
-            <p>I'm a side column</p>
-          </aside>
         </div>
       </div>
     </transition>
