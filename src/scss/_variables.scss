@@ -1,0 +1,80 @@
+$white: #fff;
+$black: hsl(210, 40%, 15%);
+$box-shadow-md-transparent: 0 3px 7px 0 hsla(0, 0%, 0%, 0), 0 1px 9px 0 hsla(0, 0, 0, 0);
+$box-shadow-sm: 0 1px 2px 0 hsla(0, 0%, 0%, 0.17), 0 1px 5px 0 hsla(0, 0%, 0%, 0.11);
+$box-shadow-md: 0 3px 7px 0 hsla(0, 0%, 0%, 0.15), 0 1px 9px 0 hsla(0, 0, 0, 0.15);
+$box-shadow-lg: 0 2px 10px 0 hsla(0, 0%, 0%, 0.17), 0 1px 13px 0 hsla(0, 0, 0, 0.11);
+$line-height-gr: 1.618em;
+$font-primary: 'Open Sans', Arial, sans-serif;
+$font-secondary: Lato, Geneva, Tahoma, sans-serif;
+$font-tertiary: Oswald, Impact, sans-serif;
+$bg-light-gray: hsl(200, 20%, 97%);
+$bg-med-gray: hsl(200, 20%, 94%);
+$border-red: rgba(245, 163, 170, 0.9);
+$border-yellow: rgba(255, 249, 77, 0.95);
+$border-green: rgba(77, 255, 240, 0.65);
+$border-blue: hsl(197, 100%, 64%);
+$border-purple: rgba(140, 140, 242, 0.75);
+$border-lightest-gray: hsl(200,16%,96%);
+$border-light-gray: hsl(200, 14%, 92%);
+$border-med-gray: hsl(200, 14%, 76%);
+$border-dark-gray: hsl(200, 14%, 56%);
+$link-red: hsl(355, 80%, 75%);
+$link-red-darker: hsl(355, 80%, 65%);
+$link-red-vivid: hsla(355, 92.5%, 67.5%, 100%);
+$link-yellow: hsl(58, 100%, 65%);
+$link-yellow-darker: hsl(58, 65%, 50%);
+$link-yellow-vivid: hsla(58, 95%, 62.5%, 100%);
+$link-green: hsl(175, 80%, 65%);
+$link-green-darker: hsl(175, 50%, 45%);
+$link-blue: hsl(197, 80%, 65%);
+$link-blue-darker: hsl(197, 90%, 45%);
+$link-purple: hsl(240, 80%, 75%);
+$link-purple-darker: hsl(240, 90%, 65%);
+$highlight-yellow: hsla(58, 100%, 65%, 0.7);
+$color-primary-lighter: hsl(210, 10%, 94%);
+$color-primary-light: hsl(210, 10%, 87.5%);
+$color-primary: hsl(210, 25%, 27%);
+$color-primary-med: hsl(210, 25, 36%);
+$white: #fff;
+$black: hsl(210, 35%, 10%);
+$rainbow-box-shadow: hsl(175, 100%, 65%) 0 2px 0,
+  hsl(58, 100%, 65%) -2px 0 0,
+  hsl(240, 80%, 75%) 2px 0 0,
+  hsl(355, 80%, 80%) 0 -2px 0;
+$rainbow-box-shadow-dark: hsl(175, 80%, 60%) 0 2px,
+  hsl(58, 100%, 60%) -2px 0,
+  hsl(240, 80%, 69%) 2px 0,
+  hsl(355, 80%, 72.5%) 0 -2px 0;
+$rainbow-gradient-light: linear-gradient(
+    90deg,
+    rgba(158, 118, 244, 22.5%) 0%,
+    hsla(197, 78%, 39%, 22.5%) 20%,
+    hsla(175, 74%, 43%, 22.5%) 40%,
+    hsla(49, 100%, 60%, 22.5%) 55%,
+    rgba(240, 85, 85, 22.5%) 95%
+);
+$rainbow-gradient-med: linear-gradient(
+  90deg,
+  $border-purple 0%,
+  $border-blue 20%,
+  $border-green 40%,
+  $border-yellow 55%,
+  $border-red 95%
+);
+$rainbow-gradient-dark: linear-gradient(
+  90deg,
+  $link-red 10.5%,
+  $link-yellow 39.5%,
+  $link-green 50%,
+  $link-blue 67.5%,
+  $link-purple 82.5%
+);
+$rainbow-gradient-darker: linear-gradient(
+  90deg,
+  $link-red-darker 10.5%,
+  $link-yellow-darker 39.5%,
+  $link-green-darker 50%,
+  $link-blue-darker 67.5%,
+  $link-purple-darker 82.5%
+);
