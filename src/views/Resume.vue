@@ -1,29 +1,27 @@
 <template>
   <div class="resume-page app-container site-content container-fluid">
     <PageHeader iconClass="fad fa-file-user" text="Resumé"></PageHeader>
-    <transition name="fade">
-      <div v-if="show && data.jobTitle" class="row">
-        <div class="col-lg-7 col-md-12">
-          <h3>Work History</h3>
-          <div v-for="(job, index) in data.experience" :key="index">
-            <h6>
-              {{ job.position }}
-              <span v-html="job.company"></span>
-            </h6>
-          </div>
-          <h3>Education</h3>
-          <div v-for="(edu, index) in data.education" :key="index">
-            <h6>
-              {{ edu.position }}
-              <span v-html="edu.company"></span>
-            </h6>
-          </div>
+    <div v-if="show && data.jobTitle" class="row">
+      <div class="col-lg-7 col-md-12">
+        <h3>Work History</h3>
+        <div v-for="(job, index) in data.experience" :key="index">
+          <h6>
+            {{ job.position }}
+            <span v-html="job.company"></span>
+          </h6>
         </div>
-        <div class="col-lg-5 col-md-12">
-          <h5>Second column</h5>
+        <h3>Education</h3>
+        <div v-for="(edu, index) in data.education" :key="index">
+          <h6>
+            {{ edu.position }}
+            <span v-html="edu.company"></span>
+          </h6>
         </div>
       </div>
-    </transition>
+      <div class="col-lg-5 col-md-12">
+        <h5>Second column</h5>
+      </div>
+    </div>
   </div>
 </template>
 

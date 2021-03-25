@@ -5,23 +5,25 @@
         {{ post.title }}
       </router-link>
     </h2>
-    <p class="post-summary-pubinfo">{{ formattedDate(post.published) }}</p>
+    <PostMeta :post="post" />
   </header>
-
   <p>{{ post.summary }}</p>
 </template>
 
 <script>
 import moment from 'moment'
-// import { mapState } from 'vuex'
+import PostMeta from '@/components/post/Meta.vue'
 
 export default {
-  name: 'PostSummary',
+  name: 'Teaser',
   props: {
     post: {
       required: true,
       type: Object,
     },
+  },
+  components: {
+    PostMeta,
   },
   methods: {
     formattedDate(isoString) {
@@ -40,13 +42,20 @@ export default {
 
   a {
     background-size: 100% 1px;
-    font-weight: 300;
+    font-weight: 700;
+    font-family: $font-primary;
     background-image: $rainbow-gradient-radial;
+    background-size: 100% 1.5px;
   }
 }
 
-.post-summary-pubinfo {
+.post-summary {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
 
+  &:first-of-type {
+    margin-top: 30px;
+  }
 }
-
 </style>

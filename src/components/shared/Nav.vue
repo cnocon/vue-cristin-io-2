@@ -1,7 +1,10 @@
 <template>
   <nav id="nav">
     <router-link :to="{ name: 'about' }"><span>About</span></router-link>
-    <router-link :to="{ name: 'posts', query: { page: '1' } }">
+    <router-link
+      :to="{ name: 'posts', query: { page: '1' } }"
+      :class="manualActiveClass"
+    >
       <span>Blog</span>
     </router-link>
     <router-link :to="{ name: 'docs' }"><span>Docs</span></router-link>
@@ -14,6 +17,13 @@
 <script>
 export default {
   name: 'Nav',
+  computed: {
+    manualActiveClass() {
+      return this.$route.fullPath.split('posts').length > 1
+        ? 'router-link-active router-link-exact-active'
+        : ''
+    },
+  },
 }
 </script>
 
