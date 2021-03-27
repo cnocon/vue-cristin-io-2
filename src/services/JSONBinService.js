@@ -8,7 +8,7 @@ const apiClient = axios.create({
     'Content-Type': 'application/json',
     'secret-key':
       '$2b$10$RDgNaGrlmzTiv0suilVmIeZ9Skhm5/rv3bd4GvW6ShS6t33dvWbaW',
-  }
+  },
 })
 
 export default {

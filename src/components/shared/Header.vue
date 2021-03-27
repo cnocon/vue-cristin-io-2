@@ -1,5 +1,5 @@
 <template>
-  <header v-if="globals?.name" class="app-container text-center">
+  <header v-if="globals" class="app-container text-center">
     <div class="logo">
       <img
         src="@/assets/images/global/square-portrait.png"
@@ -8,7 +8,9 @@
     </div>
     <div class="site-title">
       <h2 class="title">
-        <router-link :to="{ name: 'about' }">{{ globals.name }}</router-link>
+        <router-link :to="{ name: 'about' }">
+          {{ globals.name }}
+        </router-link>
       </h2>
       <p class="subtitle">{{ globals.jobTitle }}</p>
     </div>

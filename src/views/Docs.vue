@@ -1,5 +1,5 @@
 <template>
-  <main v-if="globals?.name" class="app-container site-content">
+  <main v-if="globals" class="app-container site-content">
     <PageHeader
       :text="`Vue.js + TypeScript`"
       :iconClass="`fal fa-code`"

@@ -1,5 +1,5 @@
 <template>
-  <footer v-if="globals?.name" class="app-container">
+  <footer v-if="globals" class="app-container">
     <div class="footer-inner app-container-inner">
       <div class="footer-row">
         <div class="footer-column" role="contentinfo">

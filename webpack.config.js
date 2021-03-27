@@ -1,4 +1,4 @@
-const { VueLoaderPlugin } = require("vue-loader");
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   module: {
@@ -6,13 +6,13 @@ module.exports = {
       // ... other rules
       {
         test: /\.vue$/,
-        loader: "vue-loader",
+        loader: 'vue-loader',
       },
       // this will apply to both plain `.scss` files
       // AND `<style lang="scss">` blocks in `.vue` files
       {
         test: /\.scss$/,
-        use: ["vue-style-loader", "css-loader", "sass-loader"],
+        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -20,4 +20,4 @@ module.exports = {
     // make sure to include the plugin!
     new VueLoaderPlugin(),
   ],
-};
+}

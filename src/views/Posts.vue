@@ -6,7 +6,7 @@
         <div class="col-12 post-summary-list">
           <Teaser
             v-for="post in posts"
-            class="post-summary"
+            :class="`post-summary`"
             :post="post"
             :key="post.slug"
             prevText="Newer Posts"

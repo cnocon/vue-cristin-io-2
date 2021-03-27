@@ -17,9 +17,10 @@ import PostMeta from '@/components/post/Meta.vue'
 export default {
   name: 'Teaser',
   props: {
+    prevText: String,
+    nextText: String,
     post: {
       required: true,
-      type: Object,
     },
   },
   components: {

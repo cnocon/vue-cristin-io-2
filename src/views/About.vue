@@ -51,7 +51,7 @@
           :key="index"
           class="col-lg-4 col-md-6 col-sm-12 post"
         >
-          <PostCard :post="post"/>
+          <PostCard :post="post" />
         </div>
       </div>
 
@@ -60,7 +60,7 @@
         text="Connect"
         alignment="left"
       ></PageHeader>
-      <ul v-if="globals?.profiles" class="row text-center connect">
+      <ul class="row text-center connect">
         <li
           v-for="(profile, index) in globals.profiles"
           :key="index"
