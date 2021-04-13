@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import About from '@/views/About.vue'
-import Docs from '@/views/Docs.vue'
+// import Docs from '@/views/Docs.vue'
+import Portfolio from '@/views/Portfolio.vue'
 import Post from '@/views/Post.vue'
 import Posts from '@/views/Posts.vue'
 import Resume from '@/views/Resume.vue'
@@ -13,9 +14,9 @@ const routes = [
     component: About,
   },
   {
-    path: '/docs',
-    name: 'docs',
-    component: Docs,
+    path: '/portfolio',
+    name: 'portfolio',
+    component: Portfolio,
   },
   {
     path: '/resume',
@@ -33,6 +34,11 @@ const routes = [
     component: Post,
     props: true,
   },
+  // {
+  //   path: '/docs',
+  //   name: 'docs',
+  //   component: Docs,
+  // },
   // {
   //   path: '/:badurl(.*)',
   //   name: 'not-found',

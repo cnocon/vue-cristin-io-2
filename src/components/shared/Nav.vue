@@ -7,9 +7,10 @@
     >
       <span>Blog</span>
     </router-link>
-    <router-link :to="{ name: 'docs' }"><span>Docs</span></router-link>
+    <!-- <router-link :to="{ name: 'docs' }"><span>Docs</span></router-link> -->
     <!-- | <router-link to="/blog">Blog</router-link> -->
     <router-link :to="{ name: 'resume' }"><span>Resumé</span></router-link>
+    <router-link :to="{ name: 'portfolio' }"><span>Portfolio</span></router-link>
     <!-- | <router-link to="/portfolio">Portfolio</router-link> -->
   </nav>
 </template>
