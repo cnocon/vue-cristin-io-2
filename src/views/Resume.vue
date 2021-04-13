@@ -1,7 +1,7 @@
 <template>
-  <div class="resume-page app-container site-content container-fluid">
-    <PageHeader iconClass="fad fa-file-user" text="Resumé"></PageHeader>
-    <div v-if="data.jobTitle" class="row">
+  <main v-if="visible" class="resume-page app-container site-content container-fluid">
+    <PageHeader iconClass="fad fa-file-user" text="Resumé & Courses"></PageHeader>
+    <div v-if="data.jobTitle" class="row resume-row">
       <div class="col-lg-7 col-md-12 mt-3">
         <span class="rule"></span>
         <div class="work-history">
@@ -13,6 +13,7 @@
           <div class="timeline">
             <ResumeItem
               :item="job"
+              itemClass="work-item"
               :key="index"
               v-for="(job, index) in data.experience"
             />
@@ -58,7 +59,7 @@
               :key="index"
               class="asset-item"
             >
-              <i class="fal fa-plus"></i>
+              <i class="far fa-check"></i>
               <span v-html="asset"></span>
             </li>
           </ul>
@@ -72,6 +73,7 @@
           <ResumeItem
             :item="edu"
             :key="index"
+            itemClass="edu-item"
             descClass="pl-0"
             descItemClass="list-style-none"
             v-for="(edu, index) in data.education"
@@ -108,12 +110,16 @@
     <div v-if="courseData" class="row mt-5">
       <div v-for="(course, cIndex) in courseData"
         :key="cIndex"
-        class="col-12 col-md-4 course"
+        class="col-12 col-sm-6 col-md-4 course"
       >
-        <img
-          :src="course.img"
-          :alt="course.name"
-        />
+        <figure>
+          <img
+            :data-url="course.img"
+            :src="course.img"
+            :alt="course.name"
+            :title="course.name"
+          />
+        </figure>
         <h3>
           <a :href="course.url" target="_blank" rel="noopener">
             {{ course.name }}
@@ -137,7 +143,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -161,31 +167,49 @@ export default {
   },
   data() {
     return {
+      visible: false,
       data: resumeData,
       courseData
     }
+  },
+  mounted() {
+    this.$nextTick(function() {
+      this.visible = true
+    })
   }
 }
 </script>
 
 <style scoped lang="scss">
 @import '@/scss/_variables.scss';
-.timeline { padding-left: 68px; }
+
+.timeline {
+  @media all and (min-width: $breakpoint-sm-min) {
+    padding-left: 68px;
+  }
+}
 .work-history {
   position: relative;
   z-index: 1;
   margin-bottom: 5rem;
-  padding-right: 30px;
+
+  @media all and (min-width: $breakpoint-sm-min) {
+    padding-right: 30px;
+  }
 
   .rule {
     position: absolute;
-    display: block;
+    display: none;
     top: 33px;
     left: 26.5px;
     z-index: 0;
     width: 3px;
     height: calc(100% - 33px);
     background-color: $border-light-gray;
+
+    @media all and (min-width: $breakpoint-sm-min) {
+      display: block;
+    }
   }
 }
 .col-lg-7,
@@ -195,7 +219,14 @@ export default {
   margin-right: auto;
 }
 .assets {
-  ul { list-style: none; }
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      font-size: 0.875rem;
+    }
+  }
 
   .asset-item {
     padding: 5px 0 10px;
@@ -219,7 +250,7 @@ export default {
     }
   }
 }
-.row:first-of-type h3 {
+.resume-row h3 {
   position: relative;
   height: 48px;
   margin: 2rem 0 1rem;
@@ -228,6 +259,12 @@ export default {
   font-weight: 300;
   font-family: $font-secondary;
   text-transform: uppercase;
+
+  @media all and (max-width: $breakpoint-sm) {
+    &.mt-3 {
+      margin-top: -1rem !important;
+    }
+  }
 
   i {
     position: absolute;
@@ -264,7 +301,6 @@ export default {
 
   blockquote {
     background-color: $black;
-    // box-shadow: $box-shadow-sm;
     padding: 30px;
     padding-bottom: 10px;
     border-radius: 5px;
@@ -304,47 +340,58 @@ export default {
 }
 .connect {
   list-style: none;
+  padding-left: 0;
 
   [class^='col-'] {
     text-align: center;
     padding: 0 0 1rem;
   }
 }
-
 .course {
   margin-bottom: 4rem;
   text-align: center;
 
+  figure {
+    display: inline-block;
+    text-align: center;
+    height: 80px;
+    padding-bottom: 1.5rem;
+  }
   img {
-    max-height: 100px;
-    margin-bottom: 0.5rem;
+    text-align: center;
+    max-height: 80px;
   }
 
   h3 {
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    line-height: 1em;
 
     a {
       color: $color-primary;
       text-decoration: none;
       font-weight: 900;
-      font-size: 24px;
-      line-height: 1.25em;
+      font-size: 1.5rem;
       font-family: $font-secondary;
       background-image: $rainbow-gradient-med;
       background-size: 100% 2px;
       background-position: center bottom;
       background-repeat: no-repeat;
+
+      &:hover {
+        background-image: none;
+      }
     }
   }
 
   h4 {
     font-family: $font-secondary;
-    margin-bottom: 0.5rem;
+    margin-top: 0;
     font-size: 18px;
   }
 
   .description {
     font-weight: 400;
+    margin-top: 0;
   }
 
   .instructor,
@@ -365,6 +412,7 @@ export default {
     font-weight: 600;
     font-size: 14px;
     transition: background-color 0.2s, color 0.2s;
+    background-image: none;
 
     &:hover {
       background-color: $color-primary;

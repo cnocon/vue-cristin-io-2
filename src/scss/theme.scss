@@ -51,9 +51,9 @@ header + .app-container {
   max-width: 62.5rem;
   margin: 0 auto;
 }
-header.app-container {
-  height: 21.125rem;
-}
+// header.app-container {
+//   height: 21.125rem;
+// }
 footer.app-container {
   height: 7.875rem;
 }
@@ -63,156 +63,156 @@ footer.app-container {
   flex-direction: column;
   padding-bottom: 3.75rem;
 }
-main {
-  p,
-  li,
-  div,
-  span,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  blockquote,
-  a,
-  nav,
-  i,
-  b {
-    line-height: $line-height-gr;
+
+p,
+li,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+a,
+nav,
+i,
+b {
+  line-height: $line-height-gr;
+}
+
+
+p,
+li {
+  font-size: 1rem;
+  font-weight: 300;
+}
+p,
+ul,
+ol {
+  margin-top: 0.9375rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.875rem;
+  margin-bottom: 10px;
+  color: $color-primary;
+}
+h2 {
+  font-family: $font-secondary;
+  font-weight: 900;
+  font-size: 2.375rem;
+}
+h3 {
+  font-family: $font-secondary;
+  font-weight: 900;
+  font-size: 1.875rem;
+}
+h4 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+h5,
+h6 {
+  font-family: $font-tertiary;
+  margin-top: 1.25rem;
+  margin-bottom: 5px;
+}
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+a,
+a:link,
+a:visited {
+  color: $color-primary;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: $rainbow-gradient-light;
+  background-size: 100% 1px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-size: 0;
   }
 
-  p,
-  li {
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  p,
-  ul,
-  ol {
-    margin-top: 0.9375rem;
-  }
+  // Buttons
+  &.button {
+    &.button-primary {
+      display: inline-block;
+      font-weight: 900;
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      background-color: $color-primary;
+      color: $white;
+      background-image: none;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      box-shadow: $box-shadow-md;
+      border: 1px solid lighten($color-primary, 5%);
+      padding: 4px 14px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      transition: all 0.3s ease, background-color 0.3s ease;
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 1.875rem;
-    margin-bottom: 10px;
-    color: $color-primary;
-  }
-  h2 {
-    font-family: $font-secondary;
-    font-weight: 900;
-    font-size: 2.375rem;
-  }
-  h3 {
-    font-family: $font-secondary;
-    font-weight: 900;
-    font-size: 1.875rem;
-  }
-  h4 {
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 0;
-  }
-  h5,
-  h6 {
-    font-family: $font-tertiary;
-    margin-top: 1.25rem;
-    margin-bottom: 5px;
-  }
-  h5 {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-  h6 {
-    font-size: 1rem;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-  a,
-  a:link,
-  a:visited {
-    color: $color-primary;
-    font-weight: 500;
-    text-decoration: none;
-    background-image: $rainbow-gradient-light;
-    background-size: 100% 1px;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-
-    &:hover {
-      background-size: 0;
-    }
-
-    // Buttons
-    &.button {
-      &.button-primary {
-        display: inline-block;
-        font-weight: 900;
-        font-family: $font-secondary;
-        text-transform: uppercase;
-        background-color: $color-primary;
-        color: $white;
-        background-image: none;
-        font-size: 1rem;
-        letter-spacing: 2px;
-        box-shadow: $box-shadow-md;
-        border: 1px solid lighten($color-primary, 5%);
-        padding: 4px 14px;
-        border-radius: 4px;
-        box-sizing: border-box;
-        transition: all 0.3s ease, background-color 0.3s ease;
-
-        &:hover {
-          transform: scale(1.1);
-          background-color: $white;
-          color: $black;
-        }
-      }
-
-      span {
-        display: block;
+      &:hover {
+        transform: scale(1.1);
+        background-color: $white;
+        color: $black;
       }
     }
-  }
-  img {
-    display: block;
-    max-width: 100%;
-  }
-  ol,
-  ul {
-    margin: 0.9375rem 0 0.3125rem;
-    padding: 0 0 0 2.8125rem;
 
-    &.circle {
-      list-style: circle;
-    }
-
-    &.inline {
-      display: flex;
-      padding-left: 0;
-
-      li {
-        flex-direction: column;
-        margin: 0 15px 10px;
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-
-      &.text-center {
-        justify-content: center;
-      }
+    span {
+      display: block;
     }
   }
-  ul {
-    list-style: disc;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ol,
+ul {
+  margin: 0.9375rem 0 0.3125rem;
+  padding: 0 0 0 2.8125rem;
+
+  &.circle {
+    list-style: circle;
   }
+
+  &.inline {
+    display: flex;
+    padding-left: 0;
+
+    li {
+      flex-direction: column;
+      margin: 0 15px 10px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &.text-center {
+      justify-content: center;
+    }
+  }
+}
+ul {
+  list-style: disc;
 }
 
 .post-body {
@@ -221,7 +221,6 @@ main {
 
   h2 {
     line-height: 1.25em;
-    // text-transform: uppercase;
     font-size: 30px;
     font-weight: 400;
   }
@@ -229,7 +228,6 @@ main {
   h3 {
     font-weight: 600;
     font-size: 22px;
-    // text-transform: uppercase;
   }
 
   .tagline {

@@ -14,7 +14,7 @@
       </h2>
       <p class="subtitle">{{ globals.jobTitle }}</p>
     </div>
-    <Nav></Nav>
+    <Nav/>
   </header>
 </template>
 
@@ -39,6 +39,10 @@ export default {
   margin: 1.5rem auto 0.75rem;
   width: 100%;
   text-align: center;
+
+  @media all and (min-width: $breakpoint-lg-min) {
+    padding-top: 1.5rem;
+  }
 
   img {
     height: 9.375rem;

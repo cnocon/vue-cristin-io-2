@@ -61,5 +61,5 @@ export default {
 
 <style scoped lang="scss">
 @import '@/scss/_variables.scss';
-
+main { margin: 0 auto; }
 </style>

@@ -7,7 +7,7 @@
     </h2>
     <PostMeta :post="post" />
   </header>
-  <p>{{ post.summary }}</p>
+  <p class="summary-content">{{ post.summary }}</p>
 </template>
 
 <script>
@@ -41,6 +41,10 @@ export default {
   line-height: 1em;
   font-size: 32px;
 
+  @media all and (max-width: $breakpoint-sm-min) {
+    font-size: 1.25rem;
+  }
+
   a {
     background-size: 100% 1px;
     font-weight: 700;
@@ -57,6 +61,11 @@ export default {
 
   &:first-of-type {
     margin-top: 30px;
+  }
+}
+.summary-content {
+  @media all and (max-width: $breakpoint-sm-min) {
+    font-size: 0.875rem;
   }
 }
 </style>

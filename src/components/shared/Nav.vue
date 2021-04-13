@@ -31,14 +31,28 @@ export default {
 @import '../../scss/_variables.scss';
 
 #nav {
-  padding: 1.5rem 0 0;
+  display: block;
+  padding: 1rem 0 0;
   text-align: center;
   color: $border-med-gray;
 
   a {
+    display: inline-block;
+    margin: 0 0.875rem 0.875rem !important;
     text-decoration: none;
-    margin: 0 0.875rem;
     text-align: center;
+    background-image: none;
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      @media all and (max-width: $breakpoint-sm) {
+        margin-bottom: 0.5rem !important;
+      }
+    }
+
+    @media all and (max-width: $breakpoint-sm) {
+      margin-right: 0;
+    }
 
     &:hover {
       &.router-link-exact-active {
@@ -46,29 +60,34 @@ export default {
           background-color: $white;
         }
       }
-
-      span {
-        box-shadow: $box-shadow-md;
-        text-decoration: none;
-        color: $nav-text-hover;
-      }
     }
 
     span {
+      display: inline-block;
       color: $color-primary;
-      // text-decoration: underline;
       background-color: $white;
       text-transform: uppercase;
       font-weight: 900;
       font-family: $font-secondary;
       box-shadow: $box-shadow-md-transparent;
-      letter-spacing: 2px;
       text-align: center;
+      letter-spacing: 1px;
       display: inline-block;
       padding: 4px 7px;
       border-radius: 4px;
       transition: all 0.3s ease;
       box-sizing: border-box;
+
+      @media all and (max-width: $breakpoint-md) {
+        font-size: 13px;
+        padding: 2px 5px;
+      }
+
+      &:hover {
+        box-shadow: $box-shadow-sm;
+        text-decoration: none;
+        color: $nav-text-hover;
+      }
     }
 
     &.router-link-exact-active {
@@ -77,7 +96,6 @@ export default {
         font-weight: 800;
         text-decoration: none;
         box-shadow: $box-shadow-md;
-        // border: 1px solid lighten($color-primary, 5%);
         border-radius: 4px;
       }
     }

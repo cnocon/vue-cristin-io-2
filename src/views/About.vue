@@ -1,11 +1,11 @@
 <template>
-  <main class="about-page site-content">
+  <main v-if="visible" class="about-page site-content">
     <PageHeader
       iconClass="fal fa-user-astronaut"
       text="A Little About Me"
       alignment="left"
     ></PageHeader>
-    <div v-if="show">
+    <div>
       <RotatingHeader />
 
       <PageHeader
@@ -64,7 +64,7 @@
         <li
           v-for="(profile, index) in globals.profiles"
           :key="index"
-          class="col-lg-2 col-md-4 col-sm-6"
+          class="col-lg-2 col-md-4 col-6"
         >
           <br />
           <Icon
@@ -90,7 +90,7 @@ export default {
   name: 'About',
   data() {
     return {
-      show: false,
+      visible: false,
       serviceIconStyle: { marginTop: '25%' },
       data: pageData.data,
     }
@@ -111,14 +111,17 @@ export default {
       perPage: 6,
       excludeBody: true,
     })
-    this.show = true
   },
+  mounted() {
+    this.$nextTick(function() {
+      this.visible = true
+    })
+  }
 }
 </script>
 
 <style scoped lang="scss">
 @import '@/scss/_variables.scss';
-
 .profiles {
   padding: 30px 0 0;
 }
@@ -216,6 +219,10 @@ export default {
     flex-direction: column;
     padding: 15px 15px;
     max-width: calc(100% - 30px);
+
+    @media all and (max-width: $breakpoint-sm-min) {
+      max-width: 100%;
+    }
 
     @media (min-width: 768px) and (max-width: 991px) {
       &:nth-of-type(even) {

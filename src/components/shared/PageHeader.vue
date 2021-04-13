@@ -1,5 +1,5 @@
 <template>
-  <h2 :class="alignment ? `align-${alignment}` : ''">
+  <h2 :class="alignment ? `page-header align-${alignment}` : 'page-header'">
     <span>
       <i :class="iconClass"> </i>
       <b>{{ text }}</b>
@@ -27,35 +27,52 @@ export default {
 .fas {
   color: rgba($color-primary, 0.625);
 }
-h2 {
+
+h2.page-header {
   position: relative;
-  margin-bottom: 3.75rem;
+  margin-bottom: 4.75rem !important;
   white-space: nowrap;
+
+  @media all and (max-width: $breakpoint-md) {
+    margin-top: 1rem !important;
+
+    i {
+      display: none !important;
+    }
+  }
 
   &::before {
     content: '';
+    display: inline-block;
     position: absolute;
-    top: 50%;
+    top: calc(50% + 3px);
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 60px;
+    height: 64px;
     margin: 0;
     width: 100%;
     max-width: none;
     box-sizing: content-box;
-    border-bottom: 4px solid $border-lightest-gray;
+    border-bottom: 3px solid $border-lightest-gray;
+
+    @media all and (max-width: $breakpoint-sm-min) {
+      top: calc(50% + 4px);
+    }
   }
 
   &.align-left {
     &::before {
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
+      @media all and (min-width: $breakpoint-sm-min) {
+        left: 0;
+        transform: translateY(-50%);
+      }
     }
 
     span {
-      left: 0;
-      transform: none;
+      @media all and (min-width: $breakpoint-sm-min) {
+        left: 0;
+        transform: none;
+      }
     }
 
     i {
@@ -66,31 +83,31 @@ h2 {
         color: darken($border-light-gray, 5%);
       }
     }
-
-    b {
-      font-size: 14px;
-    }
   }
 
   span {
     position: absolute;
     display: block;
     top: 0;
-    left: 50%;
+    left: calc(50% - 28px);
     transform: translateX(-50%);
     background-color: $white;
+
+    @media all and (max-width: $breakpoint-sm) {
+      left: 50%;
+    }
   }
 
   b {
     display: inline-block;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     line-height: 60px;
     vertical-align: middle;
     padding: 0 0.75rem;
     background: $white;
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: $font-secondary;
     color: $color-primary;
   }

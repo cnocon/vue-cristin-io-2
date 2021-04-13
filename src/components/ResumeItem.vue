@@ -1,6 +1,6 @@
 <template>
-  <div class="item">
-    <div v-if="itemType === 'default'" class="year">{{ item.year }}</div>
+  <div :class="itemClasses">
+    <div class="year">{{ item.year }}</div>
     <header>
       <h4>
         {{ item.position }}
@@ -48,9 +48,15 @@ export default {
   name: 'ResumeItem',
   props: {
     item: Object,
+    itemClass: String,
     descItemClass: String,
     descClass: String,
   },
+  computed: {
+    itemClasses() {
+      return 'item ' + this.itemClass
+    }
+  }
 }
 </script>
 
@@ -60,8 +66,90 @@ export default {
 .item {
   border: 3px solid $border-light-gray;
   padding: 1.875rem 1.875rem 0;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   margin-bottom: 3rem;
+  position: relative;
+
+  @media all and (max-width: $breakpoint-sm) {
+    padding: 0 1.5rem;
+  }
+
+  header {
+    h4 {
+      margin-bottom: 0;
+    }
+
+    @media all and (min-width: $breakpoint-sm-min) {
+      h4 {
+        margin-top: 0;
+      }
+
+
+      p span,
+      p span.range {
+        font-size: 12px;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  ul {
+    @media all and (max-width: $breakpoint-sm) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  li {
+    margin-bottom: 0.625rem;
+    font-size: 14px;
+    font-weight: 400;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media all and (max-width: $breakpoint-sm) {
+      font-size: 0.875rem;
+    }
+  }
+  &.edu-item {
+    .year {
+      display: none;
+    }
+  }
+
+  &.service-item {
+    &:last-of-type {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &.work-item {
+    .year {
+      display: none;
+
+      @media all and (min-width: $breakpoint-sm-min) {
+        display: block;
+        position: absolute;
+        left: -4.125rem;
+        top: calc(50% - 1.5625rem);
+        width: 3.125rem;
+        height: 3.125rem;
+        font-size: 0.875rem;
+        line-height: 3.125rem;
+        vertical-align: middle;
+        font-weight: 700;
+        text-align: center;
+        font-family: $font-primary;
+        color: $white;
+        background-color: $color-primary;
+        border-radius: 50%;
+      }
+    }
+  }
 
   &.service-item {
     display: block;
@@ -70,28 +158,6 @@ export default {
     margin-bottom: 0 !important;
 
     .year { display: none; }
-  }
-
-  &.default {
-    margin-left: 66px;
-    position: relative;
-
-    .year {
-      position: absolute;
-      background-color: $color-primary;
-      color: $white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      left: -66px;
-      top: calc(50% - 25px);
-      line-height: 50px;
-      text-align: center;
-      vertical-align: middle;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: $font-primary;
-    }
   }
 
   header {
@@ -108,31 +174,59 @@ export default {
       font-weight: 400;
       margin-bottom: 0;
       font-family: $font-secondary;
-      font-size: 14px;
+      font-size: 0.875rem;
 
       &.company {
         font-family: $font-tertiary;
         text-transform: uppercase;
+        font-size: 0.875rem;
+
+        @media all and (max-width: $breakpoint-sm) {
+          display: block;
+          font-size: 0.8125rem;
+        }
+
+        + i {
+          @media all and (max-width: $breakpoint-sm) {
+            display: none;
+          }
+        }
       }
 
       &.location {
         display: inline-block;
         font-weight: 400;
         font-style: italic;
+        font-size: 0.875rem;
+
+        @media all and (max-width: $breakpoint-sm) {
+          vertical-align: top;
+          font-size: 0.8125rem;
+        }
       }
 
       &.range {
         display: block;
-        font-size: 13px;
+        font-size: 0.8125rem;
         color: $border-dark-gray;
         font-weight: 500;
         font-family: $font-primary;
+
+        @media all and (max-width: $breakpoint-sm) {
+          font-size: 0.75rem;
+          line-height: 1em;
+        }
 
         .range-end {
           color: $border-dark-gray;
           font-weight: 500;
           font-family: $font-primary;
-          font-size: 13px;
+          font-size: 0.8125rem;
+
+          @media all and (max-width: $breakpoint-sm) {
+            font-size: 0.75rem;
+            line-height: 1em;
+          }
         }
       }
     }
@@ -157,13 +251,19 @@ export default {
     font-size: 14px;
     margin: 0 0 1.5rem;
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
     &.awards {
       padding-left: 0;
-      padding-bottom: 20px;
+      // padding-bottom: 1.5rem;
+
+      @media all and (max-width: $breakpoint-sm) {
+        padding: 1.5rem 0;
+
+        li {
+          div {
+            font-size: 12px;
+          }
+        }
+      }
 
       li {
         position: relative;
@@ -182,6 +282,7 @@ export default {
           display: inline-block;
           padding-left: 25px;
           margin-bottom: 0.9375rem;
+          font-size: 0.875rem;
         }
 
         span {

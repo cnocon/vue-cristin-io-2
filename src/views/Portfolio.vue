@@ -5,11 +5,11 @@
       <div
         v-for="(item, index) in data"
         :key="index"
-        class="row"
+        class="row portfolio-item"
       >
-        <div class="text-center col-12">
+        <div class="col-12">
           <h2>{{ item.name }}</h2>
-          <p>
+          <p class="links">
             <span
               v-for="(link, linkIndex) in item.links"
               :key="linkIndex"
@@ -77,7 +77,22 @@ export default {
 
 <style scoped lang="scss">
 @import '@/scss/_variables.scss';
+.portfolio-item h2 {
+  font-size: 2rem;
 
+  @media all and (max-width: $breakpoint-sm-min) {
+    font-size: 1.65rem;
+    line-height: 1.35;
+  }
+}
+.portfolio-item h2,
+.portfolio-item .links {
+  text-align: center;
+
+  @media all and (max-width: $breakpoint-sm-min) {
+    text-align: left;
+  }
+}
 ul {
   list-style: disc;
   padding-left: 20px;

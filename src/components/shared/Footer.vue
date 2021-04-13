@@ -11,25 +11,18 @@
           </p>
           <p class="built-with-info">
             Built using&nbsp;
-            <a href="https://www.gatsbyjs.org" rel="noopener" target="_blank"
-              >Vue</a
-            >,
-            <a href="https://sass-lang.org" rel="noopener" target="_blank"
-              >SCSS</a
-            >, and
-            <a
-              href="https://www.typescriptlang.org/"
-              rel="noopener"
-              target="_blank"
+            <a href="https://v3.vuejs.org" rel="noopener" target="_blank"
+              >Vue 3</a
+            > and
+            <a href="https://next.vuex.vuejs.org/" rel="noopener" target="_blank"
+              >Vuex</a
             >
-              TypeScript
-            </a>
           </p>
         </div>
         <div class="footer-column">
           <div>
             <p>Blog Powered By</p>
-            <img src="@/assets/images/logos/buttercms.png" alt="ButterCMS" />
+            <img src="@/assets/images/logos/buttercms.png" alt="ButterCMS" class="logo" />
           </div>
         </div>
       </div>
@@ -102,6 +95,10 @@ footer.app-container {
 
   img {
     max-width: 175px;
+
+    @media all and (max-width: $breakpoint-sm) {
+      max-width: 125px;
+    }
   }
 
   p {

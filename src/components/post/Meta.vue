@@ -43,12 +43,16 @@ export default {
 .post-meta {
   font-family: $font-secondary;
   font-weight: 400;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  font-size: 14px;
+  margin-top: 0.9375rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
   line-height: 1.35rem;
   vertical-align: middle;
   color: hsl(194, 10%, 70%);
+
+  @media all and (max-width: $breakpoint-sm-min) {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .posted-in b,
@@ -61,16 +65,21 @@ export default {
   text-transform: uppercase;
   line-height: 1.8em;
   border-radius: 4px;
-  padding: 1px 8px;
+  padding: 1px 0.5rem;
   margin: 0 2px;
   font-weight: 800;
   letter-spacing: 1px;
   color: $color-primary;
+
+  @media all and (max-width: $breakpoint-sm-min) {
+    line-height: 1.675rem;
+    font-size: 0.6875rem;
+  }
 }
 
 .posted-on time {
   border: 0;
   margin-left: 0;
-  padding-left: 4px;
+  padding-left: 0.25rem;
 }
 </style>

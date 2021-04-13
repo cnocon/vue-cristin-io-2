@@ -61,7 +61,7 @@ const resume = {
       "startDate": "July 2015",
       "endDate": "Sept 2017",
       "position": "Software Engineer",
-      "company": "NCSA Next College Student Athlete",
+      "company": "Next College Student Athlete",
       "location": "Chicago, IL",
       "descList": [
         "Serve simultaneously on both the UI and Software Engineering teams and float between teams as needed",
