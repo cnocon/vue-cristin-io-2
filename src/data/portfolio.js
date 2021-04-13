@@ -107,29 +107,51 @@ const portfolio = [
     "previewAlt": "CRISTIN.IO Website"
   },
   {
-    "name": "CRISTIN.IO",
+    "name": "YouTube Search App",
     "links": [
       {
-        "href": "https://github.com/cnocon/weather-charts-app-new",
+        "href": "https://github.com/cnocon/youtube-search-new",
         "text": "GitHub"
       },
       {
-        "href": "https://weather-charts-app.netlify.app",
+        "href": "https://youtube-search-new.netlify.app",
         "text": "Demo"
       }
     ],
     "summary": [
-      "CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a front end web development blog authored by yours truly, my résumé, portfolio (surprise!), and some general information about me and the services I offer."
+      "Search for and watch content from YouTube."
     ],
     "technologies": [
-      "Vue",
-      "Vuex",
-      "Vue Router",
-      "ButterCMS API"
+      "YouTube API V3",
+      "React",
+      "Bootstrap"
     ],
-    "previewImage": "https://github.com/cnocon/vue-cristin-io-2/raw/master/cristin-io.png",
-    "previewAlt": "CRISTIN.IO Website"
+    "previewImage": "https://github.com/cnocon/youtube-search-new/raw/master/youtube-app-screenshot.png",
+    "previewAlt": "YouTube Search Application"
+  },
+  {
+    "name": "CenturyLink Small Business",
+    "links": [
+      {
+        "href": "https://business.centurylink.com/",
+        "text": "Demo"
+      }
+    ],
+    "summary": [
+      "Built using a proprietary component library, this website searches for service in a user's zip code and updates content based on product availability along with showcasing small business products. Please note I cannot provide the repository link because it is private."
+    ],
+    "technologies": [
+      "Component-based architecture",
+      "Responsive design",
+      "SCSS",
+      "Handlebars",
+      "JavaScript (ES6)",
+      "PHP"
+    ],
+    "previewImage": "https://www.dropbox.com/s/qt4ieh7flxadcij/clq.png?dl=1",
+    "previewAlt": "CenturyLink Small Business Website (for Clearlink)"
   }
+
 ]
 
 export default portfolio

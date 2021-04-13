@@ -60,7 +60,7 @@
         text="Connect"
         alignment="left"
       ></PageHeader>
-      <ul class="row text-center connect">
+      <ul class="row list-style-none text-center connect">
         <li
           v-for="(profile, index) in globals.profiles"
           :key="index"

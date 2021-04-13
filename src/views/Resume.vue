@@ -2,7 +2,7 @@
   <div class="resume-page app-container site-content container-fluid">
     <!-- <PageHeader iconClass="fad fa-file-user" text="Resumé"></PageHeader> -->
     <div v-if="show && data.jobTitle" class="row">
-      <div class="col-lg-7 col-md-12">
+      <div class="col-lg-7 col-md-12 mt-5">
         <span class="rule"></span>
         <div class="work-history">
           <div class="rule"></div>
@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-12">
+      <div class="col-lg-5 col-md-12 mt-5">
         <h3 class="mt-3">
           <i class="fal fa-hands-heart"></i>
           Service
@@ -72,6 +72,8 @@
           <ResumeItem
             :item="edu"
             :key="index"
+            descClass="pl-0"
+            descItemClass="list-style-none"
             v-for="(edu, index) in data.education"
           />
         </div>
@@ -136,7 +138,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import '@/scss/_variables.scss';
 .timeline { padding-left: 68px; }
 .work-history {
@@ -163,8 +165,6 @@ export default {
   margin-right: auto;
 }
 .assets {
-  padding-left: calc(2.125rem - 12px);
-
   ul { list-style: none; }
 
   .asset-item {
