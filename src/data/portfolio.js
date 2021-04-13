@@ -81,6 +81,54 @@ const portfolio = [
     ],
     "previewImage": "https://github.com/cnocon/weather-charts-app-new/raw/master/weather-app-screenshot.png",
     "previewAlt": "Weather Charts Application"
+  },
+  {
+    "name": "CRISTIN.IO",
+    "links": [
+      {
+        "href": "https://github.com/cnocon/weather-charts-app-new",
+        "text": "GitHub"
+      },
+      {
+        "href": "https://weather-charts-app.netlify.app",
+        "text": "Demo"
+      }
+    ],
+    "summary": [
+      "CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a front end web development blog authored by yours truly, my résumé, portfolio (surprise!), and some general information about me and the services I offer."
+    ],
+    "technologies": [
+      "Vue",
+      "Vuex",
+      "Vue Router",
+      "ButterCMS API"
+    ],
+    "previewImage": "https://github.com/cnocon/vue-cristin-io-2/raw/master/cristin-io.png",
+    "previewAlt": "CRISTIN.IO Website"
+  },
+  {
+    "name": "CRISTIN.IO",
+    "links": [
+      {
+        "href": "https://github.com/cnocon/weather-charts-app-new",
+        "text": "GitHub"
+      },
+      {
+        "href": "https://weather-charts-app.netlify.app",
+        "text": "Demo"
+      }
+    ],
+    "summary": [
+      "CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a front end web development blog authored by yours truly, my résumé, portfolio (surprise!), and some general information about me and the services I offer."
+    ],
+    "technologies": [
+      "Vue",
+      "Vuex",
+      "Vue Router",
+      "ButterCMS API"
+    ],
+    "previewImage": "https://github.com/cnocon/vue-cristin-io-2/raw/master/cristin-io.png",
+    "previewAlt": "CRISTIN.IO Website"
   }
 ]
 
