@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { trackRouter } from "vue-gtag-next";
 import About from '@/views/About.vue'
-// import Docs from '@/views/Docs.vue'
 import Portfolio from '@/views/Portfolio.vue'
 import Post from '@/views/Post.vue'
 import Posts from '@/views/Posts.vue'
 import Resume from '@/views/Resume.vue'
+// import Docs from '@/views/Docs.vue'
 // import NotFound from '@/views/NotFound.vue'
 
 const routes = [
@@ -60,5 +61,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 })
+
+trackRouter(router)
 
 export default router
