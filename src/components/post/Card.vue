@@ -43,20 +43,15 @@ a {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  // box-shadow: $box-shadow-sm;
-  // border: 1px solid $color-primary-light;
   border-radius: 4px;
   box-shadow: $box-shadow-md;
   background-image: $rainbow-gradient-dark;
-  // border: 1px solid $border-light-gray;
   height: 100%;
   background-size: 100% 2px;
-  // background-image: $rainbow-gradient-radial-light;
   background-position: top;
   transition: all 0.3s ease;
 
   &:hover {
-    // background-color: $bg-light-gray;
     border-radius: 4px;
     box-shadow: $box-shadow-md;
     transform: scale(1.015);

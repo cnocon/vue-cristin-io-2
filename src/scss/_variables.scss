@@ -7,19 +7,28 @@ $box-shadow-lg: 0 2px 10px 0 hsla(0, 0%, 0%, 0.17), 0 1px 13px 0 hsla(0, 0, 0, 0
 $line-height-gr: 1.618;
 // $font-primary: 'Work Sans', Arial, sans-serif;
 $font-primary: 'Open Sans', Arial, sans-serif;
-
 // $font-secondary: 'Work Sans', Geneva, Tahoma, sans-serif;
 $font-secondary: Lato, Geneva, Tahoma, sans-serif;
-
-// $font-tertiary: Oswald, Impact, sans-serif;
-$font-tertiary: 'Work Sans', Impact, sans-serif;
+$font-tertiary: Oswald, Impact, sans-serif;
+// $font-tertiary: 'Work Sans', Impact, sans-serif;
 $bg-light-gray: hsl(200, 20%, 97%);
 $bg-med-gray: hsl(200, 20%, 94%);
-$border-red: rgba(245, 163, 170, 0.9);
-$border-yellow: rgba(255, 249, 77, 0.95);
-$border-green: rgba(77, 255, 240, 0.65);
-$border-blue: hsl(197, 100%, 64%);
-$border-purple: rgba(140, 140, 242, 0.75);
+
+$border-red: hsla(355, 80%, 80%, 1.0);
+$border-red-vivid: hsla(355, 100%, 75%, 1.0);
+
+$border-yellow: hsla(55, 85%, 70%, 1.0);
+$border-yellow-vivid: hsla(55, 100%, 55%, 1.0);
+
+$border-green: hsla(167, 95%, 80%, 1.0);
+$border-green-vivid: hsl(167, 100%, 65%);
+
+$border-blue: hsl(216, 92.5%, 80%);
+$border-blue-vivid: hsl(216, 100%, 75%);
+
+$border-purple: hsl(253, 87.5%, 82.5%);
+$border-purple-vivid: hsla(253, 95%, 75%, 1.0);
+
 $border-lightest-gray: hsl(200,16%,96%);
 $border-light-gray: hsl(200, 14%, 92%);
 $border-med-gray: hsl(200, 14%, 76%);
@@ -43,8 +52,15 @@ $color-primary: hsl(210, 25%, 27%);
 $color-primary-med: hsl(210, 25, 36%);
 $white: #fff;
 $black: hsl(210, 35%, 10%);
+$pastel-rainbow-bar: linear-gradient(90deg,
+  hsl(58, 100%, 75%) 7.5%,
+  hsl(58, 100%, 82.5%) 12.5%,
+  hsl(175, 100%, 75%) 27.5%,
+  hsl(197, 100%, 82.5%) 42.5%,
+  hsl(240, 100%, 85%) 57.5%,
+  hsl(355, 100%, 90%) 80%);
 $rainbow-box-shadow: hsl(175, 100%, 65%) 0 2px 0,
-  hsl(58, 100%, 65%) -2px 0 0,
+  hsla(58, 100%, 65%, 0.096) -2px 0 0,
   hsl(240, 80%, 75%) 2px 0 0,
   hsl(355, 80%, 80%) 0 -2px 0;
 $rainbow-box-shadow-dark: hsl(175, 80%, 60%) 0 2px,
