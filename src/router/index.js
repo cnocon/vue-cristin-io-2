@@ -1,8 +1,7 @@
-
 // import Docs from '@/views/Docs.vue'
 import NotFound from '@/views/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import { trackRouter } from "vue-gtag-next";
+import { trackRouter } from 'vue-gtag-next'
 import About from '@/views/About.vue'
 import Portfolio from '@/views/Portfolio.vue'
 import Post from '@/views/Post.vue'
@@ -39,7 +38,7 @@ const routes = [
   {
     path: '/:pathMatch(.*)',
     name: '404',
-    component: NotFound
+    component: NotFound,
   },
   // {
   //   path: '/docs',

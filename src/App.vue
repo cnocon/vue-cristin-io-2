@@ -15,7 +15,9 @@ import Footer from '@/components/shared/Footer.vue'
 
 export default {
   setup() {
-    const errorMsg = globals ? null : 'There was a problem loading data into the application store.'
+    const errorMsg = globals
+      ? null
+      : 'There was a problem loading data into the application store.'
 
     return {
       globals,
