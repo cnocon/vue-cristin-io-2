@@ -1,17 +1,15 @@
 <template>
   <nav id="nav">
-    <router-link :to="{ name: 'about' }"><span>About</span></router-link>
+    <router-link :to="{ name: 'about' }"><span>Home</span></router-link>
+    <!-- <router-link :to="{ name: 'docs' }"><span>Docs</span></router-link> -->
+    <router-link :to="{ name: 'resume' }"><span>Resumé & Courses</span></router-link>
+    <router-link :to="{ name: 'portfolio' }"><span>Portfolio</span></router-link>
     <router-link
       :to="{ name: 'posts', query: { page: '1' } }"
       :class="manualActiveClass"
     >
       <span>Blog</span>
     </router-link>
-    <!-- <router-link :to="{ name: 'docs' }"><span>Docs</span></router-link> -->
-    <!-- | <router-link to="/blog">Blog</router-link> -->
-    <router-link :to="{ name: 'resume' }"><span>Resumé</span></router-link>
-    <router-link :to="{ name: 'portfolio' }"><span>Portfolio</span></router-link>
-    <!-- | <router-link to="/portfolio">Portfolio</router-link> -->
   </nav>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <div class="resume-page app-container site-content container-fluid">
-    <!-- <PageHeader iconClass="fad fa-file-user" text="Resumé"></PageHeader> -->
-    <div v-if="show && data.jobTitle" class="row">
-      <div class="col-lg-7 col-md-12 mt-5">
+    <PageHeader iconClass="fad fa-file-user" text="Resumé"></PageHeader>
+    <div v-if="data.jobTitle" class="row">
+      <div class="col-lg-7 col-md-12 mt-3">
         <span class="rule"></span>
         <div class="work-history">
           <div class="rule"></div>
@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-12 mt-5">
+      <div class="col-lg-5 col-md-12 mt-3">
         <h3 class="mt-3">
           <i class="fal fa-hands-heart"></i>
           Service
@@ -104,12 +104,47 @@
         </ul>
       </div>
     </div>
+    <PageHeader iconClass="fal fa-pencil" text="Recent Coursework"/>
+    <div v-if="courseData" class="row mt-5">
+      <div v-for="(course, cIndex) in courseData"
+        :key="cIndex"
+        class="col-12 col-md-4 course"
+      >
+        <img
+          :src="course.img"
+          :alt="course.name"
+        />
+        <h3>
+          <a :href="course.url" target="_blank" rel="noopener">
+            {{ course.name }}
+          </a>
+        </h3>
+        <h4>
+          <span class="company">{{ course.company }}</span>
+          <span v-if="course.instructor">
+            <span class="instructor">&nbsp;|&nbsp;{{ course.instructor }}</span>
+          </span>
+        </h4>
+        <p class="description">{{ course.description }}</p>
+
+        <a
+          v-if="course.certificate_url"
+          :href="course.certificate_url"
+          class="certificate"
+          target="_blank"
+        >
+          View Certificate
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Icon from '@/components/shared/Icon'
+import PageHeader from '@/components/shared/PageHeader'
 import resumeData from '@/data/resume'
+import courseData from '@/data/courses'
 import ResumeItem from '@/components/ResumeItem'
 import Skill from '@/components/Skill'
 
@@ -118,23 +153,18 @@ export default {
   components: {
     ResumeItem,
     Skill,
-    Icon
+    Icon,
+    PageHeader
   },
   props: {
     globals: {},
   },
   data() {
     return {
-      data: {},
-      show: false,
+      data: resumeData,
+      courseData
     }
-  },
-  created() {
-    this.data = resumeData
-  },
-  mounted() {
-    this.show = true
-  },
+  }
 }
 </script>
 
@@ -184,14 +214,12 @@ export default {
       width: calc(100% - 2rem);
 
       b {
-        // color: darken($border-blue-vivid, 10%);
         font-weight: 500;
       }
     }
   }
 }
-
-h3 {
+.row:first-of-type h3 {
   position: relative;
   height: 48px;
   margin: 2rem 0 1rem;
@@ -229,7 +257,6 @@ h3 {
     }
   }
 }
-
 .quote {
   padding: 0 0 2rem;
   max-width: 600px;
@@ -281,6 +308,68 @@ h3 {
   [class^='col-'] {
     text-align: center;
     padding: 0 0 1rem;
+  }
+}
+
+.course {
+  margin-bottom: 4rem;
+  text-align: center;
+
+  img {
+    max-height: 100px;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 1.25em;
+      font-family: $font-secondary;
+      background-image: $rainbow-gradient-med;
+      background-size: 100% 2px;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+  }
+
+  h4 {
+    font-family: $font-secondary;
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+  }
+
+  .description {
+    font-weight: 400;
+  }
+
+  .instructor,
+  .company {
+    font-family: $font-tertiary;
+    font-weight: 400;
+  }
+
+  .certificate {
+    display: inline-block;
+    margin: 1rem 0 0;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    text-transform: uppercase;
+    padding: 1px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $white;
+    }
   }
 }
 </style>
