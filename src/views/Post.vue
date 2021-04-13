@@ -16,6 +16,7 @@
 </template>
 
 <script>
+const prettyPrint = require('code-prettify')
 import moment from 'moment'
 import { mapState } from 'vuex'
 import PageHeader from '@/components/shared/PageHeader.vue'
@@ -24,6 +25,11 @@ import PostMeta from '@/components/post/Meta.vue'
 export default {
   name: 'Post',
   props: ['slug'],
+  data() {
+    return {
+      highlight: false,
+    }
+  },
   components: {
     PageHeader,
     PostMeta,
@@ -44,6 +50,14 @@ export default {
   },
   created() {
     this.$store.dispatch('post/getPost', this.slug)
+  },
+  mounted() {
+    this.highlight = !this.highlight
+  },
+  updated() {
+    this.$nextTick(() => {
+      prettyPrint.prettyPrint()
+    })
   },
 }
 </script>
