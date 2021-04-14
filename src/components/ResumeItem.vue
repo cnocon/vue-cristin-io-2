@@ -4,8 +4,14 @@
     <header>
       <h4>
         {{ item.position }}
-        <span v-if="item.positionDetail" class="font-tertiary font-weight-300">|&nbsp;</span>
-        <small v-if="item.positionDetail" class="nocase font-tertiary  font-weight-300">
+
+        <span v-if="item.positionDetail" class="font-tertiary font-weight-300">
+          |&nbsp;
+        </span>
+        <small
+          v-if="item.positionDetail"
+          class="nocase font-tertiary font-weight-300"
+        >
           {{ item.positionDetail }}
         </small>
       </h4>
@@ -14,7 +20,10 @@
         <i class="far fa-chevron-double-right"></i>
         <span v-html="item.location" class="location"></span>
         <span class="range">
-          {{ item.startDate }} <span class="range-end" v-if="item.endDate"> &mdash; {{ item.endDate }}</span>
+          {{ item.startDate }}
+          <span class="range-end" v-if="item.endDate">
+            &mdash; {{ item.endDate }}
+          </span>
         </span>
       </p>
     </header>
@@ -28,10 +37,7 @@
       </li>
     </ul>
     <ul class="awards list-style-none">
-      <li
-        v-for="(award, index) in item.awards"
-        :key="index"
-      >
+      <li v-for="(award, index) in item.awards" :key="index">
         <i className="fal fa-trophy-alt"></i>
         <div>
           {{ award.name }}
@@ -43,7 +49,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'ResumeItem',
   props: {
@@ -55,8 +60,8 @@ export default {
   computed: {
     itemClasses() {
       return 'item ' + this.itemClass
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -83,7 +88,6 @@ export default {
       h4 {
         margin-top: 0;
       }
-
 
       p span,
       p span.range {
@@ -157,7 +161,9 @@ export default {
     padding: 0;
     margin-bottom: 0 !important;
 
-    .year { display: none; }
+    .year {
+      display: none;
+    }
   }
 
   header {

@@ -1,17 +1,15 @@
 <template>
   <div class="post-meta">
-    <span class="posted-in">
-      Posted in
-      <span v-for="(cat, index) in post.categories" :key="cat.slug">
-        <b>{{ cat.name }}</b>
-        {{ getJoinString(index) }}
-      </span>
-    </span>
     <span class="posted-on">
-      on
       <time class="entry-date" :datetime="post.published">
         {{ formattedDate(post.published) }}
       </time>
+    </span>
+    <span class="posted-in">
+      <span v-for="(cat) in post.categories" :key="cat.slug">
+        <b>{{ cat.name }}</b>
+        <!-- {{ getJoinString(index) }} -->
+      </span>
     </span>
   </div>
 </template>
@@ -28,29 +26,29 @@ export default {
     formattedDate(isoString) {
       return moment(isoString).format('dddd, MMMM D, YYYY')
     },
-    getJoinString(index) {
-      const { categories } = this.post
-      const count = categories.length
+    // getJoinString(index) {
+    //   const { categories } = this.post
+    //   const count = categories.length
 
-      switch (count) {
-        case 4:
-          if (index === 0 || index === 1) {
-            return ', '
-          } else {
-            return index === 2 ? ' and ' : ''
-          }
-        case 3:
-          if (index === 1) {
-            return ' and '
-          } else {
-            return index === 0 ? ', ' : ''
-          }
-        case 2:
-          return index === 0 ? ' and ' : ''
-        default:
-          return ''
-      }
-    },
+    //   switch (count) {
+    //     case 4:
+    //       if (index === 0 || index === 1) {
+    //         return ', '
+    //       } else {
+    //         return index === 2 ? ' and ' : ''
+    //       }
+    //     case 3:
+    //       if (index === 1) {
+    //         return ' and '
+    //       } else {
+    //         return index === 0 ? ', ' : ''
+    //       }
+    //     case 2:
+    //       return index === 0 ? ' and ' : ''
+    //     default:
+    //       return ''
+    //   }
+    // },
   },
 }
 </script>
@@ -74,12 +72,10 @@ export default {
 
 .posted-in b,
 .posted-on time {
-  background-color: $white;
-  border: 1px solid $color-primary;
-  color: hsl(200, 10%, 45%);
-  border: 1px solid hsl(210, 15%, 80%);
+
+  // color: hsl(200, 10%, 45%);
+  // border: 1px solid hsl(210, 15%, 80%);
   font-size: 12px;
-  text-transform: uppercase;
   line-height: 1.8em;
   border-radius: 4px;
   padding: 1px 0.5rem;
@@ -94,9 +90,28 @@ export default {
   }
 }
 
-.posted-on time {
-  border: 0;
-  margin-left: 0;
-  padding-left: 0.25rem;
+.posted-in {
+  display: block;
+  text-align: center;
+
+  b {
+    background-color: $color-primary;
+    color: $white;
+    font-family: $font-primary;
+    font-weight: 700;
+  }
+}
+
+
+.posted-on {
+  display: block;
+  text-align: center;
+
+  time {
+    text-transform: uppercase;
+    border: 0;
+    margin-left: 0;
+    padding-left: 0.25rem;
+  }
 }
 </style>

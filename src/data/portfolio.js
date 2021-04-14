@@ -148,7 +148,7 @@ const portfolio = [
       "JavaScript (ES6)",
       "PHP"
     ],
-    "previewImage": "https://www.dropbox.com/s/qt4ieh7flxadcij/clq.png?dl=1",
+    "previewImage": "https://www.dropbox.com/s/qt4ieh7flxadcij/clq.png?raw=1",
     "previewAlt": "CenturyLink Small Business Website (for Clearlink)"
   }
 
