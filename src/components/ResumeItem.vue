@@ -103,7 +103,7 @@ export default {
   }
 
   li {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.3125rem;
     font-size: 14px;
     font-weight: 400;
 

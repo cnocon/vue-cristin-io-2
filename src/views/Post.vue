@@ -1,5 +1,5 @@
 <template>
-  <main class="post-page site-content app-container">
+  <main class="post-page site-content">
     <PageHeader
       iconClass="fas fa-chart-bar"
       :text="'Level: ' + post.tags[0].name"
@@ -8,7 +8,7 @@
     <article v-show="post" class="post-content">
       <header class="post-header">
         <h1>{{ post.title }}</h1>
-        <PostMeta :post="post" />
+        <PostMeta :post="post" categoriesClass="inline" :showDate="false" />
       </header>
       <div v-html="post.body" class="post-body"></div>
     </article>

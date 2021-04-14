@@ -30,9 +30,26 @@ export default {
     },
     getJoinString(index) {
       const { categories } = this.post
-      return categories.length > 1 && index < categories.length - 1
-        ? ' and '
-        : ''
+      const count = categories.length
+
+      switch (count) {
+        case 4:
+          if (index === 0 || index === 1) {
+            return ', '
+          } else {
+            return index === 2 ? ' and ' : ''
+          }
+        case 3:
+          if (index === 1) {
+            return ' and '
+          } else {
+            return index === 0 ? ', ' : ''
+          }
+        case 2:
+          return index === 0 ? ' and ' : ''
+        default:
+          return ''
+      }
     },
   },
 }

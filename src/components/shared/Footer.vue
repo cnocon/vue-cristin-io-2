@@ -81,6 +81,7 @@ footer.app-container {
     color: $color-primary;
     font-weight: 500;
     text-decoration: underline;
+    background-image: none;
 
     &:hover {
       text-decoration: none;

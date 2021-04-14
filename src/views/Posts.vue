@@ -2,16 +2,19 @@
   <main class="posts-page site-content">
     <PageHeader iconClass="fad fa-rss" text="Blog"/>
     <div class="container app-container">
-      <div class="row" v-if="posts">
-        <div class="col-12 post-summary-list">
-          <Teaser
-            v-for="post in posts"
-            :class="`post-summary`"
-            :post="post"
-            :key="post.slug"
-            prevText="Newer Posts"
-            nextText="Older Posts"
-          />
+
+      <div class="row post-summary-list" v-if="posts">
+        <Teaser
+          v-for="post in posts"
+          :class="`post-summary`"
+          :post="post"
+          :key="post.slug"
+          prevText="Newer Posts"
+          nextText="Older Posts"
+        />
+      </div>
+      <div class="row summary-list" v-if="posts">
+        <div class="col-12">
           <Pagination
             :perPage="perPage"
             :currentPage="page"
@@ -20,6 +23,7 @@
           />
         </div>
       </div>
+
     </div>
   </main>
 </template>

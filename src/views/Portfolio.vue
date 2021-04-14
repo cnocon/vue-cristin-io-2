@@ -1,5 +1,5 @@
 <template>
-  <main class="app-container site-content">
+  <main class="portfolio-page site-content">
     <PageHeader text="Portfolio" :iconClass="`far fa-folders`"></PageHeader>
     <div v-if="data">
       <div
