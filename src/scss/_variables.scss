@@ -18,6 +18,9 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 $font-secondary: Lato, Geneva, Tahoma, sans-serif;
 $font-tertiary: Oswald, Impact, sans-serif;
 // $font-tertiary: 'Work Sans', Impact, sans-serif;
+
+$yellow: hsla(58, 100, 65, 0.7);
+
 $bg-light-gray: hsl(200, 20%, 97%);
 $bg-med-gray: hsl(200, 20%, 94%);
 
@@ -59,6 +62,11 @@ $color-primary: hsl(210, 25%, 27%);
 $color-primary-med: hsl(210, 25, 36%);
 $white: #fff;
 $black: hsl(210, 35%, 10%);
+$yellow-accent-bar: linear-gradient(90deg,
+gold 0%,
+hsla(58, 100%, 85%, 0.5) 30%,
+hsl(58, 100%, 55%) 65%,
+hsl(58, 100%, 75%) 90%);
 $pastel-rainbow-bar: linear-gradient(90deg,
   hsl(58, 100%, 75%) 7.5%,
   hsl(58, 100%, 82.5%) 12.5%,
