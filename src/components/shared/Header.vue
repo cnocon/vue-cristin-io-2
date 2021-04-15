@@ -36,12 +36,12 @@ export default {
 <style scoped lang="scss">
 @import "@/scss/_variables.scss";
 .logo {
-	margin: 1.5rem auto 0.75rem;
+	margin: 1.5rem auto 0;
 	width: 100%;
 	text-align: center;
 
 	@media all and (min-width: $breakpoint-lg-min) {
-		padding-top: 1.5rem;
+		padding-top: 0.5rem;
 	}
 
 	img {
@@ -61,7 +61,7 @@ export default {
 	.title a,
 	.subtitle {
 		margin: 0;
-		font-family: Oswald, sans-serif;
+		font-family: $font-tertiary;
 		color: $color-primary;
 	}
 	.title a {
@@ -78,19 +78,6 @@ export default {
 
 		&:hover {
 			text-decoration: underline;
-			// );
-			// z-index: 0;
-			// color: transparent;
-			// -webkit-background-clip: text;
-			// background-clip: text;
-			// background-image: linear-gradient(
-			//   90deg,
-			//   rgba(158, 118, 244, 60%) 0%,
-			//   hsla(197, 78%, 39%, 60%) 20%,
-			//   hsla(175, 74%, 43%, 60%) 40%,
-			//   hsla(49, 100%, 60%, 60%) 55%,
-			//   rgba(240, 85, 85, 60%) 95%
-			// );
 		}
 	}
 	.subtitle {
@@ -100,9 +87,9 @@ export default {
 		display: inline-block;
 		padding: 0 0.1875rem;
 		color: $color-primary;
-		border-radius: 0.25rem;
+		border-radius: 4px;
 		font-size: 1rem;
-		font-family: Oswald, sans-serif;
+		font-family: $font-tertiary;
 		letter-spacing: 1px;
 		background-color: $highlight-yellow;
 	}

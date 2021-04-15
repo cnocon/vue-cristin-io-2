@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const courses = [
   {
     "name": "Vue JS Essentials with Vuex and Vue Router",

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const globals = {
   "name": "Cristin O'Connor",
   "jobTitle": "Front End Software Engineer",

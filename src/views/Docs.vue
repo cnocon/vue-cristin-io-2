@@ -60,7 +60,10 @@
 						For a guide and recipes on how to configure / customize this
 						project,<br />
 						check out the
-						<a href="https://cli.vuejs.org" target="_blank" rel="noopener noreferrer"
+						<a
+							href="https://cli.vuejs.org"
+							target="_blank"
+							rel="noopener noreferrer"
 							>vue-cli documentation</a
 						>.
 					</p>
@@ -118,27 +121,42 @@
 					<h3>Essential Links</h3>
 					<ul class="inline text-center">
 						<li>
-							<a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"
+							<a
+								href="https://vuejs.org"
+								target="_blank"
+								rel="noopener noreferrer"
 								>Core Docs</a
 							>
 						</li>
 						<li>
-							<a href="https://forum.vuejs.org" target="_blank" rel="noopener noreferrer"
+							<a
+								href="https://forum.vuejs.org"
+								target="_blank"
+								rel="noopener noreferrer"
 								>Forum</a
 							>
 						</li>
 						<li>
-							<a href="https://chat.vuejs.org" target="_blank" rel="noopener noreferrer"
+							<a
+								href="https://chat.vuejs.org"
+								target="_blank"
+								rel="noopener noreferrer"
 								>Community Chat</a
 							>
 						</li>
 						<li>
-							<a href="https://twitter.com/vuejs" target="_blank" rel="noopener noreferrer"
+							<a
+								href="https://twitter.com/vuejs"
+								target="_blank"
+								rel="noopener noreferrer"
 								>Twitter</a
 							>
 						</li>
 						<li>
-							<a href="https://news.vuejs.org" target="_blank" rel="noopener noreferrer"
+							<a
+								href="https://news.vuejs.org"
+								target="_blank"
+								rel="noopener noreferrer"
 								>News</a
 							>
 						</li>
@@ -146,12 +164,18 @@
 					<h3>Ecosystem</h3>
 					<ul class="inline text-center">
 						<li>
-							<a href="https://router.vuejs.org" target="_blank" rel="noopener noreferrer"
+							<a
+								href="https://router.vuejs.org"
+								target="_blank"
+								rel="noopener noreferrer"
 								>vue-router</a
 							>
 						</li>
 						<li>
-							<a href="https://vuex.vuejs.org" target="_blank" rel="noopener noreferrer"
+							<a
+								href="https://vuex.vuejs.org"
+								target="_blank"
+								rel="noopener noreferrer"
 								>vuex</a
 							>
 						</li>

@@ -33,10 +33,8 @@ h2.page-header {
 	margin-bottom: 4.75rem !important;
 	white-space: nowrap;
 
-	@media all and (max-width: $breakpoint-md) {
-		margin-top: 1rem !important;
-
-		i {
+	i {
+		@media all and (max-width: $breakpoint-md) {
 			display: none !important;
 		}
 	}

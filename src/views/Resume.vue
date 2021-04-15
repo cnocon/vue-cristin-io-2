@@ -92,10 +92,11 @@
 					<blockquote>
 						<p>
 							<i class="fas fa-quote-left"></i>
-							<span>
-								How we spend our days is, of course, how we spend our lives.
+							<span
+								>How we spend our days is, of course, how we spend our lives.
 								What we do with this hour, and that one, is what we are
-								doing.</span>
+								doing.</span
+							>
 						</p>
 						<cite title="Annie Dillard">— Annie Dillard</cite>
 					</blockquote>
@@ -124,7 +125,7 @@
 			<div
 				v-for="(course, cIndex) in courseData"
 				:key="cIndex"
-				class="col-12 col-sm-6 col-md-4 course"
+				class="col-12 col-sm-6 col-md-6 col-lg-4 course"
 			>
 				<figure>
 					<img
@@ -397,7 +398,7 @@ export default {
 		background-color: $black;
 		padding: 1.875rem;
 		padding-bottom: 0.625rem;
-		border-radius: 0.25rem;
+		border-radius: 4px;
 		left: 0;
 		top: 0;
 

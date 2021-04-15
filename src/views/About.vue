@@ -13,29 +13,31 @@
 				text="Services"
 				alignment="left"
 			></PageHeader>
-			<div class="services-container">
-				<div class="services row">
-					<div
-						v-for="service in data.services"
-						:key="service.title"
-						class="col-6 col-md-3 col-sm-6 service"
-					>
-						<Icon classes="service.icon" :style="serviceIconStyle"></Icon>
-						<h6>{{ service.title }}</h6>
-						<p v-html="service.body"></p>
-					</div>
-					<div
-						v-for="testo in data.testimonials"
-						:key="testo.cite"
-						class="col-12 col-md-6 testimonial"
-					>
-						<div>
-							<blockquote>
-								<i class="fas fa-quote-left"></i>
-								<p v-html="testo.content"></p>
-								<cite v-html="testo.cite"></cite>
-							</blockquote>
-						</div>
+
+			<div class="row services-row">
+				<div
+					v-for="service in data.services"
+					:key="service.title"
+					class="col-12 col-sm-6 col-md-6 col-lg-3 service"
+				>
+					<!-- <div class="service"> -->
+					<div class="icon"><Icon :classes="service.icon" /></div>
+					<h6>{{ service.title }}</h6>
+					<p v-html="service.body"></p>
+					<!-- </div> -->
+				</div>
+				<div
+					v-for="testo in data.testimonials"
+					:key="testo.cite"
+					class="col-12 col-lg-6"
+				>
+					<div class="testimonial">
+						<blockquote>
+							<i class="fas fa-quote-left"></i>
+							<p v-html="testo.content"></p>
+							<cite v-html="testo.cite"></cite>
+							<span v-html="testo.citePosition" class="cite-info"></span>
+						</blockquote>
 					</div>
 				</div>
 			</div>
@@ -49,7 +51,7 @@
 				<div
 					v-for="(post, index) in posts"
 					:key="index"
-					class="col-lg-4 col-md-6 col-sm-12 post"
+					class="col-lg-4 col-md-6 col-sm-12"
 				>
 					<PostCard :post="post" />
 				</div>
@@ -91,7 +93,7 @@ export default {
 	data() {
 		return {
 			visible: false,
-			serviceIconStyle: { marginTop: "25%" },
+			serviceIconStyle: { marginTop: "2rem", marginBottom: "1rem" },
 			data: pageData.data,
 		}
 	},
@@ -122,31 +124,39 @@ export default {
 
 <style scoped lang="scss">
 @import "@/scss/_variables.scss";
-.profiles {
-	padding: 30px 0 0;
-}
-.services-container {
-	height: auto;
-}
-.services {
-	@media (min-width: 768px) {
-		padding: 45px 0;
-		position: relative;
-		display: flex;
-		height: 100%;
-	}
+.services-row {
+	align-items: center;
 
 	.service {
-		padding-right: 15px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-content: space-between;
 		text-align: center;
+		max-width: 22.5rem;
+		margin: 0 auto 2rem;
+		height: 100%;
+
+		&:nth-child(2) {
+			@media all and (max-width: $breakpoint-sm) {
+				padding-bottom: 2rem;
+			}
+
+			.icon {
+				@media all and (max-width: $breakpoint-sm) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.icon {
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+		}
 
 		h6 {
 			font-weight: 700;
 			font-family: inherit;
-			margin-top: 15px;
+			margin-top: 0;
 		}
 
 		span {
@@ -154,7 +164,7 @@ export default {
 		}
 
 		p {
-			margin-top: 5px;
+			margin-top: 0;
 			font-size: 0.875rem;
 			font-weight: 400;
 		}
@@ -167,74 +177,83 @@ export default {
 	.testimonial {
 		background-color: $bg-light-gray;
 		border-radius: 4px;
-		margin: 30px 30px 10px;
-		padding: 0 30px;
-		max-width: calc(100% - 60px);
+		padding: 0 1.875rem;
+		position: relative;
 
-		@media (min-width: 768px) {
-			margin: 0 15px 10px;
-			padding: 0 15px 10px 30px;
-			position: absolute;
-			max-width: calc(50% - 30px);
-			right: 0;
+		@media all and (max-width: $breakpoint-lg) {
+			max-width: 37.5rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media all and (min-width: $breakpoint-lg-min) {
+			margin-top: 3rem;
 		}
 
 		i {
 			position: absolute;
-			left: 20px;
-			top: 20px;
+			left: 1.25rem;
+			top: 1.25rem;
 
 			&::before,
 			&::after {
-				color: $color-primary-light;
-				font-size: 22px;
+				color: lighten($color-primary-med, 12%);
+				font-size: 1.375rem;
 			}
 		}
 
 		blockquote {
-			padding: 20px;
+			padding: 1.25rem;
 			box-sizing: border-box;
 			left: 0;
 			top: 0;
 
 			p {
-				font-size: 14px;
 				font-weight: 400;
 				margin-bottom: 0;
 				padding-bottom: 5px;
 			}
 
 			cite {
-				font-size: 14px;
+				margin-top: 0.5rem;
+				display: block;
+				text-align: right;
+				font-size: 1rem;
+				font-weight: 800;
+				color: lighten($color-primary-med, 5%);
+
+				&::before {
+					content: "– ";
+					display: inline-block;
+					padding-right: 3px;
+				}
+			}
+
+			.cite-info {
+				display: block;
+				text-align: right;
+				font-style: italic;
+				font-size: 0.9375rem;
 			}
 		}
 	}
 }
 .posts {
-	display: flex;
-	justify-content: space-between;
-	padding: 30px 15px 0;
+	padding-top: 3rem;
+
+	[class^="col-"] {
+		margin-bottom: 2rem;
+	}
 
 	.post {
-		flex-direction: column;
-		padding: 15px 15px;
-		max-width: calc(100% - 30px);
+		padding: 1.5rem;
 
 		@media all and (max-width: $breakpoint-sm) {
-			max-width: 100%;
-		}
-
-		@media (min-width: 768px) and (max-width: 991px) {
-			&:nth-of-type(even) {
-				padding-right: 0;
-			}
-			&:nth-of-type(odd) {
-				padding-left: 0;
-			}
+			padding: 0.9375rem;
 		}
 	}
 }
 .connect {
-	padding: 30px 15px 15px;
+	padding: 1.875rem 0.9375rem 0.9375rem;
 }
 </style>

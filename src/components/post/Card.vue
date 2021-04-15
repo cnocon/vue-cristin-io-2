@@ -4,7 +4,7 @@
 			name: 'post',
 			params: { slug: post.slug },
 		}"
-		class="post-link"
+		class="post"
 	>
 		<div class="post-header">
 			<div class="img-wrapper">
@@ -45,9 +45,9 @@ a {
 	padding: 15px;
 	border-radius: 4px;
 	box-shadow: $box-shadow-md;
-	background-image: $rainbow-gradient-dark;
+	background-image: $rainbow-gradient-light;
 	height: 100%;
-	background-size: 100% 2px;
+	background-size: 100% 3.5px;
 	background-position: top;
 	transition: all 0.3s ease;
 
@@ -64,14 +64,15 @@ a {
 
 .post-header {
 	overflow: hidden;
+	margin-top: 1rem;
 
 	.img-wrapper {
 		float: left;
 		position: relative;
-		height: 42px;
-		width: 42px;
+		height: 2.625rem;
+		width: 2.625rem;
 		border: 1px solid $color-primary;
-		margin: 3px 10px 3px 3px;
+		margin: 0.1875rem 0.625rem 3px 3px;
 		box-shadow: rgba($color-primary, 0.5) 0 1px 1px,
 			rgba($color-primary, 0.5) 0 -1px 1px, rgba($color-primary, 0.5) 1px 0 1px,
 			rgba($color-primary, 0.5) -1px 0 1px;
@@ -86,7 +87,7 @@ a {
 			top: 50%;
 			left: 50%;
 			max-width: 100%;
-			height: 30px;
+			height: 1.875rem;
 			transform: translate(-50%, -50%);
 		}
 	}
@@ -96,13 +97,12 @@ h6 {
 	text-transform: none;
 	font-family: $font-secondary;
 	margin-top: 0;
-	// width: calc(100% - 72px);
 
 	span {
-		display: inline-block;
 		font-weight: 800;
-		margin: 3px 0 0;
-		width: calc(100% - 72px);
+		max-width: calc(100% - 55px);
+		display: inline-block;
+		font-size: 1.125rem;
 	}
 }
 

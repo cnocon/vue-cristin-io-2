@@ -132,6 +132,13 @@ export default {
 	}
 
 	&.work-item {
+		&:first-of-type {
+			.year {
+				background-color: $color-primary;
+				color: $white;
+			}
+		}
+
 		.year {
 			display: none;
 
@@ -149,7 +156,8 @@ export default {
 				text-align: center;
 				font-family: $font-primary;
 				color: $white;
-				background-color: $color-primary;
+				background-color: $border-light-gray;
+				color: $color-primary;
 				border-radius: 50%;
 			}
 		}

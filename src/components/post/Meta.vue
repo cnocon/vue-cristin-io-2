@@ -52,7 +52,7 @@ export default {
 	font-size: 0.875rem;
 	line-height: 1.8em;
 	vertical-align: top;
-	border-radius: 0.25rem;
+	border-radius: 4px;
 	padding: 1px 0.5rem 0.125rem;
 	margin: 0 0.125rem;
 	font-weight: 800;

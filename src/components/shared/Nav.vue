@@ -1,19 +1,16 @@
 <template>
 	<nav id="nav">
 		<router-link :to="{ name: 'about' }"><span>Home</span></router-link>
-		<!-- <router-link :to="{ name: 'docs' }"><span>Docs</span></router-link> -->
-		<router-link :to="{ name: 'resume' }"
-			><span>Resumé & Courses</span></router-link
-		>
-		<router-link :to="{ name: 'portfolio' }"
-			><span>Portfolio</span></router-link
-		>
 		<router-link
 			:to="{ name: 'posts', query: { page: '1' } }"
 			:class="manualActiveClass"
 		>
 			<span>Blog</span>
 		</router-link>
+		<router-link :to="{ name: 'resume' }"><span>Resumé</span></router-link>
+		<router-link :to="{ name: 'portfolio' }"
+			><span>Portfolio</span></router-link
+		>
 	</nav>
 </template>
 
@@ -40,68 +37,62 @@ export default {
 	text-align: center;
 	color: $border-med-gray;
 
+	@media all and (max-width: $breakpoint-sm) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
 	a {
-		display: inline-block;
-		margin: 0 0.875rem 0.875rem !important;
+		margin: 0 0.875rem 0.9375rem;
 		text-decoration: none;
-		text-align: center;
 		background-image: none;
+
+		@media all and (max-width: $breakpoint-sm) {
+			flex-basis: calc(50% - 1.75rem);
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+		}
 
 		&:nth-of-type(3),
 		&:nth-of-type(4) {
 			@media all and (max-width: $breakpoint-sm) {
-				margin-bottom: 0.5rem !important;
+				margin-bottom: 0;
 			}
 		}
 
-		@media all and (max-width: $breakpoint-sm) {
-			margin-right: 0;
+		&.router-link-active {
+			span {
+				font-weight: 700;
+				border-radius: 4px;
+				color: $white;
+				box-shadow: $box-shadow-md;
+				background-color: $color-primary;
+			}
 		}
 
-		&:hover {
-			&.router-link-exact-active {
+		&:not(.router-link-active) {
+			&:hover {
 				span {
+					box-shadow: $box-shadow-md;
+					text-decoration: none;
+					color: $color-primary;
+					border: 1px solid transparent;
 					background-color: $white;
+					border: 1px solid $color-primary;
 				}
 			}
 		}
 
 		span {
-			display: inline-block;
-			color: $color-primary;
-			background-color: $white;
 			text-transform: uppercase;
-			font-weight: 900;
-			font-family: $font-secondary;
+			font-weight: 700;
 			box-shadow: $box-shadow-md-transparent;
-			text-align: center;
 			letter-spacing: 1px;
-			display: inline-block;
-			padding: 4px 7px;
+			padding: 0.25rem 0.4375rem;
 			border-radius: 4px;
-			transition: all 0.3s ease;
-			box-sizing: border-box;
-
-			@media all and (max-width: $breakpoint-md) {
-				font-size: 13px;
-				padding: 2px 5px;
-			}
-
-			&:hover {
-				box-shadow: $box-shadow-sm;
-				text-decoration: none;
-				color: $nav-text-hover;
-			}
-		}
-
-		&.router-link-exact-active {
-			span {
-				color: $black;
-				font-weight: 800;
-				text-decoration: none;
-				box-shadow: $box-shadow-md;
-				border-radius: 4px;
-			}
+			border: 1px solid transparent;
+			transition: box-shadow 0.3s ease;
 		}
 	}
 }

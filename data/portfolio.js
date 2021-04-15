@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const portfolio = [
   {
     "name": "GitHub Stats Card for React",

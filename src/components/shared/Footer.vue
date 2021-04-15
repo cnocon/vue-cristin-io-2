@@ -11,7 +11,10 @@
 					</p>
 					<p class="built-with-info">
 						Built using&nbsp;
-						<a href="https://v3.vuejs.org" rel="noopener noreferrer" target="_blank"
+						<a
+							href="https://v3.vuejs.org"
+							rel="noopener noreferrer"
+							target="_blank"
 							>Vue 3</a
 						>
 						and
