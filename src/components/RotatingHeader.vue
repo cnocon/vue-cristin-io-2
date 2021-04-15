@@ -54,13 +54,13 @@ export default {
 <style scoped lang="scss">
 @import "@/scss/_variables.scss";
 .rotate-header {
-	@media all and (max-width: $breakpoint-sm-min) {
+	@media all and (max-width: $breakpoint-sm) {
 		font-size: 18px;
 		line-height: 24px;
 	}
 
 	span {
-		@media all and (max-width: $breakpoint-sm-min) {
+		@media all and (max-width: $breakpoint-sm) {
 			min-width: 230px;
 
 			&.rotate-in {

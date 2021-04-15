@@ -55,7 +55,7 @@ h2.page-header {
 		box-sizing: content-box;
 		border-bottom: 3px solid $border-lightest-gray;
 
-		@media all and (max-width: $breakpoint-sm-min) {
+		@media all and (max-width: $breakpoint-sm) {
 			top: calc(50% + 4px);
 		}
 	}

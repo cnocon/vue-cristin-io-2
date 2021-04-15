@@ -67,7 +67,7 @@ export default {
 .portfolio-item h2 {
 	font-size: 2rem;
 
-	@media all and (max-width: $breakpoint-sm-min) {
+	@media all and (max-width: $breakpoint-sm) {
 		font-size: 1.65rem;
 		line-height: 1.35;
 	}
@@ -76,7 +76,7 @@ export default {
 .portfolio-item .links {
 	text-align: center;
 
-	@media all and (max-width: $breakpoint-sm-min) {
+	@media all and (max-width: $breakpoint-sm) {
 		text-align: left;
 	}
 }

@@ -42,26 +42,22 @@ export default {
 	vertical-align: middle;
 	color: hsl(194, 10%, 70%);
 
-	@media all and (max-width: $breakpoint-sm-min) {
+	@media all and (max-width: $breakpoint-sm) {
 		margin-bottom: 0.75rem;
 	}
 }
 
 .posted-in b,
 .posted-on time {
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 	line-height: 1.8em;
+	vertical-align: top;
 	border-radius: 0.25rem;
-	padding: 1px 0.5rem;
-	margin: 0 2px;
+	padding: 1px 0.5rem 0.125rem;
+	margin: 0 0.125rem;
 	font-weight: 800;
 	letter-spacing: 1px;
 	color: $color-primary;
-
-	@media all and (max-width: $breakpoint-sm-min) {
-		line-height: 1.675rem;
-		font-size: 0.6875rem;
-	}
 }
 
 .posted-in {
@@ -73,18 +69,28 @@ export default {
 		color: $white;
 		font-family: $font-primary;
 		font-weight: 700;
+
+		@media all and (max-width: $breakpoint-sm) {
+			font-size: 0.8125rem;
+		}
 	}
 }
 
 .posted-on {
 	display: block;
 	text-align: center;
+	margin-bottom: 10px;
 
 	time {
 		text-transform: uppercase;
 		border: 0;
 		margin-left: 0;
 		padding-left: 0.25rem;
+		font-size: 1.125rem;
+
+		@media all and (max-width: $breakpoint-sm) {
+			font-size: 1rem;
+		}
 	}
 }
 </style>

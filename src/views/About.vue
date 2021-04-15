@@ -220,7 +220,7 @@ export default {
 		padding: 15px 15px;
 		max-width: calc(100% - 30px);
 
-		@media all and (max-width: $breakpoint-sm-min) {
+		@media all and (max-width: $breakpoint-sm) {
 			max-width: 100%;
 		}
 
