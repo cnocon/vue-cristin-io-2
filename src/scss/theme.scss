@@ -297,7 +297,9 @@ ul {
     font-size: 22px;
   }
 
-  .tagline {
+  .tagline,
+  .pullquote,
+  .pull-quote {
     margin: 1rem auto 0.75rem;
     padding: 0 0.5rem;
     max-width: 50%;
@@ -309,7 +311,9 @@ ul {
       float: none;
     }
 
-    &.float-left {
+    &.float-left,
+    &.pull-left,
+    &.align-left {
       float: left;
 
       @media all and (max-width: $breakpoint-sm) {
@@ -326,7 +330,6 @@ ul {
       font-weight: 600;
       line-height: 1.25em;
       border-left: 7.5px solid lighten($color-primary-med, 12%);
-      // text-transform: uppercase;
 
       em {
         font-style: normal;
@@ -590,8 +593,8 @@ pre.prettyprint {
   border-radius: 3px !important;
 }
 code {
-  background-color: lighten($black, 20%);
-  color: $white;
+  background-color: lighten($black, 81.75%);
+  color: darken($color-primary, 10%);
   padding: 3px 6px;
   border-radius: 4px;
   font-weight: 400;
