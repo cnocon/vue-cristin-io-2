@@ -197,8 +197,16 @@ ul {
   margin: 0.9375rem 0 0.3125rem;
   padding: 0 0 0 2.8125rem;
 
+  @media all and (max-width: $breakpoint-sm) {
+    padding-left: 1.25rem;
+  }
+
   li {
     margin-bottom: 0.625rem;
+
+    @media all and (max-width: $breakpoint-sm) {
+      padding-left: 0.25rem;
+    }
   }
 
   &.circle {
@@ -588,15 +596,21 @@ ul {
 .mt-15 {
   margin-top: 15px !important;
 }
-pre.prettyprint {
-  margin: 1.5rem auto !important;
-  border-radius: 3px !important;
+.snippet {
+  overflow-x: scroll;
+  max-width: 100%;
+
+  pre.prettyprint {
+    border-radius: 4px !important;
+    min-width: 500px;
+    margin: 1.5rem auto !important;
+  }
 }
 code {
-  background-color: lighten($black, 81.75%);
-  color: darken($color-primary, 10%);
-  padding: 3px 6px;
+  background-color: lighten($yellow, 15%);
+  color: #000;
+  padding: 0px 4px;
   border-radius: 4px;
-  font-weight: 400;
-  font-family: Menlo, Monaco, monospace;
+  font-weight: 500;
+  font-family: 'Fira Code', Menlo, Monaco, monospace;
 }
