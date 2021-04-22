@@ -156,12 +156,12 @@ const resume = {
       "year": 2021,
       "startDate": "April 21, 2021",
       "endDate": null,
-      "position": "Judge",
+      "position": "Mentor",
       "company": "WomenTechCouncil",
       "location": "Lehi, UT",
       "positionDetail": "SheTech Summit",
       "descList": [
-        "Serve as a judge in an industry-centered, hands-on interactive STEM competition held across the country for 9th through 12th grade high school girls"
+        "Provided mentorship to participants in an industry-centered, hands-on interactive STEM competition held across the country for 9th through 12th grade high school girls"
       ],
       "awards": [],
     }
