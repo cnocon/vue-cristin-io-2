@@ -37,8 +37,8 @@
       </li>
       <li class="nav-item">
         <nuxt-link
-          :active="isActive('blog')"
-          :to="{ name: 'blog', query: { page: 1 } }"
+          :active="isActive('blog-page')"
+          :to="{ name: 'blog-page', params: { slug: 'blog-page', page: 1 } }"
           class="rounded nav-link"
           >Blog</nuxt-link
         >
@@ -100,8 +100,11 @@
           </li>
           <li class="nav-item" role="presentation">
             <nuxt-link
-              to="/blog"
-              :active="isActive('blog')"
+              :to="{
+                name: 'blog-page',
+                params: { slug: 'blog-page', page: 1 },
+              }"
+              :active="isActive('blog-page')"
               class="dropdown-item"
               role="menuitem"
               >Blog</nuxt-link

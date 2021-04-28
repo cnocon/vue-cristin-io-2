@@ -18,20 +18,18 @@
     ></PostList>
 
     <PrevNext
-      name="blog"
+      name="blog-page"
       :prev="
         page - 1 >= 1
           ? {
-              params: { slug: 'blog' },
-              query: { page: page - 1 },
+              params: { slug: 'blog-page', page: page - 1 },
             }
           : null
       "
       :next="
         page + 1 <= Math.ceil(postsCount / limit)
           ? {
-              params: { slug: 'blog' },
-              query: { page: page + 1 },
+              params: { slug: 'blog-page', page: page + 1 },
             }
           : null
       "
@@ -54,11 +52,11 @@ export default {
     PostList,
     Breadcrumbs,
   },
-  async asyncData({ $content, query }) {
+  async asyncData({ $content, query, params }) {
     // eslint-disable-next-line no-console
-    console.log(parseInt(query.page))
+    const page = parseInt(params.page) || 1
     // eslint-disable-next-line prettier/prettier
-    const page = parseInt(query.page) || 1
+    // const page = parseInt(query.page) || 1
     const limit = 4
     const posts = await $content('articles').sortBy('date', 'desc').fetch()
     const postsCount = posts.length
@@ -70,7 +68,7 @@ export default {
       },
       {
         text: 'Blog',
-        href: '/blog?page=1',
+        href: '/blog/1',
       },
       {
         text: `Page ${page}`,
@@ -90,7 +88,7 @@ export default {
       breadcrumbs,
     }
   },
-  watchQuery: ['page'],
+  watchParams: ['page'],
 }
 </script>
 
