@@ -1,15 +1,15 @@
 <template>
   <div class="blog-index-page">
     <Breadcrumbs :crumbs="breadcrumbs" />
-    <h1 class="mb-0">Blog</h1>
+    <h1 class="mt-0">Recent Articles</h1>
     <SectionHeader
       v-if="page"
-      :text="'Page ' + page + ' of ' + lastPage"
+      :text="'Showing Page ' + page + ' of ' + lastPage"
       alignment="center"
-      header-classes="mb-5"
+      header-classes="mb-5 mt-3"
     >
       <template #section-header-icon>
-        <font-awesome-icon :icon="['fal', 'rss']"></font-awesome-icon>
+        <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>
       </template>
     </SectionHeader>
     <PostList
@@ -42,7 +42,7 @@ import PostList from '@/components/PostList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import PrevNext from '@/components/PrevNext'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faRss } from '@fortawesome/pro-light-svg-icons'
+import { faRss } from '@fortawesome/pro-solid-svg-icons'
 
 library.add(faRss)
 
@@ -53,10 +53,7 @@ export default {
     Breadcrumbs,
   },
   async asyncData({ $content, query, params }) {
-    // eslint-disable-next-line no-console
     const page = parseInt(params.page) || 1
-    // eslint-disable-next-line prettier/prettier
-    // const page = parseInt(query.page) || 1
     const limit = 4
     const posts = await $content('articles').sortBy('date', 'desc').fetch()
     const postsCount = posts.length

@@ -11,7 +11,7 @@
       header-icon-type="fab"
       header-icon="github"
       header-alignment="center"
-      header-classes="mb-1"
+      header-classes="mb-4 mt-3"
       section-classes="mb-5"
     >
       <PortfolioItem
@@ -59,7 +59,7 @@
       header-icon-type="fad"
       header-icon="clipboard-list-check"
       header-alignment="center"
-      header-classes="mb-1"
+      header-classes="mb-4 mt-3"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -96,7 +96,7 @@
       header-icon-type="fal"
       header-icon="thunderstorm-moon"
       header-alignment="center"
-      header-classes="mb-1"
+      header-classes="mb-4 mt-3"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -131,7 +131,7 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="mb-1"
+      header-classes="mb-4 mt-3"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -165,7 +165,7 @@
       header-icon-type="fab"
       header-icon="youtube"
       header-alignment="center"
-      header-classes="mb-1"
+      header-classes="mb-4 mt-3"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -193,7 +193,7 @@
       header-icon-type="fal"
       header-icon="briefcase"
       header-alignment="center"
-      header-classes="mb-1"
+      header-classes="mb-4 mt-3"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -233,7 +233,7 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="mb-1"
+      header-classes="mb-4 mt-3"
       section-classes="pb-5"
     >
       <PortfolioItem

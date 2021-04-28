@@ -19,19 +19,19 @@
       </Section>
 
       <Section
-        header-icon-type="fal"
+        header-icon-type="far"
         header-icon="concierge-bell"
         header-text="Services"
         header-alignment="left"
       >
         <div class="row d-flex align-items-center">
           <div class="col-sm-6 col-lg-3 text-center mb-5">
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <!-- <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
               <font-awesome-icon
                 :icon="['fal', 'code']"
                 size="2x"
               ></font-awesome-icon>
-            </div>
+            </div> -->
             <h4>WEB DEVELOPMENT</h4>
             <p>
               This is my primary area of expertise after 10+ years in the field.
@@ -40,12 +40,12 @@
             </p>
           </div>
           <div class="col-sm-6 col-lg-3 text-center mb-5">
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <!-- <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
               <font-awesome-icon
                 :icon="['fal', 'graduation-cap']"
                 size="2x"
               ></font-awesome-icon>
-            </div>
+            </div> -->
             <h4>CODE TUTORING</h4>
             <p>
               I focus on teaching with compassion and work with all ages.
@@ -214,8 +214,8 @@ import RotatingHeader from '@/components/RotatingHeader'
 import Section from '@/components/Section'
 import PostList from '@/components/PostList'
 import { library } from '@fortawesome/fontawesome-svg-core'
-// import {  } from '@fortawesome/pro-regular-svg-icons'
-import { faHandshake, faUserAstronaut, faEnvelope, faHashtag, faCode, faGraduationCap, faConciergeBell, faRss } from '@fortawesome/pro-light-svg-icons'
+import { faConciergeBell } from '@fortawesome/pro-regular-svg-icons'
+import { faHandshake, faUserAstronaut, faEnvelope, faHashtag, faCode, faGraduationCap, faRss } from '@fortawesome/pro-light-svg-icons'
 // import {  } from '@fortawesome/pro-duotone-svg-icons'
 // import {  } from '@fortawesome/pro-solid-svg-icons'
 import { faLinkedinIn, faStackOverflow, faCodepen, faGithub } from '@fortawesome/free-brands-svg-icons'

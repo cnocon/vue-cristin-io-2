@@ -1,7 +1,7 @@
 ---
 title: Perilous Confusion and the Opportunity for Growth
 date: 2020-09-09T13:58:00Z
-summary: To make the most (or anything at all) of the beautiful gift of confusion, you must be able to step back a bit and transform your doubts into productive thoughts. Instead of letting panic and self-doubt creep in, instead, try thinking, "Hm, this is new. I want to understand it." You'll likely feel calmer and be able to think clearly,  which means you can start learning rather than beating up on yourself to no end.
+summary: To make the most (or anything at all) of the beautiful gift of confusion, you must be able to step back a bit and transform your doubts into productive thoughts. Instead of letting panic and self-doubt creep in, try to start learning.
 img: mental-health-sm.png
 alt: Heart and Mind
 categories: [{name: Soft Skills, slug: soft-skills}, {name: Personal Growth, slug: personal-growth}]

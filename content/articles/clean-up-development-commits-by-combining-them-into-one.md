@@ -1,6 +1,6 @@
 ---
 title: Clean Up Developments Commits By Combining Them Into One
-summary: This post demonstrates how you can cleanup your commit history on a local branch prior to merging it into another branch (e.g. 'master'). Keeping frequent commits throughout your development process on a local branch can be very helpful for works-in-progress, but long, detailed histories that were meant to aid in...
+summary: This post demonstrates how you can clean up your commit history on a local branch prior to merging it into another branch. Often times the frequent commits we keep when develping on our local branches are rushed and or ill-thought out.
 date: 2020-07-19T17:42:00Z
 img: git-sm.png
 alt: Git
