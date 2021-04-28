@@ -17,7 +17,7 @@ export default {
     },
     image: {
       type: String,
-      default: `https://nuxt-cristin-io.netlify.app/person-on-laptop.jpeg`,
+      default: `https://nuxt.cristin.io/person-on-laptop.jpeg`,
     },
   },
   head() {
@@ -68,6 +68,11 @@ export default {
           hid: 'og:image:alt',
           property: 'og:image:alt',
           content: this.title,
+        },
+        {
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          content: 'summary',
         },
       ],
     }
