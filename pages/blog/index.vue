@@ -68,7 +68,7 @@ export default {
       },
       {
         text: 'Blog',
-        href: '/blog?page=1',
+        href: '/blog',
       },
       {
         text: `Page ${page}`,
