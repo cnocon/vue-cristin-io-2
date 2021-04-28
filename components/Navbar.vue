@@ -44,34 +44,99 @@
         >
       </li>
 
-      <b-nav-item-dropdown id="my-nav-dropdown" text="Menu" right>
+      <li
+        id="navbarDropdown"
+        :class="showMenu ? 'nav-item dropdown show' : 'nav-item dropdown'"
+        @click.stop.prevent="toggleMenu"
+      >
+        <a
+          id="navbarDropdown"
+          href="#dropdownMenu"
+          role="button"
+          :aria-expanded="showMenu"
+          aria-haspopup="true"
+          :class="
+            showMenu
+              ? 'show nav-link dropdown-toggle'
+              : 'nav-link dropdown-toggle'
+          "
+          target="_self"
+          data-bs-toggle="dropdown"
+        >
+          <font-awesome-icon
+            v-if="showMenu"
+            :icon="['fas', 'times']"
+          ></font-awesome-icon>
+          <font-awesome-icon v-else :icon="['fas', 'bars']"></font-awesome-icon>
+        </a>
+
+        <ul
+          v-show="showMenu"
+          id="dropdownMenu"
+          :class="
+            showMenu
+              ? 'dropdown-menu dropdown-menu-right show'
+              : 'dropdown-menu dropdown-menu-right'
+          "
+          aria-labelledby="#navbarDropdown"
+        >
+          <li class="nav-item" role="presentation">
+            <nuxt-link
+              to="/resume"
+              :active="isActive('resume')"
+              class="dropdown-item"
+              role="menuitem"
+              >Résumé</nuxt-link
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <nuxt-link
+              to="/portfolio"
+              :active="isActive('portfolio')"
+              class="dropdown-item"
+              role="menuitem"
+              >Portfolio</nuxt-link
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <nuxt-link
+              to="/blog"
+              :active="isActive('blog')"
+              class="dropdown-item"
+              role="menuitem"
+              >Blog</nuxt-link
+            >
+          </li>
+        </ul>
+      </li>
+
+      <!-- <b-nav-item-dropdown id="my-nav-dropdown" text="Menu" right>
         <template slot="button-content">
           <font-awesome-icon :icon="['fas', 'bars']"></font-awesome-icon>
         </template>
-        <b-dropdown-item :active="isActive('index')" to="/"
-          >Home</b-dropdown-item
-        >
-        <b-dropdown-item :active="isActive('resume')" to="/resume"
-          >Résumé</b-dropdown-item
-        >
         <b-dropdown-item :active="isActive('portfolio')" to="/portfolio"
           >Portfolio</b-dropdown-item
         >
         <b-dropdown-item :active="isActive('blog')" to="/blog"
           >Blog</b-dropdown-item
         >
-      </b-nav-item-dropdown>
+      </b-nav-item-dropdown> -->
     </ul>
   </div>
 </template>
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHomeLgAlt, faBars } from '@fortawesome/pro-solid-svg-icons'
+import { faHomeLgAlt, faBars, faTimes } from '@fortawesome/pro-solid-svg-icons'
 
-library.add(faHomeLgAlt, faBars)
+library.add(faHomeLgAlt, faBars, faTimes)
 
 export default {
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
   methods: {
     isActive(path) {
       if (path === 'blog') {
@@ -83,11 +148,33 @@ export default {
         return this.$route.name === path
       }
     },
+    toggleMenu() {
+      this.showMenu = !this.showMenu
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.nav {
+  .dropdown-menu.dropdown-menu-right {
+    &.show {
+      position: absolute;
+      left: auto;
+    }
+  }
+
+  .nav-item:not(.dropdown) {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .show .nav-item:not(.dropdown) {
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}
 .navbar-inner {
   &.container {
     display: flex;
@@ -156,12 +243,8 @@ export default {
     }
   }
 }
-.nav-item:not(#my-nav-dropdown) {
-  @include media-breakpoint-down(sm) {
-    display: none !important;
-  }
-}
-#my-nav-dropdown {
+// #my-nav-dropdown,
+.dropdown-toggle {
   right: -1rem;
 
   @include media-breakpoint-up(md) {

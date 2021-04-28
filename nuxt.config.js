@@ -70,7 +70,7 @@ export default {
   },
 
   bootstrapVue: {
-    bootstrapCSS: false,
+    bootstrapCSS: true,
     bootstrapVueCSS: false,
     icons: false,
   },

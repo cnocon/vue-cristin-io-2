@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .pull-quote {
   border-left: 10px solid $color-primary-med;
   padding-left: 1.25rem;

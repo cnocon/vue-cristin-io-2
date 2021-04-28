@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .quote {
   padding: 2rem;
   border-radius: 4px;
