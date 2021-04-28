@@ -6,7 +6,7 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   // target: 'server',
-  target: 'server',
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -95,6 +95,5 @@ export default {
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
   generate: {
     fallback: true,
-    routes: ['/blog?page=1', '/blog?page=2', '/blog?page=3'],
   },
 }
