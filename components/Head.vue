@@ -17,7 +17,7 @@ export default {
     },
     image: {
       type: String,
-      default: 'https://nuxt-cristin-io.netlify.app/person-on-laptop.jpeg',
+      default: `https://nuxt-cristin-io.netlify.app/person-on-laptop.jpeg`,
     },
   },
   head() {
