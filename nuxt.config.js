@@ -21,6 +21,10 @@ export default {
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
       },
       {
+        name: 'twitter:card',
+        content: 'summary',
+      },
+      {
         hid: 'description',
         name: 'description',
         content: `Front End Software Engineer Cristin O'Connor's portfolio, blog and résumé site`,
@@ -101,5 +105,6 @@ export default {
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
   generate: {
     fallback: true,
+    subFolders: true,
   },
 }
