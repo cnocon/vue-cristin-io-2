@@ -51,7 +51,7 @@
 
         <b-nav-item-dropdown id="my-nav-dropdown" text="Menu" right>
           <template slot="button-content">
-            <BIconList class="py-0" />
+            <font-awesome-icon :icon="['fas', 'bars']"></font-awesome-icon>
           </template>
           <b-dropdown-item :active="isActive('index')" to="/"
             >Home</b-dropdown-item
@@ -75,16 +75,12 @@
 </template>
 
 <script>
-import { BIconList } from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHomeLgAlt } from '@fortawesome/pro-solid-svg-icons'
+import { faHomeLgAlt, faBars } from '@fortawesome/pro-solid-svg-icons'
 
-library.add(faHomeLgAlt)
+library.add(faHomeLgAlt, faBars)
 
 export default {
-  components: {
-    BIconList,
-  },
   methods: {
     isActive(path) {
       if (path === 'blog') {

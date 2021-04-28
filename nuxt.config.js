@@ -6,7 +6,7 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   // target: 'server',
-  target: 'server',
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -62,12 +62,10 @@ export default {
       Oswald: [300, 400, 500, 600, 700],
       Lato: [300, 400, 700, 900],
       'Open+Sans': [300, 400, 500, 600, 700, 800, 900],
-      'Source+Code+Pro': [200, 300, 400, 500, 600, 700, 900],
     },
   },
 
   bootstrapVue: {
-    icons: true,
     bootstrapCSS: false,
     bootstrapVueCSS: false,
   },
