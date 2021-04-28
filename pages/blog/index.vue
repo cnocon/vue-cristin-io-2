@@ -55,6 +55,8 @@ export default {
     Breadcrumbs,
   },
   async asyncData({ $content, query }) {
+    // eslint-disable-next-line no-console
+    console.log(parseInt(query.page))
     // eslint-disable-next-line prettier/prettier
     const page = parseInt(query.page) || 1
     const limit = 4
@@ -68,7 +70,7 @@ export default {
       },
       {
         text: 'Blog',
-        href: '/blog',
+        href: '/blog?page=1',
       },
       {
         text: `Page ${page}`,
