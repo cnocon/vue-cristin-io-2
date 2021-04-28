@@ -12,7 +12,7 @@
           query: prev.query || null,
         }"
       >
-        <BIconChevronLeft />
+        <font-awesome-icon :icon="['far', 'chevron-left']"></font-awesome-icon>
         Prev
       </nuxt-link>
       <span v-if="prev.title">{{ prev.title }}</span>
@@ -29,7 +29,7 @@
         }"
       >
         Next
-        <BIconChevronRight />
+        <font-awesome-icon :icon="['far', 'chevron-right']"></font-awesome-icon>
       </nuxt-link>
       <span v-if="next.title">{{ next.title }}</span>
     </div>
@@ -39,13 +39,15 @@
 
 <script>
 // eslint-disable-next-line import/named
-import { BIconChevronLeft, BIconChevronRight } from 'bootstrap-vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/pro-regular-svg-icons'
+
+library.add(faChevronLeft, faChevronRight)
 
 export default {
-  components: {
-    BIconChevronLeft,
-    BIconChevronRight,
-  },
   props: {
     name: {
       type: String,

@@ -51,7 +51,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    // 'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
@@ -69,11 +69,11 @@ export default {
     },
   },
 
-  bootstrapVue: {
-    bootstrapCSS: true,
-    bootstrapVueCSS: false,
-    icons: false,
-  },
+  // bootstrapVue: {
+  //   bootstrapCSS: false,
+  //   bootstrapVueCSS: false,
+  //   icons: false,
+  // },
 
   styleResources: {
     scss: '@/assets/scss/main.scss',
