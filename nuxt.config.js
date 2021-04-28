@@ -6,7 +6,7 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   // target: 'server',
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -80,8 +80,8 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    nestedProperties: ['categories.slug'],
-    fullTextSearchFields: ['title', 'summary'],
+    // nestedProperties: ['categories.slug'],
+    // fullTextSearchFields: ['title', 'summary'],
     markdown: {
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
@@ -95,5 +95,6 @@ export default {
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
   generate: {
     fallback: true,
+    routes: ['/blog?page=1', '/blog?page=2', '/blog?page=3'],
   },
 }
