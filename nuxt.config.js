@@ -16,7 +16,10 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+      },
       {
         hid: 'description',
         name: 'description',
@@ -26,8 +29,8 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/scss/main.scss'],
+  // // Global CSS: https://go.nuxtjs.dev/config-css
+  // css: ['@/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -69,6 +72,7 @@ export default {
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false,
+    icons: false,
   },
 
   styleResources: {
@@ -90,7 +94,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    // analyze: true,
+  },
 
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
   generate: {

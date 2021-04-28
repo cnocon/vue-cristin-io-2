@@ -5,7 +5,7 @@
         <h1 class="mb-2">{{ post.title }}</h1>
         <div class="meta text-center mb-2">
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-          <nuxt-link
+          <!-- <nuxt-link
             v-for="(cat, index) in post.categories"
             :key="cat + '-' + index"
             :to="{
@@ -16,7 +16,13 @@
             class="badge badge-dark"
           >
             {{ cat.name }}
-          </nuxt-link>
+          </nuxt-link> -->
+          <span
+            v-for="(cat, index) in post.categories"
+            :key="cat + '-' + index"
+            class="badge badge-dark"
+            >{{ cat.name }}</span
+          >
         </div>
       </header>
       <div v-if="post.toc.length > 0" class="row toc-row mb-5">

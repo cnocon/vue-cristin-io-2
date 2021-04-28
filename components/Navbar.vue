@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-inner container">
-    <b-navbar-brand to="/">
+    <nuxt-link to="/" class="navbar-brand">
       <img
         :src="require(`~/assets/images/square-portrait.png`)"
         alt="Cristin O'Connor"
@@ -11,66 +11,57 @@
         <div class="name">Cristin O'Connor</div>
         <div class="title">Front End Engineer</div>
       </div>
-    </b-navbar-brand>
+    </nuxt-link>
 
     <div class="name-and-title-mobile">
       <div class="name">Cristin O'Connor</div>
       <div class="title">Front End Engineer</div>
     </div>
 
-    <b-navbar-nav class="ml-0">
-      <b-nav>
-        <b-nav-item
+    <ul class="nav ml-0">
+      <li class="nav-item">
+        <nuxt-link
           :active="isActive('resume')"
           to="/resume"
-          link-classes="rounded"
+          class="rounded nav-link"
+          >Résumé</nuxt-link
         >
-          Résumé
-        </b-nav-item>
-        <b-nav-item
+      </li>
+      <li class="nav-item">
+        <nuxt-link
           :active="isActive('portfolio')"
           to="/portfolio"
-          link-classes="rounded"
+          class="rounded nav-link"
+          >Portfolio</nuxt-link
         >
-          Portfolio
-        </b-nav-item>
-        <b-nav-item
+      </li>
+      <li class="nav-item">
+        <nuxt-link
           :active="isActive('blog')"
           :to="{ name: 'blog', query: { page: 1 } }"
-          link-classes="rounded"
+          class="rounded nav-link"
+          >Blog</nuxt-link
         >
-          Blog
-        </b-nav-item>
-        <b-nav-item
-          :active="isActive('contact')"
-          to="/contact"
-          link-classes="rounded"
-        >
-          Contact
-        </b-nav-item>
+      </li>
 
-        <b-nav-item-dropdown id="my-nav-dropdown" text="Menu" right>
-          <template slot="button-content">
-            <font-awesome-icon :icon="['fas', 'bars']"></font-awesome-icon>
-          </template>
-          <b-dropdown-item :active="isActive('index')" to="/"
-            >Home</b-dropdown-item
-          >
-          <b-dropdown-item :active="isActive('resume')" to="/resume"
-            >Résumé</b-dropdown-item
-          >
-          <b-dropdown-item :active="isActive('portfolio')" to="/portfolio"
-            >Portfolio</b-dropdown-item
-          >
-          <b-dropdown-item :active="isActive('blog')" to="/blog"
-            >Blog</b-dropdown-item
-          >
-          <b-dropdown-item :active="isActive('contact')" to="/contact"
-            >Contact</b-dropdown-item
-          >
-        </b-nav-item-dropdown>
-      </b-nav>
-    </b-navbar-nav>
+      <b-nav-item-dropdown id="my-nav-dropdown" text="Menu" right>
+        <template slot="button-content">
+          <font-awesome-icon :icon="['fas', 'bars']"></font-awesome-icon>
+        </template>
+        <b-dropdown-item :active="isActive('index')" to="/"
+          >Home</b-dropdown-item
+        >
+        <b-dropdown-item :active="isActive('resume')" to="/resume"
+          >Résumé</b-dropdown-item
+        >
+        <b-dropdown-item :active="isActive('portfolio')" to="/portfolio"
+          >Portfolio</b-dropdown-item
+        >
+        <b-dropdown-item :active="isActive('blog')" to="/blog"
+          >Blog</b-dropdown-item
+        >
+      </b-nav-item-dropdown>
+    </ul>
   </div>
 </template>
 
@@ -177,8 +168,9 @@ export default {
     display: none;
   }
 }
-.navbar-nav {
+.nav {
   margin-right: 0.9375rem;
+  justify-content: space-between;
 
   @include media-breakpoint-up(md) {
     min-width: 325px;
@@ -187,34 +179,7 @@ export default {
     width: 100%;
     flex-direction: row;
     align-items: center;
-  }
-
-  .dropdown-toggle {
-    // margin-right: -1rem;
-    font-size: 150%;
-    padding: 0.125rem 0.5rem !important;
-
-    &::after {
-      display: none;
-    }
-  }
-  .dropdown-menu.show {
-    left: 0.25rem;
-  }
-
-  .nav-item {
-    .nav-link {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-}
-.nav {
-  justify-content: space-between;
-
-  @include media-breakpoint-up(md) {
     margin-left: 0;
-    justify-content: center;
   }
 
   .nav-link {
@@ -234,6 +199,26 @@ export default {
     }
     &.dropdown-toggle {
       font-size: 150%;
+    }
+  }
+
+  .dropdown-toggle {
+    // margin-right: -1rem;
+    font-size: 150%;
+    padding: 0.125rem 0.5rem !important;
+
+    &::after {
+      display: none;
+    }
+  }
+  .dropdown-menu.show {
+    left: 0.25rem;
+  }
+
+  .nav-item {
+    .nav-link {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 }

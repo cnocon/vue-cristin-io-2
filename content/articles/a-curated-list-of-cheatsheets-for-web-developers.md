@@ -2,7 +2,7 @@
 title: A Curated List of Cheatsheets for Web Developers
 summary: As a tribute to my young, homework-nerd self, I've compiled a list of some of the best cheat sheets I could find for web development purposes (although admittedly I favored the things I just happen to need sometimes). If we're being honest, there's simply too much to know by memory, so having a list like this could be handy.
 date: 2020-11-15T21:38:00Z
-img: person-on-laptop.png
+img: default-sm.png
 alt: Woman on a Laptop
 categories: [{name: Reference, slug: reference}, {name: Docs, slug: docs}]
 ---

@@ -19,7 +19,7 @@
         demo-link="https://react-github-stats-card-v2-demo.netlify.app"
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
         npm-link="https://www.npmjs.com/package/react-github-stats-card-v2"
-        screenshot="https://github.com/cnocon/react-github-stats-card-v2/raw/master/stat-card-preview.png"
+        :screenshot="require('/assets/images/stat-card-preview.jpg')"
         :technologies="[
           { name: 'GitHub API', link: 'https://docs.github.com/en/rest' },
           {
@@ -66,7 +66,9 @@
         title="Front End Development Flash Cards App"
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
-        screenshot="https://github.com/cnocon/flash-cards/raw/master/flashcards-app-screenshot-white.png"
+        :screenshot="
+          require('/assets/images/flashcards-app-screenshot-white.jpg')
+        "
         :technologies="[
           { name: 'MongoDB (custom API)', link: 'https://www.mongodb.com/' },
           { name: 'Mongoose (custom API)', link: 'https://mongoosejs.com/' },
@@ -101,7 +103,7 @@
         title="Weather Charts/Forecast App"
         demo-link="https://weather-charts-app.netlify.app"
         git-hub-link="https://github.com/cnocon/weather-charts-app-new"
-        screenshot="https://github.com/cnocon/weather-charts-app-new/raw/master/weather-app-screenshot.png"
+        :screenshot="require('/assets/images/weather-app-screenshot.jpg')"
         :technologies="[
           { name: 'React', link: 'https://reactjs.org/' },
           { name: 'Redux', link: 'https://redux.js.org/' },
@@ -136,7 +138,7 @@
         title="CRISTIN.IO (this website)"
         demo-link="https://cristin.io"
         git-hub-link="https://github.com/cnocon/nuxt-cristin-io"
-        screenshot="https://github.com/cnocon/vue-cristin-io-2/raw/master/cristin-io.png"
+        :screenshot="require('/assets/images/cristin-io.jpg')"
         :technologies="[
           { name: 'Vue', link: 'https://vuejs.org/' },
           { name: 'Nuxt', link: 'https://nuxtjs.org/' },
@@ -170,7 +172,7 @@
         title="YouTube Search App"
         demo-link="https://youtube-search-new.netlify.app"
         git-hub-link="https://github.com/cnocon/youtube-search-new"
-        screenshot="https://github.com/cnocon/youtube-search-new/raw/master/youtube-app-screenshot.png"
+        :screenshot="require('/assets/images/youtube-app-screenshot.jpg')"
         :technologies="[
           {
             name: 'YouTube API V3',
@@ -197,7 +199,7 @@
       <PortfolioItem
         title="CenturyLink Small Business Site"
         demo-link="https://business.centurylink.com/"
-        screenshot="https://www.dropbox.com/s/qt4ieh7flxadcij/clq.png?raw=1"
+        :screenshot="require('/assets/images/clq.jpg')"
         :technologies="[
           { name: 'Component-based architecture', link: null },
           {

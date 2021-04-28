@@ -2,7 +2,7 @@
 title: Search Git History for Certain Words and Phrases
 summary: Finding your work in a long history of commits can be difficult. These commands help search your git reflog or log history for exactly what you need, whether your search term(s) are a word or phrase...
 date: 2020-05-26T22:30:00Z
-img: git.png
+img: git-sm.png
 alt: git
 categories: [{name: Git, slug: git}, {name: Workflow, slug: workflow}]
 ---

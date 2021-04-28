@@ -1,7 +1,7 @@
 <template>
   <div class="resume-page">
     <Breadcrumbs :crumbs="breadcrumbs" />
-    <h1>Résumé & Courses</h1>
+    <h1 class="mt-0">Résumé & Courses</h1>
   </div>
 </template>
 

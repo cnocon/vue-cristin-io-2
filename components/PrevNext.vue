@@ -4,8 +4,8 @@
       v-if="prev"
       :class="next ? 'col-6 btn-col prev' : 'full-width col-6 btn-col prev'"
     >
-      <b-button
-        variant="outline-primary"
+      <nuxt-link
+        class="btn btn-outline-primary"
         :to="{
           name: name,
           params: prev.params || null,
@@ -14,14 +14,14 @@
       >
         <BIconChevronLeft />
         Prev
-      </b-button>
+      </nuxt-link>
       <span v-if="prev.title">{{ prev.title }}</span>
     </div>
     <div v-else class="col-6 empty-prev"></div>
 
     <div v-if="next" class="col-6 btn-col next">
-      <b-button
-        variant="outline-primary"
+      <nuxt-link
+        class="btn btn-outline-primary"
         :to="{
           name: name,
           params: next.params || null,
@@ -30,7 +30,7 @@
       >
         Next
         <BIconChevronRight />
-      </b-button>
+      </nuxt-link>
       <span v-if="next.title">{{ next.title }}</span>
     </div>
     <div v-else class="col-md-6 empty-next"></div>
