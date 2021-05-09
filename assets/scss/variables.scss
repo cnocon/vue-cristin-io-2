@@ -10,7 +10,12 @@ $dark: hsl(210, 30%, 17%);
 .bg-lightest {background-color: $lightest;}
 .bg-dark {background-color: $dark;}
 
-
+$breakpoint-sm: 575px;
+$breakpoint-sm-min: 576px;
+$breakpoint-md: 767px;
+$breakpoint-md-min: 768px;
+$breakpoint-lg: 991px;
+$breakpoint-lg-min: 992px;
 // hsla(253, 95%, 75%, 1.0)
 
 // $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -57,7 +62,7 @@ $light-gray: hsl(200, 14%, 92%);
 $border-lightest-gray: hsl(200,16%,96%);
 $border-light-gray: hsl(200, 14%, 92%);
 $border-med-gray: hsl(200, 14%, 76%);
-// $border-dark-gray: hsl(200, 14%, 56%);
+$border-dark-gray: hsl(200, 14%, 56%);
 $link-red: hsl(355, 80%, 75%);
 // $link-red-darker: hsl(355, 80%, 65%);
 $link-red-vivid: hsla(355, 92.5%, 67.5%, 100%);
@@ -71,11 +76,6 @@ $link-blue: hsl(197, 80%, 65%);
 $link-purple: hsl(240, 80%, 75%);
 // $link-purple-darker: hsl(240, 90%, 65%);
 $highlight-yellow: hsla(58, 100%, 65%, 0.8);
-// $color-primary-lighter: hsl(210, 10%, 94%);
-// $color-primary-light: hsl(210, 10%, 87.5%);
-// $color-primary: hsl(210, 25%, 27%);
-$color-primary-med: hsl(210, 25, 36%);
-
 // $yellow-accent-bar: linear-gradient(90deg,
 // gold 0%,
 // hsla(58, 100%, 85%, 0.5) 30%,

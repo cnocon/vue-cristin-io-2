@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .pull-quote {
-  border-left: 10px solid $color-primary-med;
+  border-left: 10px solid lighten($primary, 15%);
   padding-left: 1.25rem;
   font-size: 1.35rem;
   font-family: $font-family-heading;
@@ -38,7 +38,7 @@ export default {
     float: left;
     width: 50%;
     margin: 0 2rem 0.75rem 1.25rem;
-    border-left: 10px solid $color-primary-med;
+    border-left: 10px solid lighten($primary, 15%);
     padding-left: 1.25rem;
     padding-right: 0;
   }
