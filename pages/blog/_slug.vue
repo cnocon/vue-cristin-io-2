@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="post">
     <Head
       :title="`${post.title} by Cristin O'Connor`"
       :description="`${post.title} by Cristin O'Connor`"
