@@ -6,7 +6,7 @@
       </div>
 
       <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: post.slug } }"
+        :to="{ name: 'blog-articles-slug', params: { slug: post.slug } }"
         class="text-primary"
       >
         {{ post.title }}</nuxt-link

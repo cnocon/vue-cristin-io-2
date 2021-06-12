@@ -66,7 +66,7 @@
       </div>
       <nuxt-content :document="post" />
       <PrevNext
-        name="blog-slug"
+        name="blog-articles-slug"
         :prev="
           prev
             ? { params: { slug: prev.slug }, query: null, title: prev.title }
