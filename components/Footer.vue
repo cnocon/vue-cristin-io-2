@@ -26,14 +26,14 @@
         </p>
       </div>
       <div class="footer-column">
-        <div>
+        <!-- <div>
           <p>Blog Powered By</p>
           <img
             src="~assets/images/buttercms.png"
             alt="ButterCMS"
             class="logo"
           />
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
