@@ -17,7 +17,7 @@ export default {
     },
     image: {
       type: String,
-      default: `https://cristin.io/person-on-laptop.jpeg`,
+      default: `https://cristin.io/codehands.jpg`,
     },
   },
   head() {

@@ -1,8 +1,8 @@
 <template>
   <div class="resume-page app-container site-content container-fluid">
     <Head
-      title="Portfolio | Cristin O'Connor"
-      description="Cristin O'Connor's Résumé"
+      title="Résumé and Coursework"
+      description="Cristin O'Connor's Front End Software Engineering Résumé and Coursework"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1 class="mt-0">Résumé & Courses</h1>
@@ -322,6 +322,18 @@ export default {
     ResumeItem,
     Skill,
     SectionHeader,
+  },
+  head() {
+    return {
+      title: 'Résumé and Coursework',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Cristin O\'Connor\'s Front End Software Engineering Résumé and Coursework'
+        }
+      ]
+    }
   },
   props: {
     globals: {},

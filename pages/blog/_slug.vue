@@ -1,5 +1,10 @@
 <template>
   <div>
+    <Head
+      :title="`${post.title} by Cristin O'Connor`"
+      :description="`${post.title} by Cristin O'Connor`"
+      :image="`https://cristin.io/${post.shareimg}`"
+    ></Head>
     <article>
       <header>
         <h1 class="mb-2">{{ post.title }}</h1>
@@ -79,10 +84,12 @@
 
 <script>
 import PrevNext from '@/components/PrevNext'
+import Head from '@/components/Head'
 
 export default {
   components: {
     PrevNext,
+    Head,
   },
   async asyncData({ $content, params, query }) {
     // fetch our article here

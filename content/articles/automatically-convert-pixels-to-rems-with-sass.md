@@ -3,6 +3,7 @@ title: Automatically Convert Pixels to Rems with SASS
 summary: SASS essentially turns CSS into a programmatic language. Suddenly we can dynamically generate everything from comprehensive utility class names and styles to entire grid layouts.  In this post we'll take advantage of SASS functions to convert pixels to rems without all the ugly math.
 date: 2020-06-10T00:48:00Z
 img: sass-sm.png
+shareimg: sass.jpg
 alt: SASS Logo
 categories: [{name: Accessibility, slug: accessibility}, {name: SCSS, slug: scss}]
 ---

@@ -3,6 +3,7 @@ title: Use Webhooks to Automatically Deploy Your Gatsby Site
 summary:  Use a Webhook to automatically build and deploy your site on Netlify after you create, update, or delete a post in ButterCMS. This way you avoid having to manually rebuild and redeploy your site just to fix a typo in a post.
 date: 2020-06-28T06:35:00Z
 img: netlify-sm.png
+shareimg: netlify.jpg
 alt: Rocket launching
 categories: [{name: Gatsby, slug: gatsby}, {name: Netlify, slug: netlify}, {name: Webhooks, slug: webhooks}]
 ---

@@ -1,5 +1,9 @@
 <template>
   <div class="blog-index-page">
+    <Head
+      title="Blog"
+      description="Cristin O'Connor's Front End Software Engineering Blog"
+    ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1 class="mt-0">Recent Articles</h1>
     <SectionHeader
@@ -39,6 +43,7 @@
 
 <script>
 import PostList from '@/components/PostList'
+import Head from '@/components/Head'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import PrevNext from '@/components/PrevNext'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -51,6 +56,7 @@ export default {
     PrevNext,
     PostList,
     Breadcrumbs,
+    Head,
   },
   async asyncData({ $content, query, params }) {
     const page = parseInt(params.page) || 1

@@ -3,6 +3,7 @@ title: Women In Computing Are Losing Ground
 summary: The Women Tech Council recently hosted a virtual summit on the first female recession, which caught my attention because I assumed women’s progress in computer science had been improving. The information presented proved me horribly wrong.
 date: 2021-04-18T15:29:00.272Z
 img: programmer-sm.png
+shareimg: programmer.jpg
 alt: Programmer on a Laptop
 categories: [{name: Inclusion and Diversity, slug: 'inclusion-and-diversity'}, {name: Industry, slug: industry}]
 ---

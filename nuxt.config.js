@@ -10,7 +10,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: `Cristin O'Connor | Front End Software Engineer`,
+    title: `Cristin O'Connor, Front End Software Engineer`,
     htmlAttrs: {
       lang: 'en',
     },
@@ -23,7 +23,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: `Front End Software Engineer Cristin O'Connor's portfolio, blog and résumé site`,
+        content: ` Resume, Portfolio, and Blog from Cristin O'Connor,  a Utah based Front End Software Engineer.`,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

@@ -1,8 +1,8 @@
 <template>
   <div class="portfolio-page">
     <Head
-      title="Portfolio | Cristin O'Connor"
-      description="Front End Software Engineering portfolio for Cristin O'Connor"
+      title="Portfolio"
+      description="Cristin O'Connor's Front End Software Engineering Portfolio"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1 class="mt-1">Portfolio</h1>
