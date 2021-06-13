@@ -1,5 +1,5 @@
 <template>
-  <div class="row pt-5 mt-5 mb-5">
+  <div class="prev-next-container row pt-5 mt-5 mb-5">
     <div
       v-if="prev"
       :class="next ? 'col-6 btn-col prev' : 'col-12 btn-col prev'"
@@ -74,6 +74,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.prev-next-container {
+  align-items: flex-start;
+}
+
 .btn-col {
   display: flex;
   justify-content: space-between;
@@ -106,6 +110,7 @@ export default {
   .prev-title,
   .next-title {
     display: block;
+    width: 100%;
     margin-top: 0.875rem;
     color: $link-underline-gray;
 

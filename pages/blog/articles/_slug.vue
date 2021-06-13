@@ -159,15 +159,11 @@ header {
 }
 .toc-image {
   border-radius: 50%;
-  max-width: 95%;
+  max-width: 180px;
   overflow: hidden;
   border: 2px solid $border-light-gray;
   margin-left: auto;
   margin-right: auto;
-
-  @include media-breakpoint-down(sm) {
-    max-width: 180px;
-  }
 
   img {
     padding: 1.25rem;
