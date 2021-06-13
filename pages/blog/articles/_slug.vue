@@ -180,6 +180,10 @@ header {
       margin-left: 2rem;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .drop-cap:first-letter {

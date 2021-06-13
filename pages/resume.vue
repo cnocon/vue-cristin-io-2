@@ -77,7 +77,9 @@
                 :icon="['fas', 'check']"
                 size="2x"
               ></font-awesome-icon>
+              <!-- eslint-disable vue/no-v-html -->
               <span v-html="asset"></span>
+              <!--eslint-enable-->
             </li>
           </ul>
         </div>
@@ -732,6 +734,7 @@ export default {
       background-size: 100% 2px;
       background-position: center bottom;
       background-repeat: no-repeat;
+      text-decoration: none;
 
       &:hover {
         background-image: none;
@@ -762,6 +765,7 @@ export default {
     font-weight: 400;
     border-bottom: 1px solid $border-med-gray;
     background-image: none;
+    text-decoration: none;
 
     &:hover {
       border-bottom: 0;
