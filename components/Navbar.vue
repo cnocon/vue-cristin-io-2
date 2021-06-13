@@ -185,37 +185,51 @@ export default {
 
     @include media-breakpoint-down(sm) {
       width: 100%;
+      align-items: center;
+      padding: 0.5rem 1rem 0;
     }
   }
 }
 .name-and-title-mobile,
 .name-and-title {
   .name {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: $font-family-display;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.25;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+    }
   }
   .title {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 0.875rem;
+    }
   }
 }
 .name-and-title-mobile {
   display: block;
   width: 100%;
   text-align: center;
+  padding-top: 0.5rem;
 
   @include media-breakpoint-up(md) {
     display: none;
   }
 }
 .navbar-brand {
+  margin-right: 0;
+
   @include media-breakpoint-up(md) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: left;
+    margin-right: 1rem;
     // width: 100%;
   }
 
@@ -230,7 +244,6 @@ export default {
   }
 
   .logo-img {
-    height: 62px;
     width: 62px;
     border-radius: 50%;
     background-color: $dark;
@@ -257,6 +270,7 @@ export default {
 .nav {
   margin-right: 0.9375rem;
   justify-content: space-between;
+  margin-right: 0;
 
   @include media-breakpoint-up(md) {
     min-width: 325px;
@@ -285,6 +299,7 @@ export default {
     }
     &.dropdown-toggle {
       font-size: 150%;
+      margin-left: 1rem;
     }
   }
 
@@ -305,6 +320,13 @@ export default {
     .nav-link {
       padding-left: 1rem;
       padding-right: 1rem;
+
+      &.show {
+        @include media-breakpoint-down(sm) {
+          width: 32px;
+          text-align: center;
+        }
+      }
     }
   }
 }

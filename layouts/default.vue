@@ -42,7 +42,9 @@ export default {
     text-decoration: none;
 
     &:hover {
-      border-bottom: 0;
+      &:not(.btn) {
+        border-bottom: 0;
+      }
     }
 
     &.plain {
@@ -66,6 +68,9 @@ export default {
   // background-repeat: no-repeat;
   // background-position: bottom;
   // box-shadow: $box-shadow-md;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .footer-container {
