@@ -1,5 +1,4 @@
 <template>
-  <!-- prettier-ignore -->
   <div class="app-container mb-0">
     <div class="navbar-container mb-5">
       <Navbar />
@@ -12,19 +11,15 @@
     </div>
   </div>
 </template>
+
 <script>
-/* eslint-disable prettier/prettier */
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-// import { dom } from '@fortawesome/fontawesome-svg-core'
 
 export default {
   components: {
     Navbar,
     Footer,
-  },
-  mounted() {
-    // dom.watch()
   },
 }
 </script>
@@ -60,42 +55,26 @@ export default {
 
 .navbar-container {
   width: 100%;
-  // background-color: $lightest-gray;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  // background-image: $rainbow-gradient-light;
-  // background-size: 100% 2px;
-  // background-repeat: no-repeat;
-  // background-position: bottom;
-  // box-shadow: $box-shadow-md;
+
   @include media-breakpoint-down(sm) {
     margin-bottom: 1rem !important;
   }
 }
 
 .footer-container {
-  // background-image: $pastel-rainbow-bar;
-  // background-size: 100% 4px;
-  // background-position: center top;
-  // background-repeat: no-repeat;
   background-color: $lightest-gray;
   justify-self: flex-end;
   margin-top: auto;
 
-  // &::after {
-  //   content: '';
-  //   display: block;
-  //   height: 0.5rem;
-  //   width: 100%;
-  //   background-image: $rainbow-gradient-light;
-  //   background-size: cover;
-  //   background-position: center bottom;
-  //   background-repeat: no-repeat;
-  // }
+  @include media-breakpoint-up(md) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .content-container {
-  // height - footerheight - headerheight - header bottom margin
   min-height: calc(100vh - 150px - 75px - 64px);
 }
 

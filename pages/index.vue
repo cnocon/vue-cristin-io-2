@@ -26,12 +26,6 @@
       >
         <div class="row d-flex align-items-center">
           <div class="col-sm-6 col-lg-3 text-center mb-5">
-            <!-- <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
-              <font-awesome-icon
-                :icon="['fal', 'code']"
-                size="2x"
-              ></font-awesome-icon>
-            </div> -->
             <h4>WEB DEVELOPMENT</h4>
             <p>
               This is my primary area of expertise after 10+ years in the field.
@@ -40,17 +34,11 @@
             </p>
           </div>
           <div class="col-sm-6 col-lg-3 text-center mb-5">
-            <!-- <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
-              <font-awesome-icon
-                :icon="['fal', 'graduation-cap']"
-                size="2x"
-              ></font-awesome-icon>
-            </div> -->
             <h4>CODE TUTORING</h4>
             <p>
               I focus on teaching with compassion and work with all ages.
               <a href="mailto:her@cristin.io">Contact me</a> about mentoring or
-              code tutoring.
+              tutoring.
             </p>
           </div>
           <div class="col-sm-12 col-lg-6 mb-5">
@@ -216,8 +204,6 @@ import PostList from '@/components/PostList'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faConciergeBell } from '@fortawesome/pro-regular-svg-icons'
 import { faHandshake, faUserAstronaut, faEnvelope, faHashtag, faCode, faGraduationCap, faRss } from '@fortawesome/pro-light-svg-icons'
-// import {  } from '@fortawesome/pro-duotone-svg-icons'
-// import {  } from '@fortawesome/pro-solid-svg-icons'
 import { faLinkedinIn, faStackOverflow, faCodepen, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faGraduationCap, faCode, faUserAstronaut, faConciergeBell, faRss, faHandshake, faEnvelope, faLinkedinIn, faHashtag, faStackOverflow, faCodepen, faGithub)
@@ -229,7 +215,6 @@ export default {
     PostList,
     Head,
   },
-  // eslint-disable-next-line require-await
   async asyncData({ $content, params, query }) {
     const posts = await $content('articles').limit(6).sortBy('date', 'desc').fetch()
 
@@ -272,10 +257,6 @@ header {
 
   span {
     display: inline-block;
-    // border-radius: 0.25rem;
-    // background-color: rgba($highlight-yellow, 0.625);
-    // padding-left: 0.5rem;
-    // padding-right: 0.5rem;
   }
 
   b {

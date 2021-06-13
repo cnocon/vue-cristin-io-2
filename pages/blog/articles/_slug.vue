@@ -10,18 +10,6 @@
         <h1 class="mb-2">{{ post.title }}</h1>
         <div class="meta text-center mb-2">
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-          <!-- <nuxt-link
-            v-for="(cat, index) in post.categories"
-            :key="cat + '-' + index"
-            :to="{
-              name: 'blog-categories-slug',
-              params: { slug: cat.slug },
-              query: { page: 1 },
-            }"
-            class="badge badge-dark"
-          >
-            {{ cat.name }}
-          </nuxt-link> -->
           <span
             v-for="(cat, index) in post.categories"
             :key="cat + '-' + index"

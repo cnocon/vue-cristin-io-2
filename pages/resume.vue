@@ -45,7 +45,7 @@
             :key="index"
             class="service-item"
             desc-item-class="list-style-none"
-            descClass="list-style-none pl-0"
+            desc-class="list-style-none pl-0"
             :item="service"
           />
         </div>
@@ -87,8 +87,8 @@
         </h3>
         <div class="education mt-3">
           <ResumeItem
-            :key="index"
             v-for="(edu, index) in data.education"
+            :key="index"
             :item="edu"
             item-class="edu-item"
             desc-item-class="list-style-none"
@@ -120,7 +120,13 @@
                   class="d-inline-block text-center plain"
                 >
                   <div
-                    class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
+                    class="
+                      rainbow-border
+                      rounded-circle
+                      p-2
+                      d-inline-block
+                      mb-2
+                    "
                   >
                     <font-awesome-icon
                       :icon="['fab', 'github']"
@@ -138,7 +144,13 @@
                   class="plain"
                 >
                   <div
-                    class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
+                    class="
+                      rainbow-border
+                      rounded-circle
+                      p-2
+                      d-inline-block
+                      mb-2
+                    "
                   >
                     <font-awesome-icon
                       :icon="['fab', 'codepen']"
@@ -156,7 +168,13 @@
                   class="plain"
                 >
                   <div
-                    class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
+                    class="
+                      rainbow-border
+                      rounded-circle
+                      p-2
+                      d-inline-block
+                      mb-2
+                    "
                   >
                     <font-awesome-icon
                       :icon="['fab', 'stack-overflow']"
@@ -175,7 +193,13 @@
                   class="plain"
                 >
                   <div
-                    class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
+                    class="
+                      rainbow-border
+                      rounded-circle
+                      p-2
+                      d-inline-block
+                      mb-2
+                    "
                   >
                     <font-awesome-icon
                       :icon="['fal', 'hashtag']"
@@ -194,7 +218,13 @@
                   class="plain"
                 >
                   <div
-                    class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
+                    class="
+                      rainbow-border
+                      rounded-circle
+                      p-2
+                      d-inline-block
+                      mb-2
+                    "
                   >
                     <font-awesome-icon
                       :icon="['fab', 'linkedin-in']"
@@ -213,7 +243,13 @@
                   class="plain"
                 >
                   <div
-                    class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
+                    class="
+                      rainbow-border
+                      rounded-circle
+                      p-2
+                      d-inline-block
+                      mb-2
+                    "
                   >
                     <font-awesome-icon
                       :icon="['fal', 'envelope']"
@@ -323,6 +359,19 @@ export default {
     Skill,
     SectionHeader,
   },
+  props: {
+    globals: {
+      type: Object,
+      default: null,
+    },
+  },
+  data() {
+    return {
+      visible: false,
+      data: resumeData,
+      courseData,
+    }
+  },
   head() {
     return {
       title: 'Résumé and Coursework',
@@ -330,19 +379,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Cristin O\'Connor\'s Front End Software Engineering Résumé and Coursework'
-        }
-      ]
-    }
-  },
-  props: {
-    globals: {},
-  },
-  data() {
-    return {
-      visible: false,
-      data: resumeData,
-      courseData,
+          content:
+            "Cristin O'Connor's Front End Software Engineering Résumé and Coursework",
+        },
+      ],
     }
   },
   mounted() {
@@ -726,25 +766,5 @@ export default {
       vertical-align: top;
     }
   }
-
-  // .certificate {
-  // 	display: inline-block;
-  // 	margin: 1rem 0 0;
-  // 	border: 2px solid $primary;
-  // 	color: $primary;
-  // 	text-transform: uppercase;
-  // 	padding: 1px 10px;
-  // 	border-radius: 5px;
-  // 	text-decoration: none;
-  // 	font-weight: 600;
-  // 	font-size: 14px;
-  // 	transition: background-color 0.2s, color 0.2s;
-  // 	background-image: none;
-
-  // 	&:hover {
-  // 		background-color: $primary;
-  // 		color: $white;
-  // 	}
-  // }
 }
 </style>

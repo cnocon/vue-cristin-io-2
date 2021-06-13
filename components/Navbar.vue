@@ -112,18 +112,6 @@
           </li>
         </ul>
       </li>
-
-      <!-- <b-nav-item-dropdown id="my-nav-dropdown" text="Menu" right>
-        <template slot="button-content">
-          <font-awesome-icon :icon="['fas', 'bars']"></font-awesome-icon>
-        </template>
-        <b-dropdown-item :active="isActive('portfolio')" to="/portfolio"
-          >Portfolio</b-dropdown-item
-        >
-        <b-dropdown-item :active="isActive('blog')" to="/blog"
-          >Blog</b-dropdown-item
-        >
-      </b-nav-item-dropdown> -->
     </ul>
   </div>
 </template>
@@ -230,7 +218,6 @@ export default {
     align-items: center;
     text-align: left;
     margin-right: 1rem;
-    // width: 100%;
   }
 
   .name-and-title {
@@ -286,7 +273,6 @@ export default {
     color: $dark;
     font-family: $font-family-heading;
     font-weight: 600;
-    // font-size: 0.875rem;
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -299,12 +285,10 @@ export default {
     }
     &.dropdown-toggle {
       font-size: 150%;
-      margin-left: 1rem;
     }
   }
 
   .dropdown-toggle {
-    // margin-right: -1rem;
     font-size: 150%;
     padding: 0.125rem 0.5rem !important;
 

@@ -173,10 +173,5 @@ a.btn {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  // max-width: calc(100% - 38px);
-  // flex-basis: calc(100% - 38px);
-  // white-space: nowrap;
-  // text-overflow: ellipsis;
-  // border-bottom: 1px solid $link-underline-gray;
 }
 </style>

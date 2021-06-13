@@ -16,29 +16,17 @@ $breakpoint-md: 767px;
 $breakpoint-md-min: 768px;
 $breakpoint-lg: 991px;
 $breakpoint-lg-min: 992px;
-// hsla(253, 95%, 75%, 1.0)
 
-// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-sans-serif: 'Open Sans', sans-serif;
-
-// $font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-
 $font-family-base: $font-family-sans-serif;
 $font-family-heading: Lato, Verdana, sans-serif;
 $font-family-display: Oswald, Impact, sans-serif;
 
-
 $white: #fff;
 $black: hsl(210, 40%, 15%);
-// $bg-light-gray: hsl(200, 20%, 97%);
-// $bg-med-gray: hsl(200, 20%, 94%);
 
-// $box-shadow-md-transparent: 0 3px 7px 0 hsla(0, 0%, 0%, 0), 0 1px 9px 0 hsla(0, 0, 0, 0);
 $box-shadow-sm: 0 1px 2px 0 hsla(0, 0%, 0%, 0.17), 0 1px 5px 0 hsla(0, 0%, 0%, 0.11);
-$box-shadow-md: 0 3px 7px 0 hsla(0, 0%, 0%, 0.15), 0 1px 9px 0 hsla(0, 0, 0, 0.15);
-// $box-shadow-lg: 0 2px 10px 0 hsla(0, 0%, 0%, 0.17), 0 1px 13px 0 hsla(0, 0, 0, 0.11);
-
-// $line-height-gr: 1.618;
+$box-shadow-md: 0 3px 7px 0 hsla(0, 0%, 0%, 0.15), 0 1px 9px 0 hsla(0, 0%, 0%, 0.15);
 
 $border-red: hsla(355, 80%, 80%, 1.0);
 $border-red-vivid: hsla(355, 100%, 75%, 1.0);
@@ -76,11 +64,6 @@ $link-blue: hsl(197, 80%, 65%);
 $link-purple: hsl(240, 80%, 75%);
 // $link-purple-darker: hsl(240, 90%, 65%);
 $highlight-yellow: hsla(58, 100%, 65%, 0.8);
-// $yellow-accent-bar: linear-gradient(90deg,
-// gold 0%,
-// hsla(58, 100%, 85%, 0.5) 30%,
-// hsl(58, 100%, 55%) 65%,
-// hsl(58, 100%, 75%) 90%);
 
 $pastel-rainbow-bar: linear-gradient(-90deg,
   hsl(240, 100%, 85%) 7.5%,
@@ -98,10 +81,6 @@ $rainbow-box-shadow-dark: hsl(175, 80%, 60%) 0 2px,
   hsl(240, 80%, 69%) 2px 0,
   hsl(355, 80%, 72.5%) 0 -2px 0;
 .rainbow-border {box-shadow: $rainbow-box-shadow-dark;}
-// $rainbow-box-shadow-dark-lg: hsl(175, 80%, 60%) 0 3px,
-//   hsl(58, 100%, 60%) -3px 0,
-//   hsl(240, 80%, 69%) 3px 0,
-//   hsl(355, 80%, 72.5%) 0 -3px 0;
 $rainbow-gradient-light: linear-gradient(
     -240deg,
     hsl(259, 83%, 80%) 0%,
@@ -124,14 +103,6 @@ $rainbow-gradient-med: linear-gradient(
     hsl(49, 100%, 70%) 60%,
     hsl(0, 80%, 85%) 80%
 );
-// $rainbow-gradient-med: linear-gradient(
-//   90deg,
-//   $border-purple 0%,
-//   $border-blue 20%,
-//   $border-green 40%,
-//   $border-yellow 55%,
-//   $border-red 95%
-// );
 $rainbow-gradient-dark: linear-gradient(
   90deg,
   $link-red 10.5%,
@@ -140,24 +111,6 @@ $rainbow-gradient-dark: linear-gradient(
   $link-blue 67.5%,
   $link-purple 82.5%
 );
-// $rainbow-gradient-darker: linear-gradient(
-//   90deg,
-  // $link-red-darker 10.5%,
-//   $link-yellow-darker 39.5%,
-  // $link-green-darker 50%,
-//   $link-blue-darker 67.5%,
-//   $link-purple-darker 82.5%
-// );
-// $rainbow-gradient-radial: radial-gradient(
-//   205deg,
-//   rgb(255, 249, 77) 15%,
-//   rgb(77, 255, 240) 26%,
-//   rgb(77, 255, 240) 40%,
-//   rgb(184, 235, 255) 52%,
-//   rgb(184, 235, 255) 62%,
-//   rgb(189, 189, 255) 70%,
-//   rgb(255, 214, 218) 90%
-// );
 $rainbow-text: linear-gradient(
   1205deg,
   hsl(60, 100%, 68%) 15%,
@@ -211,11 +164,3 @@ $rainbow-ellipse-bottom-left: radial-gradient(
   hsl(197, 100%, 85%) 65%,
   hsl(240, 100%, 90%) 75%
 );
-// $rainbow-gradient-radial-light: linear-gradient(
-//   90deg,
-//   hsl(240, 100%, 70%),
-//   $border-blue,
-//   hsl(175, 100%, 82%),
-//   hsl(58, 100%, 78%),
-//   hsl(354, 100%, 73%),
-// );

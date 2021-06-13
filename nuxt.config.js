@@ -1,11 +1,8 @@
 export default {
   // Enable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  // ssr: true, // universal
-  // ssr: false // spa
   ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
-  // target: 'server',
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -18,12 +15,12 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        content: 'width=device-width, initial-scale=1',
       },
       {
         hid: 'description',
         name: 'description',
-        content: ` Resume, Portfolio, and Blog from Cristin O'Connor,  a Utah based Front End Software Engineer.`,
+        content: `Resume, Portfolio, and Blog from Cristin O'Connor, a Utah based Front End Software Engineer.`,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -31,6 +28,10 @@ export default {
 
   // // Global CSS: https://go.nuxtjs.dev/config-css
   // css: ['@/assets/scss/main.scss'],
+
+  styleResources: {
+    scss: '@/assets/scss/main.scss',
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -65,18 +66,7 @@ export default {
       Oswald: [300, 400, 500, 600, 700],
       Lato: [300, 400, 700, 900],
       'Open+Sans': [300, 400, 500, 600, 700, 800, 900],
-      // 'Source+Code+Pro': [200, 300, 400, 500, 600, 700, 900],
     },
-  },
-
-  // bootstrapVue: {
-  //   bootstrapCSS: false,
-  //   bootstrapVueCSS: false,
-  //   icons: false,
-  // },
-
-  styleResources: {
-    scss: '@/assets/scss/main.scss',
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -84,8 +74,6 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    // nestedProperties: ['categories.slug'],
-    // fullTextSearchFields: ['title', 'summary'],
     markdown: {
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
@@ -94,9 +82,7 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    // analyze: true,
-  },
+  build: {},
 
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
   generate: {
