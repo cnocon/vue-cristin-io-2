@@ -72,6 +72,11 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
+  router: {
+    // ran before every route on both client and server
+    middleware: ['redirects'],
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
     markdown: {
