@@ -105,50 +105,61 @@ export default {
 
   .prev-title,
   .next-title {
+    display: block;
+    margin-top: 0.875rem;
+    color: $link-underline-gray;
+
     @include media-breakpoint-down(sm) {
-      display: none;
+      font-size: 0.95rem;
+      line-height: 1.25em;
+    }
+  }
+
+  .prev-title {
+    padding-right: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      padding-right: 1rem;
+    }
+  }
+
+  .next-title {
+    padding-left: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      padding-left: 1rem;
+    }
+  }
+
+  &.prev,
+  &.next {
+    // display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: column;
     }
   }
 
   &.next {
     align-items: flex-end;
     text-align: right;
-    display: inline-block;
-
-    @include media-breakpoint-up(md) {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      text-align: right;
-    }
+    justify-content: flex-end;
 
     a.btn {
       padding-left: 1.25rem;
-
-      @include media-breakpoint-up(md) {
-        padding-bottom: 0.5rem;
-      }
     }
   }
 
   &.prev {
-    @include media-breakpoint-up(md) {
-      align-items: flex-start;
-      flex-direction: column;
-      text-align: left;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     a.btn {
-      padding-right: 1.5rem;
-    }
-
-    .prev-title,
-    .next-title {
-      @include media-breakpoint-up(md) {
-        padding-right: 20%;
-      }
+      padding-right: 1.25rem;
     }
   }
 }
@@ -162,16 +173,5 @@ a.btn {
   .b-icon.bi {
     color: inherit;
   }
-}
-
-.prev-title,
-.next-title {
-  display: block;
-  margin-top: 0.875rem;
-  color: $link-underline-gray;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 </style>

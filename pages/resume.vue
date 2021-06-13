@@ -485,10 +485,18 @@ export default {
     border-radius: 50%;
     border: 3px solid $light;
     background-color: $white;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
   .fa-briefcase {
   }
   .left-column {
+    @include media-breakpoint-up(sm) {
+      position: relative;
+    }
+
     h3 {
       @media all and (max-width: $breakpoint-sm) {
         padding-left: 0;

@@ -41,7 +41,7 @@
 
 <style lang="scss">
 footer {
-  padding: 2rem 0 1.5rem;
+  padding: 2rem 0;
 }
 .footer-row {
   display: flex;
@@ -60,7 +60,6 @@ footer {
   @include media-breakpoint-down(sm) {
     flex-basis: 100%;
     width: 100%;
-    margin-bottom: 1rem;
     text-align: center;
   }
 }

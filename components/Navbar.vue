@@ -151,17 +151,57 @@ export default {
   .dropdown-menu.dropdown-menu-right {
     &.show {
       position: absolute;
-      left: auto;
+      width: 175px;
+      left: -150px;
+      padding: 0;
+      background-color: $dark;
+      border-color: $primary;
+      box-shadow: $box-shadow-md;
+
+      li {
+        padding-bottom: 0.85rem;
+        padding-top: 0.85rem;
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba($lightest-gray, 0.5);
+
+        &:hover {
+          background-color: $white;
+          border-bottom: 1px solid $dark;
+
+          a {
+            color: $dark;
+            background-color: $white;
+          }
+        }
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+
+        a {
+          color: $white;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-family: $font-family-display;
+          letter-spacing: 1px;
+          text-align: center;
+
+          &:hover {
+            color: $dark;
+            background-color: $white;
+          }
+        }
+      }
     }
   }
 
   .nav-item:not(.dropdown) {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
   .show .nav-item:not(.dropdown) {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: block;
     }
   }
