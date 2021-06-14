@@ -239,12 +239,20 @@ export default {
 .name-and-title-mobile,
 .name-and-title {
   .name {
+    font-size: 1.125rem;
     line-height: 1em;
     font-family: $font-family-display;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.5rem;
     color: $white;
+
+    @include media-breakpoint-xxs-up {
+      font-size: 1.35rem;
+    }
+
+    @include media-breakpoint-up(xs) {
+      font-size: 1.5rem;
+    }
 
     @include media-breakpoint-up(md) {
       font-size: 1.8438rem;
@@ -252,15 +260,23 @@ export default {
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 0.8125rem;
     font-family: $font-family-heading;
     white-space: nowrap;
     line-height: 1.5em;
     font-weight: 400 !important;
-    letter-spacing: 1px;
     color: $white;
     text-transform: uppercase;
     text-indent: 2px;
+
+    @include media-breakpoint-up(xs) {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1rem;
+    }
 
     @include media-breakpoint-up(md) {
       font-size: 1.15rem;
@@ -335,14 +351,16 @@ export default {
   }
 
   .logo-img {
-    width: 62px;
+    width: 42px;
     border-radius: 50%;
     display: inline-block;
     box-shadow: $rainbow-box-shadow-dark;
     background-color: $lightest-gray;
+    margin-right: 0.25rem;
 
     @include media-breakpoint-up(md) {
       margin: 1rem 0.5rem 1rem 0;
+      width: 62px;
     }
   }
 }
@@ -414,14 +432,14 @@ export default {
 
     &:last-of-type {
       .nav-link {
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
           padding-right: 0;
         }
       }
     }
 
     &.dropdown.show {
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         text-align: center;
       }
 

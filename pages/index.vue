@@ -3,10 +3,10 @@
     <Head />
     <header class="text-center">
       <h1 class="page-title">
-        I&nbsp;&nbsp;L<span>&heartsuit;</span>VE&nbsp;&nbsp;<i>Code</i>.
+        I&nbsp;&nbsp;L<span>&#9829;</span>VE&nbsp;&nbsp;<i>Code</i>,
       </h1>
       <p class="page-subtitle">
-        So I write it, teach it, and learn more every day.
+        so I write it, teach it, and am always learning more.
       </p>
     </header>
     <main>
@@ -237,15 +237,15 @@ header {
   font-family: $font-family-display;
   margin-bottom: 0;
 
-  b {
-    font-weight: 500;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: $rainbow-gradient-dark;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  // b {
+  //   font-weight: 500;
+  //   color: transparent;
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   background-image: $rainbow-gradient-dark;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
 
   i {
     font-style: normal;
@@ -259,9 +259,9 @@ header {
     -webkit-background-clip: text;
     background-image: linear-gradient(
       130deg,
-      #f5a0a7 20%,
-      #f5a0a7 40%,
-      #fff94d 47.5%,
+      #f5959d 0%,
+      #f5959d 30%,
+      #f8f58f 47.5%,
       #5eede1 55%,
       #5ec5ed 62.5%,
       #8c8cf2 75%
@@ -284,16 +284,17 @@ header {
   font-style: italic;
 
   @include media-breakpoint-down(md) {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    line-height: 1.1em;
   }
 
   span {
     display: inline-block;
   }
 
-  b {
-    display: inline-block;
-    font-weight: 300;
-  }
+  // b {
+  //   display: inline-block;
+  //   font-weight: 300;
+  // }
 }
 </style>
