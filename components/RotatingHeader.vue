@@ -79,13 +79,13 @@ export default {
   margin-bottom: 0;
   text-align: center;
 
-  @include media-breakpoint-xxs-down {
-    font-size: 1.15rem;
-  }
-
   @include media-breakpoint-down(sm) {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+
+  @include media-breakpoint-xxs-down {
+    font-size: 1.25rem;
   }
 
   span {

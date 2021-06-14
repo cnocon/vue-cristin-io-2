@@ -3,11 +3,15 @@
     <Head />
     <header class="text-center">
       <h1 class="page-title">
-        I&nbsp;&nbsp;L<span>&#9829;</span>VE&nbsp;&nbsp;<i>Code</i>,
+        I&nbsp;&nbsp;L<span class="smaller">&#9825;</span>VE&nbsp;&nbsp;CODE.
       </h1>
-      <p class="page-subtitle">
-        so I write it, teach it, and am always learning more.
-      </p>
+      <!-- <h1 class="page-title">
+        I&nbsp;&nbsp;L<span class="smaller">&#9825;</span
+        >VE&nbsp;&nbsp;C<span>&#9829;</span>DE.
+      </h1> -->
+      <!-- <p class="page-subtitle">
+        so I write it, teach it, and endeavor to learn more.
+      </p> -->
     </header>
     <main>
       <Section
@@ -15,7 +19,7 @@
         header-icon="user-astronaut"
         header-text="A Little About Me"
         header-alignment="left"
-        header-classes="mb-3"
+        header-classes=""
       >
         <RotatingHeader />
       </Section>
@@ -26,8 +30,8 @@
         header-text="Services"
         header-alignment="left"
       >
-        <div class="row d-flex align-items-center">
-          <div class="col-sm-6 col-lg-3 text-center mb-5">
+        <div class="row services-row d-flex align-items-center">
+          <div class="col-12 col-sm-6 col-lg-3 text-center">
             <h4>WEB DEVELOPMENT</h4>
             <p>
               This is my primary area of expertise after 10+ years in the field.
@@ -35,7 +39,7 @@
               development.
             </p>
           </div>
-          <div class="col-sm-6 col-lg-3 text-center mb-5">
+          <div class="col-12 col-sm-6 col-lg-3 text-center">
             <h4>CODE TUTORING</h4>
             <p>
               I focus on teaching with compassion and work with all ages.
@@ -43,7 +47,7 @@
               tutoring.
             </p>
           </div>
-          <div class="col-sm-12 col-lg-6 mb-5">
+          <div class="col-12 col-lg-6 quote-container">
             <quote classes="subtle dark rounded-lg pr-5">
               <template #quote>
                 Cristin O'Connor is a lifesaver! Being new to Gatsby.js, I was
@@ -69,7 +73,8 @@
       >
         <LazyPostList
           :posts="posts"
-          column-classes="col-sm-12 col-md-6 col-xl-4 mb-5"
+          classes="mt-5"
+          column-classes="post-preview-container col-12 col-md-6 col-xl-4 mb-5"
         ></LazyPostList>
       </Section>
 
@@ -79,7 +84,7 @@
         header-text="Connect"
         header-alignment="left"
       >
-        <ul class="list-style-none row">
+        <ul class="list-style-none row mt-5">
           <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
             <a
               href="https://github.com/cnocon"
@@ -232,28 +237,21 @@ header {
 }
 
 .page-title {
-  font-weight: 400;
+  font-weight: 300;
   color: $primary;
   font-family: $font-family-display;
   margin-bottom: 0;
 
-  // b {
-  //   font-weight: 500;
-  //   color: transparent;
-  //   background-clip: text;
-  //   -webkit-background-clip: text;
-  //   background-image: $rainbow-gradient-dark;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  // }
+  @include media-breakpoint-up(md) {
+    margin-top: 3rem;
+  }
 
-  i {
-    font-style: normal;
-    text-transform: uppercase;
+  @include media-breakpoint-up(lg) {
+    margin-top: 4rem;
   }
 
   span {
-    font-size: 2.4375rem; // 39px
+    font-size: 2.625rem; // 42px
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -268,10 +266,45 @@ header {
     );
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: -3px;
+    margin-right: -1px;
+    line-height: inherit;
+
+    @include media-breakpoint-xxs-down {
+      font-size: 2.375rem; // 38px
+    }
 
     @include media-breakpoint-up(sm) {
-      font-size: 3.375rem; // 54px
-      line-height: 1em;
+      font-size: 2.75rem; // 44px
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 3rem; // 48px
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3.5rem; // 56px
+    }
+
+    &.smaller {
+      margin-left: 0;
+      margin-right: 0;
+
+      @include media-breakpoint-xxs-down {
+        font-size: 1.6428571429rem; // 23px
+      }
+
+      @include media-breakpoint-up(sm) {
+        font-size: 2rem; // 32px
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.1875rem; // 35px
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.625rem; // 42px
+      }
     }
   }
 }
@@ -280,21 +313,31 @@ header {
   display: inline-block;
   font-weight: 300;
   font-family: $font-family-display;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  line-height: 1.1em;
   font-style: italic;
+  margin-bottom: 0;
 
-  @include media-breakpoint-down(md) {
-    font-size: 1.15rem;
-    line-height: 1.1em;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.25rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 1.25rem;
   }
 
   span {
     display: inline-block;
   }
+}
 
-  // b {
-  //   display: inline-block;
-  //   font-weight: 300;
-  // }
+.services-row {
+  .quote-container {
+    margin-top: 3rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+    }
+  }
 }
 </style>

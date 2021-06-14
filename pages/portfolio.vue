@@ -12,8 +12,8 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="pb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section pb-5"
     >
       <PortfolioItem
         title="CRISTIN.IO (Nuxt Implementation)"
@@ -58,8 +58,8 @@
       header-icon-type="fab"
       header-icon="github"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="mb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section mb-5"
     >
       <PortfolioItem
         title="GitHub Stats Card for React"
@@ -106,8 +106,8 @@
       header-icon-type="fad"
       header-icon="clipboard-list-check"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="pb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section pb-5"
     >
       <PortfolioItem
         title="Front End Development Flash Cards App"
@@ -141,8 +141,8 @@
       header-icon-type="fal"
       header-icon="thunderstorm-moon"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="pb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section pb-5"
     >
       <PortfolioItem
         title="Weather Charts/Forecast App"
@@ -176,8 +176,8 @@
       header-icon-type="fab"
       header-icon="youtube"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="pb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section pb-5"
     >
       <PortfolioItem
         title="YouTube Search App"
@@ -204,8 +204,8 @@
       header-icon-type="fal"
       header-icon="briefcase"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="pb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section pb-5"
     >
       <PortfolioItem
         title="CenturyLink Small Business Site"
@@ -243,8 +243,8 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="pb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section pb-5"
     >
       <PortfolioItem
         title="CRISTIN.IO (Legacy Version Using Gatsby)"
@@ -281,8 +281,8 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="dark"
-      section-classes="pb-5"
+      header-classes="dark portfolio-section-header"
+      section-classes="section pb-5"
     >
       <PortfolioItem
         header-text="CRISTIN.IO (Gatsby Implementation)"

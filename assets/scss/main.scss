@@ -4,11 +4,7 @@
 // Bootstrap and BootstrapVue SCSS files
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap/scss/mixins';
-// @import '~bootstrap-vue/src/variables.scss';
-// @import '~bootstrap-vue/src/utilities.scss';
-// @import '~bootstrap-vue/src/custom-controls.scss';
-// @import '~bootstrap-vue/src/components/index.scss';
 
 // General style overrides and custom classes
+@import './mixins.scss';
 @import 'theme';
-

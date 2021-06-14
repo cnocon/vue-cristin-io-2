@@ -23,7 +23,7 @@ export default {
   },
   props: {
     sectionClasses: {
-      default: '',
+      default: 'section',
       type: String,
     },
     headerIcon: {
@@ -43,7 +43,7 @@ export default {
       type: String,
     },
     headerClasses: {
-      default: 'mb-5',
+      default: 'section-header',
       type: String,
     },
   },

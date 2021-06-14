@@ -67,7 +67,7 @@ article {
   padding: 2rem 2rem 1.5rem;
   height: 100%;
   background-image: $pastel-rainbow-bar;
-  background-size: 100% 4px;
+  background-size: 100% 4.5px;
   background-position: center bottom;
   background-repeat: no-repeat;
 

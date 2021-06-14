@@ -1,6 +1,6 @@
 <template>
   <div class="app-container mb-0">
-    <div class="navbar-container mb-4">
+    <div class="navbar-container">
       <Navbar />
     </div>
     <div class="container content-container mb-4">
@@ -68,8 +68,8 @@ export default {
   background-color: $primary;
   box-shadow: $box-shadow-sm;
 
-  @include media-breakpoint-down(sm) {
-    margin-bottom: 1rem !important;
+  @include media-breakpoint-xxs-up {
+    margin-bottom: 1rem;
   }
 }
 

@@ -21,7 +21,7 @@
         >
       </p>
     </div>
-    <div class="col-12 col-md-7">
+    <div class="col-12 col-md-7 text-content">
       <h4>Summary</h4>
       <div>
         <slot name="summary"></slot>
@@ -34,7 +34,7 @@
         </li>
       </ul>
     </div>
-    <div class="col-12 col-md-5 image-column">
+    <div class="col-12 col-md-5 image-content">
       <div class="shadow mt-3">
         <nuxt-img :src="screenshot" :alt="title"></nuxt-img>
       </div>
@@ -87,7 +87,7 @@ export default {
     }
   }
 }
-.image-column {
+.image-content {
   max-width: 25rem;
   margin-left: auto;
   margin-right: 0;
@@ -95,6 +95,19 @@ export default {
   @include media-breakpoint-down(md) {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+.text-content {
+  h4 {
+    margin-top: 2rem;
+
+    @include media-breakpoint-xxs-up {
+      margin-top: 1.5rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: 2rem;
+    }
   }
 }
 

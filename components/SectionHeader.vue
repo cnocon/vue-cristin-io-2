@@ -26,7 +26,7 @@ export default {
     },
     headerClasses: {
       type: String,
-      default: 'mb-5',
+      default: '',
     }
   },
 }
@@ -38,10 +38,33 @@ export default {
   white-space: nowrap;
   height: 64px;
   margin-bottom: 0.25rem;
+  // index mb-3
 
   @include media-breakpoint-down(md) {
     height: 42px;
     margin-bottom: 0.25rem;
+  }
+
+  @include media-breakpoint-xxs-down {
+    height: 32px;
+  }
+
+  &.portfolio-section-header {
+    margin-bottom: 3rem;
+    margin-top: 0;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0.25rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 1.5rem;
+    }
   }
 
   &.align-center {
@@ -87,6 +110,10 @@ export default {
     @include media-breakpoint-down(md) {
       height: 42px;
     }
+
+    @include media-breakpoint-xxs-down {
+      height: 32px;
+    }
   }
 
   span {
@@ -101,6 +128,11 @@ export default {
     @include media-breakpoint-down(md) {
       line-height: 42px;
       height: 42px;
+    }
+
+    @include media-breakpoint-xxs-down {
+      height: 32px;
+      line-height: 32px;
     }
   }
 
@@ -128,15 +160,18 @@ export default {
     @include media-breakpoint-down(md) {
       width: 42px;
       height: 42px;
-      // line-height: 46px;
       margin-right: 0.25rem;
+    }
+
+    @include media-breakpoint-xxs-down {
+      height: 32px;
+      width: 32px;
     }
 
     svg {
       position: absolute;
       top: 50%;
       left: 50%;
-      // padding: 0 2.5px;
       transform: translate(-50%, -50%);
     }
   }

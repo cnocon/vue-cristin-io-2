@@ -8,6 +8,16 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   max-width: 100%;
+  overflow-x: hidden;
+
+  @include media-breakpoint-xxs-down {
+    font-size: 13px;
+  }
+}
+
+#__layout {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 *,

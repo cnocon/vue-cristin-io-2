@@ -239,7 +239,7 @@ export default {
 .name-and-title-mobile,
 .name-and-title {
   .name {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 1em;
     font-family: $font-family-display;
     text-transform: uppercase;
@@ -247,11 +247,7 @@ export default {
     color: $white;
 
     @include media-breakpoint-xxs-up {
-      font-size: 1.35rem;
-    }
-
-    @include media-breakpoint-up(xs) {
-      font-size: 1.5rem;
+      font-size: 1.725rem;
     }
 
     @include media-breakpoint-up(md) {
@@ -260,22 +256,22 @@ export default {
   }
 
   .title {
-    font-size: 0.8125rem;
+    font-size: 0.95rem;
     font-family: $font-family-heading;
     white-space: nowrap;
-    line-height: 1.5em;
+    line-height: 1.725em;
     font-weight: 400 !important;
     color: $white;
     text-transform: uppercase;
     text-indent: 2px;
+    letter-spacing: 1px;
 
-    @include media-breakpoint-up(xs) {
-      font-size: 0.85rem;
-      letter-spacing: 1px;
+    @include media-breakpoint-xxs-up {
+      font-size: 1.075rem;
     }
 
     @include media-breakpoint-up(sm) {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     @include media-breakpoint-up(md) {
@@ -308,7 +304,11 @@ export default {
   text-align: center;
   padding: 1.25rem 0;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-xxs-up {
+    padding: 0.5rem 0;
+  }
+
+  @include media-breakpoint-up(sm) {
     display: none;
   }
 }
@@ -344,7 +344,7 @@ export default {
   .name-and-title {
     display: none;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       display: block;
       text-align: left;
     }
@@ -356,7 +356,12 @@ export default {
     display: inline-block;
     box-shadow: $rainbow-box-shadow-dark;
     background-color: $lightest-gray;
-    margin-right: 0.25rem;
+    margin-right: 0.5rem;
+
+    @include media-breakpoint-up(sm) {
+      margin: 0rem 0.875rem 0 0;
+      width: 52px;
+    }
 
     @include media-breakpoint-up(md) {
       margin: 1rem 0.5rem 1rem 0;

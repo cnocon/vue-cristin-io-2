@@ -10,7 +10,7 @@
       v-if="page"
       :text="'Showing Page ' + page + ' of ' + lastPage"
       alignment="center"
-      header-classes="mb-5 mt-3"
+      header-classes=""
     >
       <template #section-header-icon>
         <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>
@@ -18,7 +18,7 @@
     </SectionHeader>
     <PostList
       :posts="pagePosts"
-      column-classes="col-12 col-lg-6 mb-5"
+      column-classes="post-preview-container col-12 col-lg-6 mb-5"
     ></PostList>
 
     <PrevNext
