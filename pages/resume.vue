@@ -5,7 +5,7 @@
       description="Cristin O'Connor's Front End Software Engineering Résumé and Coursework"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
-    <h1 class="mt-0">Résumé & Courses</h1>
+    <h1 class="mt-0">Résumé & Coursework</h1>
 
     <div v-if="data.jobTitle" class="row resume-row">
       <div class="col-lg-7 col-md-12 left-column">
@@ -267,12 +267,7 @@
         class="col-12 col-sm-6 col-md-6 col-lg-4 course"
       >
         <figure>
-          <img
-            :data-url="course.img"
-            :src="course.img"
-            :alt="course.name"
-            :title="course.name"
-          />
+          <nuxt-img :src="course.img" :alt="course.name"></nuxt-img>
         </figure>
         <h3>
           <a :href="course.url" target="_blank" rel="noopener noreferrer">
@@ -303,50 +298,18 @@
 </template>
 
 <script>
-import SectionHeader from '@/components/SectionHeader'
 import resumeData from '@/data/resume'
 import courseData from '@/data/courses'
-import ResumeItem from '@/components/ResumeItem'
-import Skill from '@/components/Skill'
+/* eslint-disable prettier/prettier */
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFileUser } from '@fortawesome/pro-duotone-svg-icons'
-import {
-  faBriefcase,
-  faHashtag,
-  faEnvelope,
-  faHandsHeart,
-  faPencil,
-} from '@fortawesome/pro-light-svg-icons'
+import { faBriefcase, faHashtag, faEnvelope, faHandsHeart, faPencil } from '@fortawesome/pro-light-svg-icons'
 import { faGraduationCap, faCheck } from '@fortawesome/pro-solid-svg-icons'
-import {
-  faLinkedinIn,
-  faStackOverflow,
-  faCodepen,
-  faGithub,
-} from '@fortawesome/free-brands-svg-icons'
-
-library.add(
-  faPencil,
-  faHandsHeart,
-  faFileUser,
-  faGraduationCap,
-  faLinkedinIn,
-  faStackOverflow,
-  faCodepen,
-  faGithub,
-  faBriefcase,
-  faCheck,
-  faHashtag,
-  faEnvelope
-)
+import { faLinkedinIn, faStackOverflow, faCodepen, faGithub } from '@fortawesome/free-brands-svg-icons'
+library.add( faPencil, faHandsHeart, faFileUser, faGraduationCap, faLinkedinIn, faStackOverflow, faCodepen, faGithub, faBriefcase, faCheck, faHashtag, faEnvelope )
+/* eslint-enable prettier/prettier */
 
 export default {
-  name: 'Resume',
-  components: {
-    ResumeItem,
-    Skill,
-    SectionHeader,
-  },
   props: {
     globals: {
       type: Object,
@@ -363,7 +326,7 @@ export default {
           href: '/',
         },
         {
-          text: 'Résumé & Courses',
+          text: 'Résumé & Coursework',
           href: null,
         },
       ],
@@ -378,7 +341,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            "Cristin O'Connor's Front End Software Engineering Résumé and Coursework",
+            "Cristin O'Connor's Résumé and Coursework Related to Front End Software Engineering",
         },
       ],
     }
@@ -600,71 +563,6 @@ export default {
       b {
         font-weight: 500;
       }
-    }
-  }
-}
-
-.quote {
-  padding: 0 0 2rem;
-  max-width: 37.5rem;
-  margin: 0 auto;
-
-  blockquote {
-    display: block;
-    background-color: $primary;
-    padding: 1.875rem;
-    padding-bottom: 0.625rem;
-    border-radius: 4px;
-    left: 0;
-    top: 0;
-
-    .quote-icon {
-      display: inline-block;
-      width: 1.5rem;
-      height: 1.5rem;
-      flex-basis: 1.5rem;
-      margin-right: 0.625rem;
-      color: $primary;
-    }
-
-    // &::before {
-    //   content: url('~assets/images/fas-quote-left.svg');
-    //   display: inline-block;
-    //   width: 1.5rem;
-    //   height: 1.5rem;
-    //   flex-basis: 1.5rem;
-    //   margin-right: 0.625rem;
-    //   color: $primary;
-    // }
-
-    p {
-      color: $white;
-
-      i {
-        display: inline-block;
-        color: lighten($primary, 10%);
-        font-size: 1.25rem;
-        width: 0.8125rem;
-      }
-
-      span {
-        display: inline-block;
-        padding: 5px 0 0 18px;
-        margin-top: -25px;
-        font-size: 22px;
-        line-height: 1.3em;
-        font-family: $font-family-base;
-        font-weight: 700;
-        text-align: center;
-      }
-    }
-
-    cite {
-      display: block;
-      color: $white;
-      text-align: center;
-      font-weight: 500;
-      padding-bottom: 20px;
     }
   }
 }

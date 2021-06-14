@@ -1,5 +1,5 @@
 <template>
-  <ol class="breadcrumbs breadcrumb">
+  <ol :class="`breadcrumbs breadcrumb ${classes ? classes : ''}`">
     <li
       v-for="(crumb, index) in crumbs"
       :key="'crumb-' + index"
@@ -22,12 +22,30 @@ export default {
       type: Array,
       default: () => null,
     },
+    classes: {
+      type: String,
+      default: '',
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.breadcrumbs.breadcrumb {
+.flex-center {
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb-item {
+    &.active {
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+.breadcrumb {
   margin: 2rem 0 0;
   padding: 0;
   background-color: transparent;

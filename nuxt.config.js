@@ -26,7 +26,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // // Global CSS: https://go.nuxtjs.dev/config-css
+  // Global CSS: https://go.nuxtjs.dev/config-css
   // css: ['@/assets/scss/main.scss'],
 
   styleResources: {
@@ -36,19 +36,19 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: {
-    path: '~/components/global/*.vue',
-    ignore: ['~/compnoents/*.vue'],
-  },
+  // Auto import components: https://go.nuxtjs.dev/config-components w/@nuxt/components https://github.com/nuxt/components
+  components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module', // https://go.nuxtjs.dev/eslint
     '@nuxtjs/google-fonts',
     '@nuxtjs/google-analytics',
+    '@nuxt/image',
+    '@nuxt/components',
   ],
+
+  image: {},
 
   googleAnalytics: {
     id: 'UA-134680170-1',
@@ -64,13 +64,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    // 'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxtjs/axios', // https://go.nuxtjs.dev/axios
+    '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-fontawesome',
   ],
 
@@ -78,8 +74,7 @@ export default {
   axios: {},
 
   router: {
-    // ran before every route on both client and server
-    middleware: ['redirects'],
+    middleware: ['redirects'], // runs before every route on both client & server
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

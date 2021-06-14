@@ -42,22 +42,11 @@
 </template>
 
 <script>
-import PostList from '@/components/PostList'
-import Head from '@/components/Head'
-import Breadcrumbs from '@/components/Breadcrumbs'
-import PrevNext from '@/components/PrevNext'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faRss } from '@fortawesome/pro-solid-svg-icons'
-
 library.add(faRss)
 
 export default {
-  components: {
-    PrevNext,
-    PostList,
-    Breadcrumbs,
-    Head,
-  },
   async asyncData({ $content, query, params }) {
     const page = parseInt(params.page) || 1
     const limit = 4

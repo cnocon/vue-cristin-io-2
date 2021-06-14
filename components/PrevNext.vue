@@ -4,7 +4,7 @@
       v-if="prev"
       :class="next ? 'col-6 btn-col prev' : 'col-12 btn-col prev'"
     >
-      <nuxt-link
+      <NuxtLink
         class="btn btn-primary"
         :to="{
           name: name,
@@ -18,13 +18,13 @@
           ></font-awesome-icon>
         </span>
         Prev
-      </nuxt-link>
+      </NuxtLink>
       <span v-if="prev.title" class="prev-title">{{ prev.title }}</span>
     </div>
     <div v-else class="col-6 empty-prev"></div>
 
     <div v-if="next" class="col-6 btn-col next">
-      <nuxt-link
+      <NuxtLink
         class="btn btn-primary"
         :to="{
           name: name,
@@ -38,7 +38,7 @@
             :icon="['far', 'chevron-right']"
           ></font-awesome-icon>
         </span>
-      </nuxt-link>
+      </NuxtLink>
       <span v-if="next.title" class="next-title">{{ next.title }}</span>
     </div>
     <div v-else class="col-md-6 empty-next"></div>
@@ -46,14 +46,11 @@
 </template>
 
 <script>
-// eslint-disable-next-line import/named
+/* eslint-disable prettier/prettier */
 import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/pro-regular-svg-icons'
-
+import { faChevronLeft, faChevronRight } from '@fortawesome/pro-regular-svg-icons'
 library.add(faChevronLeft, faChevronRight)
+/* eslint-enable prettier/prettier */
 
 export default {
   props: {

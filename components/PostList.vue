@@ -29,41 +29,15 @@ export default {
       default: 1,
     },
   },
-  // eslint-disable-next-line require-await
-  async asyncData({ $content, params, query }) {
-    // eslint-disable-next-line no-console
-    // const postCount = this.posts.length
-    // return {
-    //   postCount
-    // }
-    // const categoryArticles = await $content('articles')
-    //   .where({
-    //     'categories.slug': { $contains: params.slug },
-    //   })
-    //   .only('title')
-    //   .fetch()
-    // const posts = await $content('articles')
-    //   .where({
-    //     'categories.slug': { $contains: params.slug },
-    //   })
-    //   .limit(2)
-    //   .skip((page - 1) * 2)
-    //   .sortBy('date', 'desc')
-    //   .fetch()
-    // const articleCount = categoryArticles.length
-    // eslint-disable-next-line no-console
-    // console.log('articleCount', articleCount)
-    // const currentCategory = posts[0].categories.filter((cat) => {
-    //   return cat.slug === params.slug
-    // })[0]
-    // return {
-    //   currentCategory,
-    //   posts,
-    //   page,
-    //   articleCount,
-    // }
-  },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.post-list {
+  .post-preview {
+    max-width: 525px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+</style>

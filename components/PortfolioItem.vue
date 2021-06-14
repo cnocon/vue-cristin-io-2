@@ -36,7 +36,7 @@
     </div>
     <div class="col-12 col-md-5 image-column">
       <div class="shadow mt-3">
-        <img :src="screenshot" :alt="title" />
+        <nuxt-img :src="screenshot" :alt="title"></nuxt-img>
       </div>
     </div>
   </div>
@@ -77,6 +77,10 @@ export default {
 .links {
   text-align: center;
 
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+  }
+
   a[target='_blank'] {
     &::after {
       margin-left: 3px;
@@ -84,7 +88,7 @@ export default {
   }
 }
 .image-column {
-  max-width: 360px;
+  max-width: 25rem;
   margin-left: auto;
   margin-right: 0;
 

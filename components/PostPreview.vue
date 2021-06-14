@@ -1,20 +1,20 @@
 <template>
-  <article class="shadow">
+  <article class="shadow post-preview">
     <header>
       <div class="post-image">
-        <img :src="require(`~/assets/images/${post.img}`)" :alt="post.alt" />
+        <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
       </div>
 
-      <nuxt-link
+      <NuxtLink
         :to="{ name: 'blog-articles-slug', params: { slug: post.slug } }"
         class="text-primary"
       >
-        {{ post.title }}</nuxt-link
+        {{ post.title }}</NuxtLink
       >
 
       <div class="meta">
         <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-        <!-- <nuxt-link
+        <!-- <NuxtLink
           v-for="(cat, index) in post.categories"
           :key="cat + '-' + index"
           :to="{
@@ -25,7 +25,7 @@
           class="badge badge-primary text-white mx-1 px-2 py-1 my-1"
         >
           {{ cat.name }}
-        </nuxt-link> -->
+        </NuxtLink> -->
         <span
           v-for="(cat, index) in post.categories"
           :key="cat + '-' + index"
@@ -64,7 +64,6 @@ export default {
 
 <style lang="scss" scoped>
 article {
-  // background-color: $lightest-gray;
   padding: 2rem 2rem 1.5rem;
   height: 100%;
   background-image: $pastel-rainbow-bar;

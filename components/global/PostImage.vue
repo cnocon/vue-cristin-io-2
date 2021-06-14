@@ -1,7 +1,7 @@
 <template>
   <figure>
     <div>
-      <img :src="src" :alt="alt" />
+      <nuxt-img :src="src" :alt="alt"></nuxt-img>
     </div>
     <figcaption v-show="caption">{{ caption }}</figcaption>
   </figure>
@@ -31,11 +31,14 @@ export default {
 figure {
   display: block;
   text-align: center;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 1.25rem auto;
+  width: 100%;
+  max-width: 900px;
 
   div {
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
 
     @include media-breakpoint-down(sm) {
       max-width: 100%;

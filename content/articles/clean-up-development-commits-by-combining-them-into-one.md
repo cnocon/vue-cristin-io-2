@@ -17,7 +17,7 @@ Keeping frequent commits throughout your development process on a local branch c
 
 First, let's create a history to work with on a new development branch called demo based off of master. For our purposes, master will serve as our production branch, while demo is our development branch we're using to create a detailed README file. Inside demo, I updated the README several times, committing after each change. When I run <code>git log</code>, my history looks like this (ignore the fact my commit email addresses are different - I have my reasons!):
 
-<post-image src="https://cdn.buttercms.com/1cvSxqa3RESSyYkyJOy4" alt="Git history"></post-image>
+<post-image src="/git-history.jpg" alt="Git history"></post-image>
 
 Let's say we've been super efficient and our README is done already, and our changes are ready for production. It's now time to get our history production ready.
 
@@ -39,7 +39,7 @@ Just like you'd normally do, commit the changes. But be careful to use a concise
 
 Our new development branch history will look like this:
 
-<post-image src="https://cdn.buttercms.com/xvPmg3PkQhqxIXriEFZa" alt="Git history"></post-image>
+<post-image src="/git-history-2.jpg" alt="Git history"></post-image>
 
 ### Step 3: Merge your branch into master (or whatever your production branch is)
 
@@ -59,7 +59,7 @@ We're going to check out out development branch, demo, and restore it to the com
 
 Unlike `git log`, which contains a commit ancestry for the current HEAD, `git reflog` contains a history of every action performed where data changed. When I run `git reflog` on my demo branch, it looks like this:
 
-<post-image src="https://cdn.buttercms.com/E3ZLqokvRa2W41KuvIhg" alt="Git reflog history"></post-image>
+<post-image src="/git-reflog.jpg" alt="Git reflog history"></post-image>
 
 We can see basically everything we've done in the entire repository, not just on the local branch. A few notable items are:
 
@@ -72,7 +72,7 @@ The abbreviated SHAs in yellow are what we can use to revert to that commit. In 
 
 `git reset --hard 451437d`
 
-<post-image src="https://cdn.buttercms.com/g6xGgVsWSeCN9sCnprgS" alt="Git reset hard output"></post-image>
+<post-image src="/git-reset-hard-output.jpg" alt="Git reset hard output"></post-image>
 
 Now that your branch contains only the changes you want, you can edit the commit message for production by running:
 
@@ -80,17 +80,17 @@ Now that your branch contains only the changes you want, you can edit the commit
 
 Now if we run `git log` on our demo branch, we'll see our production ready commit instead of our old commit:
 
-<post-image src="https://cdn.buttercms.com/DBFgVKVGQ7CThuPA2Dki" alt="New git history"></post-image>
+<post-image src="/new-git-history.jpg" alt="New git history"></post-image>
 
 You can merge this branch back into master like you'd normally do. You'll likely encounter merge conflicts due to the fact that you revised the history of the demo branch. But this is easy enough to fix - just accept the incoming change for each conflict in your code editor (I use VSCode's built in merge conflict helper):
 
-<post-image src="https://cdn.buttercms.com/sELQSISS9jIL6Fjk2CAl" alt="VS Code's Merge Conflict Helper"></post-image>
+<post-image src="/vscode-merge-conflict-helper.jpg" alt="VS Code's Merge Conflict Helper"></post-image>
 
 After you accept the incoming change, save the file, and run `git add` followed by `git commit -m "Fix merge conflicts with demo"`.
 
 The new history for the _master_ branch looks like this:
 
-<post-image src="https://cdn.buttercms.com/TF6g3lnDTIqKajYrDeZ6" alt="New git history"></post-image>
+<post-image src="/new-git-history-2.jpg" alt="New git history"></post-image>
 
 
 

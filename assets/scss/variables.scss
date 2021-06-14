@@ -7,15 +7,13 @@ $info: hsl(253, 98%, 62%);
 $light: hsl(200, 14%, 92%);
 $lightest: hsl(200, 16%, 96%);
 $dark: hsl(210, 30%, 17%);
-.bg-lightest {background-color: $lightest;}
-.bg-dark {background-color: $dark;}
 
-$breakpoint-sm: 575px;
-$breakpoint-sm-min: 576px;
-$breakpoint-md: 767px;
-$breakpoint-md-min: 768px;
-$breakpoint-lg: 991px;
-$breakpoint-lg-min: 992px;
+$breakpoint-sm: 35.9375rem; // 575px
+$breakpoint-sm-min: 36rem; // 576px
+$breakpoint-md: 47.9375rem; // 767px
+$breakpoint-md-min: 48rem; // 768px
+$breakpoint-lg: 61.9375rem; // 991px
+$breakpoint-lg-min: 62rem; // 992px
 
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-base: $font-family-sans-serif;
@@ -52,19 +50,25 @@ $border-light-gray: hsl(200, 14%, 92%);
 $border-med-gray: hsl(200, 14%, 76%);
 $border-dark-gray: hsl(200, 14%, 56%);
 $link-red: hsl(355, 80%, 75%);
-// $link-red-darker: hsl(355, 80%, 65%);
 $link-red-vivid: hsla(355, 92.5%, 67.5%, 100%);
 $link-yellow: hsl(58, 100%, 65%);
-// $link-yellow-darker: hsl(58, 65%, 50%);
 $link-yellow-vivid: hsla(58, 95%, 62.5%, 100%);
 $link-green: hsl(175, 80%, 65%);
-// $link-green-darker: hsl(175, 50%, 45%);
 $link-blue: hsl(197, 80%, 65%);
-// $link-blue-darker: hsl(197, 90%, 45%);
 $link-purple: hsl(240, 80%, 75%);
-// $link-purple-darker: hsl(240, 90%, 65%);
 $highlight-yellow: hsla(58, 100%, 65%, 0.8);
 
+$rainbow-text-angled: linear-gradient(
+  130deg,
+  #bca2f6,
+  #cdb9f8 5%,
+  #66d4ff 17%,
+  #66d4ff 25%,
+  #76f9ee 35%,
+  #ffe366 55%,
+  #ffe366 60%,
+  #f7baba 80%
+);
 $pastel-rainbow-bar: linear-gradient(-90deg,
   hsl(240, 100%, 85%) 7.5%,
   hsl(355, 100%, 90%) 22.5%,
@@ -72,15 +76,10 @@ $pastel-rainbow-bar: linear-gradient(-90deg,
   hsl(58, 100%, 80%) 37.5%,
   hsl(175, 100%, 85%) 85%,
   hsl(197, 100%, 85%) 92.5%);
-$rainbow-box-shadow: hsl(175, 100%, 65%) 0 2px 0,
-  hsla(58, 100%, 65%, 0.096) -2px 0 0,
-  hsl(240, 80%, 75%) 2px 0 0,
-  hsl(355, 80%, 80%) 0 -2px 0;
 $rainbow-box-shadow-dark: hsl(175, 80%, 60%) 0 2px,
   hsl(58, 100%, 60%) -2px 0,
   hsl(240, 80%, 69%) 2px 0,
   hsl(355, 80%, 72.5%) 0 -2px 0;
-.rainbow-border {box-shadow: $rainbow-box-shadow-dark;}
 $rainbow-gradient-light: linear-gradient(
     -240deg,
     hsl(259, 83%, 80%) 0%,
@@ -91,7 +90,6 @@ $rainbow-gradient-light: linear-gradient(
     hsl(49, 100%, 70%) 60%,
     hsl(0, 80%, 90%) 85%
 );
-
 $rainbow-gradient-med: linear-gradient(
     130deg,
     hsl(259, 83%, 80%) 0%,
@@ -104,56 +102,12 @@ $rainbow-gradient-med: linear-gradient(
     hsl(0, 80%, 85%) 80%
 );
 $rainbow-gradient-dark: linear-gradient(
-  90deg,
+  75deg,
   $link-red 10.5%,
   $link-yellow 39.5%,
   $link-green 50%,
   $link-blue 67.5%,
   $link-purple 82.5%
-);
-$rainbow-text: linear-gradient(
-  1205deg,
-  hsl(60, 100%, 68%) 15%,
-  hsl(175, 100%, 72%) 27.5%,
-  hsl(197, 100%, 78%) 50%,
-  hsl(240, 100%, 88%) 75%,
-  hsl(354, 100%, 85%) 90%,
-);
-$rainbow-ellipse-top-right: radial-gradient(
-  ellipse at top right,
-  hsl(355, 100%, 85%) 0%,
-  hsl(58, 100%, 80%) 30%,
-  hsl(175, 100%, 80%) 45%,
-  hsl(175, 100%, 85%) 55%,
-  hsl(197, 100%, 85%) 65%,
-  hsl(240, 100%, 90%) 75%
-);
-$rainbow-ellipse-top-right-dark: radial-gradient(
-  ellipse at top right,
-  hsl(355, 100%, 75%) 0%,
-  hsl(58, 100%, 70%) 30%,
-  hsl(175, 100%, 65%) 45%,
-  hsl(175, 100%, 55%) 55%,
-  hsl(197, 100%, 65%) 65%,
-  hsl(240, 100%, 87.5%) 75%
-);
-$rainbow-ellipse-top-left: radial-gradient(
-  ellipse at top left,
-  hsl(355, 100%, 85%) 0%,
-  hsl(58, 100%, 80%) 30%,
-  hsl(175, 100%, 80%) 45%,
-  hsl(175, 100%, 85%) 55%,
-  hsl(197, 100%, 85%) 65%,
-  hsl(240, 100%, 90%) 75%
-);
-$rainbow-ellipse-bottom-right: radial-gradient(
-  ellipse at bottom right,
-  hsl(355, 100%, 85%) 0%,
-  hsl(58, 100%, 80%) 30%,
-  hsl(175, 100%, 80%) 45%,
-  hsl(175, 100%, 85%) 55%,
-  hsl(197, 100%, 85%) 65%,
-  hsl(240, 100%, 90%) 75%
 );
 $rainbow-ellipse-bottom-left: radial-gradient(
   ellipse at bottom left,

@@ -11,9 +11,9 @@ html {
   box-sizing: border-box;
   max-width: 100%;
 
-  @include media-breakpoint-down(md) {
-    font-size: 14px;
-  }
+  // @include media-breakpoint-down(md) {
+  //   font-size: 14px;
+  // }
 }
 
 *,
@@ -33,10 +33,6 @@ body {
 h1 {
   font-family: $font-family-heading;
   font-weight: 900;
-
-  // @include media-breakpoint-down(sm) {
-  //   text-align: center;
-  // }
 }
 
 h1,
@@ -139,6 +135,7 @@ a {
   font-weight: 800;
   font-family: $font-family-display;
   letter-spacing: 1px;
+  background-color: $dark;
 }
 
 pre,

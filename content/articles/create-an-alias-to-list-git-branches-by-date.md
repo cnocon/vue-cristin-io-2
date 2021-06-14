@@ -25,7 +25,7 @@ _N.B. The following instructions are for Mac OSX command line users._
 
 Your results should look something like this:
 
-<post-image src="https://cdn.buttercms.com/Cu8MHsagSLKCBK4ZFfAZ" alt="list of git branches"></post-image>
+<post-image src="/gbl-alias.jpg" alt="list of git branches"></post-image>
 
 If you're human, you'll never remember that whole command. I personally have it saved as an alias called `gbl` (like "git branch list") that you can create as well by following along below.
 

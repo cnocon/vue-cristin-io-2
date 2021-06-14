@@ -1,48 +1,48 @@
 <template>
   <div class="navbar-inner container">
-    <nuxt-link to="/" class="navbar-brand">
-      <img
-        :src="require(`~/assets/images/square-portrait-white.png`)"
+    <NuxtLink :to="{ name: 'index' }" class="navbar-brand">
+      <nuxt-img
+        src="/square-portrait-white.png"
         alt="Cristin O'Connor"
         class="logo-img"
-      />
+      ></nuxt-img>
 
       <div class="name-and-title">
-        <div class="name">Cristin O'Connor</div>
+        <div :class="`${homepageClasses()}`">Cristin O'Connor</div>
         <div class="title">Front End Engineer</div>
       </div>
-    </nuxt-link>
 
-    <div class="name-and-title-mobile">
-      <div class="name">Cristin O'Connor</div>
-      <div class="title">Front End Engineer</div>
-    </div>
+      <div class="name-and-title-mobile">
+        <div :class="`${homepageClasses()}`">Cristin O'Connor</div>
+        <div class="title">Front End Engineer</div>
+      </div>
+    </NuxtLink>
 
     <ul class="nav ml-0">
       <li class="nav-item">
-        <nuxt-link
+        <NuxtLink
           :active="isActive('resume')"
           to="/resume"
           class="rounded nav-link"
-          >Résumé</nuxt-link
+          >Résumé</NuxtLink
         >
       </li>
       <li class="nav-item">
-        <nuxt-link
+        <NuxtLink
           :active="isActive('portfolio')"
           to="/portfolio"
           class="rounded nav-link"
-          >Portfolio</nuxt-link
+          >Portfolio</NuxtLink
         >
       </li>
       <li class="nav-item">
-        <nuxt-link
+        <NuxtLink
           :active="isActive('blog')"
           :to="{ name: 'blog-page', params: { slug: 'blog-page', page: 1 } }"
           :class="`rounded nav-link ${
             isActive('blog') ? 'nuxt-link-active nuxt-link-exact-active' : ''
           }`"
-          >Blog</nuxt-link
+          >Blog</NuxtLink
         >
       </li>
 
@@ -83,25 +83,29 @@
           aria-labelledby="#navbarDropdown"
         >
           <li class="nav-item" role="presentation">
-            <nuxt-link
+            <NuxtLink
               to="/resume"
               :active="isActive('resume')"
-              class="dropdown-item"
+              :class="`dropdown-item ${
+                isActive('resume')
+                  ? 'nuxt-link-active nuxt-link-exact-active'
+                  : ''
+              }`"
               role="menuitem"
-              >Résumé</nuxt-link
+              >Résumé</NuxtLink
             >
           </li>
           <li class="nav-item" role="presentation">
-            <nuxt-link
+            <NuxtLink
               to="/portfolio"
               :active="isActive('portfolio')"
               class="dropdown-item"
               role="menuitem"
-              >Portfolio</nuxt-link
+              >Portfolio</NuxtLink
             >
           </li>
           <li class="nav-item" role="presentation">
-            <nuxt-link
+            <NuxtLink
               :to="{
                 name: 'blog-page',
                 params: { slug: 'blog-page', page: 1 },
@@ -113,7 +117,7 @@
                   : ''
               }`"
               role="menuitem"
-              >Blog</nuxt-link
+              >Blog</NuxtLink
             >
           </li>
         </ul>
@@ -126,7 +130,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHomeLgAlt, faBars } from '@fortawesome/pro-solid-svg-icons'
 import { faTimes } from '@fortawesome/pro-light-svg-icons'
-
 library.add(faHomeLgAlt, faBars, faTimes)
 
 export default {
@@ -139,14 +142,17 @@ export default {
     isActive(path) {
       if (this.$route.name.match(/blog/)) {
         return (
-          (this.$route.name.match(/blog/) &&
-            this.$route.name.match(/blog/).length > 0) ||
-          (this.$route.name.match(/blog-articles-slug/) &&
-            this.$route.name.match(/blog-articles-slug/).length > 0)
+          this.$route.name === 'blog-page' ||
+          this.$route.name === 'blog-articles-slug'
         )
       } else {
         return this.$route.name === path
       }
+    },
+    homepageClasses() {
+      return this.$route.name === 'index'
+        ? 'name nuxt-link-active nuxt-link-exact-active'
+        : 'name'
     },
     toggleMenu() {
       this.showMenu = !this.showMenu
@@ -220,7 +226,7 @@ export default {
   &.container {
     display: flex;
     flex-wrap: nowrap !important;
-    max-width: 1220px;
+    max-width: 1140px;
 
     @include media-breakpoint-down(md) {
       width: 100%;
@@ -229,48 +235,54 @@ export default {
     }
   }
 }
+
 .name-and-title-mobile,
 .name-and-title {
   .name {
-    font-size: 1.75rem;
     line-height: 1em;
-    font-family: $font-family-heading;
-    text-transform: lowercase;
+    font-family: $font-family-display;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
     color: $white;
-    // color: transparent;
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // background-image: linear-gradient(
-    //   130deg,
-    //   #bca2f6,
-    //   #cdb9f8 5%,
-    //   #66d4ff 17%,
-    //   #66d4ff 25%,
-    //   #76f9ee 35%,
-    //   #ffe366 55%,
-    //   #ffe366 60%,
-    //   #f7baba 80%
-    // );
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    font-weight: 400;
 
     @include media-breakpoint-up(md) {
-      font-size: 2.0625rem;
+      font-size: 1.8438rem;
     }
   }
+
   .title {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-family: $font-family-heading;
     white-space: nowrap;
-    line-height: 1em;
+    line-height: 1.5em;
     font-weight: 400 !important;
     letter-spacing: 1px;
     color: $white;
     text-transform: uppercase;
     text-indent: 2px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.15rem;
+    }
   }
 }
+
+.name-and-title-mobile,
+.name-and-title {
+  .name {
+    &.nuxt-link-active,
+    &.nuxt-link-exact-active {
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: $rainbow-gradient-med;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 .name-and-title-mobile {
   display: flex;
   flex-direction: column;
@@ -286,13 +298,31 @@ export default {
 }
 .navbar-brand {
   margin-right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
 
   @include media-breakpoint-up(md) {
-    display: flex;
+    // width: unset;
     justify-content: flex-start;
-    align-items: center;
     text-align: left;
     margin-right: 1rem;
+  }
+
+  &.hover {
+    cursor: pointer;
+
+    .name-and-title,
+    .name-and-title-mobile {
+      .name {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: $rainbow-text-angled;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
   }
 
   .name-and-title {
@@ -301,7 +331,6 @@ export default {
     @include media-breakpoint-up(md) {
       display: block;
       text-align: left;
-      height: 62px;
     }
   }
 
@@ -309,24 +338,16 @@ export default {
     width: 62px;
     border-radius: 50%;
     display: inline-block;
-    box-shadow: $rainbow-box-shadow;
+    box-shadow: $rainbow-box-shadow-dark;
     background-color: $lightest-gray;
-    // background-image: $rainbow-ellipse-bottom-left;
-    // border: 1px solid $primary;
-    // box-shadow: $box-shadow-sm;
-    // border: 0.5px solid $light-gray;
-    // border: 1px solid $light-gray;
 
     @include media-breakpoint-up(md) {
-      // margin: 1rem 1.25rem 1rem 0;
       margin: 1rem 0.5rem 1rem 0;
     }
   }
 }
-// #my-nav-dropdown,
-.dropdown-toggle {
-  // right: -1rem;
 
+.dropdown-toggle {
   @include media-breakpoint-up(md) {
     display: none;
   }
@@ -360,58 +381,31 @@ export default {
     }
 
     &:hover {
-      color: transparent !important;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: linear-gradient(
-        130deg,
-        #bca2f6,
-        #cdb9f8 5%,
-        #66d4ff 17%,
-        #66d4ff 25%,
-        #76f9ee 35%,
-        #ffe366 55%,
-        #ffe366 60%,
-        #f7baba 80%
-      );
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    &.nuxt-link-exact-active,
-    &.nuxt-link-active {
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: linear-gradient(
-        130deg,
-        #bca2f6,
-        #cdb9f8 5%,
-        #66d4ff 17%,
-        #66d4ff 25%,
-        #76f9ee 35%,
-        #ffe366 55%,
-        #ffe366 60%,
-        #f7baba 80%
-      );
+      background-image: $rainbow-text-angled;
       background-repeat: no-repeat;
       background-size: cover;
     }
   }
 
   .dropdown-toggle {
-    font-size: 150%;
-
     &.nav-link {
-      color: $white !important;
+      color: $white;
 
       &:hover {
-        color: $white !important;
+        color: $white;
       }
     }
 
     &::after {
       display: none;
+    }
+
+    .svg-inline--fa {
+      width: 20px !important;
+      height: 24px !important;
     }
   }
 
@@ -426,40 +420,35 @@ export default {
       }
     }
 
-    &.show {
-      font-size: 150%;
-
+    &.dropdown.show {
       @include media-breakpoint-down(sm) {
         text-align: center;
       }
 
       .nuxt-link-active,
       .nuxt-link-exact-active {
-        color: transparent !important;
+        color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        background-image: linear-gradient(
-          130deg,
-          #bca2f6,
-          #cdb9f8 5%,
-          #66d4ff 17%,
-          #66d4ff 25%,
-          #76f9ee 35%,
-          #ffe366 55%,
-          #ffe366 60%,
-          #f7baba 80%
-        );
+        background-image: $rainbow-text-angled;
         background-repeat: no-repeat;
         background-size: cover;
       }
     }
 
-    .nav-item {
-      a {
-        font-family: $font-family-heading;
-        letter-spacing: 3px;
-        text-align: center;
-        font-weight: 900;
+    a {
+      font-family: $font-family-heading;
+      text-align: center;
+      font-weight: 900;
+
+      &.nuxt-link-active,
+      &.nuxt-link-exact-active {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: $rainbow-gradient-med;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
   }

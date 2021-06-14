@@ -31,8 +31,13 @@ export default {
   min-height: 100vh;
 }
 
+.container {
+  @include media-breakpoint-up(md) {
+    max-width: 1140px !important;
+  }
+}
+
 .content-container {
-  max-width: 1220px;
   min-height: calc(100vh - 150px - 75px - 64px);
 
   a {

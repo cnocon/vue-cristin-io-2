@@ -2,10 +2,12 @@
   <div>
     <Head />
     <header class="text-center">
-      <h1 class="page-title">I Write <b>Code.</b></h1>
-      <!-- <p class="page-subtitle">
-        I'm a <span>Front End Software Engineer</span>.
-      </p> -->
+      <h1 class="page-title">
+        I&nbsp;&nbsp;L<span>&heartsuit;</span>VE&nbsp;&nbsp;<i>Code</i>.
+      </h1>
+      <p class="page-subtitle">
+        So I write it, teach it, and learn more every day.
+      </p>
     </header>
     <main>
       <Section
@@ -52,7 +54,7 @@
                 knowledgeable. She was also kind and concise which was exactly
                 what a newbie like me needed."
               </template>
-              <template #cite>Mariah W., Freelance Web Developer</template>
+              <template #cite>– Mariah W., Freelance Web Developer</template>
             </quote>
           </div>
         </div>
@@ -65,10 +67,10 @@
         header-text="Latest Blog Posts"
         header-alignment="left"
       >
-        <PostList
+        <LazyPostList
           :posts="posts"
           column-classes="col-sm-12 col-md-6 col-xl-4 mb-5"
-        ></PostList>
+        ></LazyPostList>
       </Section>
 
       <Section
@@ -196,30 +198,22 @@
 </template>
 
 <script>
-/* eslint-disable prettier/prettier */
-import Head from '@/components/Head'
-import RotatingHeader from '@/components/RotatingHeader'
-import Section from '@/components/Section'
-import PostList from '@/components/PostList'
 import { library } from '@fortawesome/fontawesome-svg-core'
-// import { faConciergeBell } from '@fortawesome/pro-regular-svg-icons'
+/* eslint-disable prettier/prettier */
 import { faConciergeBell, faHandshake, faUserAstronaut, faEnvelope, faHashtag, faCode, faGraduationCap, faRss } from '@fortawesome/pro-light-svg-icons'
 import { faLinkedinIn, faStackOverflow, faCodepen, faGithub } from '@fortawesome/free-brands-svg-icons'
-
 library.add(faGraduationCap, faCode, faUserAstronaut, faConciergeBell, faRss, faHandshake, faEnvelope, faLinkedinIn, faHashtag, faStackOverflow, faCodepen, faGithub)
+/* eslint-enable prettier/prettier */
 
 export default {
-  components: {
-    RotatingHeader,
-    Section,
-    PostList,
-    Head,
-  },
   async asyncData({ $content, params, query }) {
-    const posts = await $content('articles').limit(6).sortBy('date', 'desc').fetch()
+    const posts = await $content('articles')
+      .limit(6)
+      .sortBy('date', 'desc')
+      .fetch()
 
     return {
-      posts
+      posts,
     }
   },
 }
@@ -240,18 +234,45 @@ header {
 .page-title {
   font-weight: 400;
   color: $primary;
-  text-transform: uppercase;
   font-family: $font-family-display;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 
   b {
-    font-weight: 900;
+    font-weight: 500;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: $rainbow-gradient-med;
+    background-image: $rainbow-gradient-dark;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  i {
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  span {
+    font-size: 2.4375rem; // 39px
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      130deg,
+      #f5a0a7 20%,
+      #f5a0a7 40%,
+      #fff94d 47.5%,
+      #5eede1 55%,
+      #5ec5ed 62.5%,
+      #8c8cf2 75%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 3.375rem; // 54px
+      line-height: 1em;
+    }
   }
 }
 .page-subtitle {
@@ -261,6 +282,10 @@ header {
   font-family: $font-family-display;
   font-size: 1.25rem;
   font-style: italic;
+
+  @include media-breakpoint-down(md) {
+    font-size: 1.1rem;
+  }
 
   span {
     display: inline-block;

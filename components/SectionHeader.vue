@@ -37,6 +37,12 @@ export default {
   position: relative;
   white-space: nowrap;
   height: 64px;
+  margin-bottom: 0.25rem;
+
+  @include media-breakpoint-down(md) {
+    height: 42px;
+    margin-bottom: 0.25rem;
+  }
 
   &.align-center {
     &::before {
@@ -71,22 +77,31 @@ export default {
     top: 2px;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 72px;
+    height: 62px;
     margin: 0;
     width: 100%;
     max-width: none;
     box-sizing: content-box;
     border-bottom: 1px solid $light-gray;
+
+    @include media-breakpoint-down(md) {
+      height: 42px;
+    }
   }
 
   span {
     position: absolute;
     display: inline-block;
     background-color: $white;
-    line-height: 64px;
-    height: 64px;
     vertical-align: middle;
     padding: 0 1rem 0 0;
+    line-height: 64px;
+    height: 64px;
+
+    @include media-breakpoint-down(md) {
+      line-height: 42px;
+      height: 42px;
+    }
   }
 
   b {
@@ -103,23 +118,25 @@ export default {
   .icon-container {
     position: relative;
     display: inline-block;
-    line-height: 46px;
     vertical-align: middle;
     border: 2px solid $light-gray;
     border-radius: 50%;
-    width: 42px;
-    height: 42px;
+    width: 58px;
+    height: 58px;
     color: lighten($border-med-gray, 5%);
 
     @include media-breakpoint-down(md) {
-      margin-right: 0.5rem;
+      width: 42px;
+      height: 42px;
+      // line-height: 46px;
+      margin-right: 0.25rem;
     }
 
     svg {
       position: absolute;
       top: 50%;
       left: 50%;
-      padding: 0 2.5px;
+      // padding: 0 2.5px;
       transform: translate(-50%, -50%);
     }
   }

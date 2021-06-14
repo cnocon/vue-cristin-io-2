@@ -44,14 +44,13 @@ export default {
   &.text-lg {
     blockquote {
       p {
-        font-size: 2rem;
+        font-size: 1.35rem !important;
+        font-weight: 600 !important;
       }
     }
   }
 
   &.text-center {
-    text-align: center;
-
     cite {
       text-align: center;
     }
@@ -70,11 +69,11 @@ export default {
 
     p {
       flex-basis: calc(100% - 1.5rem - 10px);
-      font-size: 1.5rem;
       line-height: 1.5;
-      font-family: $font-family-display;
-      font-weight: 800;
       margin-bottom: 0;
+      font-family: $font-family-sans-serif;
+      font-weight: 500;
+      font-size: 1.15rem;
     }
 
     cite {
@@ -83,16 +82,6 @@ export default {
       width: 100%;
       text-align: right;
       margin-top: 1.25rem;
-    }
-  }
-
-  &.subtle {
-    blockquote {
-      p {
-        font-family: $font-family-sans-serif;
-        font-weight: 500;
-        font-size: 1.15rem;
-      }
     }
   }
 }

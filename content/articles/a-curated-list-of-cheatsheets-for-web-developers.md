@@ -3,7 +3,7 @@ title: A Curated List of Cheatsheets for Developers
 summary: As a tribute to my young, homework-nerd self, I've compiled a list of some of the best cheat sheets I could find for web development purposes (although admittedly I favored the things I just happen to need sometimes).
 date: 2020-11-15T21:38:00Z
 img: default-sm.png
-shareimg: default.jpeg
+shareimg: default.jpg
 alt: Woman on a Laptop
 categories: [{name: Reference, slug: reference}, {name: Docs, slug: docs}]
 ---
@@ -83,5 +83,5 @@ I tried to find good Cheatsheets that might be helpful to beginner and intermedi
 
 Please remember that it's ok to not know everything, and even the biggest stars in our industry, like <a href="https://wesbos.com/" target="_blank" rel="noopener noreferrer">Wes Bos</a>, doubt themselves sometimes.
 
-<post-image src="https://cdn.buttercms.com/yUfdJpeRRd69fYnowB3g" alt="Wes Bos Tweet"></post-image>
+<post-image src="/wes-bos-tweet.jpg" alt="Wes Bos Tweet"></post-image>
 

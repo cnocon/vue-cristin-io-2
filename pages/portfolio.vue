@@ -12,14 +12,14 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         title="CRISTIN.IO (Nuxt Implementation)"
         demo-link="https://cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/master"
-        screenshot="https://www.dropbox.com/s/riaun6410csil62/cristin-io-nuxt.png?raw=1"
+        screenshot="/cristin-io-nuxt.jpg"
         :technologies="[
           { name: 'Nuxt', link: 'https://v3.vuejs.org/' },
           { name: 'Nuxt Content API', link: 'https://content.nuxtjs.org/' },
@@ -58,7 +58,7 @@
       header-icon-type="fab"
       header-icon="github"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="mb-5"
     >
       <PortfolioItem
@@ -66,7 +66,7 @@
         demo-link="https://react-github-stats-card-v2-demo.netlify.app"
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
         npm-link="https://www.npmjs.com/package/react-github-stats-card-v2"
-        :screenshot="require('/assets/images/stat-card-preview.jpg')"
+        screenshot="/stat-card-preview.jpg"
         :technologies="[
           { name: 'GitHub API', link: 'https://docs.github.com/en/rest' },
           {
@@ -106,16 +106,14 @@
       header-icon-type="fad"
       header-icon="clipboard-list-check"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         title="Front End Development Flash Cards App"
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
-        :screenshot="
-          require('/assets/images/flashcards-app-screenshot-white.jpg')
-        "
+        screenshot="/flashcards-app-screenshot-white.jpg"
         :technologies="[
           { name: 'MongoDB (custom API)', link: 'https://www.mongodb.com/' },
           { name: 'Mongoose (custom API)', link: 'https://mongoosejs.com/' },
@@ -143,14 +141,14 @@
       header-icon-type="fal"
       header-icon="thunderstorm-moon"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         title="Weather Charts/Forecast App"
         demo-link="https://weather-charts-app.netlify.app"
         git-hub-link="https://github.com/cnocon/weather-charts-app-new"
-        :screenshot="require('/assets/images/weather-app-screenshot.jpg')"
+        screenshot="/weather-app-screenshot.jpg"
         :technologies="[
           { name: 'React', link: 'https://reactjs.org/' },
           { name: 'Redux', link: 'https://redux.js.org/' },
@@ -178,14 +176,14 @@
       header-icon-type="fab"
       header-icon="youtube"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         title="YouTube Search App"
         demo-link="https://youtube-search-new.netlify.app"
         git-hub-link="https://github.com/cnocon/youtube-search-new"
-        :screenshot="require('/assets/images/youtube-app-screenshot.jpg')"
+        screenshot="/youtube-app-screenshot.jpg"
         :technologies="[
           {
             name: 'YouTube API V3',
@@ -206,13 +204,13 @@
       header-icon-type="fal"
       header-icon="briefcase"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         title="CenturyLink Small Business Site"
         demo-link="https://business.centurylink.com/"
-        :screenshot="require('/assets/images/clq.jpg')"
+        screenshot="/clq.jpg"
         :technologies="[
           { name: 'Component-based architecture', link: null },
           {
@@ -245,14 +243,14 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         title="CRISTIN.IO (Legacy Version Using Gatsby)"
         demo-link="https://vue.cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/vue"
-        screenshot="https://www.dropbox.com/s/0kb1qgdjgwnn3ce/cristin-io-vue.png?raw=1"
+        screenshot="/cristin-io-vue.jpg"
         :technologies="[
           { name: 'Vue 3', link: 'https://v3.vuejs.org/' },
           { name: 'Vue Router', link: 'https://router.vuejs.org/' },
@@ -283,14 +281,14 @@
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
+      header-classes="dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         header-text="CRISTIN.IO (Gatsby Implementation)"
         demo-link="https://gatsby-cristin-io.netlify.app/"
         git-hub-link="https://github.com/cnocon/cristin-io"
-        screenshot="https://www.dropbox.com/s/qndt8nmup19dp7p/gatsby-cristin-io.png?raw=1"
+        screenshot="/gatsby-cristin-io.jpg"
         :technologies="[
           { name: 'Gatsby', link: 'https://www.gatsbyjs.com/' },
           { name: 'React', link: 'https://www.reactjs.org/' },
@@ -313,77 +311,20 @@
         </template>
       </PortfolioItem>
     </Section>
-
-    <!--<Section
-      header-text="CRISTIN.IO (This Website)"
-      header-icon-type="fad"
-      header-icon="browser"
-      header-alignment="center"
-      header-classes="mb-1 mt-3 dark"
-      section-classes="pb-5"
-    >
-      <PortfolioItem
-        title="CRISTIN.IO (this website)"
-        demo-link="https://cristin.io"
-        git-hub-link="https://github.com/cnocon/nuxt-cristin-io"
-        :screenshot="require('/assets/images/cristin-io.jpg')"
-        :technologies="[
-          { name: 'Vue', link: 'https://vuejs.org/' },
-          { name: 'Nuxt', link: 'https://nuxtjs.org/' },
-          {
-            name: 'Nuxt Content API',
-            link: 'https://content.nuxtjs.org/',
-          },
-          { name: 'Vue Router', link: 'https://router.vuejs.org/' },
-        ]"
-      >
-        <template #summary>
-          <p>
-            CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a
-            front end web development blog authored by yours truly, my résumé,
-            portfolio (surprise!), and some general information about me and the
-            services I offer.
-          </p>
-        </template>
-      </PortfolioItem>
-    </Section> -->
   </div>
 </template>
 
 <script>
-import Head from '@/components/Head'
-import PortfolioItem from '@/components/PortfolioItem'
-import Breadcrumbs from '@/components/Breadcrumbs'
-import Section from '@/components/Section'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFolders } from '@fortawesome/pro-regular-svg-icons'
-import {
-  faThunderstormMoon,
-  faBriefcase,
-} from '@fortawesome/pro-light-svg-icons'
-import {
-  faClipboardListCheck,
-  faBrowser,
-} from '@fortawesome/pro-duotone-svg-icons'
+/* eslint-disable prettier/prettier */
+import { faThunderstormMoon, faBriefcase } from '@fortawesome/pro-light-svg-icons'
+import { faClipboardListCheck, faBrowser } from '@fortawesome/pro-duotone-svg-icons'
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
-
-library.add(
-  faFolders,
-  faGithub,
-  faClipboardListCheck,
-  faThunderstormMoon,
-  faBrowser,
-  faYoutube,
-  faBriefcase
-)
+library.add(faFolders, faGithub, faClipboardListCheck, faThunderstormMoon, faBrowser, faYoutube, faBriefcase)
+/* eslint-enable prettier/prettier */
 
 export default {
-  components: {
-    Section,
-    Breadcrumbs,
-    PortfolioItem,
-    Head,
-  },
   data() {
     return {
       breadcrumbs: [

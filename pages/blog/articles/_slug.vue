@@ -1,5 +1,6 @@
 <template>
   <div v-if="post">
+    <Breadcrumbs :crumbs="breadcrumbs" classes="flex-center" />
     <Head
       :title="`${post.title} by Cristin O'Connor`"
       :description="`${post.title} by Cristin O'Connor`"
@@ -35,20 +36,14 @@
         </div>
         <div class="col-12 col-md-3 toc-image-col">
           <div class="toc-image">
-            <img
-              :src="require(`~/assets/images/${post.img}`)"
-              :alt="post.alt"
-            />
+            <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
           </div>
         </div>
       </div>
       <div v-else class="row toc-image-row mb-4">
         <div class="toc-col col-md-3 mx-auto mt-2 mb-2">
           <div class="toc-image">
-            <img
-              :src="require(`~/assets/images/${post.img}`)"
-              :alt="post.alt"
-            />
+            <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
           </div>
         </div>
       </div>
@@ -71,14 +66,7 @@
 </template>
 
 <script>
-import PrevNext from '@/components/PrevNext'
-import Head from '@/components/Head'
-
 export default {
-  components: {
-    PrevNext,
-    Head,
-  },
   async asyncData({ $content, params, query }) {
     // fetch our article here
     const post = await $content('articles', params.slug).fetch()
@@ -89,10 +77,26 @@ export default {
       .surround(params.slug)
       .fetch()
 
+    const breadcrumbs = [
+      {
+        href: '/',
+        text: 'Home',
+      },
+      {
+        href: '/blog/1',
+        text: 'Recent Articles',
+      },
+      {
+        href: null,
+        text: post.title,
+      },
+    ]
+
     return {
       post,
       prev,
       next,
+      breadcrumbs,
     }
   },
   methods: {
@@ -112,6 +116,10 @@ export default {
 <style lang="scss" scoped>
 header {
   text-align: center;
+
+  h1 {
+    margin-top: 0.5rem;
+  }
 
   time {
     display: block;
