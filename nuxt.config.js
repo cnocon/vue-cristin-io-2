@@ -47,7 +47,20 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/google-analytics',
   ],
+
+  googleAnalytics: {
+    id: 'UA-134680170-1',
+  },
+
+  googleFonts: {
+    families: {
+      Oswald: [300, 400, 500, 600, 700],
+      Lato: [300, 400, 700, 900],
+      'Open+Sans': [300, 400, 500, 600, 700, 800, 900],
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -60,14 +73,6 @@ export default {
     '@nuxt/content',
     'nuxt-fontawesome',
   ],
-
-  googleFonts: {
-    families: {
-      Oswald: [300, 400, 500, 600, 700],
-      Lato: [300, 400, 700, 900],
-      'Open+Sans': [300, 400, 500, 600, 700, 800, 900],
-    },
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

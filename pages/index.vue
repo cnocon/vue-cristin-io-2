@@ -42,7 +42,7 @@
             </p>
           </div>
           <div class="col-sm-12 col-lg-6 mb-5">
-            <quote classes="subtle bg-lightest rounded-lg pr-5">
+            <quote classes="subtle dark rounded-lg pr-5">
               <template #quote>
                 Cristin O'Connor is a lifesaver! Being new to Gatsby.js, I was
                 having a difficult time finding a solution for a blocker. I

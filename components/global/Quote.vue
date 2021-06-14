@@ -20,10 +20,26 @@ export default {
 
 <style lang="scss" scoped>
 .quote {
-  padding: 2rem;
+  padding: 2rem 3rem 1rem 1.75rem;
   border-radius: 4px;
   max-width: 700px;
   margin: 0 auto;
+  box-shadow: $box-shadow-sm;
+  background-color: $lightest-gray;
+
+  &.dark {
+    background-color: $primary;
+
+    blockquote {
+      p {
+        color: $white;
+      }
+
+      cite {
+        color: $white;
+      }
+    }
+  }
 
   blockquote {
     display: flex;

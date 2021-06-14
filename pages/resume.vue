@@ -100,7 +100,6 @@
         <div class="quote">
           <blockquote>
             <p>
-              <i class="fas fa-quote-left"></i>
               <span
                 >How we spend our days is, of course, how we spend our lives.
                 What we do with this hour, and that one, is what we are
@@ -652,12 +651,22 @@ export default {
   margin: 0 auto;
 
   blockquote {
-    background-color: $black;
+    background-color: $primary;
     padding: 1.875rem;
     padding-bottom: 0.625rem;
     border-radius: 4px;
     left: 0;
     top: 0;
+
+    &::before {
+      content: url('~assets/images/fas-quote-left.svg');
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-basis: 1.5rem;
+      margin-right: 0.625rem;
+      color: $primary;
+    }
 
     p {
       color: $white;
