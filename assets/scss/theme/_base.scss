@@ -34,9 +34,9 @@ h1 {
   font-family: $font-family-heading;
   font-weight: 900;
 
-  @include media-breakpoint-down(sm) {
-    text-align: center;
-  }
+  // @include media-breakpoint-down(sm) {
+  //   text-align: center;
+  // }
 }
 
 h1,

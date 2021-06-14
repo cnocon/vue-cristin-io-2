@@ -32,6 +32,9 @@ export default {
 }
 
 .content-container {
+  max-width: 1220px;
+  min-height: calc(100vh - 150px - 75px - 64px);
+
   a {
     border-bottom: 1px solid lighten($link-underline-gray, 20%);
     text-decoration: none;
@@ -76,10 +79,6 @@ export default {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-}
-
-.content-container {
-  min-height: calc(100vh - 150px - 75px - 64px);
 }
 
 .rainbow-ellipse {

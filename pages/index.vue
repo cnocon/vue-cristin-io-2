@@ -226,6 +226,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+p,
+li {
+  a {
+    text-decoration: none;
+  }
+}
+
 header {
   text-align: center;
 }

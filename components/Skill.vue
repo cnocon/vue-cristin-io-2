@@ -33,13 +33,7 @@ export default {
 
 <style scoped lang="scss">
 .skill-unit {
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-
-  @media screen and (max-width: $breakpoint-sm) {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-  }
+  padding: 1rem 0 1rem 0.625rem;
 
   &:last-of-type {
     padding-bottom: 4rem;
@@ -49,12 +43,14 @@ export default {
     position: relative;
     z-index: 1;
     margin: 0 0 0.25rem;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.4em;
     vertical-align: baseline;
-    font-family: $font-family-heading;
+    font-family: $font-family-base;
     color: $primary;
+    letter-spacing: 0;
+    text-transform: uppercase;
   }
 
   i {
@@ -70,9 +66,9 @@ export default {
     z-index: 0;
     background-color: $border-light-gray;
     width: 100%;
-    height: 4px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    height: 6px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     display: block;
     outline: 0;
 
@@ -84,9 +80,9 @@ export default {
       left: 0;
       width: 0;
       z-index: 1;
-      height: 4px;
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px;
+      height: 6px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
       background-color: $border-light-gray;
       // background-image: $pastel-rainbow-bar;
       background-image: $rainbow-gradient-light;

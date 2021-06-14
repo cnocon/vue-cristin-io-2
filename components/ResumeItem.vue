@@ -5,9 +5,7 @@
       <h4>
         {{ item.position }}
 
-        <span v-if="item.positionDetail" class="font-tertiary font-weight-300">
-          |&nbsp;
-        </span>
+        <span v-if="item.positionDetail" class="median-pipe">|</span>
         <small
           v-if="item.positionDetail"
           class="nocase font-tertiary font-weight-300"
@@ -16,16 +14,19 @@
         </small>
       </h4>
       <p>
-        <span v-html="item.company" class="company"></span>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <span class="company" v-html="item.company"></span>
+        <!-- eslint-enable -->
         <font-awesome-icon
           :icon="['fal', 'chevron-double-right']"
           size="2x"
-          class="top-icon"
         ></font-awesome-icon>
-        <span v-html="item.location" class="location"></span>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <span class="location" v-html="item.location"></span>
+        <!-- eslint-enable -->
         <span class="range">
           {{ item.startDate }}
-          <span class="range-end" v-if="item.endDate">
+          <span v-if="item.endDate" class="range-end">
             &mdash; {{ item.endDate }}
           </span>
         </span>
@@ -33,19 +34,18 @@
     </header>
     <ul :class="descClass ? descClass : ''">
       <li
-        :class="descItemClass ? descItemClass : ''"
         v-for="(desc, index) in item.descList"
         :key="index"
+        :class="descItemClass ? descItemClass : ''"
       >
         {{ desc }}
       </li>
     </ul>
-    <ul class="awards list-style-none" v-if="item.awards.length > 0">
+    <ul v-if="item.awards.length > 0" class="awards list-style-none">
       <li v-for="(award, index) in item.awards" :key="index">
         <font-awesome-icon
           :icon="['fal', 'trophy-alt']"
           size="2x"
-          class="top-icon"
         ></font-awesome-icon>
         <div>
           {{ award.name }}
@@ -58,7 +58,6 @@
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-// import {  } from '@fortawesome/pro-solid-svg-icons'
 import {
   faChevronDoubleRight,
   faTrophyAlt,
@@ -68,10 +67,22 @@ library.add(faChevronDoubleRight, faTrophyAlt)
 export default {
   name: 'ResumeItem',
   props: {
-    item: Object,
-    itemClass: String,
-    descItemClass: String,
-    descClass: String,
+    item: {
+      type: Object,
+      default: null,
+    },
+    itemClass: {
+      type: String,
+      default: '',
+    },
+    descItemClass: {
+      type: String,
+      default: '',
+    },
+    descClass: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     itemClasses() {
@@ -84,64 +95,74 @@ export default {
 <style scoped lang="scss">
 .item {
   border: 3px solid $border-light-gray;
-  padding: 1.875rem 1.875rem 0;
+  padding: 1.875rem 1.875rem 0 2.625rem;
   border-radius: 0.3125rem;
-  margin-bottom: 3rem;
   position: relative;
 
-  @media all and (max-width: $breakpoint-sm) {
+  @include media-breakpoint-down(md) {
     padding: 0 1.5rem 1.5rem;
   }
 
-  header {
-    h4 {
-      margin-bottom: 0;
-    }
-
-    @media all and (min-width: $breakpoint-sm-min) {
-      h4 {
-        margin-top: 0;
-      }
-
-      p span,
-      p span.range {
-        font-size: 12px;
-      }
-    }
+  .left-column & {
+    margin-bottom: 2rem;
   }
 
-  p {
-    margin-top: 0;
+  .right-column & {
+    padding-left: 0.625rem;
+
+    &.edu-item {
+      margin-bottom: 2rem;
+
+      header {
+        p {
+          @include media-breakpoint-down(md) {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
   }
 
   ul {
-    @media all and (max-width: $breakpoint-sm) {
-      margin-bottom: 0 !important;
+    &.list-style-none {
+      padding-left: 0;
     }
   }
 
   li {
     margin-bottom: 0.3125rem;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
+
+    @include media-breakpoint-down(md) {
+      font-size: 0.875rem;
+    }
 
     &:last-of-type {
       margin-bottom: 0;
     }
 
-    @media all and (max-width: $breakpoint-sm) {
+    @include media-breakpoint-down(md) {
       font-size: 0.875rem;
     }
   }
+
+  p {
+    display: block;
+  }
+
+  .median-pipe {
+    font-family: $font-family-display;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1em;
+    color: $border-dark-gray;
+  }
+
   &.edu-item {
     .year {
       display: none;
-    }
-  }
-
-  &.service-item {
-    &:last-of-type {
-      padding-bottom: 1rem;
     }
   }
 
@@ -156,10 +177,10 @@ export default {
     .year {
       display: none;
 
-      @media all and (min-width: $breakpoint-sm-min) {
+      @include media-breakpoint-up(md) {
         display: block;
         position: absolute;
-        left: -4.125rem;
+        left: -4.5rem;
         top: calc(50% - 1.5625rem);
         width: 3.125rem;
         height: 3.125rem;
@@ -177,11 +198,33 @@ export default {
     }
   }
 
+  &.edu-item,
+  &.service-item,
+  &.work-item {
+    header {
+      > p {
+        // display: flex;
+        // justify-content: flex-start;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // margin-top: 0;
+      }
+    }
+  }
+
   &.service-item {
     display: block;
     border: 0;
-    padding: 0;
-    margin-bottom: 0 !important;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 1rem;
+    }
+
+    &:last-of-type {
+      padding-top: 0;
+    }
 
     .year {
       display: none;
@@ -192,11 +235,18 @@ export default {
     margin-bottom: 1rem;
 
     h4 {
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       font-family: $font-family-display;
-      font-size: 1rem;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
     }
+
     span {
       display: inline-block;
       font-weight: 400;
@@ -205,56 +255,46 @@ export default {
       font-size: 0.875rem;
 
       &.company {
-        font-family: $font-family-display;
-        text-transform: uppercase;
-        font-size: 0.875rem;
+        font-family: $font-family-heading;
+        font-size: 1.15rem;
+        line-height: 2rem;
+        font-weight: 400;
 
-        @media all and (max-width: $breakpoint-sm) {
-          display: block;
-          font-size: 0.8125rem;
-        }
-
-        + i {
-          @media all and (max-width: $breakpoint-sm) {
-            display: none;
-          }
+        @include media-breakpoint-down(md) {
+          display: inline-block;
+          font-size: 0.925rem;
         }
       }
 
       &.location {
-        display: inline-block;
-        font-weight: 400;
-        font-style: italic;
+        font-family: $font-family-base;
         font-size: 0.875rem;
-
-        @media all and (max-width: $breakpoint-sm) {
-          vertical-align: top;
-          font-size: 0.8125rem;
-        }
+        line-height: 2rem;
+        vertical-align: middle;
+        text-transform: uppercase;
+        font-style: normal;
+        color: $border-dark-gray;
       }
 
       &.range {
         display: block;
-        font-size: 0.8125rem;
-        color: $border-dark-gray;
         font-weight: 500;
+        width: 100%;
+        font-size: 0.9rem;
+        color: darken($border-dark-gray, 5%);
         font-family: $font-family-base;
+        line-height: 1.25em;
 
-        @media all and (max-width: $breakpoint-sm) {
-          font-size: 0.75rem;
-          line-height: 1em;
+        @include media-breakpoint-down(md) {
+          font-size: 0.875rem;
         }
 
         .range-end {
-          color: $border-dark-gray;
-          font-weight: 500;
-          font-family: $font-family-base;
-          font-size: 0.8125rem;
-
-          @media all and (max-width: $breakpoint-sm) {
-            font-size: 0.75rem;
-            line-height: 1em;
-          }
+          color: inherit;
+          font-weight: inherit;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
         }
       }
     }
@@ -279,28 +319,19 @@ export default {
     }
   }
   ul {
-    padding-left: 20px;
-    font-size: 14px;
-    margin: 0 0 1.5rem;
+    padding-left: 1.25rem;
+    font-size: 0.875;
+    margin: 0 0 2rem;
 
     &.awards {
       padding-left: 0;
-      // padding-bottom: 1.5rem;
-
-      @media all and (max-width: $breakpoint-sm) {
-        padding: 1.5rem 0;
-
-        li {
-          display: flex;
-          align-items: center;
-
-          div {
-            font-size: 12px;
-          }
-        }
-      }
 
       li {
+        position: static;
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 0.46875rem;
+        padding-top: 0.46875rem;
         position: relative;
         list-style: none;
         font-weight: 600;
@@ -310,14 +341,25 @@ export default {
         align-items: center;
         margin-bottom: 0.9375rem;
 
+        @include media-breakpoint-down(md) {
+          margin-bottom: 0;
+        }
+
         .fa-trophy-alt {
           color: gold;
+          max-height: 1.5rem;
+          width: auto;
         }
 
         div {
           display: inline-block;
-          padding-left: 25px;
+          padding-left: 1rem;
           font-size: 0.875rem;
+
+          @include media-breakpoint-down(md) {
+            font-size: 0.75rem;
+            padding-left: 1rem;
+          }
         }
 
         span {

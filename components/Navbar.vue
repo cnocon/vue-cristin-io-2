@@ -163,9 +163,10 @@ export default {
       width: 175px;
       left: -150px;
       padding: 0;
-      background-color: $dark;
-      border-color: $primary;
+      background-color: $black;
+      border-color: $dark;
       box-shadow: $box-shadow-md;
+      color: $white;
 
       li {
         padding-bottom: 0.85rem;
@@ -189,10 +190,10 @@ export default {
 
         a {
           color: $white;
-          font-weight: 700;
+          font-weight: 900;
           text-transform: uppercase;
-          font-family: $font-family-display;
-          letter-spacing: 1px;
+          font-family: $font-family-heading;
+          letter-spacing: 2px;
           text-align: center;
 
           &:hover {
@@ -219,6 +220,7 @@ export default {
   &.container {
     display: flex;
     flex-wrap: nowrap !important;
+    max-width: 1220px;
 
     @include media-breakpoint-down(md) {
       width: 100%;
@@ -276,7 +278,6 @@ export default {
   align-items: center;
   width: 100%;
   text-align: center;
-  margin-left: 0.5rem;
   padding: 1.25rem 0;
 
   @include media-breakpoint-up(md) {
@@ -347,10 +348,11 @@ export default {
 
   .nav-link {
     color: $white;
-    font-family: $font-family-heading;
-    font-weight: 500;
-    letter-spacing: 1.5px;
+    font-family: $font-family-base;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    padding: 0.5rem 0;
 
     @include media-breakpoint-up(md) {
       padding-left: 1rem;
@@ -358,7 +360,7 @@ export default {
     }
 
     &:hover {
-      color: transparent;
+      color: transparent !important;
       background-clip: text;
       -webkit-background-clip: text;
       background-image: linear-gradient(
@@ -379,7 +381,6 @@ export default {
     &.nuxt-link-exact-active,
     &.nuxt-link-active {
       color: transparent;
-      font-weight: 500;
       background-clip: text;
       -webkit-background-clip: text;
       background-image: linear-gradient(
@@ -400,7 +401,14 @@ export default {
 
   .dropdown-toggle {
     font-size: 150%;
-    color: $white;
+
+    &.nav-link {
+      color: $white !important;
+
+      &:hover {
+        color: $white !important;
+      }
+    }
 
     &::after {
       display: none;
@@ -410,17 +418,48 @@ export default {
   .nav-item {
     margin-bottom: 0;
 
-    .nav-link {
-      padding-left: 1rem;
-      padding-right: 1rem;
-
-      &.show {
-        font-size: 200%;
-
-        @include media-breakpoint-down(sm) {
-          padding: 0 1rem;
-          text-align: center;
+    &:last-of-type {
+      .nav-link {
+        @include media-breakpoint-up(sm) {
+          padding-right: 0;
         }
+      }
+    }
+
+    &.show {
+      font-size: 150%;
+
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+
+      .nuxt-link-active,
+      .nuxt-link-exact-active {
+        color: transparent !important;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(
+          130deg,
+          #bca2f6,
+          #cdb9f8 5%,
+          #66d4ff 17%,
+          #66d4ff 25%,
+          #76f9ee 35%,
+          #ffe366 55%,
+          #ffe366 60%,
+          #f7baba 80%
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .nav-item {
+      a {
+        font-family: $font-family-heading;
+        letter-spacing: 3px;
+        text-align: center;
+        font-weight: 900;
       }
     }
   }

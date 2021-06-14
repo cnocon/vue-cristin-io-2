@@ -13,7 +13,6 @@
           <font-awesome-icon
             :icon="['fal', 'briefcase']"
             size="2x"
-            class="top-icon"
           ></font-awesome-icon>
         </div>
         <span class="rule"></span>
@@ -39,19 +38,18 @@
         <h3>
           <span>Service</span>
         </h3>
-        <div class="service mt-3">
+        <div class="service">
           <ResumeItem
             v-for="(service, index) in data.volunteering"
             :key="index"
-            class="service-item"
+            item-class="service-item"
             desc-item-class="list-style-none"
-            desc-class="list-style-none pl-0"
+            desc-class="list-style-none"
             :item="service"
           />
         </div>
 
         <h3>
-          <i class="fal fa-code"></i>
           <span>Skills</span>
         </h3>
         <div class="skills">
@@ -63,20 +61,16 @@
         </div>
 
         <h3>
-          <i class="fal fa-gem adjust-top"></i>
           <span>Assets</span>
         </h3>
         <div class="assets pb-3">
-          <ul class="mt-0">
+          <ul>
             <li
               v-for="(asset, index) in data.assets"
               :key="index"
               class="asset-item"
             >
-              <font-awesome-icon
-                :icon="['fas', 'check']"
-                size="2x"
-              ></font-awesome-icon>
+              <font-awesome-icon :icon="['fas', 'check']"></font-awesome-icon>
               <!-- eslint-disable vue/no-v-html -->
               <span v-html="asset"></span>
               <!--eslint-enable-->
@@ -97,18 +91,13 @@
           />
         </div>
 
-        <div class="quote">
-          <blockquote>
-            <p>
-              <span
-                >How we spend our days is, of course, how we spend our lives.
-                What we do with this hour, and that one, is what we are
-                doing.</span
-              >
-            </p>
-            <cite title="Annie Dillard">— Annie Dillard</cite>
-          </blockquote>
-        </div>
+        <quote classes="subtle text-lg text-center dark rounded-lg pr-5">
+          <template #quote>
+            How we spend our days is, of course, how we spend our lives. What we
+            do with this hour, and that one, is what we are doing.
+          </template>
+          <template #cite>– Annie Dillard</template>
+        </quote>
 
         <div class="connect">
           <div class="row">
@@ -179,8 +168,8 @@
                   >
                     <font-awesome-icon
                       :icon="['fab', 'stack-overflow']"
-                      size="2x"
                       class="fa-w-16"
+                      size="2x"
                     ></font-awesome-icon>
                   </div>
                   <span class="d-block">Stack Overflow</span>
@@ -204,8 +193,8 @@
                   >
                     <font-awesome-icon
                       :icon="['fal', 'hashtag']"
-                      size="2x"
                       class="fa-w-16"
+                      size="2x"
                     ></font-awesome-icon>
                   </div>
                   <span class="d-block">Twitter</span>
@@ -229,8 +218,8 @@
                   >
                     <font-awesome-icon
                       :icon="['fab', 'linkedin-in']"
-                      size="2x"
                       class="fa-w-16"
+                      size="2x"
                     ></font-awesome-icon>
                   </div>
                   <span class="d-block">LinkedIn</span>
@@ -266,13 +255,11 @@
       </div>
     </div>
 
-    <SectionHeader text="Recent Coursework"
-      ><template #section-header-icon>
-        <font-awesome-icon
-          :icon="['fal', 'pencil']"
-          size="2x"
-        ></font-awesome-icon> </template
-    ></SectionHeader>
+    <SectionHeader text="Recent Coursework">
+      <template #section-header-icon>
+        <font-awesome-icon :icon="['fal', 'pencil']"></font-awesome-icon>
+      </template>
+    </SectionHeader>
     <div v-if="courseData" class="row">
       <div
         v-for="(course, cIndex) in courseData"
@@ -307,7 +294,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Certificate <i class="far fa-external-link"></i>
+            View Certificate
           </a>
         </p>
       </div>
@@ -406,8 +393,8 @@ export default {
 
 <style scoped lang="scss">
 .timeline {
-  @media all and (min-width: $breakpoint-sm-min) {
-    padding-left: 68px;
+  @include media-breakpoint-up(md) {
+    padding-left: 4.5rem;
   }
 }
 .work-history {
@@ -415,21 +402,21 @@ export default {
   z-index: 1;
   margin-bottom: 5rem;
 
-  @media all and (min-width: $breakpoint-sm-min) {
+  @include media-breakpoint-up(md) {
     padding-right: 30px;
   }
 
   .rule {
     position: absolute;
     display: none;
-    top: 33px;
-    left: 26.5px;
+    top: 2.0625rem;
+    left: 1.6563rem;
     z-index: 0;
     width: 3px;
-    height: calc(100% - 33px);
+    height: calc(100% - 2.0625rem);
     background-color: $border-light-gray;
 
-    @media all and (min-width: $breakpoint-sm-min) {
+    @include media-breakpoint-up(md) {
       display: block;
     }
   }
@@ -483,21 +470,23 @@ export default {
   }
   .left-column,
   .right-column {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    @include media-breakpoint-down(md) {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   .first-icon {
     z-index: 20;
     position: absolute;
-    left: 0.5rem;
+    left: 0.3125rem;
     top: -1.5rem;
     padding: 1rem;
     border-radius: 50%;
     border: 3px solid $light;
     background-color: $white;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
@@ -509,31 +498,20 @@ export default {
     }
 
     h3 {
-      @media all and (max-width: $breakpoint-sm) {
+      @include media-breakpoint-down(md) {
         padding-left: 0;
-        line-height: inherit;
-        padding-bottom: 2rem;
-        margin-top: 0.5rem;
+        // line-height: inherit;
+        // padding-bottom: 2rem;
+        // margin-top: 0.5rem;
       }
 
       span {
         background-color: $primary;
         color: $white;
         border-radius: 4px;
-        padding-left: 6px;
+        padding-left: 0.625rem;
         width: 100%;
         display: inline-block;
-
-        @media all and (max-width: $breakpoint-sm) {
-          text-align: center;
-          width: 100%;
-        }
-      }
-
-      i {
-        @media all and (max-width: $breakpoint-sm) {
-          display: none;
-        }
       }
     }
   }
@@ -553,7 +531,7 @@ export default {
         width: 100%;
         z-index: 2;
         background-color: $white;
-        padding-left: 6px;
+        padding-left: 0.75rem;
         color: $white;
         background-color: $primary;
         border-radius: 4px;
@@ -562,36 +540,6 @@ export default {
           text-align: center;
         }
       }
-
-      i {
-        display: none;
-      }
-    }
-    .assets .fa-check,
-    .assets li span {
-      display: inline-block;
-    }
-    .assets .fa-check {
-      width: 1rem;
-      margin-right: 10px;
-      color: $link-green;
-    }
-    .assets ul {
-      margin-left: 0;
-    }
-    .asset-item {
-      position: relative;
-
-      span {
-        padding-left: 30px;
-      }
-
-      .fa-check {
-        position: absolute;
-        left: 0;
-        top: 0;
-        // transform: translateY(-50%);
-      }
     }
   }
 }
@@ -599,45 +547,55 @@ export default {
   @media all and (max-width: $breakpoint-sm) {
     padding-bottom: 3rem;
   }
-
-  .service-item {
-    padding-bottom: 2rem;
-    @media all and (max-width: $breakpoint-sm) {
-      padding-bottom: 1rem;
-    }
-  }
 }
 .education {
   @media all and (max-width: $breakpoint-sm) {
     padding-top: 2rem;
   }
+
+  .item {
+    padding-left: 2.625rem;
+  }
 }
 .assets {
-  ul {
-    list-style: none;
-    padding-left: 0;
-
-    li {
-      font-size: 0.875rem;
-    }
+  @include media-breakpoint-down(md) {
+    padding-top: 2rem;
   }
 
-  .asset-item {
-    padding: 5px 0 0;
-    margin-bottom: 0;
+  > ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
 
-    i {
-      display: inline-block;
-      margin-top: 5px;
-      width: 2rem;
-      vertical-align: top;
-      color: $border-blue-vivid;
+    .asset-item {
+      font-size: 1rem;
+      position: relative;
+      padding: 5px 0 1rem 0.625rem;
+      margin-bottom: 0;
+
+      .fa-check {
+        display: inline-block;
+        width: 2rem;
+        vertical-align: top;
+        color: $border-blue-vivid;
+        position: absolute;
+        left: 0.3125rem;
+        top: 10px;
+        margin-right: 0.625rem;
+        color: $link-green;
+        display: inline-block;
+
+        @include media-breakpoint-down(md) {
+          // margin-top: 0.75rem;
+        }
+      }
     }
 
     span {
       display: inline-block;
       font-weight: 300;
       width: calc(100% - 2rem);
+      padding-left: 30px;
 
       b {
         font-weight: 500;
@@ -645,12 +603,14 @@ export default {
     }
   }
 }
+
 .quote {
   padding: 0 0 2rem;
   max-width: 37.5rem;
   margin: 0 auto;
 
   blockquote {
+    display: block;
     background-color: $primary;
     padding: 1.875rem;
     padding-bottom: 0.625rem;
@@ -658,8 +618,7 @@ export default {
     left: 0;
     top: 0;
 
-    &::before {
-      content: url('~assets/images/fas-quote-left.svg');
+    .quote-icon {
       display: inline-block;
       width: 1.5rem;
       height: 1.5rem;
@@ -667,6 +626,16 @@ export default {
       margin-right: 0.625rem;
       color: $primary;
     }
+
+    // &::before {
+    //   content: url('~assets/images/fas-quote-left.svg');
+    //   display: inline-block;
+    //   width: 1.5rem;
+    //   height: 1.5rem;
+    //   flex-basis: 1.5rem;
+    //   margin-right: 0.625rem;
+    //   color: $primary;
+    // }
 
     p {
       color: $white;
@@ -711,16 +680,41 @@ export default {
     padding: 0 0 1rem;
   }
 
-  .row {
-    justify-content: center;
+  > .row {
+    @include media-breakpoint-down(md) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
   }
 
-  ul li {
-    padding-right: 10px !important;
+  .row {
+    justify-content: center;
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  li {
+    @include media-breakpoint-up(md) {
+      padding-left: 1rem !important;
+      padding-left: 1rem !important;
+    }
+
+    &:first-of-type {
+      padding-left: 0 !important;
+    }
 
     &:last-of-type {
-      padding-right: 0;
+      padding-right: 0 !important;
     }
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 1.25em;
+    font-family: $font-family-display;
   }
 }
 .course {
@@ -772,8 +766,7 @@ export default {
     margin-top: 0;
   }
 
-  .instructor,
-  .company {
+  .instructor {
     font-family: $font-family-display;
     font-weight: 400;
   }

@@ -41,6 +41,22 @@ export default {
     }
   }
 
+  &.text-lg {
+    blockquote {
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &.text-center {
+    text-align: center;
+
+    cite {
+      text-align: center;
+    }
+  }
+
   blockquote {
     display: flex;
     flex-wrap: wrap;
