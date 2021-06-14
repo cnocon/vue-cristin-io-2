@@ -1,8 +1,8 @@
 <template>
   <div class="row">
     <div class="col-12">
-      <h3>{{ title }}</h3>
-      <p class="links mt-3">
+      <!-- <h3>{{ title }}</h3> -->
+      <p class="links mt-0">
         <span v-if="demoLink">
           <a :href="demoLink" target="_blank" rel="noopener noreferrer"
             >Demo</a
@@ -34,7 +34,7 @@
         </li>
       </ul>
     </div>
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-5 image-column">
       <div class="shadow mt-3">
         <img :src="screenshot" :alt="title" />
       </div>
@@ -73,4 +73,29 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.links {
+  text-align: center;
+
+  a[target='_blank'] {
+    &::after {
+      margin-left: 3px;
+    }
+  }
+}
+.image-column {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: 0;
+
+  @include media-breakpoint-down(md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+p a,
+li a {
+  text-decoration: none;
+}
+</style>

@@ -11,13 +11,6 @@
         <p class="built-with-info">
           Built using&nbsp;
           <a
-            href="https://v3.vuejs.org"
-            rel="noopener noreferrer"
-            target="_blank"
-            >Vue 3</a
-          >
-          and
-          <a
             href="https://nuxtjs.org/"
             rel="noopener noreferrer"
             target="_blank"
@@ -25,16 +18,7 @@
           >
         </p>
       </div>
-      <div class="footer-column">
-        <!-- <div>
-          <p>Blog Powered By</p>
-          <img
-            src="~assets/images/buttercms.png"
-            alt="ButterCMS"
-            class="logo"
-          />
-        </div> -->
-      </div>
+      <div class="footer-column"></div>
     </div>
   </footer>
 </template>

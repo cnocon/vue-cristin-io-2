@@ -2,16 +2,63 @@
   <div class="portfolio-page">
     <Head
       title="Portfolio"
-      description="Cristin O'Connor's Front End Software Engineering Portfolio"
+      description="Cristin O'Connor's Front End Engineering Portfolio"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1 class="mt-1">Portfolio</h1>
+
+    <Section
+      header-text="CRISTIN.IO (This Website)"
+      header-icon-type="fad"
+      header-icon="browser"
+      header-alignment="center"
+      header-classes="mb-1 mt-3 dark"
+      section-classes="pb-5"
+    >
+      <PortfolioItem
+        title="CRISTIN.IO (Nuxt Implementation)"
+        demo-link="https://cristin.io/"
+        git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/master"
+        screenshot="https://www.dropbox.com/s/riaun6410csil62/cristin-io-nuxt.png?raw=1"
+        :technologies="[
+          { name: 'Nuxt', link: 'https://v3.vuejs.org/' },
+          { name: 'Nuxt Content API', link: 'https://content.nuxtjs.org/' },
+          { name: 'Axios', link: 'https://www.npmjs.com/package/axios' },
+        ]"
+      >
+        <template #summary>
+          <p>
+            CRISTIN.IO (currently implemented using Nuxt) represents the most
+            recent total rebuild of this website. That's right, this page and
+            all of it's webpage friends are brought to you by Nuxt. After
+            becoming familiar with Vue 3 and using it for the previous version
+            of CRISTIN.IO, I was having issues with SEO and performance that,
+            based on my research, Nuxt promised to help with, or even fix
+            entirely right out of the box. Automatic routing (including
+            automatic dynamic routing), easy and built-in tools for SEO, and
+            performance optimizations like treeshaking and static site
+            generation (with SSR), and a helpful Bundle analyzer tool readily
+            available to gauge where performance improvements could be made
+            across your entire site.
+          </p>
+          <p>
+            I also was thrilled to move my blog content out of ButterCMS, the
+            headless CMS I'd been using previously, and into the
+            markdown-powered Nuxt Content module, which finally empowered me to
+            take full control of the presentation and structure of my blog
+            content without the restrictions and difficulties that come with
+            using a rich text editor to write each post.
+          </p>
+        </template>
+      </PortfolioItem>
+    </Section>
+
     <Section
       header-text="GitHub Stats Card for React"
       header-icon-type="fab"
       header-icon="github"
       header-alignment="center"
-      header-classes="mb-4 mt-3"
+      header-classes="mb-1 mt-3 dark"
       section-classes="mb-5"
     >
       <PortfolioItem
@@ -59,7 +106,7 @@
       header-icon-type="fad"
       header-icon="clipboard-list-check"
       header-alignment="center"
-      header-classes="mb-4 mt-3"
+      header-classes="mb-1 mt-3 dark"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -96,7 +143,7 @@
       header-icon-type="fal"
       header-icon="thunderstorm-moon"
       header-alignment="center"
-      header-classes="mb-4 mt-3"
+      header-classes="mb-1 mt-3 dark"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -127,45 +174,11 @@
     </Section>
 
     <Section
-      header-text="CRISTIN.IO (This Website)"
-      header-icon-type="fad"
-      header-icon="browser"
-      header-alignment="center"
-      header-classes="mb-4 mt-3"
-      section-classes="pb-5"
-    >
-      <PortfolioItem
-        title="CRISTIN.IO (this website)"
-        demo-link="https://cristin.io"
-        git-hub-link="https://github.com/cnocon/nuxt-cristin-io"
-        :screenshot="require('/assets/images/cristin-io.jpg')"
-        :technologies="[
-          { name: 'Vue', link: 'https://vuejs.org/' },
-          { name: 'Nuxt', link: 'https://nuxtjs.org/' },
-          {
-            name: 'Nuxt Content API',
-            link: 'https://content.nuxtjs.org/',
-          },
-          { name: 'Vue Router', link: 'https://router.vuejs.org/' },
-        ]"
-      >
-        <template #summary>
-          <p>
-            CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a
-            front end web development blog authored by yours truly, my résumé,
-            portfolio (surprise!), and some general information about me and the
-            services I offer.
-          </p>
-        </template>
-      </PortfolioItem>
-    </Section>
-
-    <Section
       header-text="YouTube Search App"
       header-icon-type="fab"
       header-icon="youtube"
       header-alignment="center"
-      header-classes="mb-4 mt-3"
+      header-classes="mb-1 mt-3 dark"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -193,7 +206,7 @@
       header-icon-type="fal"
       header-icon="briefcase"
       header-alignment="center"
-      header-classes="mb-4 mt-3"
+      header-classes="mb-1 mt-3 dark"
       section-classes="pb-5"
     >
       <PortfolioItem
@@ -204,8 +217,7 @@
           { name: 'Component-based architecture', link: null },
           {
             name: 'Responsive design',
-            link:
-              'https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/',
+            link: 'https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/',
           },
           { name: 'SCSS', link: 'https://sass-lang.com/' },
           { name: 'Handlebars', link: 'https://handlebarsjs.com/' },
@@ -229,15 +241,53 @@
     </Section>
 
     <Section
-      header-text="CRISTIN.IO (This Website, but with Gatsby)"
+      header-text="CRISTIN.IO (Vue 3 Implementation)"
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"
-      header-classes="mb-4 mt-3"
+      header-classes="mb-1 mt-3 dark"
       section-classes="pb-5"
     >
       <PortfolioItem
         title="CRISTIN.IO (Legacy Version Using Gatsby)"
+        demo-link="https://vue.cristin.io/"
+        git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/vue"
+        screenshot="https://www.dropbox.com/s/0kb1qgdjgwnn3ce/cristin-io-vue.png?raw=1"
+        :technologies="[
+          { name: 'Vue 3', link: 'https://v3.vuejs.org/' },
+          { name: 'Vue Router', link: 'https://router.vuejs.org/' },
+          { name: 'Vuex', link: 'https://vuex.vuejs.org/' },
+          {
+            name: 'ButterCMS API',
+            link: 'https://buttercms.com/docs/api/',
+          },
+          { name: 'Axios', link: 'https://www.npmjs.com/package/axios' },
+        ]"
+      >
+        <template #summary>
+          <p>
+            CRISTIN.IO (the Vue 3 implementation) represented the third
+            implementation of this website. Initially built with React, I later
+            rebuilt it using Gatsby, and after that came the Vue 3 version. Each
+            new build came about due to me wanting to learn something new by
+            actually doing it. I highly recommend this method, as React, Gatsby,
+            and now Vue 3 are frameworks I now feel comfortable using and can
+            work with professionally.
+          </p>
+        </template>
+      </PortfolioItem>
+    </Section>
+
+    <Section
+      header-text="CRISTIN.IO (This Website, but with Gatsby)"
+      header-icon-type="fad"
+      header-icon="browser"
+      header-alignment="center"
+      header-classes="mb-1 mt-3 dark"
+      section-classes="pb-5"
+    >
+      <PortfolioItem
+        header-text="CRISTIN.IO (Gatsby Implementation)"
         demo-link="https://gatsby-cristin-io.netlify.app/"
         git-hub-link="https://github.com/cnocon/cristin-io"
         screenshot="https://www.dropbox.com/s/qndt8nmup19dp7p/gatsby-cristin-io.png?raw=1"
@@ -254,14 +304,49 @@
       >
         <template #summary>
           <p>
-            CRISTIN.IO (the Gatsby version) is an <b>obvious</b> virtual
-            wonderland that includes a front end web development blog authored
-            by yours truly, my résumé, portfolio (surprise!), and some general
-            information about me and the services I offer.
+            CRISTIN.IO (the Gatsby implementation) represented the second
+            implementation of this website. Initially built with React, I
+            rebuilt this site using the Gatsby framework in order to learn the
+            technology. I highly recommend this method, as React and now Gatsby
+            are technologies I feel comfortable using in a professional context.
           </p>
         </template>
       </PortfolioItem>
     </Section>
+
+    <!--<Section
+      header-text="CRISTIN.IO (This Website)"
+      header-icon-type="fad"
+      header-icon="browser"
+      header-alignment="center"
+      header-classes="mb-1 mt-3 dark"
+      section-classes="pb-5"
+    >
+      <PortfolioItem
+        title="CRISTIN.IO (this website)"
+        demo-link="https://cristin.io"
+        git-hub-link="https://github.com/cnocon/nuxt-cristin-io"
+        :screenshot="require('/assets/images/cristin-io.jpg')"
+        :technologies="[
+          { name: 'Vue', link: 'https://vuejs.org/' },
+          { name: 'Nuxt', link: 'https://nuxtjs.org/' },
+          {
+            name: 'Nuxt Content API',
+            link: 'https://content.nuxtjs.org/',
+          },
+          { name: 'Vue Router', link: 'https://router.vuejs.org/' },
+        ]"
+      >
+        <template #summary>
+          <p>
+            CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a
+            front end web development blog authored by yours truly, my résumé,
+            portfolio (surprise!), and some general information about me and the
+            services I offer.
+          </p>
+        </template>
+      </PortfolioItem>
+    </Section> -->
   </div>
 </template>
 
@@ -280,7 +365,6 @@ import {
   faClipboardListCheck,
   faBrowser,
 } from '@fortawesome/pro-duotone-svg-icons'
-// import { faConciergeBell, faRss } from '@fortawesome/pro-solid-svg-icons'
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -316,3 +400,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+h1 {
+  text-align: left;
+}
+</style>

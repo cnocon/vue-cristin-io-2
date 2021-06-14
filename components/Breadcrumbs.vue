@@ -54,6 +54,7 @@ export default {
     a,
     span {
       color: lighten($link-underline-gray, 10%);
+      text-decoration: none;
     }
 
     a {

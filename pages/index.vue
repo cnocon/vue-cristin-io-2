@@ -2,10 +2,10 @@
   <div>
     <Head />
     <header class="text-center">
-      <h1 class="page-title">This is <b>Me.</b></h1>
-      <p class="page-subtitle">
+      <h1 class="page-title">I Write <b>Code.</b></h1>
+      <!-- <p class="page-subtitle">
         I'm a <span>Front End Software Engineer</span>.
-      </p>
+      </p> -->
     </header>
     <main>
       <Section
@@ -19,7 +19,7 @@
       </Section>
 
       <Section
-        header-icon-type="far"
+        header-icon-type="fal"
         header-icon="concierge-bell"
         header-text="Services"
         header-alignment="left"
@@ -202,8 +202,8 @@ import RotatingHeader from '@/components/RotatingHeader'
 import Section from '@/components/Section'
 import PostList from '@/components/PostList'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faConciergeBell } from '@fortawesome/pro-regular-svg-icons'
-import { faHandshake, faUserAstronaut, faEnvelope, faHashtag, faCode, faGraduationCap, faRss } from '@fortawesome/pro-light-svg-icons'
+// import { faConciergeBell } from '@fortawesome/pro-regular-svg-icons'
+import { faConciergeBell, faHandshake, faUserAstronaut, faEnvelope, faHashtag, faCode, faGraduationCap, faRss } from '@fortawesome/pro-light-svg-icons'
 import { faLinkedinIn, faStackOverflow, faCodepen, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faGraduationCap, faCode, faUserAstronaut, faConciergeBell, faRss, faHandshake, faEnvelope, faLinkedinIn, faHashtag, faStackOverflow, faCodepen, faGithub)

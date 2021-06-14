@@ -371,6 +371,16 @@ export default {
     return {
       visible: false,
       data: resumeData,
+      breadcrumbs: [
+        {
+          text: 'Home',
+          href: '/',
+        },
+        {
+          text: 'Résumé & Courses',
+          href: null,
+        },
+      ],
       courseData,
     }
   },

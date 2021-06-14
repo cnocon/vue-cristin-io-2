@@ -40,7 +40,7 @@ export default {
 
   &.align-center {
     &::before {
-      border-bottom: 3px solid $light-gray;
+      border-bottom: 1px solid $light-gray;
     }
 
     span {
@@ -48,15 +48,19 @@ export default {
       transform: translateX(-50%);
       padding: 0 1rem;
     }
+  }
 
-    b {
-      // font-size: 1.5rem;
-      // font-weight: 800;
-      // color: $primary;
+  &.dark {
+    .icon-container {
+      color: $primary;
     }
 
-    div {
-      // color: $color-primary-med;
+    b {
+      color: $primary;
+      font-weight: 500 !important;
+      font-size: 1.125rem;
+      font-family: $font-family-display;
+      letter-spacing: 2px;
     }
   }
 
@@ -64,16 +68,15 @@ export default {
     content: "";
     display: inline-block;
     position: absolute;
-    // top: calc(50% + 3px);
-    top: 3px;
+    top: 2px;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 64px;
+    height: 72px;
     margin: 0;
     width: 100%;
     max-width: none;
     box-sizing: content-box;
-    border-bottom: 3px solid $lightest-gray;
+    border-bottom: 1px solid $light-gray;
   }
 
   span {
@@ -87,39 +90,36 @@ export default {
   }
 
   b {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-family: $font-family-heading;
     white-space: nowrap;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400 !important;
     letter-spacing: 1.5px;
+    color: $border-dark-gray;
 
-    @include media-breakpoint-down(sm) {
-      font-size: 1.1rem;
-    }
-  }
-
-  div {
-    // color: $border-med-gray;
-    color: $border-med-gray;
   }
 
   .icon-container {
     position: relative;
     display: inline-block;
-    line-height: 60px;
+    line-height: 46px;
     vertical-align: middle;
-    border: 3px solid $light-gray;
+    border: 2px solid $light-gray;
     border-radius: 50%;
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
+    color: lighten($border-med-gray, 5%);
+
+    @include media-breakpoint-down(md) {
+      margin-right: 0.5rem;
+    }
 
     svg {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 30px;
-      height: 30px;
+      padding: 0 2.5px;
       transform: translate(-50%, -50%);
     }
   }
