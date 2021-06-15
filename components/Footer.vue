@@ -66,7 +66,7 @@ footer {
         vertical-align: inherit;
 
         &.copyright-symbol {
-          font-size: 23px;
+          font-size: 20px;
           letter-spacing: -4px;
           color: rgba($primary, 0.3875);
         }
@@ -79,8 +79,8 @@ footer {
 
         &.copyright-owner {
           font-weight: 500;
-          letter-spacing: 0;
-          text-transform: uppercase;
+          letter-spacing: -1px;
+          opacity: 0.325;
         }
       }
     }

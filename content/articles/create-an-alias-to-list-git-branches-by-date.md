@@ -2,8 +2,8 @@
 title: Create an Alias to List Git Branches by Date
 summary: It is possible to list your local git branches ordered by most recent commit date, while showing some extra information, like the abbreviated commit sha and commit message. But if you're human, you'll never remember the whole command to do so. In this post you'll learn how to permanently save an easy-to-remember alias to run that lengthy command with ease...
 date: 2020-05-27T02:09:00Z
-img: clean-history-sm.png
-shareimg: clean-history.jpg
+img: graphics/clean-history-sm.png
+shareimg: sharing/clean-history.jpg
 alt: git
 categories: [{name: Git, slug: git}, {name: Workflow, slug: 'workflow'}]
 ---
@@ -25,7 +25,7 @@ _N.B. The following instructions are for Mac OSX command line users._
 
 Your results should look something like this:
 
-<post-image src="/gbl-alias.jpg" alt="list of git branches"></post-image>
+<post-image src="/blog/gbl-alias.jpg" alt="list of git branches"></post-image>
 
 If you're human, you'll never remember that whole command. I personally have it saved as an alias called `gbl` (like "git branch list") that you can create as well by following along below.
 

@@ -2,7 +2,7 @@
   <div class="navbar-inner container">
     <NuxtLink :to="{ name: 'index' }" class="navbar-brand">
       <nuxt-img
-        src="/square-portrait-white.png"
+        src="/components/square-portrait-white.png"
         alt="Cristin O'Connor"
         class="logo-img"
       ></nuxt-img>

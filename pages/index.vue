@@ -251,7 +251,7 @@ header {
   }
 
   span {
-    font-size: 2.625rem; // 42px
+    // font-size: 2.625rem; // 42px
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -269,22 +269,6 @@ header {
     margin-left: -3px;
     margin-right: -1px;
     line-height: inherit;
-
-    @include media-breakpoint-xxs-down {
-      font-size: 2.375rem; // 38px
-    }
-
-    @include media-breakpoint-up(sm) {
-      font-size: 2.75rem; // 44px
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 3rem; // 48px
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 3.5rem; // 56px
-    }
 
     &.smaller {
       margin-left: 0;

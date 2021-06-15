@@ -2,8 +2,8 @@
 title: Use Webhooks to Automatically Deploy Your Gatsby Site
 summary:  Use a Webhook to automatically build and deploy your site on Netlify after you create, update, or delete a post in ButterCMS. This way you avoid having to manually rebuild and redeploy your site just to fix a typo in a post.
 date: 2020-06-28T06:35:00Z
-img: netlify-sm.png
-shareimg: netlify.jpg
+img: graphics/netlify-sm.png
+shareimg: sharing/netlify.jpg
 alt: Rocket launching
 categories: [{name: Gatsby, slug: gatsby}, {name: Netlify, slug: netlify}, {name: Webhooks, slug: webhooks}]
 ---
@@ -22,7 +22,7 @@ I finally decided to look into using a Webhook to automatically trigger the buil
 <li>In the menu on the left-hand side, click "Build & deploy"</li>
 <li>Scroll down to the "Build hooks" section</li>
 <li>Create a new hook. Name it "post.published" after the name of the Event in ButterCMS we're about to use. Make sure the branch you choose to build is the one that you usually deploy with.
-<post-image src="/netlify-build-hooks.jpg" alt="Build hooks in Netlify"></post-image></li>
+<post-image src="/blog/netlify-build-hooks.jpg" alt="Build hooks in Netlify"></post-image></li>
 <li>Save your hook.</li>
 <li>You'll see Netlify has assigned a URL to your hook. Any POST request to this URL will trigger a new build and deploy process in Netlify. Copy this URL - we'll need it in a moment.</li>
 <li><a href="https://buttercms.com/login/" target="_blank" rel="noopener noreferrer">Log in to ButterCMS</a></li>
@@ -30,7 +30,7 @@ I finally decided to look into using a Webhook to automatically trigger the buil
 <li>Click on "Webhooks"</li>
 <li>Paste the Netlify URL we copied into the Target URL field. You can leave the Header fields blank for our purposes.</li>
 <li>Select the "post.all" event from the Event field dropdown menu. _Note: If you want to use a different event, feel free! Post.all is useful because it will rebuild and deploy our site whether we delete, update, or create a new post. It's a nice catch-all event. All event types are pictured below:_
-<post-image src="/buttercms-event-types.jpg" alt="Event types in ButterCMS"></post-image></li>
+<post-image src="/blog/buttercms-event-types.jpg" alt="Event types in ButterCMS"></post-image></li>
 <li>Click the "Save" button.</li>
 </ol>
 

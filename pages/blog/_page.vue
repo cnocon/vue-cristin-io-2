@@ -10,7 +10,7 @@
       v-if="page"
       :text="'Showing Page ' + page + ' of ' + lastPage"
       alignment="center"
-      header-classes=""
+      header-classes="blog-section-header"
     >
       <template #section-header-icon>
         <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>

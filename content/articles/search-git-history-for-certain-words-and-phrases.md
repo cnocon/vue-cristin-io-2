@@ -2,8 +2,8 @@
 title: Search Git History for Certain Words and Phrases
 summary: Finding your work in a long history of commits can be difficult. These commands help search your git reflog or log history for exactly what you need, whether your search term(s) are a word or phrase...
 date: 2020-05-26T22:30:00Z
-img: git-sm.png
-shareimg: git.jpg
+img: graphics/git-sm.png
+shareimg: sharing/git.jpg
 alt: git
 categories: [{name: Git, slug: git}, {name: Workflow, slug: workflow}]
 ---
@@ -27,7 +27,7 @@ For example, say I run `git log --grep=fix`.
 
 This should output what looks like a normal `git log` except that only commit messages with some semblance of the word "style" show up.
 
-<post-image src="/git-log.jpg" alt="Git log"></post-image>
+<post-image src="/blog/git-log.jpg" alt="Git log"></post-image>
 
 ## Searching for Multiple Words or a Phrase
 

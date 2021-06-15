@@ -2,8 +2,8 @@
 title: Clean Up Developments Commits By Combining Them Into One
 summary: This post demonstrates how you can clean up your commit history on a local branch prior to merging it into another branch. Often times the frequent commits we keep when develping on our local branches are rushed and or ill-thought out.
 date: 2020-07-19T17:42:00Z
-img: git-sm.png
-shareimg: git.jpg
+img: graphics/git-sm.png
+shareimg: sharing/git.jpg
 alt: Git
 categories: [{name: Git, slug: git}, {name: Workflow, slug: workflow}]
 ---
@@ -39,7 +39,7 @@ Just like you'd normally do, commit the changes. But be careful to use a concise
 
 Our new development branch history will look like this:
 
-<post-image src="/git-history-2.jpg" alt="Git history"></post-image>
+<post-image src="/blog/git-history-2.jpg" alt="Git history"></post-image>
 
 ### Step 3: Merge your branch into master (or whatever your production branch is)
 
@@ -59,7 +59,7 @@ We're going to check out out development branch, demo, and restore it to the com
 
 Unlike `git log`, which contains a commit ancestry for the current HEAD, `git reflog` contains a history of every action performed where data changed. When I run `git reflog` on my demo branch, it looks like this:
 
-<post-image src="/git-reflog.jpg" alt="Git reflog history"></post-image>
+<post-image src="/blog/git-reflog.jpg" alt="Git reflog history"></post-image>
 
 We can see basically everything we've done in the entire repository, not just on the local branch. A few notable items are:
 
@@ -72,7 +72,7 @@ The abbreviated SHAs in yellow are what we can use to revert to that commit. In 
 
 `git reset --hard 451437d`
 
-<post-image src="/git-reset-hard-output.jpg" alt="Git reset hard output"></post-image>
+<post-image src="/blog/git-reset-hard-output.jpg" alt="Git reset hard output"></post-image>
 
 Now that your branch contains only the changes you want, you can edit the commit message for production by running:
 
@@ -80,17 +80,17 @@ Now that your branch contains only the changes you want, you can edit the commit
 
 Now if we run `git log` on our demo branch, we'll see our production ready commit instead of our old commit:
 
-<post-image src="/new-git-history.jpg" alt="New git history"></post-image>
+<post-image src="/blog/new-git-history.jpg" alt="New git history"></post-image>
 
 You can merge this branch back into master like you'd normally do. You'll likely encounter merge conflicts due to the fact that you revised the history of the demo branch. But this is easy enough to fix - just accept the incoming change for each conflict in your code editor (I use VSCode's built in merge conflict helper):
 
-<post-image src="/vscode-merge-conflict-helper.jpg" alt="VS Code's Merge Conflict Helper"></post-image>
+<post-image src="/blog/vscode-merge-conflict-helper.jpg" alt="VS Code's Merge Conflict Helper"></post-image>
 
 After you accept the incoming change, save the file, and run `git add` followed by `git commit -m "Fix merge conflicts with demo"`.
 
 The new history for the _master_ branch looks like this:
 
-<post-image src="/new-git-history-2.jpg" alt="New git history"></post-image>
+<post-image src="/blog/new-git-history-2.jpg" alt="New git history"></post-image>
 
 
 

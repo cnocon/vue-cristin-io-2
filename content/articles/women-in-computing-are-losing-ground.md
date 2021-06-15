@@ -2,8 +2,8 @@
 title: Women In Computing Are Losing Ground
 summary: The Women Tech Council recently hosted a virtual summit on the first female recession, which caught my attention because I assumed women’s progress in computer science had been improving. The information presented proved me horribly wrong.
 date: 2021-04-18T15:29:00.272Z
-img: programmer-sm.png
-shareimg: programmer.jpg
+img: graphics/programmer-sm.png
+shareimg: sharing/programmer.jpg
 alt: Programmer on a Laptop
 categories: [{name: Inclusion and Diversity, slug: 'inclusion-and-diversity'}, {name: Industry, slug: industry}]
 ---
@@ -17,7 +17,7 @@ Instead, speakers at the summit opened my eyes to an unpleasant truth. I was wro
 
 The problems women in tech face, ranging from inequalities in child care responsibilities to workforce regression, have only worsened during the pandemic (Figure 1).
 
-<post-image src="/figure-1.jpg" alt="The pandemic has worsened inequalities experienced by women" caption="Figure 1. The pandemic has worsened inequalities experienced by women"></post-image>
+<post-image src="/blog/figure-1.jpg" alt="The pandemic has worsened inequalities experienced by women" caption="Figure 1. The pandemic has worsened inequalities experienced by women"></post-image>
 
 Overall, <a href="https://www.cnbc.com/2021/02/08/womens-labor-force-participation-rate-hit-33-year-low-in-january-2021.html" target="_blank" rel="noopener noreferrer">women's labor force participation is at a 33-year low</a> in the United States, and women in STEM may be among the hardest hit.
 
@@ -33,7 +33,7 @@ As of 2019, the most recent data available, women in computing were faring worse
 
 Women held only 26% of computing jobs in 2019, 3 percentage points fewer than women in STEM overall. Women in engineering have seen measly gains since 1990, while women in computing have been steadily declining since 1990, Census Bureau data show. (2) Women in all other STEM fields, which typically pay less, have experienced steady increases for the last 20 years.
 
-<post-image src="/women-in-stem-graph.jpg" alt="Percentage of Women in STEM Jobs from 1970-2019"></post-image>
+<post-image src="/blog/women-in-stem-graph.jpg" alt="Percentage of Women in STEM Jobs from 1970-2019"></post-image>
 
 Notably, the two worst performing fields, Engineering and Computing, are also the largest, making up a whopping 80% of the STEM workforce in 2019 and skewing the overall percentage of women in STEM downward.
 
