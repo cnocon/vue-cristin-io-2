@@ -19,7 +19,7 @@
         title="CRISTIN.IO (Nuxt Implementation)"
         demo-link="https://cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/master"
-        screenshot="/cristin-io-nuxt.jpg"
+        screenshot="/portfolio/cristin-io-nuxt.jpg"
         :technologies="[
           { name: 'Nuxt', link: 'https://v3.vuejs.org/' },
           { name: 'Nuxt Content API', link: 'https://content.nuxtjs.org/' },
@@ -66,7 +66,8 @@
         demo-link="https://react-github-stats-card-v2-demo.netlify.app"
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
         npm-link="https://www.npmjs.com/package/react-github-stats-card-v2"
-        screenshot="/stat-card-preview.jpg"
+        screenshot="/portfolio/stat-card-preview.jpg"
+        image-content-classes="image-tall"
         :technologies="[
           { name: 'GitHub API', link: 'https://docs.github.com/en/rest' },
           {
@@ -113,7 +114,7 @@
         title="Front End Development Flash Cards App"
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
-        screenshot="/flashcards-app-screenshot-white.jpg"
+        screenshot="/portfolio/flashcards-app-screenshot-white.jpg"
         :technologies="[
           { name: 'MongoDB (custom API)', link: 'https://www.mongodb.com/' },
           { name: 'Mongoose (custom API)', link: 'https://mongoosejs.com/' },
@@ -148,7 +149,7 @@
         title="Weather Charts/Forecast App"
         demo-link="https://weather-charts-app.netlify.app"
         git-hub-link="https://github.com/cnocon/weather-charts-app-new"
-        screenshot="/weather-app-screenshot.jpg"
+        screenshot="/portfolio/weather-app-screenshot.jpg"
         :technologies="[
           { name: 'React', link: 'https://reactjs.org/' },
           { name: 'Redux', link: 'https://redux.js.org/' },
@@ -183,7 +184,7 @@
         title="YouTube Search App"
         demo-link="https://youtube-search-new.netlify.app"
         git-hub-link="https://github.com/cnocon/youtube-search-new"
-        screenshot="/youtube-app-screenshot.jpg"
+        screenshot="/portfolio/youtube-app-screenshot.jpg"
         :technologies="[
           {
             name: 'YouTube API V3',
@@ -210,7 +211,7 @@
       <PortfolioItem
         title="CenturyLink Small Business Site"
         demo-link="https://business.centurylink.com/"
-        screenshot="/clq.jpg"
+        screenshot="/portfolio/clq.jpg"
         :technologies="[
           { name: 'Component-based architecture', link: null },
           {
@@ -250,7 +251,7 @@
         title="CRISTIN.IO (Legacy Version Using Gatsby)"
         demo-link="https://vue.cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/vue"
-        screenshot="/cristin-io-vue.jpg"
+        screenshot="/portfolio/cristin-io-vue.jpg"
         :technologies="[
           { name: 'Vue 3', link: 'https://v3.vuejs.org/' },
           { name: 'Vue Router', link: 'https://router.vuejs.org/' },
@@ -286,9 +287,9 @@
     >
       <PortfolioItem
         header-text="CRISTIN.IO (Gatsby Implementation)"
-        demo-link="https://gatsby-cristin-io.netlify.app/"
-        git-hub-link="https://github.com/cnocon/cristin-io"
-        screenshot="/gatsby-cristin-io.jpg"
+        demo-link="https://cristin-io-gatsby.netlify.app/"
+        git-hub-link="https://github.com/cnocon/cristin-io-gatsby"
+        screenshot="/portfolio/cristin-io-gatsby.jpg"
         :technologies="[
           { name: 'Gatsby', link: 'https://www.gatsbyjs.com/' },
           { name: 'React', link: 'https://www.reactjs.org/' },

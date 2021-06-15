@@ -83,5 +83,3 @@ export default {
   watchParams: ['page'],
 }
 </script>
-
-<style lang="scss" scoped></style>

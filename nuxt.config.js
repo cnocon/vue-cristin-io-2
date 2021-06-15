@@ -28,7 +28,6 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   // css: ['@/assets/scss/main.scss'],
-
   styleResources: {
     scss: '@/assets/scss/main.scss',
   },
@@ -42,9 +41,9 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/eslint-module', // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/google-analytics',
-    '@nuxt/image',
+    '@nuxtjs/google-fonts', // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-analytics', // https://google-analytics.nuxtjs.org/
+    '@nuxt/image', // https://image.nuxtjs.org/
     '@nuxt/components',
   ],
 
@@ -55,6 +54,10 @@ export default {
   },
 
   googleFonts: {
+    display: 'swap',
+    prefetch: true,
+    preconnect: true,
+    preload: true,
     families: {
       Oswald: [300, 400, 500, 600, 700],
       Lato: [300, 400, 700, 900],
@@ -87,7 +90,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extractCSS: true, // critical CSS
+  },
 
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
   generate: {

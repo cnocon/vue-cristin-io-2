@@ -50,11 +50,10 @@ export default {
   }
 
   &.portfolio-section-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     margin-top: 0;
 
     @include media-breakpoint-down(lg) {
-      margin-bottom: 1rem;
       margin-top: 2rem;
     }
 
@@ -100,7 +99,7 @@ export default {
     top: 2px;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 62px;
+    height: 100%;
     margin: 0;
     width: 100%;
     max-width: none;
@@ -108,11 +107,11 @@ export default {
     border-bottom: 1px solid $light-gray;
 
     @include media-breakpoint-down(md) {
-      height: 42px;
+      // height: 42px;
     }
 
     @include media-breakpoint-xxs-down {
-      height: 32px;
+      // height: 32px;
     }
   }
 
