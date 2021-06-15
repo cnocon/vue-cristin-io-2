@@ -47,7 +47,8 @@
   width: 100%;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  background-color: $primary;
+  // background-color: $primary;
+  background-color: $bg-gray;
   box-shadow: $box-shadow-sm;
 
   @include media-breakpoint-xxs-up {

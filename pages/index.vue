@@ -3,7 +3,8 @@
     <Head />
     <header class="text-center">
       <h1 class="page-title">
-        I&nbsp;&nbsp;L<span class="smaller">&#9825;</span>VE&nbsp;&nbsp;CODE.
+        <!-- I&nbsp;&nbsp;L<span class="smaller">&#9825;</span>VE&nbsp;&nbsp;CODE. -->
+        I&nbsp;&nbsp;L<span class="smaller">&#9829;</span>VE&nbsp;&nbsp;CODE.
       </h1>
       <!-- <h1 class="page-title">
         I&nbsp;&nbsp;L<span class="smaller">&#9825;</span
@@ -48,7 +49,7 @@
             </p>
           </div>
           <div class="col-12 col-lg-6 quote-container">
-            <quote classes="subtle dark rounded-lg pr-5">
+            <quote classes="subtle rounded-lg pr-5">
               <template #quote>
                 Cristin O'Connor is a lifesaver! Being new to Gatsby.js, I was
                 having a difficult time finding a solution for a blocker. I

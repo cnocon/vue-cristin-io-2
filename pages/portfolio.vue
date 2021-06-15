@@ -4,7 +4,9 @@
       title="Portfolio"
       description="Cristin O'Connor's Front End Engineering Portfolio"
     ></Head>
+
     <Breadcrumbs :crumbs="breadcrumbs" />
+
     <h1 class="mt-1">Portfolio</h1>
 
     <Section
@@ -29,8 +31,6 @@
         <template #summary>
           <NuxtImg
             src="/portfolio/cristin-io-nuxt.jpg"
-            height="auto"
-            width="100%"
             alt="CRISTIN.IO (Nuxt Implementation)"
             class="summary-img shadow"
           ></NuxtImg>
@@ -85,13 +85,12 @@
           { name: 'Storybook', link: 'https://storybook.js.org/' },
         ]"
       >
+        <NuxtImg
+          src="/portfolio/stat-card-preview.jpg"
+          alt="GitHub Stats Card for React"
+          class="summary-img summary-img-tall shadow"
+        ></NuxtImg>
         <template #summary>
-          <NuxtImg
-            src="/portfolio/stat-card-preview.jpg"
-            alt="GitHub Stats Card for React"
-            class="summary-img summary-img-tall shadow"
-            height="270"
-          ></NuxtImg>
           <p>
             A simple stats card showing information about any GitHub usser with
             public repositories. The GitHub Stats Card for React can be styled
@@ -127,10 +126,8 @@
       section-classes="section pb-5"
     >
       <PortfolioItem
-        title="Front End Development Flash Cards App"
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
-        screenshot="/portfolio/flashcards-app-screenshot-white.jpg"
         :technologies="[
           { name: 'MongoDB (custom API)', link: 'https://www.mongodb.com/' },
           { name: 'Mongoose (custom API)', link: 'https://mongoosejs.com/' },
@@ -143,6 +140,11 @@
           },
         ]"
       >
+        <NuxtImg
+          src="/portfolio/flashcards-app-screenshot-white.jpg"
+          alt="Front End Development Flash Cards App"
+          class="summary-img shadow"
+        ></NuxtImg>
         <template #summary>
           <p>
             A flash card app specifically geared toward teaching front end
@@ -353,5 +355,40 @@ export default {
 <style lang="scss" scoped>
 h1 {
   text-align: left;
+}
+
+.nuxt-image-wrapper {
+  @include media-breakpoint-up(md) {
+    width: 40%;
+    margin: 0;
+    display: inline-block;
+  }
+}
+.portfolio-item-container {
+  @include media-breakpoint-up(md) {
+    width: 60%;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+.summary-img {
+  max-width: 380px;
+  margin-left: 30px;
+  float: right;
+
+  // &.summary-img-left {
+  //   float: left;
+  // }
+
+  // &.summary-img-tall {
+  //   max-height: 300px;
+  // }
+
+  // @include media-breakpoint-down(sm) {
+  //   max-width: 80%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
 }
 </style>

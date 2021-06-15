@@ -44,6 +44,7 @@ $border-purple-vivid: hsla(253, 95%, 75%, 1.0);
 $link-underline-gray: hsl(210, 10%, 48%);
 $lightest-gray: hsl(200, 16%, 96%);
 $light-gray: hsl(200, 14%, 92%);
+$bg-gray: hsl(220, 8%, 92%); //#eaebed;
 
 $border-lightest-gray: hsl(200,16%,96%);
 $border-light-gray: hsl(200, 14%, 92%);
@@ -68,6 +69,17 @@ $rainbow-text-angled: linear-gradient(
   #ffe366 55%,
   #ffe366 60%,
   #f7baba 80%
+);
+$rainbow-text-angled-dark: linear-gradient(
+  130deg,
+  #9c86cd,
+  #a897ce 5%,
+  #66d4ff 17%,
+  #66d4ff 25%,
+  #76f9ee 35%,
+  #ffe366 55%,
+  #ffe366 60%,
+  #e38a8a 80%
 );
 $pastel-rainbow-bar: linear-gradient(-90deg,
   hsl(240, 100%, 85%) 7.5%,

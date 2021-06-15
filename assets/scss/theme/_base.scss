@@ -179,26 +179,6 @@ pre code {
   color: #ffffff;
 }
 
-.summary-img {
-  max-width: 380px;
-  margin-left: 30px;
-  float: right;
-
-  &.summary-img-left {
-    float: left;
-  }
-
-  &.summary-img-tall {
-    max-height: 100%;
-  }
-
-  @include media-breakpoint-down(sm) {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .nuxt-content-highlight {
   margin: 1.25rem 0;
   border-radius: 0.25rem !important;

@@ -1,24 +1,24 @@
 <template>
-  <!-- prettier-ignore -->
-  <h2 :class="'section-header align-' + alignment + ' ' + headerClasses">
-
+  <h2
+    :class="`section-header ${
+      alignment ? 'align-' + alignment : ''
+    } ${headerClasses}`"
+  >
     <span>
       <div class="icon-container">
         <slot name="section-header-icon"></slot>
       </div>
-      <!-- <i class="fal fa-user-astronaut"></i> -->
       <b>{{ text }}</b>
     </span>
   </h2>
 </template>
 
 <script>
-/* eslint-disable prettier/prettier */
 export default {
   props: {
     alignment: {
       type: String,
-      default: 'left',
+      default: null,
     },
     text: {
       type: String,
@@ -27,7 +27,7 @@ export default {
     headerClasses: {
       type: String,
       default: '',
-    }
+    },
   },
 }
 </script>
@@ -93,12 +93,12 @@ export default {
   }
 
   &::before {
-    content: "";
+    content: '';
     display: inline-block;
     position: absolute;
     top: 2px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 100%;
     margin: 0;
     width: 100%;
@@ -143,7 +143,6 @@ export default {
     font-weight: 400 !important;
     letter-spacing: 1.5px;
     color: $border-dark-gray;
-
   }
 
   .icon-container {

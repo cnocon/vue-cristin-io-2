@@ -1,5 +1,5 @@
 <template>
-  <article class="portfolio-item-container">
+  <article>
     <div class="portfolio-item-header">
       <p class="links">
         <span v-if="demoLink">
@@ -20,10 +20,12 @@
 
     <div class="portfolio-item-content">
       <div class="technologies text-center">
-        <h4>Technologies</h4>
-        <ul class="list-inline list-inline-centered">
+        <ul class="list-style-none list-inline list-inline-centered">
+          <li key="title"><h6>TECHNOLOGIES</h6></li>
           <li v-for="(tech, index) in technologies" :key="'tech-' + index">
-            <a v-if="tech.link" href="tech.link">{{ tech.name }}</a>
+            <a v-if="tech.link" href="tech.link" class="badge badge-light">{{
+              tech.name
+            }}</a>
             <span v-else>{{ tech.name }}</span>
           </li>
         </ul>
@@ -85,6 +87,8 @@ export default {
   }
 }
 .portfolio-item-content {
+  overflow: hidden;
+
   .technologies {
     display: block;
     width: 100%;
@@ -96,8 +100,10 @@ export default {
     color: $black;
   }
 }
-h4 {
+
+h6 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 p,
 li {

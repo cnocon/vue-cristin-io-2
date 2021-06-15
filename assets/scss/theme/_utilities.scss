@@ -39,7 +39,6 @@
 // Borders
 .rainbow-border {box-shadow: $rainbow-box-shadow-dark;}
 
-
 .rainbow-ellipse {
   background-image: $rainbow-ellipse-bottom-left;
   background-size: cover;
@@ -52,4 +51,9 @@
   border-bottom-right-radius: 0;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+.badge-light {
+  background-color: $light-gray !important;
+  color: $dark !important;
 }

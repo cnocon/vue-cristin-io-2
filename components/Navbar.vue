@@ -164,24 +164,35 @@ export default {
       width: 175px;
       left: -150px;
       padding: 0;
-      background-color: $black;
-      border-color: $dark;
+      // background-color: $black;
+      background-color: $lightest-gray;
+      // border-color: $dark;
+      border-color: $border-light-gray;
       box-shadow: $box-shadow-md;
-      color: $white;
+      // color: $white;
+      color: $dark;
 
       li {
         padding-bottom: 0.85rem;
         padding-top: 0.85rem;
         margin-bottom: 0;
-        border-bottom: 1px solid rgba($lightest-gray, 0.5);
+        // border-bottom: 1px solid rgba($lightest-gray, 0.5);
+        border-bottom: 1px solid $border-light-gray;
 
         &:hover {
-          background-color: $white;
-          border-bottom: 1px solid $dark;
+          background-color: $lightest-gray;
+          color: $dark;
+          // background-color: $dark;
+          // border-bottom: 1px solid $dark;
+          border-bottom: 1px solid $border-light-gray;
 
           a {
+            // color: $dark;
+            // color: $white;
             color: $dark;
             background-color: $white;
+            color: $dark;
+            background-color: $dark;
           }
         }
 
@@ -190,7 +201,8 @@ export default {
         }
 
         a {
-          color: $white;
+          // color: $white;
+          color: $dark;
           font-weight: 900;
           text-transform: uppercase;
           font-family: $font-family-heading;
@@ -200,6 +212,8 @@ export default {
           &:hover {
             color: $dark;
             background-color: $white;
+            color: $dark;
+            background-color: $dark;
           }
         }
       }
@@ -239,7 +253,8 @@ export default {
     font-family: $font-family-display;
     text-transform: uppercase;
     font-weight: 500;
-    color: $white;
+    // color: $white;
+    color: $dark;
 
     @include media-breakpoint-xxs-up {
       font-size: 1.725rem;
@@ -256,7 +271,8 @@ export default {
     white-space: nowrap;
     line-height: 1.725em;
     font-weight: 400 !important;
-    color: $white;
+    // color: $white;
+    color: $dark;
     text-transform: uppercase;
     text-indent: 2px;
     letter-spacing: 1px;
@@ -329,7 +345,7 @@ export default {
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        background-image: $rainbow-text-angled;
+        background-image: $rainbow-text-angled-dark;
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -386,7 +402,8 @@ export default {
   }
 
   .nav-link {
-    color: $white;
+    // color: $white;
+    color: $dark;
     font-family: $font-family-base;
     font-weight: 700;
     letter-spacing: 2px;
@@ -402,7 +419,7 @@ export default {
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: $rainbow-text-angled;
+      background-image: $rainbow-text-angled-dark;
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -410,10 +427,12 @@ export default {
 
   .dropdown-toggle {
     &.nav-link {
-      color: $white;
+      // color: $white;
+      color: $dark;
 
       &:hover {
-        color: $white;
+        // color: $white;
+        color: $dark;
       }
     }
 
@@ -448,7 +467,7 @@ export default {
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        background-image: $rainbow-text-angled;
+        background-image: $rainbow-text-angled-dark;
         background-repeat: no-repeat;
         background-size: cover;
       }
