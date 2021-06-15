@@ -46,12 +46,6 @@
 </template>
 
 <script>
-/* eslint-disable prettier/prettier */
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft, faChevronRight } from '@fortawesome/pro-regular-svg-icons'
-library.add(faChevronLeft, faChevronRight)
-/* eslint-enable prettier/prettier */
-
 export default {
   props: {
     name: {

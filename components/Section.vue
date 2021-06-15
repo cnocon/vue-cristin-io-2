@@ -14,13 +14,9 @@
     <slot></slot>
   </section>
 </template>
-<script>
-// import SectionHeader from '@/components/SectionHeader'
 
+<script>
 export default {
-  // components: {
-  //   SectionHeader,
-  // },
   props: {
     sectionClasses: {
       default: 'section',

@@ -153,6 +153,17 @@ a {
       border-bottom: 1px solid $primary;
     }
   }
+
+  &[target='_blank']::after {
+    content: '';
+    display: block;
+    margin-left: 0.5rem;
+    background-image: url('~assets/images/box-arrow-up-right.svg');
+    display: inline-block;
+    width: 0.8125rem;
+    height: 0.8125rem;
+    background-size: 0.8125rem 0.8125rem;
+  }
 }
 
 .badge {
@@ -178,12 +189,28 @@ pre code {
   }
 
   &.summary-img-tall {
-    // hello
+    max-height: 100%;
   }
 
   @include media-breakpoint-down(sm) {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.nuxt-content-highlight {
+  margin: 1.25rem 0;
+  border-radius: 0.25rem !important;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+
+  code {
+    @include media-breakpoint-down(sm) {
+      min-width: 450px !important;
+    }
   }
 }

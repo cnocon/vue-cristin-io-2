@@ -264,7 +264,7 @@
       section-classes="section pb-5"
     >
       <PortfolioItem
-        title="CRISTIN.IO (Legacy Version Using Gatsby)"
+        header-text="CRISTIN.IO (Vue 3 Implementation)"
         demo-link="https://vue.cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/vue"
         screenshot="/portfolio/cristin-io-vue.jpg"
@@ -332,15 +332,6 @@
 </template>
 
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFolders } from '@fortawesome/pro-regular-svg-icons'
-/* eslint-disable prettier/prettier */
-import { faThunderstormMoon, faBriefcase } from '@fortawesome/pro-light-svg-icons'
-import { faClipboardListCheck, faBrowser } from '@fortawesome/pro-duotone-svg-icons'
-import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
-library.add(faFolders, faGithub, faClipboardListCheck, faThunderstormMoon, faBrowser, faYoutube, faBriefcase)
-/* eslint-enable prettier/prettier */
-
 export default {
   data() {
     return {

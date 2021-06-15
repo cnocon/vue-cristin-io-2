@@ -42,10 +42,6 @@
 </template>
 
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faRss } from '@fortawesome/pro-solid-svg-icons'
-library.add(faRss)
-
 export default {
   async asyncData({ $content, query, params }) {
     const page = parseInt(params.page) || 1

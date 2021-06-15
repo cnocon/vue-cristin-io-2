@@ -9,12 +9,7 @@
 </template>
 
 <script>
-import PostPreview from '@/components/PostPreview'
-
 export default {
-  components: {
-    PostPreview,
-  },
   props: {
     posts: {
       type: Array,
@@ -36,7 +31,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post-list {
   max-width: 100%;
   overflow: hidden;

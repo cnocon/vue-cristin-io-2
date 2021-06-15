@@ -26,17 +26,8 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  // css: ['@/assets/scss/main.scss'],
-  styleResources: {
-    scss: '@/assets/scss/main.scss',
-  },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components w/@nuxt/components https://github.com/nuxt/components
-  components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -46,12 +37,6 @@ export default {
     '@nuxt/image', // https://image.nuxtjs.org/
     '@nuxt/components',
   ],
-
-  image: {},
-
-  googleAnalytics: {
-    id: 'UA-134680170-1',
-  },
 
   googleFonts: {
     display: 'swap',
@@ -65,6 +50,15 @@ export default {
     },
   },
 
+  googleAnalytics: {
+    id: 'UA-134680170-1',
+  },
+
+  image: {},
+
+  // Auto import components: https://go.nuxtjs.dev/config-components w/@nuxt/components https://github.com/nuxt/components
+  components: true,
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
@@ -73,12 +67,15 @@ export default {
     'nuxt-fontawesome',
   ],
 
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  // css: ['@/assets/scss/main.scss'],
+
+  styleResources: {
+    scss: '@/assets/scss/main.scss',
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
-  router: {
-    middleware: ['redirects'], // runs before every route on both client & server
-  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
@@ -87,6 +84,58 @@ export default {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
+  },
+
+  // https://www.npmjs.com/package/nuxt-fontawesome
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/pro-regular-svg-icons',
+        icons: ['faAdjust', 'faChevronLeft', 'faChevronRight', 'faFolders'],
+      },
+      {
+        set: '@fortawesome/pro-light-svg-icons',
+        icons: [
+          'faConciergeBell',
+          'faHandshake',
+          'faUserAstronaut',
+          'faHashtag',
+          'faCode',
+          'faGraduationCap',
+          'faRss',
+          'faTimes',
+          'faChevronDoubleRight',
+          'faTrophyAlt',
+          'faThunderstormMoon',
+          'faBriefcase',
+          'faEnvelope',
+          'faHandsHeart',
+          'faPencil',
+        ],
+      },
+      {
+        set: '@fortawesome/pro-duotone-svg-icons',
+        icons: ['faFileUser', 'faClipboardListCheck', 'faBrowser'],
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: [
+          'faStackOverflow',
+          'faCodepen',
+          'faGithub',
+          'faYoutube',
+          'faLinkedinIn',
+        ],
+      },
+      {
+        set: '@fortawesome/pro-solid-svg-icons',
+        icons: ['faGraduationCap', 'faCheck', 'faHomeLgAlt', 'faBars', 'faRss'],
+      },
+    ],
+  },
+
+  router: {
+    middleware: ['redirects'], // runs before every route on both client & server
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

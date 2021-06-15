@@ -127,11 +127,6 @@
 </template>
 
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHomeLgAlt, faBars } from '@fortawesome/pro-solid-svg-icons'
-import { faTimes } from '@fortawesome/pro-light-svg-icons'
-library.add(faHomeLgAlt, faBars, faTimes)
-
 export default {
   data() {
     return {

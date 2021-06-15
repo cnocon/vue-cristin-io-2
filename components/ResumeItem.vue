@@ -57,14 +57,7 @@
 </template>
 
 <script>
-/* eslint-disable prettier/prettier */
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronDoubleRight, faTrophyAlt } from '@fortawesome/pro-light-svg-icons'
-library.add(faChevronDoubleRight, faTrophyAlt)
-/* eslint-enable prettier/prettier */
-
 export default {
-  name: 'ResumeItem',
   props: {
     item: {
       type: Object,

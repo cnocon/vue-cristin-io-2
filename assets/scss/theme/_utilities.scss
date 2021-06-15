@@ -38,3 +38,18 @@
 
 // Borders
 .rainbow-border {box-shadow: $rainbow-box-shadow-dark;}
+
+
+.rainbow-ellipse {
+  background-image: $rainbow-ellipse-bottom-left;
+  background-size: cover;
+}
+
+.rainbow-border {
+  background-image: $rainbow-gradient-light;
+  background-size: 100% 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}

@@ -12,25 +12,7 @@
   </div>
 </template>
 
-<script>
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-
-export default {
-  components: {
-    Navbar,
-    Footer,
-  },
-}
-</script>
-
 <style lang="scss">
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .container {
   @include media-breakpoint-up(md) {
     max-width: 1140px !important;
@@ -86,46 +68,10 @@ export default {
   }
 }
 
-.rainbow-ellipse {
-  background-image: $rainbow-ellipse-bottom-left;
-  background-size: cover;
-}
-
-.rainbow-border {
-  background-image: $rainbow-gradient-light;
-  background-size: 100% 2px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-
-[target='_blank']::after {
-  content: '';
-  display: block;
-  margin-left: 0.5rem;
-  background-image: url('~assets/images/box-arrow-up-right.svg');
-  display: inline-block;
-  width: 0.8125rem;
-  height: 0.8125rem;
-  background-size: 0.8125rem 0.8125rem;
-}
-.nuxt-content-highlight {
-  margin: 1.25rem 0;
-  border-radius: 0.25rem !important;
-
-  @include media-breakpoint-down(sm) {
-    max-width: 100%;
-    overflow-x: scroll;
-  }
-
-  code {
-    @include media-breakpoint-down(sm) {
-      min-width: 450px !important;
-    }
-  }
-}
 .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   animation: 1s appear;
   margin: auto;
 }
