@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-const courses = [
+const coursesData = [
   {
     "name": "Vue JS Essentials with Vuex and Vue Router",
     "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=1605992",
@@ -57,4 +57,4 @@ const courses = [
   }
 ]
 
-export default courses
+export default coursesData

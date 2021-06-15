@@ -15,12 +15,12 @@
   </section>
 </template>
 <script>
-import SectionHeader from '@/components/SectionHeader'
+// import SectionHeader from '@/components/SectionHeader'
 
 export default {
-  components: {
-    SectionHeader,
-  },
+  // components: {
+  //   SectionHeader,
+  // },
   props: {
     sectionClasses: {
       default: 'section',

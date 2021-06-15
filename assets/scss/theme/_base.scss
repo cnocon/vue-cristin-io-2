@@ -82,6 +82,27 @@ ul {
     list-style: none;
   }
 
+  &.list-inline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.list-inline-centered {
+      justify-content: center;
+    }
+
+    li {
+      flex-grow: 0;
+      flex-basis: auto;
+      display: inline-block;
+      margin-right: 0.875rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
   ol,
   ul {
     margin-top: 1rem;
@@ -145,4 +166,24 @@ a {
 pre,
 pre code {
   color: #ffffff;
+}
+
+.summary-img {
+  max-width: 380px;
+  margin-left: 30px;
+  float: right;
+
+  &.summary-img-left {
+    float: left;
+  }
+
+  &.summary-img-tall {
+    // hello
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

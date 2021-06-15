@@ -27,6 +27,13 @@
         ]"
       >
         <template #summary>
+          <NuxtImg
+            src="/portfolio/cristin-io-nuxt.jpg"
+            height="auto"
+            width="100%"
+            alt="CRISTIN.IO (Nuxt Implementation)"
+            class="summary-img shadow"
+          ></NuxtImg>
           <p>
             CRISTIN.IO (currently implemented using Nuxt) represents the most
             recent total rebuild of this website. That's right, this page and
@@ -66,8 +73,6 @@
         demo-link="https://react-github-stats-card-v2-demo.netlify.app"
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
         npm-link="https://www.npmjs.com/package/react-github-stats-card-v2"
-        screenshot="/portfolio/stat-card-preview.jpg"
-        image-content-classes="image-tall"
         :technologies="[
           { name: 'GitHub API', link: 'https://docs.github.com/en/rest' },
           {
@@ -81,22 +86,33 @@
         ]"
       >
         <template #summary>
+          <NuxtImg
+            src="/portfolio/stat-card-preview.jpg"
+            alt="GitHub Stats Card for React"
+            class="summary-img summary-img-tall shadow"
+            height="270"
+          ></NuxtImg>
           <p>
-            A simple card, with or without attached styles, to show some basic
-            GitHub statistics for a given GitHub user.
+            A simple stats card showing information about any GitHub usser with
+            public repositories. The GitHub Stats Card for React can be styled
+            with the theme options.
           </p>
           <p>
-            There are multiple theme options that can be implemented by passing
-            props to the component.
-          </p>
-          <p>
-            Usage instructions are included in the
+            Theme variations can be activated for your card with ease. Choose
+            one of the available theme options (each of which are included in
             <a
               target="blank"
               rel="noopener"
               href="https://github.com/cnocon/react-github-stats-card-v2#readme"
-              >repository README file</a
-            >.
+            >
+              repository README file</a
+            >) for the <code>theme</code> prop. Pass the the
+            <code>theme</code> prop with a value of the option you chose to the
+            GitHub Stats Card for React component instance.
+          </p>
+          <p>
+            Usage instructions are also included in the repository's README.md
+            file.
           </p>
         </template>
       </PortfolioItem>

@@ -255,51 +255,30 @@
       </div>
     </div>
 
-    <SectionHeader text="Recent Coursework">
+    <SectionHeader
+      text="Recent Coursework"
+      header-classes="courses-section-header"
+    >
       <template #section-header-icon>
         <font-awesome-icon :icon="['fal', 'pencil']"></font-awesome-icon>
       </template>
     </SectionHeader>
-    <div v-if="courseData" class="row">
-      <div
-        v-for="(course, cIndex) in courseData"
+
+    <div v-if="coursesData" class="courses-row row">
+      <course
+        v-for="(course, cIndex) in coursesData"
         :key="cIndex"
-        class="col-12 col-sm-6 col-md-6 col-lg-4 course"
-      >
-        <figure>
-          <nuxt-img :src="course.img" :alt="course.name"></nuxt-img>
-        </figure>
-        <h3>
-          <a :href="course.url" target="_blank" rel="noopener noreferrer">
-            {{ course.name }}
-          </a>
-        </h3>
-        <h4>
-          <span class="company">{{ course.company }}</span>
-          <span v-if="course.instructor">
-            <span class="instructor">&nbsp;|&nbsp;{{ course.instructor }}</span>
-          </span>
-        </h4>
-        <p class="description">
-          {{ course.description }}
-          <a
-            v-if="course.certificate_url"
-            :href="course.certificate_url"
-            class="btn-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Certificate
-          </a>
-        </p>
-      </div>
+        :course-data="course"
+        :index="cIndex"
+        classes="col-12 col-sm-6 col-lg-4"
+      ></course>
     </div>
   </div>
 </template>
 
 <script>
 import resumeData from '@/data/resume'
-import courseData from '@/data/courses'
+import coursesData from '@/data/courses'
 /* eslint-disable prettier/prettier */
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFileUser } from '@fortawesome/pro-duotone-svg-icons'
@@ -330,7 +309,7 @@ export default {
           href: null,
         },
       ],
-      courseData,
+      coursesData,
     }
   },
   head() {
@@ -384,7 +363,6 @@ export default {
     }
   }
 }
-
 .resume-row {
   margin-top: 20px;
   h3 {
@@ -615,77 +593,16 @@ export default {
     font-family: $font-family-display;
   }
 }
-.course {
-  margin-bottom: 4rem;
-  text-align: center;
+.section-header {
+  &.courses-section-header {
+    margin-bottom: 2rem;
 
-  figure {
-    display: inline-block;
-    text-align: center;
-    height: 80px;
-    padding-bottom: 1.5rem;
-  }
-  img {
-    text-align: center;
-    max-height: 80px;
-  }
-
-  h3 {
-    margin-top: 0.5rem;
-    line-height: 1em;
-    margin-bottom: 1rem;
-
-    a {
-      color: $primary;
-      font-weight: 700;
-      font-size: 1.45rem;
-      line-height: 1.25em;
-      font-family: $font-family-base;
-      background-image: $rainbow-gradient-med;
-      background-size: 100% 2px;
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      text-decoration: none;
-
-      &:hover {
-        background-image: none;
-      }
-    }
-  }
-
-  h4 {
-    font-family: $font-family-heading;
-    margin-top: 0;
-    font-size: 1.125rem;
-  }
-
-  .description {
-    font-weight: 400;
-    margin-top: 0;
-  }
-
-  .instructor {
-    font-family: $font-family-display;
-    font-weight: 400;
-  }
-
-  .btn-link {
-    display: inline-block;
-    line-height: 1.25em;
-    font-weight: 400;
-    border-bottom: 1px solid $border-med-gray;
-    background-image: none;
-    text-decoration: none;
-
-    &:hover {
-      border-bottom: 0;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 2.5rem;
     }
 
-    i {
-      font-size: 0.875rem;
-      color: lighten($primary, 20%);
-      line-height: inherit;
-      vertical-align: top;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 3rem;
     }
   }
 }
