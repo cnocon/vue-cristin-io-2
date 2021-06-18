@@ -164,32 +164,24 @@ export default {
       width: 175px;
       left: -150px;
       padding: 0;
-      // background-color: $lightest-gray;
-      // border-color: $border-light-gray;
-      box-shadow: $box-shadow-md;
-      // color: $dark;
-      color: $white;
-      background-color: $dark;
+      background-color: $black;
       border-color: $dark;
+      box-shadow: $box-shadow-md;
+      color: $white;
 
       li {
         padding-bottom: 0.85rem;
         padding-top: 0.85rem;
         margin-bottom: 0;
-        // border-bottom: 1px solid rgba($lightest-gray, 0.5);
-        border-bottom: 1px solid $border-light-gray;
+        border-bottom: 1px solid rgba($lightest-gray, 0.5);
 
         &:hover {
-          background-color: $lightest-gray;
-          // color: $dark;
-          border-bottom: 1px solid $border-light-gray;
+          background-color: $white;
+          border-bottom: 1px solid $dark;
 
           a {
-            // color: $dark;
-            // color: $white;
             color: $dark;
-            background-color: $lightest-gray;
-            text-decoration: underline;
+            background-color: $white;
           }
         }
 
@@ -199,7 +191,6 @@ export default {
 
         a {
           color: $white;
-          // color: $dark;
           font-weight: 900;
           text-transform: uppercase;
           font-family: $font-family-heading;
@@ -207,11 +198,8 @@ export default {
           text-align: center;
 
           &:hover {
-            // color: $dark;
-            // background-color: $white;
-            // color: $dark;
-            // background-color: $dark;
-            text-decoration: underline;
+            color: $dark;
+            background-color: $white;
           }
         }
       }
@@ -251,8 +239,7 @@ export default {
     font-family: $font-family-display;
     text-transform: uppercase;
     font-weight: 500;
-    // color: $white;
-    color: $dark;
+    color: $white;
 
     @include media-breakpoint-xxs-up {
       font-size: 1.725rem;
@@ -269,8 +256,7 @@ export default {
     white-space: nowrap;
     line-height: 1.725em;
     font-weight: 400 !important;
-    // color: $white;
-    color: $dark;
+    color: $white;
     text-transform: uppercase;
     text-indent: 2px;
     letter-spacing: 1px;
@@ -294,13 +280,12 @@ export default {
   .name {
     &.nuxt-link-active,
     &.nuxt-link-exact-active {
-      // color: transparent;
-      // background-clip: text;
-      // -webkit-background-clip: text;
-      // background-image: $rainbow-gradient-med;
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      color: $dark;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: $rainbow-gradient-med;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 }
@@ -341,13 +326,12 @@ export default {
     .name-and-title,
     .name-and-title-mobile {
       .name {
-        // color: transparent;
-        // background-clip: text;
-        // -webkit-background-clip: text;
-        // background-image: $rainbow-text-angled-dark;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        color: $dark;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: $rainbow-text-angled;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
   }
@@ -402,8 +386,7 @@ export default {
   }
 
   .nav-link {
-    // color: $white;
-    color: $dark;
+    color: $white;
     font-family: $font-family-base;
     font-weight: 700;
     letter-spacing: 2px;
@@ -416,24 +399,21 @@ export default {
     }
 
     &:hover {
-      // color: transparent;
-      // background-clip: text;
-      // -webkit-background-clip: text;
-      // background-image: $rainbow-text-angled-dark;
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      text-decoration: underline;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: $rainbow-text-angled;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
   .dropdown-toggle {
     &.nav-link {
-      // color: $white;
-      color: $dark;
+      color: $white;
 
       &:hover {
-        // color: $white;
-        color: $dark;
+        color: $white;
       }
     }
 
@@ -468,7 +448,7 @@ export default {
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        background-image: $rainbow-text-angled-dark;
+        background-image: $rainbow-text-angled;
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -481,19 +461,12 @@ export default {
 
       &.nuxt-link-active,
       &.nuxt-link-exact-active {
-        // color: transparent;
-        // background-clip: text;
-        // -webkit-background-clip: text;
-        // background-image: $rainbow-gradient-med;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        background-color: $primary;
-        color: $white;
-        border-radius: 4px;
-
-        &:hover {
-          text-decoration: none;
-        }
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: $rainbow-gradient-med;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
   }
