@@ -199,7 +199,7 @@
 export default {
   async asyncData({ $content, params, query }) {
     const posts = await $content('articles')
-      .limit(6)
+      .limit(3)
       .sortBy('date', 'desc')
       .fetch()
 
