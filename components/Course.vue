@@ -1,7 +1,7 @@
 <template>
   <div v-if="courseData" :class="`course ${classes}`">
     <figure>
-      <nuxt-img :src="courseData.img" :alt="courseData.name"></nuxt-img>
+      <nuxt-img :src="courseData.img" :alt="courseData.name" defer></nuxt-img>
     </figure>
     <h3>
       <a :href="courseData.url" target="_blank" rel="noopener noreferrer">

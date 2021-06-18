@@ -2,7 +2,7 @@
   <article class="shadow post-preview">
     <header>
       <div class="post-image">
-        <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
+        <nuxt-img :src="`/${post.img}`" :alt="post.alt" defer></nuxt-img>
       </div>
 
       <NuxtLink

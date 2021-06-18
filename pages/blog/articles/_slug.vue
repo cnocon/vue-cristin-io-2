@@ -68,8 +68,7 @@
 <script>
 export default {
   async asyncData({ $content, params, query }) {
-    // fetch our article here
-    const post = await $content('articles', params.slug).fetch()
+    const post = await $content('articles', params.slug).fetch() // fetch article by slug
 
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
