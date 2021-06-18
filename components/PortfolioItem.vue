@@ -16,18 +16,6 @@
       </span>
     </p>
     <div class="portfolio-item-content">
-      <div class="technologies text-center">
-        <ul class="list-style-none list-inline list-inline-centered">
-          <li key="title"><h6>TECHNOLOGIES</h6></li>
-          <li v-for="(tech, index) in technologies" :key="'tech-' + index">
-            <a v-if="tech.link" href="tech.link" class="badge badge-light">{{
-              tech.name
-            }}</a>
-            <span v-else>{{ tech.name }}</span>
-          </li>
-        </ul>
-      </div>
-      <slot name="summary"></slot>
       <div v-if="screenshot.length > 0" class="screenshot-container">
         <NuxtImg
           :src="screenshot"
@@ -36,6 +24,18 @@
             screenshotClasses ? screenshotClasses : ''
           }`"
         ></NuxtImg>
+      </div>
+      <slot name="summary"></slot>
+      <div class="technologies text-center">
+        <h6>TECHNOLOGIES</h6>
+        <ul class="list-style-none list-inline">
+          <li v-for="(tech, index) in technologies" :key="'tech-' + index">
+            <a v-if="tech.link" href="tech.link" class="badge badge-light">{{
+              tech.name
+            }}</a>
+            <span v-else>{{ tech.name }}</span>
+          </li>
+        </ul>
       </div>
     </div>
   </article>
@@ -85,69 +85,66 @@ export default {
   overflow: hidden;
 
   .portfolio-item-content {
-    .links {
-      text-align: center;
+    overflow: hidden;
+  }
 
-      @include media-breakpoint-down(md) {
-        margin-bottom: 0;
-      }
+  .links {
+    text-align: center;
 
-      a {
-        text-decoration: none;
-
-        &[target='_blank'] {
-          &::after {
-            margin-left: 3px;
-          }
-        }
-      }
-    }
-
-    .technologies {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-
-    .screenshot-container {
-      max-width: 350px;
-      margin-left: 30px;
-      float: right;
-
-      .summary-img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-
-      // &.summary-img-left {
-      //   float: left;
-      // }
-
-      // &.summary-img-tall {
-      //   max-height: 300px;
-      // }
-
-      // @include media-breakpoint-down(sm) {
-      //   max-width: 80%;
-      //   margin-left: auto;
-      //   margin-right: auto;
-      // }
-    }
-
-    h6 {
-      margin-top: 0;
+    @include media-breakpoint-down(md) {
       margin-bottom: 0;
     }
 
-    p,
-    li {
-      font-family: $font-family-heading;
-      color: $black;
+    a {
+      text-decoration: none;
 
-      a {
-        text-decoration: none;
+      &[target='_blank'] {
+        &::after {
+          margin-left: 3px;
+        }
       }
+    }
+  }
+
+  .technologies {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    h6 {
+      text-align: left;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+  }
+
+  .screenshot-container {
+    max-width: 350px;
+    margin-left: 30px;
+    float: left;
+    padding: 0 1.25rem 1.25rem;
+
+    .summary-img {
+      display: block;
+      max-width: calc(100% - 2rem);
+      height: auto;
+      margin: 0 1rem 1.5rem;
+    }
+  }
+
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p,
+  li {
+    font-family: $font-family-heading;
+    color: $black;
+
+    a {
+      text-decoration: none;
     }
   }
 }

@@ -69,7 +69,6 @@
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
         npm-link="https://www.npmjs.com/package/react-github-stats-card-v2"
         screenshot="/portfolio/stat-card-preview.jpg"
-        screenshot-classes="summary-img-tall"
         :technologies="[
           { name: 'GitHub API', link: 'https://docs.github.com/en/rest' },
           {
@@ -116,11 +115,11 @@
       header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
-      screenshot="/portfolio/flashcards-app-screenshot-white.jpg"
     >
       <PortfolioItem
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
+        screenshot="/portfolio/flashcards-app-screenshot-white.jpg"
         :technologies="[
           { name: 'MongoDB (custom API)', link: 'https://www.mongodb.com/' },
           { name: 'Mongoose (custom API)', link: 'https://mongoosejs.com/' },
@@ -201,7 +200,11 @@
         ]"
       >
         <template #summary>
-          <p>Search for and watch content from YouTube.</p>
+          <p>
+            This mini-application allows you to search for and watch content
+            from YouTube. It returns only six results at a time (limitation due
+            to me wanting to avoid paying for the API).
+          </p>
         </template>
       </PortfolioItem>
     </Section>
@@ -219,7 +222,6 @@
         demo-link="https://business.centurylink.com/"
         screenshot="/portfolio/clq.jpg"
         :technologies="[
-          { name: 'Component-based architecture', link: null },
           {
             name: 'Responsive design',
             link: 'https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/',

@@ -27,14 +27,14 @@
           >Résumé</NuxtLink
         >
       </li>
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <NuxtLink
           :active="isActive('portfolio')"
           to="/portfolio"
           class="rounded nav-link"
           >Portfolio</NuxtLink
         >
-      </li> -->
+      </li>
       <li class="nav-item">
         <NuxtLink
           :active="isActive('blog')"
@@ -164,13 +164,13 @@ export default {
       width: 175px;
       left: -150px;
       padding: 0;
-      // background-color: $black;
-      background-color: $lightest-gray;
-      // border-color: $dark;
-      border-color: $border-light-gray;
+      // background-color: $lightest-gray;
+      // border-color: $border-light-gray;
       box-shadow: $box-shadow-md;
-      // color: $white;
-      color: $dark;
+      // color: $dark;
+      color: $white;
+      background-color: $dark;
+      border-color: $dark;
 
       li {
         padding-bottom: 0.85rem;
@@ -181,18 +181,15 @@ export default {
 
         &:hover {
           background-color: $lightest-gray;
-          color: $dark;
-          // background-color: $dark;
-          // border-bottom: 1px solid $dark;
+          // color: $dark;
           border-bottom: 1px solid $border-light-gray;
 
           a {
             // color: $dark;
             // color: $white;
             color: $dark;
-            background-color: $white;
-            color: $dark;
-            background-color: $dark;
+            background-color: $lightest-gray;
+            text-decoration: underline;
           }
         }
 
@@ -201,8 +198,8 @@ export default {
         }
 
         a {
-          // color: $white;
-          color: $dark;
+          color: $white;
+          // color: $dark;
           font-weight: 900;
           text-transform: uppercase;
           font-family: $font-family-heading;
@@ -210,10 +207,11 @@ export default {
           text-align: center;
 
           &:hover {
-            color: $dark;
-            background-color: $white;
-            color: $dark;
-            background-color: $dark;
+            // color: $dark;
+            // background-color: $white;
+            // color: $dark;
+            // background-color: $dark;
+            text-decoration: underline;
           }
         }
       }
@@ -296,12 +294,13 @@ export default {
   .name {
     &.nuxt-link-active,
     &.nuxt-link-exact-active {
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: $rainbow-gradient-med;
-      background-repeat: no-repeat;
-      background-size: cover;
+      // color: transparent;
+      // background-clip: text;
+      // -webkit-background-clip: text;
+      // background-image: $rainbow-gradient-med;
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      color: $dark;
     }
   }
 }
@@ -342,12 +341,13 @@ export default {
     .name-and-title,
     .name-and-title-mobile {
       .name {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $rainbow-text-angled-dark;
-        background-repeat: no-repeat;
-        background-size: cover;
+        // color: transparent;
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // background-image: $rainbow-text-angled-dark;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        color: $dark;
       }
     }
   }
@@ -487,7 +487,7 @@ export default {
         // background-image: $rainbow-gradient-med;
         // background-repeat: no-repeat;
         // background-size: cover;
-        background-color: #345;
+        background-color: $primary;
         color: $white;
         border-radius: 4px;
 
