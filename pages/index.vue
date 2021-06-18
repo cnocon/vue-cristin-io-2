@@ -3,16 +3,8 @@
     <Head />
     <header class="text-center">
       <h1 class="page-title">
-        <!-- I&nbsp;&nbsp;L<span class="smaller">&#9825;</span>VE&nbsp;&nbsp;CODE. -->
-        I&nbsp;&nbsp;L<span class="smaller">&#9829;</span>VE&nbsp;&nbsp;CODE.
+        I&nbsp;&nbsp;L<span>&#9829;</span>VE&nbsp;&nbsp;CODE.
       </h1>
-      <!-- <h1 class="page-title">
-        I&nbsp;&nbsp;L<span class="smaller">&#9825;</span
-        >VE&nbsp;&nbsp;C<span>&#9829;</span>DE.
-      </h1> -->
-      <!-- <p class="page-subtitle">
-        so I write it, teach it, and endeavor to learn more.
-      </p> -->
     </header>
     <main>
       <Section
@@ -245,7 +237,7 @@ header {
   }
 
   span {
-    // font-size: 2.625rem; // 42px
+    font-size: 2.625rem; // 42px
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -263,6 +255,22 @@ header {
     margin-left: -3px;
     margin-right: -1px;
     line-height: inherit;
+
+    @include media-breakpoint-xxs-down {
+      font-size: 2.375rem; // 38px
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 2.75rem; // 44px
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 3rem; // 48px
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3.5rem; // 56px
+    }
 
     &.smaller {
       margin-left: 0;

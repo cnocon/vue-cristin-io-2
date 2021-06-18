@@ -29,11 +29,6 @@
         ]"
       >
         <template #summary>
-          <NuxtImg
-            src="/portfolio/cristin-io-nuxt.jpg"
-            alt="CRISTIN.IO (Nuxt Implementation)"
-            class="summary-img shadow"
-          ></NuxtImg>
           <p>
             CRISTIN.IO (currently implemented using Nuxt) represents the most
             recent total rebuild of this website. That's right, this page and
@@ -73,6 +68,8 @@
         demo-link="https://react-github-stats-card-v2-demo.netlify.app"
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
         npm-link="https://www.npmjs.com/package/react-github-stats-card-v2"
+        screenshot="/portfolio/stat-card-preview.jpg"
+        screenshot-classes="summary-img-tall"
         :technologies="[
           { name: 'GitHub API', link: 'https://docs.github.com/en/rest' },
           {
@@ -85,11 +82,6 @@
           { name: 'Storybook', link: 'https://storybook.js.org/' },
         ]"
       >
-        <NuxtImg
-          src="/portfolio/stat-card-preview.jpg"
-          alt="GitHub Stats Card for React"
-          class="summary-img summary-img-tall shadow"
-        ></NuxtImg>
         <template #summary>
           <p>
             A simple stats card showing information about any GitHub usser with
@@ -124,6 +116,7 @@
       header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
+      screenshot="/portfolio/flashcards-app-screenshot-white.jpg"
     >
       <PortfolioItem
         demo-link="https://fed-flash-cards.netlify.app"
@@ -140,11 +133,6 @@
           },
         ]"
       >
-        <NuxtImg
-          src="/portfolio/flashcards-app-screenshot-white.jpg"
-          alt="Front End Development Flash Cards App"
-          class="summary-img shadow"
-        ></NuxtImg>
         <template #summary>
           <p>
             A flash card app specifically geared toward teaching front end
@@ -370,25 +358,5 @@ h1 {
     margin: 0;
     display: inline-block;
   }
-}
-
-.summary-img {
-  max-width: 380px;
-  margin-left: 30px;
-  float: right;
-
-  // &.summary-img-left {
-  //   float: left;
-  // }
-
-  // &.summary-img-tall {
-  //   max-height: 300px;
-  // }
-
-  // @include media-breakpoint-down(sm) {
-  //   max-width: 80%;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
 }
 </style>

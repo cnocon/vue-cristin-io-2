@@ -22,9 +22,9 @@ export default {
 .quote {
   padding: 2rem 3rem 1rem 1.75rem;
   border-radius: 4px;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
-  box-shadow: $box-shadow-sm;
+  box-shadow: $box-shadow-md;
   background-color: $lightest-gray;
 
   &.dark {

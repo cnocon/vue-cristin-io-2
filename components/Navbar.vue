@@ -27,14 +27,14 @@
           >Résumé</NuxtLink
         >
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <NuxtLink
           :active="isActive('portfolio')"
           to="/portfolio"
           class="rounded nav-link"
           >Portfolio</NuxtLink
         >
-      </li>
+      </li> -->
       <li class="nav-item">
         <NuxtLink
           :active="isActive('blog')"
