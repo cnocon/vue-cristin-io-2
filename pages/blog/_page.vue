@@ -16,6 +16,11 @@
         <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>
       </template>
     </SectionHeader>
+    <div class="blog-page-header">
+      <div class="search-bar">
+        <Search placeholder="Search Blog"></Search>
+      </div>
+    </div>
     <PostList
       :posts="pagePosts"
       column-classes="post-preview-container col-12 col-lg-6 mb-5"
@@ -79,3 +84,9 @@ export default {
   watchParams: ['page'],
 }
 </script>
+
+<style lang="scss" scoped>
+.blog-page-header {
+  margin: 1.25rem 0 1.25rem auto;
+}
+</style>
