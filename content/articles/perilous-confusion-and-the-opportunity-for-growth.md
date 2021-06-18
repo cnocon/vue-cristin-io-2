@@ -22,7 +22,7 @@ What was actually going on is that I was confused (not realizing in the moment t
 
 Had I recognized that confusion was a gift in that moment, and simultaneously been patient with the thought process that would be required to make sense of that confusion, I could have saved myself some suffering.
 
-<quote>
+<quote classes="mb-4">
   <template #quote>
     Confusion is the first step towards wisdom... So when you’re confused, know that you’re facing experiences out of your comfort zone — and that spells growth.
   </template>

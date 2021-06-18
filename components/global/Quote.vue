@@ -84,5 +84,9 @@ export default {
       margin-top: 1.25rem;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 </style>

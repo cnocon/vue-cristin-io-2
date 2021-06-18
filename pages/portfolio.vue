@@ -63,7 +63,7 @@
       header-classes="dark portfolio-section-header"
       section-classes="section mb-5"
     >
-      <PortfolioItem
+      <LazyPortfolioItem
         title="GitHub Stats Card for React"
         demo-link="https://react-github-stats-card-v2-demo.netlify.app"
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
@@ -105,7 +105,7 @@
             file.
           </p>
         </template>
-      </PortfolioItem>
+      </LazyPortfolioItem>
     </Section>
 
     <Section

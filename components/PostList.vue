@@ -44,6 +44,7 @@ export default {
   .post-preview-container {
     max-width: 100%;
     overflow: hidden;
+    padding-bottom: 1.5rem;
 
     @include media-breakpoint-xxs-down {
       max-width: 92%;

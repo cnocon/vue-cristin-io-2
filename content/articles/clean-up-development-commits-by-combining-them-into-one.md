@@ -17,7 +17,7 @@ Keeping frequent commits throughout your development process on a local branch c
 
 First, let's create a history to work with on a new development branch called demo based off of master. For our purposes, master will serve as our production branch, while demo is our development branch we're using to create a detailed README file. Inside demo, I updated the README several times, committing after each change. When I run <code>git log</code>, my history looks like this (ignore the fact my commit email addresses are different - I have my reasons!):
 
-<post-image src="/git-history.jpg" alt="Git history"></post-image>
+<post-image src="/blog/git-history.jpg" alt="Git history"></post-image>
 
 Let's say we've been super efficient and our README is done already, and our changes are ready for production. It's now time to get our history production ready.
 

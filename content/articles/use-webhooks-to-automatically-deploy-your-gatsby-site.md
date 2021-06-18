@@ -10,7 +10,7 @@ categories: [{name: Gatsby, slug: gatsby}, {name: Netlify, slug: netlify}, {name
 
 <p class="drop-cap">I used to use a headless CMS by the name of ButterCMS to create and publish the posts you see on CRISTIN.IO. This was also when my site used Gatsby, so I had set up API calls to fetch and create pages server-side based on the data returned from the ButterCMS API (with some help from the [gatsby-source-buttercms plugin](https://github.com/buttercms/gatsby-source-buttercms)). Because I'm rendering these pages server-side, the client won't have the ability to re-fetch content with every page load. To generate the new version(s) of my updated post/posts pages, I'd have to rebuild the site locally so the server could re-fetch the updated data, and then finally deploy that build to Netlify manually via the command line.</p>
 
-<quote>
+<quote classes="mb-4">
   <template #quote>This is inconvenient and I hate doing it.</template>
   <template #cite>&mdash; Cristin O'Connor</template>
 </quote>
