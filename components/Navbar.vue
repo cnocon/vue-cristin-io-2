@@ -416,12 +416,13 @@ export default {
     }
 
     &:hover {
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: $rainbow-text-angled-dark;
-      background-repeat: no-repeat;
-      background-size: cover;
+      // color: transparent;
+      // background-clip: text;
+      // -webkit-background-clip: text;
+      // background-image: $rainbow-text-angled-dark;
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      text-decoration: underline;
     }
   }
 
@@ -480,12 +481,19 @@ export default {
 
       &.nuxt-link-active,
       &.nuxt-link-exact-active {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $rainbow-gradient-med;
-        background-repeat: no-repeat;
-        background-size: cover;
+        // color: transparent;
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // background-image: $rainbow-gradient-med;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        background-color: #345;
+        color: $white;
+        border-radius: 4px;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }

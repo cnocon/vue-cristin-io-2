@@ -35,6 +35,11 @@ export default {
 .post-list {
   max-width: 100%;
   overflow: hidden;
+  margin-top: 2rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 1rem;
+  }
 
   .post-preview-container {
     max-width: 100%;
