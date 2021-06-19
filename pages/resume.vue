@@ -6,7 +6,6 @@
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1 class="mt-0">Résumé & Coursework</h1>
-
     <div v-if="data.jobTitle" class="row resume-row">
       <div class="col-lg-7 col-md-12 left-column">
         <div class="first-icon">
@@ -51,7 +50,7 @@
           <span>Skills</span>
         </h3>
         <div class="skills">
-          <Skill
+          <LazySkill
             v-for="(skill, index) in data.skills"
             :key="index"
             :skill="skill"
@@ -89,15 +88,15 @@
           ></LazyResumeItem>
         </div>
 
-        <quote classes="subtle text-lg text-center dark rounded-lg pr-5">
+        <LazyQuote classes="subtle text-lg text-center dark rounded-lg pr-5">
           <template #quote>
             How we spend our days is, of course, how we spend our lives. What we
             do with this hour, and that one, is what we are doing.
           </template>
           <template #cite>– Annie Dillard</template>
-        </quote>
+        </LazyQuote>
 
-        <LazyConnect></LazyConnect>
+        <LazyConnect />
       </div>
     </div>
 
@@ -127,15 +126,8 @@ import resumeData from '@/data/resume'
 import coursesData from '@/data/courses'
 
 export default {
-  props: {
-    globals: {
-      type: Object,
-      default: null,
-    },
-  },
   data() {
     return {
-      visible: false,
       data: resumeData,
       breadcrumbs: [
         {
@@ -150,28 +142,22 @@ export default {
       coursesData,
     }
   },
-  head() {
-    return {
-      title: 'Résumé and Coursework',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            "Cristin O'Connor's Résumé and Coursework Related to Front End Software Engineering",
-        },
-      ],
-    }
-  },
-  mounted() {
-    this.$nextTick(function () {
-      this.visible = true
-    })
-  },
 }
 </script>
 
 <style scoped lang="scss">
+.resume-page {
+  // display: flex;
+  // flex-direction: column;
+  // min-height: 100vh;
+  -webkit-animation: 1s appear;
+  animation: 1s appear;
+  margin: 3rem auto 0;
+
+  h1 {
+    margin-bottom: 4rem;
+  }
+}
 .timeline {
   @include media-breakpoint-up(md) {
     padding-left: 4.5rem;
@@ -202,50 +188,18 @@ export default {
   }
 }
 .resume-row {
-  margin-top: 20px;
+  margin-top: 2rem; // 32px
+
   h3 {
     position: relative;
     padding: 0 0 1rem 4.5rem;
     font-size: 1rem;
     line-height: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     font-family: $font-family-display;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 1rem;
-
-    @media all and (max-width: $breakpoint-sm) {
-      &.mt-3 {
-        margin-top: -1rem !important;
-      }
-    }
-
-    i {
-      position: absolute;
-      left: 0;
-      height: 3.5rem;
-      width: 3.5rem;
-      border-radius: 50%;
-      border: 2px solid $light;
-      background-color: $white;
-      z-index: 1;
-
-      &::before {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        color: lighten($primary, 15%);
-        background-color: $white;
-        font-size: 1.625rem;
-      }
-
-      &.adjust-top {
-        &::before {
-          top: calc(50% + 2px);
-        }
-      }
-    }
   }
   .left-column,
   .right-column {
@@ -391,13 +345,5 @@ export default {
       margin-bottom: 3rem;
     }
   }
-}
-.resume-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  -webkit-animation: 1s appear;
-  animation: 1s appear;
-  margin: auto;
 }
 </style>

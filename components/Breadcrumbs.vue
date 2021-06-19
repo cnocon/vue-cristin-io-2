@@ -62,7 +62,7 @@ export default {
     margin-bottom: 0;
     font-size: 0.9375rem;
     color: $link-underline-gray;
-    font-weight: 500;
+    font-weight: 400;
     font-family: $font-family-heading;
 
     + .breadcrumb-item {

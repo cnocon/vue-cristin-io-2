@@ -331,7 +331,7 @@ export default {
   color: $white;
   text-decoration: none;
   font-family: $font-family-base;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
   @include transition($nav-link-transition);
@@ -402,7 +402,7 @@ export default {
   font-family: $font-family-heading;
   white-space: nowrap;
   line-height: 1.725em;
-  font-weight: 800;
+  font-weight: 900;
   color: $white;
   text-transform: uppercase;
   text-indent: 2px;
@@ -429,6 +429,20 @@ export default {
   width: 100%;
   text-align: center;
   padding: 1.25rem 0;
+
+  @include media-breakpoint-xxs-down {
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+
+    .name {
+      font-size: 22px;
+    }
+
+    .title {
+      font-size: 14px;
+    }
+  }
 
   @include media-breakpoint-xxs-up {
     padding: 0.5rem 0;
@@ -486,6 +500,10 @@ export default {
     display: inline-block;
     box-shadow: $rainbow-box-shadow-dark;
     background-color: $lightest-gray;
+
+    @include media-breakpoint-xxs-down {
+      display: none;
+    }
 
     @include media-breakpoint-up(md) {
       margin: 1rem 0.5rem 1rem 0;

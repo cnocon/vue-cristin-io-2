@@ -361,6 +361,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.portfolio-page {
+  @include media-breakpoint-up(sm) {
+    margin-top: 2rem;
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: 3rem;
+  }
+}
 h1 {
   text-align: left;
 }

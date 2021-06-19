@@ -122,7 +122,7 @@ export default {
     margin-top: 2rem;
   }
   @include media-breakpoint-up(md) {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 }
 header {

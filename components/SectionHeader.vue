@@ -38,15 +38,62 @@ export default {
   white-space: nowrap;
   height: 64px;
   margin-bottom: 0.25rem;
-  // index mb-3
 
   @include media-breakpoint-down(md) {
     height: 42px;
     margin-bottom: 0.25rem;
   }
 
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+
   @include media-breakpoint-xxs-down {
     height: 32px;
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: content-box;
+    border-bottom: 1px solid $light-gray;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  span {
+    position: absolute;
+    display: inline-block;
+    background-color: $white;
+    vertical-align: middle;
+    padding: 0 1rem 0 0;
+    line-height: 64px;
+    height: 64px;
+
+    @include media-breakpoint-down(md) {
+      line-height: 42px;
+      height: 42px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include media-breakpoint-xxs-down {
+      height: 32px;
+      line-height: 32px;
+    }
   }
 
   &.portfolio-section-header {
@@ -89,49 +136,6 @@ export default {
       font-size: 1.125rem;
       font-family: $font-family-display;
       letter-spacing: 2px;
-    }
-  }
-
-  &::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 2px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    margin: 0;
-    width: 100%;
-    max-width: none;
-    box-sizing: content-box;
-    border-bottom: 1px solid $light-gray;
-
-    @include media-breakpoint-down(md) {
-      // height: 42px;
-    }
-
-    @include media-breakpoint-xxs-down {
-      // height: 32px;
-    }
-  }
-
-  span {
-    position: absolute;
-    display: inline-block;
-    background-color: $white;
-    vertical-align: middle;
-    padding: 0 1rem 0 0;
-    line-height: 64px;
-    height: 64px;
-
-    @include media-breakpoint-down(md) {
-      line-height: 42px;
-      height: 42px;
-    }
-
-    @include media-breakpoint-xxs-down {
-      height: 32px;
-      line-height: 32px;
     }
   }
 

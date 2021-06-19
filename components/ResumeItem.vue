@@ -328,7 +328,7 @@ export default {
         padding-top: 0.46875rem;
         position: relative;
         list-style: none;
-        font-weight: 600;
+        font-weight: 700;
         font-family: $font-family-heading;
         text-transform: uppercase;
         display: flex;

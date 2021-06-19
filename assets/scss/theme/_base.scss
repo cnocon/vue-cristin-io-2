@@ -157,7 +157,7 @@ h6 {
 h2,
 h3 {
   font-family: $font-family-heading;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 h4 {
@@ -382,5 +382,11 @@ pre code {
 
   &:focus {
     text-decoration: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
   }
 }

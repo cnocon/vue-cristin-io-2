@@ -11,7 +11,7 @@
 <style lang="scss">
 .container {
   @include media-breakpoint-up(md) {
-    max-width: 1140px !important;
+    max-width: 71.25rem !important; // 1140px
   }
 }
 
@@ -30,11 +30,11 @@
     }
 
     &.plain {
-      text-decoration: none !important;
-      border-bottom: 0 !important;
+      text-decoration: none;
+      border-bottom: 0;
 
       &::after {
-        display: none !important;
+        display: none;
       }
     }
   }
@@ -46,11 +46,5 @@
   min-height: 100vh;
   animation: 1s appear;
   margin: auto;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
 }
 </style>

@@ -1,10 +1,8 @@
 <template>
-  <div>
+  <div class="index-page">
     <Head />
     <header class="text-center">
-      <h1 class="page-title">
-        I&nbsp;&nbsp;L<span>&#9829;</span>VE&nbsp;&nbsp;CODE.
-      </h1>
+      <h1 class="page-title">I&nbsp;L<span>&#9825;</span>VE&nbsp;CODE</h1>
     </header>
     <main>
       <Section
@@ -75,9 +73,8 @@
         header-icon-type="fal"
         header-icon="handshake"
         header-text="Connect"
-        header-alignment="left"
       >
-        <LazyConnect></LazyConnect>
+        <LazyConnect />
       </LazySection>
     </main>
   </div>
@@ -99,6 +96,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.index-page {
+  @include media-breakpoint-up(md) {
+    margin-top: 3rem;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 4rem;
+  }
+}
 p,
 li {
   a {
@@ -111,53 +116,36 @@ header {
 }
 
 .page-title {
-  font-weight: 300;
-  color: $primary;
-  font-family: $font-family-display;
   margin-bottom: 0;
+  color: $black;
+  font-weight: 200;
+  font-family: $font-family-display;
+  letter-spacing: 6px;
 
   @include media-breakpoint-up(md) {
-    margin-top: 3rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    margin-top: 4rem;
+    font-size: 48px;
   }
 
   span {
-    font-size: 2.625rem; // 42px
+    font-size: 1.75rem; // 28px
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: linear-gradient(
-      130deg,
-      #f5959d 0%,
-      #f5959d 30%,
-      #f8f58f 47.5%,
-      #5eede1 55%,
-      #5ec5ed 62.5%,
-      #8c8cf2 75%
-    );
+    background-image: $rainbow-text-angled-dark;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: -3px;
-    margin-right: -1px;
     line-height: inherit;
 
     @include media-breakpoint-xxs-down {
-      font-size: 2.375rem; // 38px
+      font-size: 1.75rem; // 28px
     }
 
     @include media-breakpoint-up(sm) {
-      font-size: 2.75rem; // 44px
+      font-size: 2.25rem; // 36px
     }
 
     @include media-breakpoint-up(md) {
-      font-size: 3rem; // 48px
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 3.5rem; // 56px
+      font-size: 3.125rem; // 50px
     }
   }
 }

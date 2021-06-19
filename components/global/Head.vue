@@ -9,7 +9,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: `Cristin O'Connor | Front End Software Engineer`,
+      default: `Cristin O'Connor`,
     },
     description: {
       type: String,

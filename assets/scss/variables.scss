@@ -58,7 +58,15 @@ $link-green: hsl(175, 80%, 65%);
 $link-blue: hsl(197, 80%, 65%);
 $link-purple: hsl(240, 80%, 75%);
 $highlight-yellow: hsla(58, 100%, 65%, 0.8);
-
+$rainbow-text-angled-light: linear-gradient(
+  130deg,
+  #f5959d 0%,
+  #f5959d 30%,
+  #f8f58f 47.5%,
+  #5eede1 55%,
+  #5ec5ed 62.5%,
+  #8c8cf2 75%
+);
 $rainbow-text-angled: linear-gradient(
   130deg,
   #bca2f6,

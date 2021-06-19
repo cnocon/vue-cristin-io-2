@@ -168,6 +168,17 @@
     font-family: $font-family-display;
   }
 }
+a {
+  &[target='_blank'] {
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 .connect-item-inner {
   box-shadow: $rainbow-box-shadow-dark;
 }

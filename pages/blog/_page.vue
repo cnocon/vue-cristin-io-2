@@ -10,7 +10,6 @@
       v-if="page"
       :text="'Showing Page ' + page + ' of ' + lastPage"
       alignment="center"
-      header-classes="blog-section-header"
     >
       <template #section-header-icon>
         <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>
@@ -81,6 +80,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.blog-index-page {
+  @include media-breakpoint-up(sm) {
+    margin-top: 2rem;
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: 3rem;
+  }
+}
 .blog-page-header {
   margin: 1.25rem 0 1.25rem auto;
 }
