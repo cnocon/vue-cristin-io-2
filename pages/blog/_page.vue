@@ -52,15 +52,15 @@ export default {
     const breadcrumbs = [
       {
         text: 'Home',
-        href: '/',
+        to: { name: 'index' },
       },
       {
-        text: 'Blog',
-        href: '/blog/1',
+        text: 'Recent Articles',
+        to: { name: 'blog-page', params: { slug: 'blog-page', page: 1 } },
       },
       {
         text: `Page ${page}`,
-        href: null,
+        to: null,
       },
     ]
 

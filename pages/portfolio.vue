@@ -347,11 +347,11 @@ export default {
     return {
       breadcrumbs: [
         {
-          href: '/',
+          to: { name: 'index' },
           text: 'Home',
         },
         {
-          href: null,
+          to: null,
           text: 'Portfolio',
         },
       ],

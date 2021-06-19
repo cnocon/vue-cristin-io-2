@@ -1,6 +1,6 @@
 <template>
-  <div v-if="post">
-    <Breadcrumbs :crumbs="breadcrumbs" classes="flex-center" />
+  <div v-if="post" class="blog-slug-page">
+    <Breadcrumbs :crumbs="breadcrumbs" classes="flex-center-md-down" />
     <Head
       :title="`${post.title} by Cristin O'Connor`"
       :description="`${post.title} by Cristin O'Connor`"
@@ -9,7 +9,7 @@
     <article>
       <header>
         <h1 class="mb-2">{{ post.title }}</h1>
-        <div class="meta text-center mb-2">
+        <div class="meta mb-2">
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
           <span
             v-for="(cat, index) in post.categories"
@@ -67,35 +67,39 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, query }) {
-    const post = await $content('articles', params.slug).fetch() // fetch article by slug
+  // asyncData method for fetching and rendering data on the server
+  // $content and params from destructured context object
+  // $content: Content module -> articles
+  // params: { slug: 'my-blog-post-slug-value' }
+  async asyncData({ $content, params }) {
+    // fetch article by slug in params object
+    const post = await $content('articles', params.slug).fetch()
 
+    // Fetch prev and next slugs and titles
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
       .sortBy('date', 'desc')
       .surround(params.slug)
       .fetch()
 
-    const breadcrumbs = [
-      {
-        href: '/',
-        text: 'Home',
-      },
-      {
-        href: '/blog/1',
-        text: 'Recent Articles',
-      },
-      {
-        href: null,
-        text: post.title,
-      },
-    ]
-
     return {
       post,
       prev,
       next,
-      breadcrumbs,
+      breadcrumbs: [
+        {
+          to: { name: 'index' },
+          text: 'Home',
+        },
+        {
+          to: { name: 'blog-page', params: { slug: 'blog-page', page: 1 } },
+          text: 'Recent Articles',
+        },
+        {
+          to: null,
+          text: post.title,
+        },
+      ],
     }
   },
   methods: {
@@ -113,11 +117,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.blog-slug-page {
+  @include media-breakpoint-up(sm) {
+    margin-top: 2rem;
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: 4rem;
+  }
+}
 header {
-  text-align: center;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
 
   h1 {
     margin-top: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
   }
 
   time {
@@ -129,15 +147,6 @@ header {
 
   .badge:not(:last-of-type) {
     margin-right: 0.4em;
-  }
-}
-.toc-row {
-  .toc-image-col {
-    // max-width: 200px;
-
-    .toc-image {
-      // max-width: 200px;
-    }
   }
 }
 .toc-col {

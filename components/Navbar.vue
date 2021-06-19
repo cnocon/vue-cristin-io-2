@@ -41,7 +41,7 @@
             :active="isActive('blog')"
             :to="{ name: 'blog-page', params: { slug: 'blog-page', page: 1 } }"
             :class="`rounded nav-link ${
-              isActive('blog') ? 'nuxt-link-active nuxt-link-exact-active' : ''
+              isActive('blog') ? 'nuxt-link-active' : ''
             }`"
             >Blog</NuxtLink
           >

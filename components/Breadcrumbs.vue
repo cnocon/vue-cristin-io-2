@@ -5,9 +5,9 @@
       :key="'crumb-' + index"
       :class="crumb.href ? 'breadcrumb-item' : 'breadcrumb-item active'"
     >
-      <a v-if="crumb.href" :href="crumb.href">
+      <NuxtLink v-if="crumb.to" :to="crumb.to">
         {{ crumb.text }}
-      </a>
+      </NuxtLink>
       <span v-else aria-current="location">
         {{ crumb.text }}
       </span>
@@ -31,11 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.flex-center {
-  @include media-breakpoint-down(md) {
-    flex-wrap: wrap;
-  }
-
+.flex-center-md-down {
   .breadcrumb-item {
     &.active {
       @include media-breakpoint-down(md) {

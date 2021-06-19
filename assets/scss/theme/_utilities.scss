@@ -4,7 +4,10 @@
 
 // Alignment
 .text-center {text-align: center;}
-.flex-center {
-  display: flex;
-  justify-content: center;
+.flex-center-md-down {
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
 }

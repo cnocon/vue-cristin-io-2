@@ -140,11 +140,11 @@ export default {
       breadcrumbs: [
         {
           text: 'Home',
-          href: '/',
+          to: { name: 'index' },
         },
         {
           text: 'Résumé & Coursework',
-          href: null,
+          to: null,
         },
       ],
       coursesData,
