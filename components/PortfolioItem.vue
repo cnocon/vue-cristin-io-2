@@ -18,6 +18,7 @@
     <div class="portfolio-item-content">
       <div v-if="screenshot.length > 0" class="screenshot-container">
         <NuxtImg
+          format="jpeg"
           :src="screenshot"
           :alt="title"
           :class="`summary-img ${screenshotClasses ? screenshotClasses : ''}`"
@@ -30,7 +31,7 @@
           <li v-for="(tech, index) in technologies" :key="'tech-' + index">
             <a
               v-if="tech.link"
-              href="tech.link"
+              :href="tech.link"
               rel="noopener noreferrer"
               target="_blank"
               class="badge"
@@ -152,7 +153,6 @@ export default {
     margin-right: auto;
 
     @include media-breakpoint-up(md) {
-      max-width: 350px;
       float: left;
       padding: 0 1.25rem 1.25rem 0;
       margin-left: 0;

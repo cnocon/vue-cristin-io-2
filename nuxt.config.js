@@ -77,6 +77,7 @@ export default {
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
     '@nuxtjs/sitemap', // https://sitemap.nuxtjs.org/guide/setup
+    '@nuxtjs/pwa', // https://pwa.nuxtjs.org/
   ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -149,6 +150,16 @@ export default {
         icons: ['faGraduationCap', 'faCheck', 'faHomeLgAlt', 'faRss'],
       },
     ],
+  },
+
+  pwa: {
+    manifest: {
+      name: 'CRISTIN.IO',
+      short_name: 'CRISTIN.IO',
+      lang: 'en',
+      description: `Cristin O'Connor's Front End Software Engineering Résumé, Blog and Portfolio Site`,
+      theme_color: '#345345',
+    },
   },
 
   router: {

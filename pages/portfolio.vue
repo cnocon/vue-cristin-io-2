@@ -160,7 +160,7 @@
       </PortfolioItem>
     </Section>
 
-    <Section
+    <LazySection
       header-text="Weather Charts/Forecast App"
       header-icon-type="fal"
       header-icon="thunderstorm-moon"
@@ -168,7 +168,7 @@
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
-      <PortfolioItem
+      <LazyPortfolioItem
         title="Weather Charts/Forecast App"
         demo-link="https://weather-charts-app.netlify.app"
         git-hub-link="https://github.com/cnocon/weather-charts-app-new"
@@ -192,10 +192,10 @@
             Map.
           </p>
         </template>
-      </PortfolioItem>
-    </Section>
+      </LazyPortfolioItem>
+    </LazySection>
 
-    <Section
+    <LazySection
       header-text="YouTube Search App"
       header-icon-type="fab"
       header-icon="youtube"
@@ -203,7 +203,7 @@
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
-      <PortfolioItem
+      <LazyPortfolioItem
         title="YouTube Search App"
         demo-link="https://youtube-search-new.netlify.app"
         git-hub-link="https://github.com/cnocon/youtube-search-new"
@@ -224,10 +224,10 @@
             to me wanting to avoid paying for the API).
           </p>
         </template>
-      </PortfolioItem>
-    </Section>
+      </LazyPortfolioItem>
+    </LazySection>
 
-    <Section
+    <LazySection
       header-text="CenturyLink Small Business Site"
       header-icon-type="fal"
       header-icon="briefcase"
@@ -235,7 +235,7 @@
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
-      <PortfolioItem
+      <LazyPortfolioItem
         title="CenturyLink Small Business Site"
         demo-link="https://business.centurylink.com/"
         screenshot="/portfolio/clq.jpg"
@@ -262,10 +262,10 @@
             private.
           </p>
         </template>
-      </PortfolioItem>
-    </Section>
+      </LazyPortfolioItem>
+    </LazySection>
 
-    <Section
+    <LazySection
       header-text="CRISTIN.IO (Vue 3 Implementation)"
       header-icon-type="fad"
       header-icon="browser"
@@ -273,7 +273,7 @@
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
-      <PortfolioItem
+      <LazyPortfolioItem
         header-text="CRISTIN.IO (Vue 3 Implementation)"
         demo-link="https://vue.cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/vue"
@@ -300,10 +300,10 @@
             work with professionally.
           </p>
         </template>
-      </PortfolioItem>
-    </Section>
+      </LazyPortfolioItem>
+    </LazySection>
 
-    <Section
+    <LazySection
       header-text="CRISTIN.IO (Gatsby Implementation)"
       header-icon-type="fad"
       header-icon="browser"
@@ -311,7 +311,7 @@
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
-      <PortfolioItem
+      <LazyPortfolioItem
         header-text="CRISTIN.IO (Gatsby Implementation)"
         demo-link="https://cristin-io-gatsby.netlify.app/"
         git-hub-link="https://github.com/cnocon/cristin-io-gatsby"
@@ -336,8 +336,8 @@
             are technologies I feel comfortable using in a professional context.
           </p>
         </template>
-      </PortfolioItem>
-    </Section>
+      </LazyPortfolioItem>
+    </LazySection>
   </div>
 </template>
 

@@ -65,34 +65,34 @@ export default {
   .breadcrumb-item {
     margin-bottom: 0;
     font-size: 0.9375rem;
-    color: lighten($link-underline-gray, 10%);
+    color: $link-underline-gray;
     font-weight: 500;
     font-family: $font-family-heading;
 
     + .breadcrumb-item {
       padding-left: 0.5rem;
-      color: lighten($link-underline-gray, 10%);
+      color: $link-underline-gray;
 
       &::before {
         float: left;
         padding-right: 0.5rem;
         content: '/';
-        color: lighten($link-underline-gray, 10%);
+        color: $link-underline-gray;
       }
     }
 
     &.active {
-      color: lighten($link-underline-gray, 10%);
+      color: $link-underline-gray;
     }
 
     a,
     span {
-      color: lighten($link-underline-gray, 10%);
+      color: $link-underline-gray;
       text-decoration: none;
     }
 
     a {
-      border-bottom-color: lighten($link-underline-gray, 25%) !important;
+      border-bottom-color: $link-underline-gray;
     }
   }
 
