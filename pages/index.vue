@@ -57,7 +57,7 @@
         </div>
       </Section>
 
-      <Section
+      <LazySection
         v-if="posts"
         header-icon-type="fal"
         header-icon="rss"
@@ -69,128 +69,16 @@
           classes="mt-5"
           column-classes="post-preview-container col-12 col-md-6 col-xl-4 mb-5"
         ></LazyPostList>
-      </Section>
+      </LazySection>
 
-      <Section
+      <LazySection
         header-icon-type="fal"
         header-icon="handshake"
         header-text="Connect"
         header-alignment="left"
       >
-        <ul class="list-style-none row mt-5">
-          <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
-            <a
-              href="https://github.com/cnocon"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="d-inline-block text-center plain"
-            >
-              <div
-                class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
-              >
-                <font-awesome-icon
-                  :icon="['fab', 'github']"
-                  size="2x"
-                ></font-awesome-icon>
-              </div>
-              <span class="d-block">GitHub</span>
-            </a>
-          </li>
-          <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
-            <a
-              href="https://codepen.io/cnocon"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="plain"
-            >
-              <div
-                class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
-              >
-                <font-awesome-icon
-                  :icon="['fab', 'codepen']"
-                  size="2x"
-                ></font-awesome-icon>
-              </div>
-              <span class="d-block">CodePen</span>
-            </a>
-          </li>
-          <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
-            <a
-              href="https://stackoverflow.com/users/2187039/cnocon"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="plain"
-            >
-              <div
-                class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
-              >
-                <font-awesome-icon
-                  :icon="['fab', 'stack-overflow']"
-                  size="2x"
-                  class="fa-w-16"
-                ></font-awesome-icon>
-              </div>
-              <span class="d-block">Stack Overflow</span>
-            </a>
-          </li>
-          <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
-            <a
-              href="https://twitter.com/cnocon"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="plain"
-            >
-              <div
-                class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
-              >
-                <font-awesome-icon
-                  :icon="['fal', 'hashtag']"
-                  size="2x"
-                  class="fa-w-16"
-                ></font-awesome-icon>
-              </div>
-              <span class="d-block">Twitter</span>
-            </a>
-          </li>
-          <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
-            <a
-              href="https://www.linkedin.com/in/cristinoconnor"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="plain"
-            >
-              <div
-                class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
-              >
-                <font-awesome-icon
-                  :icon="['fab', 'linkedin-in']"
-                  size="2x"
-                  class="fa-w-16"
-                ></font-awesome-icon>
-              </div>
-              <span class="d-block">LinkedIn</span>
-            </a>
-          </li>
-          <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
-            <a
-              href="mailto:her@cristin.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="plain"
-            >
-              <div
-                class="rainbow-border rounded-circle p-2 d-inline-block mb-2"
-              >
-                <font-awesome-icon
-                  :icon="['fal', 'envelope']"
-                  size="2x"
-                ></font-awesome-icon>
-              </div>
-              <span class="d-block">Email</span></a
-            >
-          </li>
-        </ul>
-      </Section>
+        <LazyConnect></LazyConnect>
+      </LazySection>
     </main>
   </div>
 </template>
@@ -271,52 +159,8 @@ header {
     @include media-breakpoint-up(lg) {
       font-size: 3.5rem; // 56px
     }
-
-    &.smaller {
-      margin-left: 0;
-      margin-right: 0;
-
-      @include media-breakpoint-xxs-down {
-        font-size: 1.6428571429rem; // 23px
-      }
-
-      @include media-breakpoint-up(sm) {
-        font-size: 2rem; // 32px
-      }
-
-      @include media-breakpoint-up(md) {
-        font-size: 2.1875rem; // 35px
-      }
-
-      @include media-breakpoint-up(lg) {
-        font-size: 2.625rem; // 42px
-      }
-    }
   }
 }
-.page-subtitle {
-  color: $primary;
-  display: inline-block;
-  font-weight: 300;
-  font-family: $font-family-display;
-  font-size: 1.15rem;
-  line-height: 1.1em;
-  font-style: italic;
-  margin-bottom: 0;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1.25rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    margin-bottom: 1.25rem;
-  }
-
-  span {
-    display: inline-block;
-  }
-}
-
 .services-row {
   .quote-container {
     margin-top: 3rem;

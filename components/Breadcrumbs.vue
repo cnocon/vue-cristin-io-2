@@ -45,10 +45,22 @@ export default {
     }
   }
 }
+
 .breadcrumb {
-  margin: 2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
-  background-color: transparent;
+  margin-bottom: 1rem;
+  list-style: none;
+
+  &.breadcrumbs {
+    margin-left: 0;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 2rem;
+    }
+  }
 
   .breadcrumb-item {
     margin-bottom: 0;
@@ -57,16 +69,20 @@ export default {
     font-weight: 500;
     font-family: $font-family-heading;
 
-    + .breadcrumb-item::before {
-      float: left;
-      padding-right: 0.5rem;
-      color: #a5adb6 !important;
-      content: '/';
-      color: lighten($link-underline-gray, 20%) !important;
+    + .breadcrumb-item {
+      padding-left: 0.5rem;
+      color: lighten($link-underline-gray, 10%);
+
+      &::before {
+        float: left;
+        padding-right: 0.5rem;
+        content: '/';
+        color: lighten($link-underline-gray, 10%);
+      }
     }
 
     &.active {
-      color: #6c757d;
+      color: lighten($link-underline-gray, 10%);
     }
 
     a,

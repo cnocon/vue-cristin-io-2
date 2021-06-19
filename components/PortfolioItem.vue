@@ -30,9 +30,14 @@
         <h6>TECHNOLOGIES</h6>
         <ul class="list-style-none list-inline">
           <li v-for="(tech, index) in technologies" :key="'tech-' + index">
-            <a v-if="tech.link" href="tech.link" class="badge badge-light">{{
-              tech.name
-            }}</a>
+            <a
+              v-if="tech.link"
+              href="tech.link"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="badge"
+              >{{ tech.name }}</a
+            >
             <span v-else>{{ tech.name }}</span>
           </li>
         </ul>
@@ -90,10 +95,7 @@ export default {
 
   .links {
     text-align: center;
-
-    @include media-breakpoint-down(md) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 2rem;
 
     a {
       text-decoration: none;
@@ -117,13 +119,47 @@ export default {
       margin-bottom: 0.75rem;
       font-weight: 700;
     }
+
+    .badge {
+      background-color: $light-gray;
+      color: $dark;
+      line-height: 1.5em;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+
+        &::after {
+          color: $white;
+        }
+      }
+
+      &::after {
+        height: 1.5em;
+        line-height: 1.5em;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+      }
+    }
+
+    ul {
+      flex-wrap: wrap;
+    }
   }
 
   .screenshot-container {
-    max-width: 350px;
-    margin-left: 30px;
-    float: left;
+    max-width: 17.5rem; // 280px
     padding: 0 1.25rem 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: 350px;
+      float: left;
+      padding: 0 1.25rem 1.25rem 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     .summary-img {
       display: block;

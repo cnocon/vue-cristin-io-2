@@ -9,7 +9,9 @@
             rel="noopener noreferrer"
             class="d-inline-block text-center plain"
           >
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <div
+              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
+            >
               <font-awesome-icon
                 :icon="['fab', 'github']"
                 size="2x"
@@ -25,7 +27,9 @@
             rel="noopener noreferrer"
             class="plain"
           >
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <div
+              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
+            >
               <font-awesome-icon
                 :icon="['fab', 'codepen']"
                 size="2x"
@@ -41,7 +45,9 @@
             rel="noopener noreferrer"
             class="plain"
           >
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <div
+              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
+            >
               <font-awesome-icon
                 :icon="['fab', 'stack-overflow']"
                 class="fa-w-16"
@@ -58,7 +64,9 @@
             rel="noopener noreferrer"
             class="plain"
           >
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <div
+              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
+            >
               <font-awesome-icon
                 :icon="['fal', 'hashtag']"
                 class="fa-w-16"
@@ -75,7 +83,9 @@
             rel="noopener noreferrer"
             class="plain"
           >
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <div
+              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
+            >
               <font-awesome-icon
                 :icon="['fab', 'linkedin-in']"
                 class="fa-w-16"
@@ -92,7 +102,9 @@
             rel="noopener noreferrer"
             class="plain"
           >
-            <div class="rainbow-border rounded-circle p-2 d-inline-block mb-2">
+            <div
+              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
+            >
               <font-awesome-icon
                 :icon="['fal', 'envelope']"
                 size="2x"
@@ -155,5 +167,8 @@
     line-height: 1.25em;
     font-family: $font-family-display;
   }
+}
+.connect-item-inner {
+  box-shadow: $rainbow-box-shadow-dark;
 }
 </style>

@@ -16,11 +16,7 @@
         <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>
       </template>
     </SectionHeader>
-    <div class="blog-page-header">
-      <div class="search-bar">
-        <Search placeholder="Search Blog"></Search>
-      </div>
-    </div>
+    <Search placeholder="Search Blog"></Search>
     <PostList
       :posts="pagePosts"
       column-classes="post-preview-container col-12 col-lg-6 mb-5"

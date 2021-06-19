@@ -8,17 +8,17 @@
       ></nuxt-img>
 
       <div class="name-and-title">
-        <div :class="`${homepageClasses()}`">Cristin O'Connor</div>
+        <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
         <div class="title">Front End Engineer</div>
       </div>
 
       <div class="name-and-title-mobile">
-        <div :class="`${homepageClasses()}`">Cristin O'Connor</div>
+        <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
         <div class="title">Front End Engineer</div>
       </div>
     </NuxtLink>
 
-    <ul class="nav ml-0">
+    <ul class="nav ml-0 mb-0">
       <li class="nav-item">
         <NuxtLink
           :active="isActive('resume')"
@@ -86,11 +86,7 @@
             <NuxtLink
               to="/resume"
               :active="isActive('resume')"
-              :class="`dropdown-item ${
-                isActive('resume')
-                  ? 'nuxt-link-active nuxt-link-exact-active'
-                  : ''
-              }`"
+              class="dropdown-item"
               role="menuitem"
               >Résumé</NuxtLink
             >
@@ -112,9 +108,7 @@
               }"
               :active="isActive('blog')"
               :class="`dropdown-item ${
-                isActive('blog')
-                  ? 'nuxt-link-active nuxt-link-exact-active'
-                  : ''
+                isActive('blog') ? 'nuxt-link-active' : ''
               }`"
               role="menuitem"
               >Blog</NuxtLink
@@ -146,8 +140,8 @@ export default {
     },
     homepageClasses() {
       return this.$route.name === 'index'
-        ? 'name nuxt-link-active nuxt-link-exact-active'
-        : 'name'
+        ? 'nuxt-link-active nuxt-link-exact-active'
+        : ''
     },
     toggleMenu() {
       this.showMenu = !this.showMenu
@@ -158,16 +152,40 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  margin-right: 0.9375rem;
+  margin-left: auto;
+
+  @include media-breakpoint-up(md) {
+    min-width: 20.3125rem; // 325px
+    margin-right: auto;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 1.25rem;
+  }
+
   .dropdown-menu.dropdown-menu-right {
     &.show {
       position: absolute;
-      width: 175px;
-      left: -150px;
+      border-top: 1px solid $info;
+      margin-top: 1.75rem;
+      width: 100%;
+      right: 0;
       padding: 0;
-      background-color: $black;
+      background-color: $dark;
       border-color: $dark;
-      box-shadow: $box-shadow-md;
       color: $white;
+      box-shadow: $box-shadow-md;
+      z-index: 10;
 
       li {
         padding-bottom: 0.85rem;
@@ -182,6 +200,7 @@ export default {
           a {
             color: $dark;
             background-color: $white;
+            text-decoration: none;
           }
         }
 
@@ -196,10 +215,21 @@ export default {
           font-family: $font-family-heading;
           letter-spacing: 2px;
           text-align: center;
+          text-decoration: none;
 
           &:hover {
             color: $dark;
             background-color: $white;
+          }
+
+          &.nuxt-link-active,
+          &.nuxt-link-exact-active {
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: $rainbow-gradient-med;
+            background-repeat: no-repeat;
+            background-size: cover;
           }
         }
       }
@@ -216,6 +246,87 @@ export default {
       display: block;
     }
   }
+
+  .dropdown-toggle {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    &.nav-link {
+      color: $white;
+
+      &:hover {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .svg-inline--fa {
+      width: 20px !important;
+      height: 24px !important;
+    }
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+
+    &:last-of-type {
+      .nav-link {
+        @include media-breakpoint-up(md) {
+          padding-right: 0;
+        }
+      }
+    }
+
+    &.dropdown {
+      &.show {
+        @include media-breakpoint-down(md) {
+          text-align: center;
+        }
+      }
+    }
+
+    a {
+      font-family: $font-family-heading;
+      text-align: center;
+      font-weight: 900;
+    }
+  }
+}
+
+.nav-link {
+  display: block;
+  font-size: 1.125rem; // 18px
+  color: $white;
+  text-decoration: none;
+  font-family: $font-family-base;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  @include transition($nav-link-transition);
+
+  @include media-breakpoint-up(md) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: $white;
+  }
+}
+.nuxt-link-active,
+.nuxt-link-exact-active {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $rainbow-text-angled;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .navbar-inner {
   &.container {
@@ -231,62 +342,55 @@ export default {
   }
 }
 
-.name-and-title-mobile,
-.name-and-title {
-  .name {
-    font-size: 1.5rem;
-    line-height: 1em;
-    font-family: $font-family-display;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: $white;
+.name {
+  font-size: 1.5rem;
+  line-height: 1em;
+  font-family: $font-family-display;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 300;
+  letter-spacing: 3px;
 
-    @include media-breakpoint-xxs-up {
-      font-size: 1.725rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 1.8438rem;
-    }
+  @include media-breakpoint-xxs-up {
+    font-size: 1.725rem;
   }
 
-  .title {
-    font-size: 0.95rem;
-    font-family: $font-family-heading;
-    white-space: nowrap;
-    line-height: 1.725em;
-    font-weight: 400 !important;
-    color: $white;
-    text-transform: uppercase;
-    text-indent: 2px;
-    letter-spacing: 1px;
+  @include media-breakpoint-up(md) {
+    font-size: 1.8438rem;
+  }
 
-    @include media-breakpoint-xxs-up {
-      font-size: 1.075rem;
-    }
-
-    @include media-breakpoint-up(sm) {
-      font-size: 1.2rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 1.15rem;
-    }
+  &.nuxt-link-active,
+  &.nuxt-link-exact-active {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: $rainbow-gradient-med;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
-.name-and-title-mobile,
-.name-and-title {
-  .name {
-    &.nuxt-link-active,
-    &.nuxt-link-exact-active {
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: $rainbow-gradient-med;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+.title {
+  font-size: 0.95rem;
+  font-family: $font-family-heading;
+  white-space: nowrap;
+  line-height: 1.725em;
+  font-weight: 800;
+  color: $white;
+  text-transform: uppercase;
+  text-indent: 2px;
+  letter-spacing: 1px;
+
+  @include media-breakpoint-xxs-up {
+    font-size: 1.075rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.15rem;
   }
 }
 
@@ -308,13 +412,17 @@ export default {
   }
 }
 .navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
   margin-right: 0;
   width: 100%;
   display: flex;
   align-items: center;
 
   @include media-breakpoint-up(md) {
-    // width: unset;
     justify-content: flex-start;
     text-align: left;
     margin-right: 1rem;
@@ -323,16 +431,13 @@ export default {
   &.hover {
     cursor: pointer;
 
-    .name-and-title,
-    .name-and-title-mobile {
-      .name {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $rainbow-text-angled;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+    .name {
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: $rainbow-text-angled;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
@@ -364,111 +469,15 @@ export default {
     }
   }
 }
+.navbar-nav {
+  display: flex;
+  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 
-.dropdown-toggle {
-  @include media-breakpoint-up(md) {
-    display: none;
-  }
-}
-.nav {
-  margin-right: 0.9375rem;
-  justify-content: space-between;
-  margin-right: 0;
-
-  @include media-breakpoint-up(md) {
-    min-width: 325px;
-    margin-right: auto;
-    justify-content: flex-end;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .nav-link {
-    color: $white;
-    font-family: $font-family-base;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 0.5rem 0;
-
-    @include media-breakpoint-up(md) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-
-    &:hover {
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: $rainbow-text-angled;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
-  .dropdown-toggle {
-    &.nav-link {
-      color: $white;
-
-      &:hover {
-        color: $white;
-      }
-    }
-
-    &::after {
-      display: none;
-    }
-
-    .svg-inline--fa {
-      width: 20px !important;
-      height: 24px !important;
-    }
-  }
-
-  .nav-item {
-    margin-bottom: 0;
-
-    &:last-of-type {
-      .nav-link {
-        @include media-breakpoint-up(md) {
-          padding-right: 0;
-        }
-      }
-    }
-
-    &.dropdown.show {
-      @include media-breakpoint-down(md) {
-        text-align: center;
-      }
-
-      .nuxt-link-active,
-      .nuxt-link-exact-active {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $rainbow-text-angled;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
-
-    a {
-      font-family: $font-family-heading;
-      text-align: center;
-      font-weight: 900;
-
-      &.nuxt-link-active,
-      &.nuxt-link-exact-active {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $rainbow-gradient-med;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
+  .dropdown-menu {
+    position: static;
   }
 }
 </style>

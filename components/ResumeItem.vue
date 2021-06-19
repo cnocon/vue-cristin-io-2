@@ -100,7 +100,9 @@ export default {
   }
 
   .right-column & {
-    padding-left: 0.625rem;
+    &:not(.edu-item) {
+      padding-left: 0.625rem;
+    }
 
     &.edu-item {
       margin-bottom: 2rem;

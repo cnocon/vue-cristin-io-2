@@ -80,7 +80,7 @@ export default {
 
   .next-icon-wrapper,
   .prev-icon-wrapper {
-    line-height: 1em;
+    line-height: 1.65em;
     vertical-align: bottom;
     font-size: 1.125rem;
 
@@ -162,9 +162,11 @@ export default {
 a.btn {
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1em;
+  line-height: 1.5em;
   vertical-align: middle;
   font-size: 1.15rem;
+  text-decoration: none;
+  border-bottom: 0;
 
   .b-icon.bi {
     color: inherit;

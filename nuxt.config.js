@@ -141,6 +141,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extractCSS: true, // critical CSS
+    analyze: true,
   },
 
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.

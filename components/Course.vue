@@ -1,7 +1,13 @@
 <template>
   <div v-if="courseData" :class="`course ${classes}`">
     <figure>
-      <nuxt-img :src="courseData.img" :alt="courseData.name" defer></nuxt-img>
+      <nuxt-img
+        :height="80"
+        :src="courseData.img"
+        :alt="courseData.name"
+        class="rounded"
+        defer
+      ></nuxt-img>
     </figure>
     <h3>
       <a :href="courseData.url" target="_blank" rel="noopener noreferrer">
@@ -80,6 +86,7 @@ export default {
       background-position: center bottom;
       background-repeat: no-repeat;
       text-decoration: none;
+      border-bottom: 0 !important;
 
       &:hover {
         background-image: none;

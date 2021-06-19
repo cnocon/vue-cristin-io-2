@@ -3,7 +3,6 @@
 
 
 // Bootstrap and BootstrapVue SCSS files
-// @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
@@ -11,16 +10,16 @@
 @import '~bootstrap/scss/root';
 @import '~bootstrap/scss/reboot';
 @import '~bootstrap/scss/type';
-@import '~bootstrap/scss/images';
+// @import '~bootstrap/scss/images';
 @import '~bootstrap/scss/containers';
 @import '~bootstrap/scss/grid';
-@import '~bootstrap/scss/buttons';
-@import '~bootstrap/scss/dropdown';
-@import '~bootstrap/scss/nav';
+// @import '~bootstrap/scss/buttons';
+// @import '~bootstrap/scss/dropdown';
+// @import '~bootstrap/scss/nav';
 @import '~bootstrap/scss/navbar';
-@import '~bootstrap/scss/breadcrumb';
-@import '~bootstrap/scss/badge';
-@import '~bootstrap/scss/helpers';
+// @import '~bootstrap/scss/breadcrumb';
+// @import '~bootstrap/scss/badge';
+// @import '~bootstrap/scss/helpers';
 @import '~bootstrap/scss/utilities/api';
 
 // General style overrides and custom classes

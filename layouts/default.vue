@@ -53,6 +53,10 @@
   @include media-breakpoint-xxs-up {
     margin-bottom: 1rem;
   }
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 2rem;
+  }
 }
 
 .footer-container {

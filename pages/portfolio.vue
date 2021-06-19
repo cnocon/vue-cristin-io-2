@@ -36,20 +36,23 @@
             becoming familiar with Vue 3 and using it for the previous version
             of CRISTIN.IO, I was having issues with SEO and performance that,
             based on my research, Nuxt promised to help with, or even fix
-            entirely right out of the box. Automatic routing (including
-            automatic dynamic routing), easy and built-in tools for SEO, and
-            performance optimizations like treeshaking and static site
-            generation (with SSR), and a helpful Bundle analyzer tool readily
-            available to gauge where performance improvements could be made
-            across your entire site.
+            entirely right out of the box.
           </p>
           <p>
-            I also was thrilled to move my blog content out of ButterCMS, the
-            headless CMS I'd been using previously, and into the
-            markdown-powered Nuxt Content module, which finally empowered me to
-            take full control of the presentation and structure of my blog
-            content without the restrictions and difficulties that come with
-            using a rich text editor to write each post.
+            Out of the box, Nuxt includes automatic routing (including automatic
+            dynamic routing), easy to use built-in tools for SEO, performance
+            optimizations like tree-shaking, smart link prefetching, link
+            preloading, and static site generation (with SSR), and a helpful
+            Bundle analyzer tool readily available to gauge where performance
+            improvements could be made across my entire site.
+          </p>
+          <p>
+            I also was thrilled to move my blog out of ButterCMS, a headless
+            CMS, and into markdown files powered by the Nuxt Content module.
+            Nuxt Content allowed me to finally take full control of the
+            presentation and structure of my blog content without the
+            restrictions and difficulties that come with using a rich text
+            editor to write each post.
           </p>
         </template>
       </PortfolioItem>
