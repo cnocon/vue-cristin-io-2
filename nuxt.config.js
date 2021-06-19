@@ -76,6 +76,7 @@ export default {
     '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
+    '@nuxtjs/sitemap', // https://sitemap.nuxtjs.org/guide/setup
   ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
