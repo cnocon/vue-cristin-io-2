@@ -1,5 +1,5 @@
 <template>
-  <div class="resume-page app-container site-content container-fluid">
+  <div class="resume-page container-fluid">
     <Head
       title="Résumé and Coursework"
       description="Cristin O'Connor's Front End Software Engineering Résumé and Coursework"
@@ -391,5 +391,13 @@ export default {
       margin-bottom: 3rem;
     }
   }
+}
+.resume-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-animation: 1s appear;
+  animation: 1s appear;
+  margin: auto;
 }
 </style>

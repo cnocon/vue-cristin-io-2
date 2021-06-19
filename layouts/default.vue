@@ -1,14 +1,10 @@
 <template>
   <div class="app-container mb-0">
-    <div class="navbar-container">
-      <Navbar />
-    </div>
-    <div class="container content-container mb-4">
+    <Navbar />
+    <div class="container content-container">
       <Nuxt />
     </div>
-    <div class="footer-container">
-      <Footer />
-    </div>
+    <Footer />
   </div>
 </template>
 
@@ -21,6 +17,7 @@
 
 .content-container {
   min-height: calc(100vh - 150px - 75px - 64px);
+  margin-bottom: 2rem;
 
   a {
     border-bottom: 1px solid lighten($link-underline-gray, 20%);
@@ -40,35 +37,6 @@
         display: none !important;
       }
     }
-  }
-}
-
-.navbar-container {
-  width: 100%;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  background-color: $dark;
-  box-shadow: $box-shadow-sm;
-
-  @include media-breakpoint-xxs-up {
-    margin-bottom: 1rem;
-  }
-
-  @include media-breakpoint-up(sm) {
-    margin-bottom: 0;
-  }
-}
-
-.footer-container {
-  background-color: $lightest-gray;
-  justify-self: flex-end;
-  margin-top: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-
-  @include media-breakpoint-up(sm) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 }
 

@@ -75,6 +75,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-fontawesome',
+    '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
   ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css

@@ -20,9 +20,7 @@
         <NuxtImg
           :src="screenshot"
           :alt="title"
-          :class="`summary-img shadow ${
-            screenshotClasses ? screenshotClasses : ''
-          }`"
+          :class="`summary-img ${screenshotClasses ? screenshotClasses : ''}`"
         ></NuxtImg>
       </div>
       <slot name="summary"></slot>
@@ -77,9 +75,9 @@ export default {
       type: Array,
       default: null,
     },
-    imageContentClasses: {
-      type: String,
-      default: '',
+    screenshotHeight: {
+      type: Number,
+      default: 250,
     },
   },
 }
@@ -162,10 +160,11 @@ export default {
     }
 
     .summary-img {
+      box-shadow: $box-shadow-sm;
+      border: 1px solid $border-light-gray;
       display: block;
-      max-width: calc(100% - 2rem);
       height: auto;
-      margin: 0 1rem 1.5rem;
+      margin: 0 1rem 0.5rem 0;
     }
   }
 

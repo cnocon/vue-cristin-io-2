@@ -25,6 +25,18 @@
         :technologies="[
           { name: 'Nuxt', link: 'https://v3.vuejs.org/' },
           { name: 'Nuxt Content', link: 'https://content.nuxtjs.org/' },
+          {
+            name: 'Nuxt Style Resources',
+            link: 'https://github.com/nuxt-community/style-resources-module#readme',
+          },
+          {
+            name: 'Critical CSS (with extractCSS config)',
+            link: 'https://github.com/nuxt-community/style-resources-module#readme',
+          },
+          {
+            name: 'Critical CSS (with extractCSS config)',
+            link: 'https://github.com/nuxt-community/style-resources-module#readme',
+          },
         ]"
       >
         <template #summary>
@@ -288,7 +300,7 @@
     </Section>
 
     <Section
-      header-text="CRISTIN.IO (This Website, but with Gatsby)"
+      header-text="CRISTIN.IO (Gatsby Implementation)"
       header-icon-type="fad"
       header-icon="browser"
       header-alignment="center"

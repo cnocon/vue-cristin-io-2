@@ -1,123 +1,128 @@
 <template>
-  <div class="navbar-inner container">
-    <NuxtLink :to="{ name: 'index' }" class="navbar-brand">
-      <nuxt-img
-        src="/components/square-portrait-white.png"
-        alt="Cristin O'Connor"
-        class="logo-img"
-      ></nuxt-img>
+  <div class="navbar-container">
+    <div class="navbar-inner container">
+      <NuxtLink :to="{ name: 'index' }" class="navbar-brand">
+        <nuxt-img
+          src="/components/square-portrait-white.png"
+          alt="Cristin O'Connor"
+          class="logo-img"
+        ></nuxt-img>
 
-      <div class="name-and-title">
-        <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
-        <div class="title">Front End Engineer</div>
-      </div>
+        <div class="name-and-title">
+          <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
+          <div class="title">Front End Engineer</div>
+        </div>
 
-      <div class="name-and-title-mobile">
-        <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
-        <div class="title">Front End Engineer</div>
-      </div>
-    </NuxtLink>
+        <div class="name-and-title-mobile">
+          <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
+          <div class="title">Front End Engineer</div>
+        </div>
+      </NuxtLink>
 
-    <ul class="nav ml-0 mb-0">
-      <li class="nav-item">
-        <NuxtLink
-          :active="isActive('resume')"
-          to="/resume"
-          class="rounded nav-link"
-          >Résumé</NuxtLink
-        >
-      </li>
-      <li class="nav-item">
-        <NuxtLink
-          :active="isActive('portfolio')"
-          to="/portfolio"
-          class="rounded nav-link"
-          >Portfolio</NuxtLink
-        >
-      </li>
-      <li class="nav-item">
-        <NuxtLink
-          :active="isActive('blog')"
-          :to="{ name: 'blog-page', params: { slug: 'blog-page', page: 1 } }"
-          :class="`rounded nav-link ${
-            isActive('blog') ? 'nuxt-link-active nuxt-link-exact-active' : ''
-          }`"
-          >Blog</NuxtLink
-        >
-      </li>
+      <ul class="nav ml-0 mb-0">
+        <li class="nav-item">
+          <NuxtLink
+            :active="isActive('resume')"
+            to="/resume"
+            class="rounded nav-link"
+            >Résumé</NuxtLink
+          >
+        </li>
+        <li class="nav-item">
+          <NuxtLink
+            :active="isActive('portfolio')"
+            to="/portfolio"
+            class="rounded nav-link"
+            >Portfolio</NuxtLink
+          >
+        </li>
+        <li class="nav-item">
+          <NuxtLink
+            :active="isActive('blog')"
+            :to="{ name: 'blog-page', params: { slug: 'blog-page', page: 1 } }"
+            :class="`rounded nav-link ${
+              isActive('blog') ? 'nuxt-link-active nuxt-link-exact-active' : ''
+            }`"
+            >Blog</NuxtLink
+          >
+        </li>
 
-      <li
-        id="navbarDropdown"
-        :class="showMenu ? 'nav-item dropdown show' : 'nav-item dropdown'"
-        @click.stop.prevent="toggleMenu"
-      >
-        <a
+        <li
           id="navbarDropdown"
-          href="#dropdownMenu"
-          role="button"
-          :aria-expanded="showMenu"
-          aria-haspopup="true"
-          :class="
-            showMenu
-              ? 'show nav-link dropdown-toggle'
-              : 'nav-link dropdown-toggle'
-          "
-          target="_self"
-          data-bs-toggle="dropdown"
+          :class="showMenu ? 'nav-item dropdown show' : 'nav-item dropdown'"
+          @click.stop.prevent="toggleMenu"
         >
-          <font-awesome-icon
-            v-if="showMenu"
-            :icon="['fal', 'times']"
-            size="2x"
-          ></font-awesome-icon>
-          <font-awesome-icon v-else :icon="['fas', 'bars']"></font-awesome-icon>
-        </a>
+          <a
+            id="navbarDropdown"
+            href="#dropdownMenu"
+            role="button"
+            :aria-expanded="showMenu"
+            aria-haspopup="true"
+            :class="
+              showMenu
+                ? 'show nav-link dropdown-toggle'
+                : 'nav-link dropdown-toggle'
+            "
+            target="_self"
+            data-bs-toggle="dropdown"
+          >
+            <font-awesome-icon
+              v-if="showMenu"
+              :icon="['fal', 'times']"
+              size="2x"
+            ></font-awesome-icon>
+            <font-awesome-icon
+              v-else
+              :icon="['fas', 'bars']"
+            ></font-awesome-icon>
+          </a>
 
-        <ul
-          v-show="showMenu"
-          id="dropdownMenu"
-          :class="
-            showMenu
-              ? 'dropdown-menu dropdown-menu-right show'
-              : 'dropdown-menu dropdown-menu-right'
-          "
-          aria-labelledby="#navbarDropdown"
-        >
-          <li class="nav-item" role="presentation">
-            <NuxtLink
-              to="/resume"
-              :active="isActive('resume')"
-              class="dropdown-item"
-              role="menuitem"
-              >Résumé</NuxtLink
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <NuxtLink
-              to="/portfolio"
-              :active="isActive('portfolio')"
-              class="dropdown-item"
-              role="menuitem"
-              >Portfolio</NuxtLink
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <NuxtLink
-              :to="{
-                name: 'blog-page',
-                params: { slug: 'blog-page', page: 1 },
-              }"
-              :active="isActive('blog')"
-              :class="`dropdown-item ${
-                isActive('blog') ? 'nuxt-link-active' : ''
-              }`"
-              role="menuitem"
-              >Blog</NuxtLink
-            >
-          </li>
-        </ul>
-      </li>
-    </ul>
+          <ul
+            v-show="showMenu"
+            id="dropdownMenu"
+            :class="
+              showMenu
+                ? 'dropdown-menu dropdown-menu-right show'
+                : 'dropdown-menu dropdown-menu-right'
+            "
+            aria-labelledby="#navbarDropdown"
+          >
+            <li class="nav-item" role="presentation">
+              <NuxtLink
+                to="/resume"
+                :active="isActive('resume')"
+                class="dropdown-item"
+                role="menuitem"
+                >Résumé</NuxtLink
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <NuxtLink
+                to="/portfolio"
+                :active="isActive('portfolio')"
+                class="dropdown-item"
+                role="menuitem"
+                >Portfolio</NuxtLink
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <NuxtLink
+                :to="{
+                  name: 'blog-page',
+                  params: { slug: 'blog-page', page: 1 },
+                }"
+                :active="isActive('blog')"
+                :class="`dropdown-item ${
+                  isActive('blog') ? 'nuxt-link-active' : ''
+                }`"
+                role="menuitem"
+                >Blog</NuxtLink
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -152,6 +157,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar-container {
+  width: 100%;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  background-color: $dark;
+  box-shadow: $box-shadow-sm;
+
+  @include media-breakpoint-xxs-up {
+    margin-bottom: 1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+  }
+}
 .navbar-container-inner {
   @include media-breakpoint-up(sm) {
     max-width: 540px;
