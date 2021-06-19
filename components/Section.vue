@@ -30,14 +30,6 @@ export default {
       default: 'Section Title',
       type: String,
     },
-    headerAlignment: {
-      default: 'left',
-      type: String,
-    },
-    headerClasses: {
-      default: 'section-header',
-      type: String,
-    },
   },
 }
 </script>

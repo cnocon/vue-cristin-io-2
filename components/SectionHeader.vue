@@ -12,10 +12,6 @@
 <script>
 export default {
   props: {
-    alignment: {
-      type: String,
-      default: null,
-    },
     text: {
       type: String,
       default: '',
@@ -99,7 +95,7 @@ export default {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1.5px;
-    color: $border-dark-gray;
+    color: $primary-light;
   }
 
   .icon-container {

@@ -76,10 +76,6 @@ export default {
       type: Array,
       default: null,
     },
-    screenshotHeight: {
-      type: Number,
-      default: 250,
-    },
   },
 }
 </script>

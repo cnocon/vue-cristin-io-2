@@ -20,18 +20,6 @@
 
       <div class="meta">
         <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-        <!-- <NuxtLink
-          v-for="(cat, index) in post.categories"
-          :key="cat + '-' + index"
-          :to="{
-            name: 'blog-categories-slug',
-            params: { slug: cat.slug },
-            query: { page: 1 },
-          }"
-          class="badge badge-primary text-white mx-1 px-2 py-1 my-1"
-        >
-          {{ cat.name }}
-        </NuxtLink> -->
         <span
           v-for="(cat, index) in post.categories"
           :key="cat + '-' + index"

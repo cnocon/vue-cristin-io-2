@@ -91,7 +91,8 @@ export default {
   head: {
     link: [
       {
-        rel: 'stylesheet',
+        rel: 'preload',
+        type: 'style',
         href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap',
       },
     ],
