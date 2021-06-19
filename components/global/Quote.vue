@@ -28,13 +28,10 @@ export default {
   background-color: $lightest-gray;
 
   &.dark {
-    background-color: $primary;
+    background-color: $dark;
 
     blockquote {
-      p {
-        color: $white;
-      }
-
+      p,
       cite {
         color: $white;
       }
@@ -44,8 +41,8 @@ export default {
   &.text-lg {
     blockquote {
       p {
-        font-size: 1.35rem !important;
-        font-weight: 600 !important;
+        font-size: 1.35rem;
+        font-weight: 700;
       }
     }
   }

@@ -104,7 +104,7 @@ export default {
     border-top-left-radius: 2px;
     color: $white;
     line-height: 1.25rem;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 0.875rem;
     font-family: $font-family-heading;
     text-align: center;

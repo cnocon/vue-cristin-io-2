@@ -236,7 +236,7 @@ export default {
 
         a {
           color: $white;
-          font-weight: 900;
+          font-weight: 700;
           text-transform: uppercase;
           font-family: $font-family-heading;
           letter-spacing: 2px;
@@ -319,7 +319,7 @@ export default {
     a {
       font-family: $font-family-heading;
       text-align: center;
-      font-weight: 900;
+      font-weight: 700;
     }
   }
 }
@@ -330,7 +330,7 @@ export default {
   color: $white;
   text-decoration: none;
   font-family: $font-family-base;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   @include transition($nav-link-transition);
@@ -401,7 +401,7 @@ export default {
   font-family: $font-family-heading;
   white-space: nowrap;
   line-height: 1.725em;
-  font-weight: 900;
+  font-weight: 700;
   color: $white;
   text-transform: uppercase;
   text-indent: 2px;

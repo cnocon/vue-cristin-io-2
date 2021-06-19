@@ -30,6 +30,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  loading: {
+    color: '#5eede1',
+    height: '4px',
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -50,9 +55,9 @@ export default {
     preconnect: true,
     preload: true,
     families: {
-      Oswald: [200, 300, 400, 500, 600, 700], // exhaustive
-      Lato: [300, 400, 700, 900], // 200
-      'Open+Sans': [300, 400, 600, 700, 800], // no 500, no 900
+      Oswald: [300, 400, 500, 700], // exhaustive
+      Lato: [300, 400, 700], // 200
+      'Open+Sans': [300, 400, 600, 700], // 800
     },
   },
 

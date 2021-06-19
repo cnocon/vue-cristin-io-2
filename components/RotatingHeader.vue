@@ -120,7 +120,7 @@ export default {
       &.active {
         opacity: 1;
         animation: 1s appear;
-        font-weight: 600;
+        font-weight: 700;
       }
 
       &.fading {

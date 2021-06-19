@@ -229,7 +229,7 @@ export default {
     margin-bottom: 1rem;
 
     h4 {
-      font-weight: 600;
+      font-weight: 500;
       text-transform: uppercase;
       font-family: $font-family-display;
       font-size: 1.15rem;

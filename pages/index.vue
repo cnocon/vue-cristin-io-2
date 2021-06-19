@@ -13,7 +13,7 @@
         <RotatingHeader />
       </Section>
 
-      <Section
+      <LazySection
         header-icon-type="fal"
         header-icon="concierge-bell"
         header-text="Services"
@@ -50,7 +50,7 @@
             </quote>
           </div>
         </div>
-      </Section>
+      </LazySection>
 
       <LazySection
         v-if="posts"
@@ -87,6 +87,14 @@ export default {
     return {
       posts,
     }
+  },
+  head: {
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap',
+      },
+    ],
   },
 }
 </script>

@@ -143,7 +143,7 @@ header {
 
   time {
     display: block;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.125rem;
     font-family: $font-family-display;
   }
@@ -203,7 +203,7 @@ header {
 
 .drop-cap:first-letter {
   font-size: 3.125rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 0.8;
   float: left;
   padding: 0 4px 0px 0;

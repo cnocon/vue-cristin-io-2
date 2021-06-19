@@ -31,14 +31,12 @@ export default {
 <style scoped lang="scss">
 .section-header {
   position: relative;
-  // white-space: nowrap;
-  // height: 64px;
-  margin-bottom: 0.25rem;
+  height: 64px;
+  margin-bottom: 0.5rem;
 
   @include media-breakpoint-down(md) {
     text-align: center;
     margin-bottom: 0.25rem;
-    // white-space: normal;
     display: block;
     left: 0;
     transform: none;
@@ -46,10 +44,6 @@ export default {
 
   @include media-breakpoint-down(md) {
     text-align: center;
-  }
-
-  @include media-breakpoint-down(sm) {
-    // height: auto;
   }
 
   span {
@@ -65,17 +59,9 @@ export default {
       position: relative;
       line-height: 42px;
       height: 42px;
-      // left: 50%;
-      // transform: translateX(-50%);
       background-color: $white;
       z-index: 1;
     }
-
-    // @include media-breakpoint-down(sm) {
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   height: auto;
-    // }
 
     @include media-breakpoint-xxs-down {
       line-height: 32px;
@@ -100,6 +86,10 @@ export default {
       box-sizing: content-box;
       border-bottom: 1px solid $light-gray;
     }
+
+    @include media-breakpoint-up(md) {
+      height: 64px;
+    }
   }
 
   b {
@@ -107,7 +97,7 @@ export default {
     font-family: $font-family-heading;
     white-space: nowrap;
     text-transform: uppercase;
-    font-weight: 400 !important;
+    font-weight: 400;
     letter-spacing: 1.5px;
     color: $border-dark-gray;
   }
@@ -126,15 +116,12 @@ export default {
       width: 42px;
       height: 42px;
       margin-right: 0.25rem;
+      margin-left: 12px;
     }
 
     @include media-breakpoint-xxs-down {
       height: 32px;
       width: 32px;
-    }
-
-    @include media-breakpoint-xxs-up {
-      margin-left: 12px;
     }
 
     svg {
@@ -160,7 +147,7 @@ export default {
 
     b {
       color: $primary;
-      font-weight: 500 !important;
+      font-weight: 500;
       font-size: 1.125rem;
       font-family: $font-family-display;
       letter-spacing: 2px;
