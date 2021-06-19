@@ -1,8 +1,12 @@
 export default {
-  // Enable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+  // SERVER-SIDE RENDERING MODE: https://go.nuxtjs.dev/ssr-mode
+  // true: Server-side rendering enabled
+  // false: No server-side rendering (only client-side rendering)
   ssr: true,
 
-  // Target: https://go.nuxtjs.dev/config-target
+  // CONFIG TARGET: https://go.nuxtjs.dev/config-target
+  // 'server': For server side rendering
+  // 'static': For static sites
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -59,6 +63,10 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components w/@nuxt/components https://github.com/nuxt/components
   components: true,
+
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/],
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
