@@ -8,7 +8,6 @@ module.exports = function (req, res, next) {
     to: '/blog/1',
   }
   if (redirect) {
-    console.log(`redirect: ${redirect.from} => ${redirect.to}`)
     res.writeHead(301, { Location: redirect.to })
     res.end()
   } else if (removedPage.from === req.url) {

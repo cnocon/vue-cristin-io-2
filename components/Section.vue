@@ -1,10 +1,6 @@
 <template>
   <section :class="sectionClasses">
-    <SectionHeader
-      :text="headerText"
-      :alignment="headerAlignment"
-      :header-classes="headerClasses"
-    >
+    <SectionHeader :text="headerText">
       <template #section-header-icon>
         <font-awesome-icon
           :icon="[headerIconType, headerIcon]"

@@ -13,7 +13,6 @@
       header-text="CRISTIN.IO (This Website)"
       header-icon-type="fad"
       header-icon="browser"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
@@ -77,7 +76,6 @@
       header-text="GitHub Stats Card for React"
       header-icon-type="fab"
       header-icon="github"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section mb-5"
     >
@@ -130,11 +128,11 @@
       header-text="Front End Development Flash Cards App"
       header-icon-type="fad"
       header-icon="clipboard-list-check"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
       <PortfolioItem
+        title="Front End Development Flash Cards App"
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
         screenshot="/portfolio/flashcards-app-screenshot-white.jpg"
@@ -164,7 +162,6 @@
       header-text="Weather Charts/Forecast App"
       header-icon-type="fal"
       header-icon="thunderstorm-moon"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
@@ -199,7 +196,6 @@
       header-text="YouTube Search App"
       header-icon-type="fab"
       header-icon="youtube"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
@@ -231,7 +227,6 @@
       header-text="CenturyLink Small Business Site"
       header-icon-type="fal"
       header-icon="briefcase"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
@@ -269,12 +264,11 @@
       header-text="CRISTIN.IO (Vue 3 Implementation)"
       header-icon-type="fad"
       header-icon="browser"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
       <LazyPortfolioItem
-        header-text="CRISTIN.IO (Vue 3 Implementation)"
+        title="CRISTIN.IO (Vue 3 Implementation)"
         demo-link="https://vue.cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/vue"
         screenshot="/portfolio/cristin-io-vue.jpg"
@@ -307,12 +301,11 @@
       header-text="CRISTIN.IO (Gatsby Implementation)"
       header-icon-type="fad"
       header-icon="browser"
-      header-alignment="center"
       header-classes="dark portfolio-section-header"
       section-classes="section pb-5"
     >
       <LazyPortfolioItem
-        header-text="CRISTIN.IO (Gatsby Implementation)"
+        title="CRISTIN.IO (Gatsby Implementation)"
         demo-link="https://cristin-io-gatsby.netlify.app/"
         git-hub-link="https://github.com/cnocon/cristin-io-gatsby"
         screenshot="/portfolio/cristin-io-gatsby.jpg"
@@ -362,9 +355,8 @@ export default {
 
 <style lang="scss" scoped>
 .portfolio-page {
-  @include media-breakpoint-up(sm) {
-    margin-top: 2rem;
-  }
+  margin-top: 2rem;
+
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
   }

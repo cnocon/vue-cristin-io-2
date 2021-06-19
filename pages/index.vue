@@ -9,8 +9,6 @@
         header-icon-type="fal"
         header-icon="user-astronaut"
         header-text="A Little About Me"
-        header-alignment="left"
-        header-classes=""
       >
         <RotatingHeader />
       </Section>
@@ -19,7 +17,6 @@
         header-icon-type="fal"
         header-icon="concierge-bell"
         header-text="Services"
-        header-alignment="left"
       >
         <div class="row services-row d-flex align-items-center">
           <div class="col-12 col-sm-6 col-lg-3 text-center">
@@ -60,7 +57,6 @@
         header-icon-type="fal"
         header-icon="rss"
         header-text="Latest Blog Posts"
-        header-alignment="left"
       >
         <LazyPostList
           :posts="posts"

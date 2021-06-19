@@ -147,9 +147,6 @@ export default {
 
 <style scoped lang="scss">
 .resume-page {
-  // display: flex;
-  // flex-direction: column;
-  // min-height: 100vh;
   -webkit-animation: 1s appear;
   animation: 1s appear;
   margin: 3rem auto 0;

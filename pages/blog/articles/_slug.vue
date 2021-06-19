@@ -118,11 +118,14 @@ export default {
 
 <style lang="scss" scoped>
 .blog-slug-page {
-  @include media-breakpoint-up(sm) {
-    margin-top: 2rem;
-  }
+  margin-top: 2rem;
+
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 header {
@@ -195,10 +198,6 @@ header {
       list-style-type: circle;
       margin-left: 2rem;
     }
-  }
-
-  a {
-    text-decoration: none;
   }
 }
 

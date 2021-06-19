@@ -61,34 +61,38 @@ export default {
   .breadcrumb-item {
     margin-bottom: 0;
     font-size: 0.9375rem;
-    color: $link-underline-gray;
+    color: $primary;
     font-weight: 400;
     font-family: $font-family-heading;
 
     + .breadcrumb-item {
       padding-left: 0.5rem;
-      color: $link-underline-gray;
+      color: $primary;
 
       &::before {
         float: left;
         padding-right: 0.5rem;
         content: '/';
-        color: $link-underline-gray;
+        color: $primary;
+
+        @include media-breakpoint-xxs-down {
+          display: none;
+        }
       }
     }
 
     &.active {
-      color: $link-underline-gray;
+      color: $primary;
     }
 
     a,
     span {
-      color: $link-underline-gray;
+      color: $primary;
       text-decoration: none;
     }
 
     a {
-      border-bottom-color: $link-underline-gray;
+      border-bottom-color: $primary;
     }
   }
 

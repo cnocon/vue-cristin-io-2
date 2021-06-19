@@ -26,7 +26,7 @@
       </div>
       <slot name="summary"></slot>
       <div class="technologies text-center">
-        <h6>TECHNOLOGIES</h6>
+        <h3>TECHNOLOGIES</h3>
         <ul class="list-style-none list-inline">
           <li v-for="(tech, index) in technologies" :key="'tech-' + index">
             <a
@@ -93,8 +93,11 @@ export default {
   }
 
   .links {
-    text-align: center;
     margin-bottom: 2rem;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
 
     a {
       text-decoration: none;
@@ -112,11 +115,16 @@ export default {
     width: 100%;
     text-align: center;
 
-    h6 {
+    h3 {
       text-align: left;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
       font-weight: 700;
+      font-size: 1.375rem; // 22px
+
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+      }
     }
 
     .badge {
@@ -166,10 +174,14 @@ export default {
       max-width: calc(100% - 2rem);
       height: auto;
       margin: 0 1rem 0.5rem 0;
+
+      @include media-breakpoint-down(md) {
+        margin: 0 auto 0.5rem;
+      }
     }
   }
 
-  h6 {
+  h3 {
     margin-top: 0;
     margin-bottom: 0;
   }

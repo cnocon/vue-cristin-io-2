@@ -9,7 +9,6 @@
     <SectionHeader
       v-if="page"
       :text="'Showing Page ' + page + ' of ' + lastPage"
-      alignment="center"
     >
       <template #section-header-icon>
         <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>
@@ -81,9 +80,8 @@ export default {
 
 <style lang="scss" scoped>
 .blog-index-page {
-  @include media-breakpoint-up(sm) {
-    margin-top: 2rem;
-  }
+  margin-top: 2rem;
+
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
   }

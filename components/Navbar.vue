@@ -53,7 +53,7 @@
           @click.stop.prevent="toggleMenu"
         >
           <a
-            id="navbarDropdown"
+            id="navbarDropdownLink"
             href="#dropdownMenu"
             role="button"
             :aria-expanded="showMenu"
@@ -85,7 +85,7 @@
                 ? 'dropdown-menu dropdown-menu-right show'
                 : 'dropdown-menu dropdown-menu-right'
             "
-            aria-labelledby="#navbarDropdown"
+            aria-labelledby="#navbarDropdownLink"
           >
             <li class="nav-item" role="presentation">
               <NuxtLink
@@ -203,13 +203,12 @@ export default {
   .dropdown-menu.dropdown-menu-right {
     &.show {
       position: absolute;
-      border-top: 1px solid $info;
-      margin-top: 1.5625rem; // 25px
+      border-top: 1px solid $white;
+      margin-top: 1.25rem; // 25px
       width: 100%;
       right: 0;
       padding: 0;
       background-color: $dark;
-      border-color: $dark;
       color: $white;
       box-shadow: $box-shadow-md;
       z-index: 10;

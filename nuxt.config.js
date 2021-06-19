@@ -186,9 +186,7 @@ export default {
     },
   },
 
-  router: {
-    middleware: ['redirects'], // runs before every route on both client & server
-  },
+  router: {},
 
   serverMiddleware: ['~/server-middleware/seo.js'],
 
