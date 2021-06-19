@@ -152,6 +152,30 @@ export default {
     ],
   },
 
+  sitemap: {
+    hostname: 'https://cristin.io',
+    gzip: true,
+    defaults: {
+      changefreq: 'weekly',
+      priority: 1,
+      lastmod: new Date(),
+    },
+    routes: [
+      '/blog/1',
+      '/blog/2',
+      '/blog/3',
+      '/blog/articles/women-in-computing-are-losing-ground',
+      '/blog/articles/a-curated-list-of-cheatsheets-for-web-developers',
+      '/blog/articles/perilous-confusion-and-the-opportunity-for-growth',
+      '/blog/articles/clean-up-development-commits-by-combining-them-into-one',
+      '/blog/articles/use-webhooks-to-automatically-deploy-your-gatsby-site',
+      '/blog/articles/what-is-destructuring-in-javascript',
+      '/blog/articles/automatically-convert-pixels-to-rems-with-sass',
+      '/blog/articles/create-an-alias-to-list-git-branches-by-date',
+      '/blog/articles/search-git-history-for-certain-words-and-phrases',
+    ],
+  },
+
   pwa: {
     manifest: {
       name: 'CRISTIN.IO',
@@ -165,6 +189,8 @@ export default {
   router: {
     middleware: ['redirects'], // runs before every route on both client & server
   },
+
+  serverMiddleware: ['~/server-middleware/seo.js'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
