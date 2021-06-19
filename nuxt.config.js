@@ -36,6 +36,7 @@ export default {
     '@nuxtjs/google-analytics', // https://google-analytics.nuxtjs.org/
     '@nuxt/image', // https://image.nuxtjs.org/
     '@nuxt/components',
+    'nuxt-purgecss',
   ],
 
   googleFonts: {
