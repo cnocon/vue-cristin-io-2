@@ -55,7 +55,7 @@
   }
 
   @include media-breakpoint-up(sm) {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 }
 

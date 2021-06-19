@@ -68,6 +68,7 @@
           <font-awesome-icon
             v-if="showMenu"
             :icon="['fal', 'times']"
+            size="2x"
           ></font-awesome-icon>
           <font-awesome-icon v-else :icon="['fas', 'bars']"></font-awesome-icon>
         </a>
@@ -151,12 +152,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar-container-inner {
+  @include media-breakpoint-up(sm) {
+    max-width: 540px;
+  }
+}
 .nav {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
-  margin-right: 0.9375rem;
   margin-left: auto;
 
   @include media-breakpoint-up(md) {
@@ -170,14 +175,16 @@ export default {
   }
 
   @include media-breakpoint-down(md) {
-    width: 1.25rem;
+    width: 3rem; // 48px
+    height: 3rem; // 48px
+    margin-right: 0.4688rem; // 7.5px
   }
 
   .dropdown-menu.dropdown-menu-right {
     &.show {
       position: absolute;
       border-top: 1px solid $info;
-      margin-top: 1.75rem;
+      margin-top: 1.5625rem; // 25px
       width: 100%;
       right: 0;
       padding: 0;
@@ -266,8 +273,8 @@ export default {
     }
 
     .svg-inline--fa {
-      width: 20px !important;
-      height: 24px !important;
+      width: 48px !important;
+      height: 48px !important;
     }
   }
 
@@ -343,7 +350,7 @@ export default {
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1em;
   font-family: $font-family-display;
   text-transform: uppercase;
@@ -352,7 +359,7 @@ export default {
   letter-spacing: 3px;
 
   @include media-breakpoint-xxs-up {
-    font-size: 1.725rem;
+    font-size: 1.25rem;
   }
 
   @include media-breakpoint-up(md) {
@@ -371,7 +378,7 @@ export default {
 }
 
 .title {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-family: $font-family-heading;
   white-space: nowrap;
   line-height: 1.725em;
@@ -382,7 +389,7 @@ export default {
   letter-spacing: 1px;
 
   @include media-breakpoint-xxs-up {
-    font-size: 1.075rem;
+    font-size: 0.9rem;
   }
 
   @include media-breakpoint-up(sm) {
@@ -412,13 +419,12 @@ export default {
   }
 }
 .navbar-brand {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 0 5px 3px; // 3px left for -2px box shadow on img container
   margin-right: 1rem;
   text-decoration: none;
   white-space: nowrap;
   margin-right: 0;
-  width: 100%;
+  width: calc(100% - 48px);
   display: flex;
   align-items: center;
 
@@ -445,27 +451,25 @@ export default {
     display: none;
 
     @include media-breakpoint-up(sm) {
-      display: block;
-      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 15px;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: 50%;
     }
   }
 
   .logo-img {
-    width: 42px;
+    width: 3rem;
     border-radius: 50%;
     display: inline-block;
     box-shadow: $rainbow-box-shadow-dark;
     background-color: $lightest-gray;
-    margin-right: 0.5rem;
-
-    @include media-breakpoint-up(sm) {
-      margin: 0rem 0.875rem 0 0;
-      width: 52px;
-    }
 
     @include media-breakpoint-up(md) {
       margin: 1rem 0.5rem 1rem 0;
-      width: 62px;
+      width: 3.875rem; // 62px
     }
   }
 }
