@@ -64,14 +64,14 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components w/@nuxt/components https://github.com/nuxt/components
   components: true,
 
+  // purgeCSS: https://purgecss.com/guides/nuxt.html
   purgeCSS: {
-    whitelistPatterns: [/svg.*/, /fa.*/],
+    whitelistPatterns: [/svg.*/, /fa.*/], // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
-    '@nuxtjs/axios', // https://go.nuxtjs.dev/axios
     '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-fontawesome',
   ],
@@ -82,9 +82,6 @@ export default {
   styleResources: {
     scss: '@/assets/scss/main.scss',
   },
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {

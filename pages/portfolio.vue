@@ -24,8 +24,7 @@
         screenshot="/portfolio/cristin-io-nuxt.jpg"
         :technologies="[
           { name: 'Nuxt', link: 'https://v3.vuejs.org/' },
-          { name: 'Nuxt Content API', link: 'https://content.nuxtjs.org/' },
-          { name: 'Axios', link: 'https://www.npmjs.com/package/axios' },
+          { name: 'Nuxt Content', link: 'https://content.nuxtjs.org/' },
         ]"
       >
         <template #summary>
