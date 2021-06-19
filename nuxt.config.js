@@ -24,7 +24,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: `Resume, Portfolio, and Blog from Cristin O'Connor, a Utah based Front End Software Engineer.`,
+        content: `Front End Software Engineer specializing in Javascript and Javascript frameworks, LESS, SASS, and Responsive Web Design | Cristin O'Connor's portfolio, résumé, and blog.`,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -77,7 +77,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/style-resources',
     '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots

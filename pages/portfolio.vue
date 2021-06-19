@@ -2,7 +2,7 @@
   <div class="portfolio-page">
     <Head
       title="Portfolio"
-      description="Cristin O'Connor's Front End Engineering Portfolio"
+      description="Front End Engineering Portfolio for Cristin O'Connor, including projects built with Nuxt.js, Vue.js, Gatsby.js, React.js, Node, Express, multiple APIs and various other technologies with a mobile-first design mindset."
     ></Head>
 
     <Breadcrumbs :crumbs="breadcrumbs" />

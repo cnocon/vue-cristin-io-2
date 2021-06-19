@@ -1,11 +1,12 @@
 <template>
   <div class="resume-page container-fluid">
     <Head
-      title="Résumé and Coursework"
-      description="Cristin O'Connor's Front End Software Engineering Résumé and Coursework"
+      title="Résumé &amp; Courses"
+      description="Résumé and recent coursework completed by Cristin O'Connor, a Utah-based Front End Software Engineer with 10 years of experience and a passion for Javascript and Javascript frameworks."
+      image="https://cristin.io/sharing/resume-screenshot.jpg"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
-    <h1 class="mt-0">Résumé & Coursework</h1>
+    <h1 class="mt-0">Résumé &amp; Coursework</h1>
     <div v-if="data.jobTitle" class="row resume-row">
       <div class="col-lg-7 col-md-12 left-column">
         <div class="first-icon">

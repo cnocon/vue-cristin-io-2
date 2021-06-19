@@ -1,8 +1,8 @@
 <template>
   <div class="blog-index-page">
     <Head
-      title="Blog"
-      description="Cristin O'Connor's Front End Software Engineering Blog"
+      title="Recent Articles"
+      description="Recent Articles from a Front End Software Engineering Blog by Cristin O'Connor"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1 class="mt-0">Recent Articles</h1>

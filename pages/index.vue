@@ -1,6 +1,6 @@
 <template>
   <div class="index-page">
-    <Head />
+    <Head title="Home" />
     <header class="text-center">
       <h1 class="page-title">I&nbsp;L<span>&#9825;</span>VE&nbsp;CODE</h1>
     </header>

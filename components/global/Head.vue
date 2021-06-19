@@ -9,11 +9,11 @@ export default {
   props: {
     title: {
       type: String,
-      default: `Cristin O'Connor`,
+      default: `Cristin O'Connor, Front End Software Engineer`,
     },
     description: {
       type: String,
-      default: `Front End Software Engineer Cristin O'Connor's portfolio, blog and résumé site`,
+      default: `Front End Software Engineer specializing in Javascript and Javascript frameworks, LESS, SASS, and Responsive Web Design | Cristin O'Connor's portfolio, résumé, and blog.`,
     },
     image: {
       type: String,
@@ -23,6 +23,7 @@ export default {
   head() {
     return {
       title: this.title,
+      titleTemplate: `${this.title} | Cristin O'Connor, Front End Software Engineer`,
       meta: [
         {
           hid: 'twitter:title',
@@ -43,6 +44,11 @@ export default {
           hid: 'twitter:image:alt',
           name: 'twitter:image:alt',
           content: this.title,
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.image,
         },
         {
           hid: 'og:title',

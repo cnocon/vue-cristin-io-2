@@ -2,8 +2,8 @@
   <div v-if="post" class="blog-slug-page">
     <Breadcrumbs :crumbs="breadcrumbs" classes="flex-center-md-down" />
     <Head
-      :title="`${post.title} by Cristin O'Connor`"
-      :description="`${post.title} by Cristin O'Connor`"
+      :title="`${post.title}`"
+      :description="`${post.title} written by Cristin O'Connor, Front End Software Engineer`"
       :image="`https://cristin.io/${post.shareimg}`"
     ></Head>
     <article>
