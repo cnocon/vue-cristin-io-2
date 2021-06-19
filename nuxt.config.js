@@ -41,6 +41,7 @@ export default {
     '@nuxt/image', // https://image.nuxtjs.org/
     '@nuxt/components',
     'nuxt-purgecss',
+    '@nuxtjs/style-resources',
   ],
 
   googleFonts: {
@@ -77,10 +78,17 @@ export default {
   ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  // css: ['@/assets/scss/main.scss'],
+  // '@/assets/scss/main.scss'
+  // css: [],
 
   styleResources: {
-    scss: '@/assets/scss/main.scss',
+    scss: [
+      '@/assets/scss/variables.scss',
+      '@/assets/scss/main.scss',
+      '@/assets/scss/mixins.scss',
+      '@/assets/scss/theme/_utilities.scss',
+      '@/assets/scss/theme/_base.scss',
+    ],
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

@@ -2,7 +2,13 @@
   <article class="shadow post-preview">
     <header>
       <div class="post-image">
-        <nuxt-img :src="`/${post.img}`" :alt="post.alt" defer></nuxt-img>
+        <nuxt-img
+          :src="`/${post.img}`"
+          :alt="post.alt"
+          :height="60"
+          :width="60"
+          defer
+        ></nuxt-img>
       </div>
 
       <NuxtLink
@@ -89,14 +95,19 @@ header {
   .post-image {
     max-width: 3.75rem;
     margin: 0 auto 1rem;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
   }
 
-  img {
-    display: inline-block;
-    max-width: 3.75rem;
-    flex-basis: 3.75rem;
-    margin-right: 1.25rem;
-  }
+  // img {
+  // display: inline-block;
+  // max-width: 3.75rem;
+  // flex-basis: 3.75rem;
+  // margin-right: 1.25rem;
+  // }
 
   time {
     display: block;
