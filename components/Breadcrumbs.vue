@@ -49,6 +49,10 @@ export default {
   margin-bottom: 1rem;
   list-style: none;
 
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
   &.breadcrumbs {
     margin-left: 0;
     margin-bottom: 0;

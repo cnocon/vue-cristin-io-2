@@ -24,8 +24,8 @@ export default {
   border-radius: 4px;
   max-width: 600px;
   margin: 0 auto;
-  box-shadow: $box-shadow-md;
-  background-color: $lightest-gray;
+  box-shadow: $box-shadow-sm;
+  background-color: $border-lightest-gray;
 
   &.dark {
     background-color: $dark;

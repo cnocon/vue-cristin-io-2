@@ -20,8 +20,11 @@
         </div>
       </header>
       <div v-if="post.toc.length > 0" class="row toc-row mb-5">
-        <div class="col-12 col-md-9 toc-col">
-          <h6 class="font-weight-bolder text-uppercase">Table of Contents</h6>
+        <div class="col-12 toc-col">
+          <div class="toc-image">
+            <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
+          </div>
+          <h6>TABLE OF CONTENTS</h6>
           <ul class="toc">
             <li
               v-for="item in post.toc"
@@ -34,20 +37,14 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-md-3 toc-image-col">
-          <div class="toc-image">
-            <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
-          </div>
-        </div>
       </div>
-      <div v-else class="row toc-image-row mb-4">
-        <div class="toc-col col-md-3 mx-auto mt-2 mb-2">
-          <div class="toc-image">
-            <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
-          </div>
-        </div>
+      <div v-else class="no-toc-image">
+        <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
       </div>
-      <nuxt-content :document="post" />
+      <NuxtContent
+        :document="post"
+        :class="post.toc.length > 0 ? 'has-toc' : 'no-toc'"
+      ></NuxtContent>
       <PrevNext
         name="blog-articles-slug"
         :prev="
@@ -130,6 +127,7 @@ export default {
 }
 header {
   @include media-breakpoint-down(md) {
+    padding-top: 1rem;
     text-align: center;
   }
 
@@ -154,6 +152,8 @@ header {
 }
 .toc-col {
   h6 {
+    font-weight: 600;
+
     @include media-breakpoint-down(sm) {
       text-align: center;
     }
@@ -176,7 +176,8 @@ header {
     margin-top: 1.25rem;
   }
 }
-.toc-image {
+.toc-image,
+.no-toc-image {
   border-radius: 50%;
   max-width: 180px;
   overflow: hidden;
@@ -187,6 +188,24 @@ header {
   img {
     padding: 1.25rem;
     max-width: 100%;
+  }
+}
+.toc-image {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  @include media-breakpoint-up(md) {
+    float: right;
+    margin: 0;
+  }
+}
+.no-toc-image {
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  float: right;
+
+  @include media-breakpoint-down(md) {
+    margin: 1.25rem auto;
+    float: none;
   }
 }
 
@@ -207,5 +226,13 @@ header {
   line-height: 0.8;
   float: left;
   padding: 0 4px 0px 0;
+}
+
+.nuxt-content-container {
+  &.no-toc {
+    @include media-breakpoint-up(md) {
+      margin-top: 2rem;
+    }
+  }
 }
 </style>
