@@ -73,7 +73,7 @@
             ></font-awesome-icon>
             <font-awesome-icon
               v-else
-              :icon="['fas', 'bars']"
+              :icon="['fal', 'bars']"
             ></font-awesome-icon>
           </a>
 

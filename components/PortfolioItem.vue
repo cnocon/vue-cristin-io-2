@@ -163,6 +163,7 @@ export default {
       box-shadow: $box-shadow-sm;
       border: 1px solid $border-light-gray;
       display: block;
+      max-width: calc(100% - 2rem);
       height: auto;
       margin: 0 1rem 0.5rem 0;
     }

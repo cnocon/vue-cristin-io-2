@@ -126,6 +126,7 @@ export default {
           'faEnvelope',
           'faHandsHeart',
           'faPencil',
+          'faBars',
         ],
       },
       {
@@ -144,7 +145,7 @@ export default {
       },
       {
         set: '@fortawesome/pro-solid-svg-icons',
-        icons: ['faGraduationCap', 'faCheck', 'faHomeLgAlt', 'faBars', 'faRss'],
+        icons: ['faGraduationCap', 'faCheck', 'faHomeLgAlt', 'faRss'],
       },
     ],
   },

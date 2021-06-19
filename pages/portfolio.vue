@@ -34,8 +34,12 @@
             link: 'https://github.com/nuxt-community/style-resources-module#readme',
           },
           {
-            name: 'Critical CSS (with extractCSS config)',
-            link: 'https://github.com/nuxt-community/style-resources-module#readme',
+            name: 'Nuxt Image',
+            link: 'https://image.nuxtjs.org/',
+          },
+          {
+            name: 'Nuxt Style Resources',
+            link: 'https://github.com/nuxt-community/style-resources-module',
           },
         ]"
       >
