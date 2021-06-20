@@ -125,14 +125,14 @@
     </Section>
 
     <Section
-      header-text="Front End Development Flash Cards App"
+      header-text="Front End  Dev Flash Cards App"
       header-icon-type="fad"
       header-icon="clipboard-list-check"
       header-classes="dark portfolio-section-header"
       section-classes="section"
     >
       <PortfolioItem
-        title="Front End Development Flash Cards App"
+        title="Front End  Dev Flash Cards App"
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
         screenshot="/portfolio/flashcards-app-screenshot-white.jpg"

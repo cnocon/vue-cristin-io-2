@@ -157,6 +157,10 @@ export default {
     margin-left: auto;
     margin-right: auto;
 
+    @include media-breakpoint-up(sm) {
+      max-width: 23.75rem; // 380px;
+    }
+
     @include media-breakpoint-up(md) {
       float: left;
       padding: 0 1.25rem 1.25rem 0;

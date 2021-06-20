@@ -207,7 +207,7 @@ export default {
 
   .dropdown-menu.dropdown-menu-right {
     &.show {
-      background-color: $dark;
+      background-color: darken($primary, 2.5%);
       color: $white;
 
       @include media-breakpoint-down(md) {
@@ -224,6 +224,15 @@ export default {
         background-size: 100% 3px;
         background-position: top left;
         transition: none !important;
+
+        &:hover {
+          text-decoration: none;
+          border-bottom: 0;
+          background-repeat: no-repeat;
+          background-position: bottom left;
+          background-size: 100% 2px;
+          background-image: $rainbow-ellipse-bottom-right;
+        }
       }
 
       @include media-breakpoint-down(sm) {

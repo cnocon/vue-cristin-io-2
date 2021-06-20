@@ -1,36 +1,45 @@
-// Bootstrap SCSS files
+/**
+  * Bootstrap SCSS files
+  */
 @import '~bootstrap/scss/functions';
 
-// Trimmed down Bootstrap variables from '~bootstrap/scss/variables';
-@import 'bootstrap-lite/variables';
+/**
+  * Trimmed down Bootstrap variables from '~bootstrap/scss/variables';
+  */
+@import 'bootstrap-variables';
 
 /**
- * @functions-and-mixins
- * contains all the necessary bootstrap functions and mixins
- */
-// @import 'bootstrap-lite/mixins/buttons'; // @import '~bootstrap/scss/mixins/buttons';
-// @import 'bootstrap-lite/mixins/box-shadow'; // @import '~bootstrap/scss/mixins/box-shadow';
-// @import 'bootstrap-lite/mixins/breakpoints'; // @import '~bootstrap/scss/mixins/breakpoints';
-// @import 'bootstrap-lite/mixins/border-radius'; // @import '~bootstrap/scss/mixins/border-radius';
-// @import 'bootstrap-lite/mixins/container'; // @import '~bootstrap/scss/mixins/container';
-// @import 'bootstrap-lite/mixins/transition'; // @import '~bootstrap/scss/mixins/transition';
-// @import 'bootstrap-lite/mixins/lists'; // @import '~bootstrap/scss/mixins/lists';
-// @import 'bootstrap-lite/utilities'; // @import '~bootstrap/scss/utilities';
-@import 'bootstrap-lite/mixins/functions-and-mixins';
+  * @functions-and-mixins – CONTAINS ALL THE TRIMMED DOWN BOOTSTRAP SCSS FROM BELOW FILES
+  * 'bootstrap-lite/mixins/border-radius' trimmed from '~bootstrap/scss/mixins/border-radius')
+  * 'bootstrap-lite/mixins/breakpoints' trimmed from '~bootstrap/scss/mixins/breakpoints')
+  * 'bootstrap-lite/mixins/transition' trimmed from '~bootstrap/scss/mixins/transition')
+  * 'bootstrap-lite/mixins/box-shadow' trimmed from '~bootstrap/scss/mixins/box-shadow')
+  * 'bootstrap-lite/mixins/container' trimmed from '~bootstrap/scss/mixins/container')
+  * 'bootstrap-lite/mixins/buttons' trimmed from '~bootstrap/scss/mixins/buttons')
+  * 'bootstrap-lite/mixins/lists' trimmed from '~bootstrap/scss/mixins/lists')
+  * 'bootstrap-lite/utilities' trimmed from '~bootstrap/scss/utilities')
+  */
+@import 'bootstrap-functions-mixins';
 
-// Keep due to lack of Dart support for @use "sass:math"
+/**
+  * Keep due to lack of Dart support for @use "sass:math"
+  */
 @import '~bootstrap/scss/mixins/grid';
-// Keep due to lack of Dart support for @use "sass:math"
 @import '~bootstrap/scss/vendor/rfs';
-// Already small enough; lightweight
-@import '~bootstrap/scss/containers';
-// Already small enough; lightweight
+
+/**
+  * Already small enough; lightweight
+  */
 @import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/containers';
 
-// @import '~bootstrap/scss/navbar';
-// @import '~bootstrap/scss/nav';
-@import 'bootstrap-lite/components/nav-navbar';
+/**
+  * Combine necessary SCSS from '~bootstrap/scss/navbar' + '~bootstrap/scss/nav';
+  */
+@import 'bootstrap-nav-navbar';
 
-// Theme Styles
+/**
+  * Theme mixins and styles
+  */
 @import 'theme/mixins';
 @import 'theme/base';

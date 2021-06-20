@@ -32,18 +32,10 @@ export default {
 
   @include media-breakpoint-down(md) {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     display: block;
     left: 0;
     transform: none;
-  }
-
-  @include media-breakpoint-down(sm) {
-    margin-bottom: 0.5rem;
-  }
-
-  @include media-breakpoint-xxs-down {
-    margin-bottom: 0.25rem;
   }
 
   span {
@@ -74,21 +66,21 @@ export default {
     @include media-breakpoint-xxs-up {
       content: '';
       display: inline-block;
+      box-sizing: content-box;
       position: absolute;
-      top: 2px;
       left: 50%;
-      transform: translate(-50%, -50%);
-      height: 100%;
+      bottom: 45px;
       height: 42px;
       margin: 0;
       width: 100%;
       max-width: none;
-      box-sizing: content-box;
+      transform: translateX(-50%);
       border-bottom: 1px solid $light-gray;
     }
 
     @include media-breakpoint-up(md) {
       height: 64px;
+      bottom: 67px;
     }
   }
 
