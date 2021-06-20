@@ -104,20 +104,20 @@ export default {
     vertical-align: middle;
     border: 2px solid $light-gray;
     border-radius: 50%;
-    width: 58px;
-    height: 58px;
-    color: lighten($border-med-gray, 5%);
+    width: 3.625rem; // 58px
+    height: 3.625rem; // 58px
+    color: $border-med-gray;
 
     @include media-breakpoint-down(md) {
-      width: 42px;
-      height: 42px;
+      width: 2.625rem; // 42px
+      height: 2.625rem; // 42px
       margin-right: 0.25rem;
       margin-left: 12px;
     }
 
     @include media-breakpoint-xxs-down {
-      height: 32px;
-      width: 32px;
+      height: 2rem; // 32px
+      width: 2rem; // 32px
     }
 
     svg {
@@ -138,11 +138,11 @@ export default {
   }
   &.dark {
     .icon-container {
-      color: $primary;
+      color: $dark;
     }
 
     b {
-      color: $primary;
+      color: $dark;
       font-weight: 500;
       font-size: 1.125rem;
       font-family: $font-family-display;

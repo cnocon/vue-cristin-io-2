@@ -6,7 +6,7 @@
       image="https://cristin.io/sharing/resume-screenshot.jpg"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
-    <h1 class="mt-0">Résumé &amp; Coursework</h1>
+    <h1>Résumé &amp; Coursework</h1>
     <div v-if="data.jobTitle" class="row resume-row">
       <div class="col-lg-7 col-md-12 left-column">
         <div class="first-icon">
@@ -61,7 +61,7 @@
         <h3>
           <span>Assets</span>
         </h3>
-        <div class="assets pb-3">
+        <div class="assets">
           <ul>
             <li
               v-for="(asset, index) in data.assets"
@@ -79,7 +79,7 @@
         <h3>
           <span>Education</span>
         </h3>
-        <div class="education mt-3">
+        <div class="education">
           <LazyResumeItem
             v-for="(edu, index) in data.education"
             :key="index"
@@ -89,7 +89,7 @@
           ></LazyResumeItem>
         </div>
 
-        <LazyQuote classes="subtle text-lg text-center dark rounded-lg pr-5">
+        <LazyQuote classes="subtle text-size-large text-center dark">
           <template #quote>
             How we spend our days is, of course, how we spend our lives. What we
             do with this hour, and that one, is what we are doing.
@@ -154,6 +154,7 @@ export default {
 
   h1 {
     margin-bottom: 4rem;
+    margin-top: 0;
   }
 }
 .timeline {
@@ -277,6 +278,8 @@ export default {
   }
 }
 .education {
+  margin-top: 1rem;
+
   @media all and (max-width: $breakpoint-sm) {
     padding-top: 2rem;
   }
@@ -286,6 +289,9 @@ export default {
   }
 }
 .assets {
+  padding-bottom: 1.25rem;
+  padding-top: 1rem;
+
   @include media-breakpoint-down(md) {
     padding-top: 2rem;
   }

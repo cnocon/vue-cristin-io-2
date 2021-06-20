@@ -7,14 +7,14 @@
 
     <Breadcrumbs :crumbs="breadcrumbs" />
 
-    <h1 class="mt-1">Portfolio</h1>
+    <h1>Portfolio</h1>
 
     <Section
       header-text="CRISTIN.IO (This Website)"
       header-icon-type="fad"
       header-icon="browser"
       header-classes="dark portfolio-section-header"
-      section-classes="section pb-5"
+      section-classes="section"
     >
       <PortfolioItem
         title="CRISTIN.IO (Nuxt Implementation)"
@@ -77,7 +77,7 @@
       header-icon-type="fab"
       header-icon="github"
       header-classes="dark portfolio-section-header"
-      section-classes="section mb-5"
+      section-classes="section"
     >
       <LazyPortfolioItem
         title="GitHub Stats Card for React"
@@ -129,7 +129,7 @@
       header-icon-type="fad"
       header-icon="clipboard-list-check"
       header-classes="dark portfolio-section-header"
-      section-classes="section pb-5"
+      section-classes="section"
     >
       <PortfolioItem
         title="Front End Development Flash Cards App"
@@ -163,7 +163,7 @@
       header-icon-type="fal"
       header-icon="thunderstorm-moon"
       header-classes="dark portfolio-section-header"
-      section-classes="section pb-5"
+      section-classes="section"
     >
       <LazyPortfolioItem
         title="Weather Charts/Forecast App"
@@ -197,7 +197,7 @@
       header-icon-type="fab"
       header-icon="youtube"
       header-classes="dark portfolio-section-header"
-      section-classes="section pb-5"
+      section-classes="section"
     >
       <LazyPortfolioItem
         title="YouTube Search App"
@@ -228,7 +228,7 @@
       header-icon-type="fal"
       header-icon="briefcase"
       header-classes="dark portfolio-section-header"
-      section-classes="section pb-5"
+      section-classes="section"
     >
       <LazyPortfolioItem
         title="CenturyLink Small Business Site"
@@ -265,7 +265,7 @@
       header-icon-type="fad"
       header-icon="browser"
       header-classes="dark portfolio-section-header"
-      section-classes="section pb-5"
+      section-classes="section"
     >
       <LazyPortfolioItem
         title="CRISTIN.IO (Vue 3 Implementation)"
@@ -302,7 +302,7 @@
       header-icon-type="fad"
       header-icon="browser"
       header-classes="dark portfolio-section-header"
-      section-classes="section pb-5"
+      section-classes="section"
     >
       <LazyPortfolioItem
         title="CRISTIN.IO (Gatsby Implementation)"
@@ -360,9 +360,14 @@ export default {
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
   }
-}
-h1 {
-  text-align: left;
+
+  h1 {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+  .section {
+    padding-bottom: 2rem;
+  }
 }
 
 .nuxt-image-wrapper {

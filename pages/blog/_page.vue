@@ -5,7 +5,7 @@
       description="Recent Articles from a Front End Software Engineering Blog by Cristin O'Connor"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
-    <h1 class="mt-0">Recent Articles</h1>
+    <h1>Recent Articles</h1>
     <SectionHeader
       v-if="page"
       :text="'Showing Page ' + page + ' of ' + lastPage"
@@ -16,7 +16,7 @@
     </SectionHeader>
     <PostList
       :posts="pagePosts"
-      column-classes="post-preview-container col-12 col-lg-6 mb-5"
+      column-classes="post-preview-container col-12 col-lg-6"
     ></PostList>
 
     <PrevNext
@@ -84,6 +84,10 @@ export default {
 
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
+  }
+
+  h1 {
+    margin-top: 0;
   }
 }
 .blog-page-header {

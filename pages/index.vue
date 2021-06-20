@@ -36,7 +36,7 @@
             </p>
           </div>
           <div class="col-12 col-lg-6 quote-container">
-            <quote classes="subtle rounded-lg pr-5">
+            <quote classes="subtle">
               <template #quote>
                 Cristin O'Connor is a lifesaver! Being new to Gatsby.js, I was
                 having a difficult time finding a solution for a blocker. I
@@ -60,8 +60,7 @@
       >
         <LazyPostList
           :posts="posts"
-          classes="mt-5"
-          column-classes="post-preview-container col-12 col-md-6 col-xl-4 mb-5"
+          column-classes="post-preview-container col-12 col-md-6 col-xl-4"
         ></LazyPostList>
       </LazySection>
 

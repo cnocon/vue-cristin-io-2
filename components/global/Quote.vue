@@ -20,10 +20,10 @@ export default {
 
 <style lang="scss" scoped>
 .quote {
-  padding: 2rem 3rem 1rem 1.75rem;
+  padding: 2rem 3rem 1rem 1.5rem;
+  margin: 0 auto 1.5rem;
   border-radius: 4px;
   max-width: 600px;
-  margin: 0 auto;
   box-shadow: $box-shadow-sm;
   background-color: $border-lightest-gray;
 
@@ -38,7 +38,7 @@ export default {
     }
   }
 
-  &.text-lg {
+  &.text-size-large {
     blockquote {
       p {
         font-size: 1.35rem;

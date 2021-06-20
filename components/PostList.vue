@@ -45,6 +45,7 @@ export default {
     max-width: 100%;
     overflow: hidden;
     padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
     @include media-breakpoint-xxs-down {
       max-width: 92%;

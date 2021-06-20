@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container mb-0">
+  <div class="app-container">
     <Navbar />
     <div class="container content-container">
       <Nuxt />
@@ -45,6 +45,6 @@
   flex-direction: column;
   min-height: 100vh;
   animation: 1s appear;
-  margin: auto;
+  margin: auto auto 0;
 }
 </style>

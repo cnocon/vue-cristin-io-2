@@ -1,5 +1,5 @@
 <template>
-  <div class="prev-next-container row pt-5 mt-5 mb-5">
+  <div class="prev-next-container row">
     <div
       v-if="prev"
       :class="next ? 'col-6 btn-col prev' : 'col-12 btn-col prev'"
@@ -67,6 +67,9 @@ export default {
 <style lang="scss" scoped>
 .prev-next-container {
   align-items: flex-start;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .btn-col {

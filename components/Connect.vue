@@ -2,115 +2,103 @@
   <div class="connect">
     <div class="row">
       <ul class="list-style-none row">
-        <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
+        <li class="connect-item col-lg-2 col-md-4 col-6">
           <a
             href="https://github.com/cnocon"
             target="_blank"
             rel="noopener noreferrer"
             class="d-inline-block text-center plain"
           >
-            <div
-              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
-            >
+            <div class="connect-item-inner">
               <font-awesome-icon
                 :icon="['fab', 'github']"
                 size="2x"
               ></font-awesome-icon>
             </div>
-            <span class="d-block">GitHub</span>
+            <span class="connect-item-text">GitHub</span>
           </a>
         </li>
-        <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
+        <li class="connect-item col-lg-2 col-md-4 col-6">
           <a
             href="https://codepen.io/cnocon"
             target="_blank"
             rel="noopener noreferrer"
             class="plain"
           >
-            <div
-              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
-            >
+            <div class="connect-item-inner">
               <font-awesome-icon
                 :icon="['fab', 'codepen']"
                 size="2x"
               ></font-awesome-icon>
             </div>
-            <span class="d-block">CodePen</span>
+            <span class="connect-item-text">CodePen</span>
           </a>
         </li>
-        <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
+        <li class="connect-item col-lg-2 col-md-4 col-6">
           <a
             href="https://stackoverflow.com/users/2187039/cnocon"
             target="_blank"
             rel="noopener noreferrer"
             class="plain"
           >
-            <div
-              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
-            >
+            <div class="connect-item-inner">
               <font-awesome-icon
                 :icon="['fab', 'stack-overflow']"
                 class="fa-w-16"
                 size="2x"
               ></font-awesome-icon>
             </div>
-            <span class="d-block">Stack Overflow</span>
+            <span class="connect-item-text">Stack Overflow</span>
           </a>
         </li>
-        <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
+        <li class="connect-item col-lg-2 col-md-4 col-6">
           <a
             href="https://twitter.com/cnocon"
             target="_blank"
             rel="noopener noreferrer"
             class="plain"
           >
-            <div
-              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
-            >
+            <div class="connect-item-inner">
               <font-awesome-icon
                 :icon="['fal', 'hashtag']"
                 class="fa-w-16"
                 size="2x"
               ></font-awesome-icon>
             </div>
-            <span class="d-block">Twitter</span>
+            <span class="connect-item-text">Twitter</span>
           </a>
         </li>
-        <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
+        <li class="connect-item col-lg-2 col-md-4 col-6">
           <a
             href="https://www.linkedin.com/in/cristinoconnor"
             target="_blank"
             rel="noopener noreferrer"
             class="plain"
           >
-            <div
-              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
-            >
+            <div class="connect-item-inner">
               <font-awesome-icon
                 :icon="['fab', 'linkedin-in']"
                 class="fa-w-16"
                 size="2x"
               ></font-awesome-icon>
             </div>
-            <span class="d-block">LinkedIn</span>
+            <span class="connect-item-text">LinkedIn</span>
           </a>
         </li>
-        <li class="col-lg-2 col-md-4 col-6 text-center mb-5">
+        <li class="connect-item col-lg-2 col-md-4 col-6">
           <a
             href="mailto:her@cristin.io"
             target="_blank"
             rel="noopener noreferrer"
             class="plain"
           >
-            <div
-              class="connect-item-inner rounded-circle p-2 d-inline-block mb-2"
-            >
+            <div class="connect-item-inner">
               <font-awesome-icon
                 :icon="['fal', 'envelope']"
                 size="2x"
               ></font-awesome-icon>
             </div>
-            <span class="d-block">Email</span></a
+            <span class="connect-item-text">Email</span></a
           >
         </li>
       </ul>
@@ -119,6 +107,10 @@
 </template>
 
 <style scoped lang="scss">
+.connect-item {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 .connect {
   padding-top: 2rem;
 
@@ -180,6 +172,13 @@ a {
   }
 }
 .connect-item-inner {
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 1rem;
   box-shadow: $rainbow-box-shadow-dark;
+  padding: 1rem;
+}
+.connect-item-text {
+  display: block;
 }
 </style>

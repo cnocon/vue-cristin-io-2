@@ -19,7 +19,7 @@
         </div>
       </NuxtLink>
 
-      <ul class="nav ml-0 mb-0">
+      <ul class="nav">
         <li class="nav-item">
           <NuxtLink
             :active="isActive('resume')"
@@ -182,7 +182,8 @@ export default {
   flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
-  margin-left: auto;
+  margin-left: 0;
+  margin-bottom: 0;
 
   @include media-breakpoint-up(md) {
     min-width: 20.3125rem; // 325px
@@ -282,8 +283,12 @@ export default {
       color: $white;
 
       &:hover {
-        color: $white;
-        text-decoration: underline;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: $rainbow-ellipse-bottom-left;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
 
@@ -341,8 +346,19 @@ export default {
   }
 
   &:hover {
-    text-decoration: underline;
-    color: $white;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: radial-gradient(
+      ellipse at bottom left,
+      hsl(259, 83%, 70%) 30%,
+      hsl(197, 100%, 70%) 40%,
+      hsl(175, 92%, 67%) 50%,
+      hsl(49, 100%, 80%) 60%,
+      hsl(0, 80%, 75%) 75%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 .nuxt-link-active,

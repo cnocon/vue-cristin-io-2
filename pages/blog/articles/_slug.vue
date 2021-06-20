@@ -8,8 +8,8 @@
     ></Head>
     <article>
       <header>
-        <h1 class="mb-2">{{ post.title }}</h1>
-        <div class="meta mb-2">
+        <h1>{{ post.title }}</h1>
+        <div class="meta">
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
           <span
             v-for="(cat, index) in post.categories"
@@ -19,7 +19,7 @@
           >
         </div>
       </header>
-      <div v-if="post.toc.length > 0" class="row toc-row mb-5">
+      <div v-if="post.toc.length > 0" class="row toc-row">
         <div class="col-12 toc-col">
           <div class="toc-image">
             <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
@@ -123,6 +123,10 @@ export default {
 
   a {
     text-decoration: none;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
   }
 }
 header {
@@ -234,5 +238,11 @@ header {
       margin-top: 2rem;
     }
   }
+}
+.meta {
+  margin-bottom: 0.5rem;
+}
+.toc-row {
+  margin-bottom: 2rem;
 }
 </style>

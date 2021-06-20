@@ -90,6 +90,7 @@ export default {
 
   .links {
     margin-bottom: 2rem;
+    margin-top: 0.5rem;
 
     @include media-breakpoint-down(md) {
       text-align: center;
@@ -115,7 +116,7 @@ export default {
       text-align: left;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
-      font-weight: 700;
+      font-weight: 400;
       font-size: 1.375rem; // 22px
 
       @include media-breakpoint-down(md) {
