@@ -45,7 +45,7 @@
         :document="post"
         :class="post.toc.length > 0 ? 'has-toc' : 'no-toc'"
       ></NuxtContent>
-      <PrevNext
+      <LazyPrevNext
         name="blog-articles-slug"
         :prev="
           prev
@@ -57,7 +57,7 @@
             ? { params: { slug: next.slug }, query: null, title: next.title }
             : null
         "
-      ></PrevNext>
+      ></LazyPrevNext>
     </article>
   </div>
 </template>

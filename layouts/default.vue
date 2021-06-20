@@ -4,7 +4,7 @@
     <div class="container content-container">
       <Nuxt />
     </div>
-    <Footer />
+    <LazyFooter></LazyFooter>
   </div>
 </template>
 

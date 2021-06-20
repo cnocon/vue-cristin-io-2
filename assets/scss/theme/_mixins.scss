@@ -1,0 +1,34 @@
+// Lists
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin media-breakpoint-xxs-up {
+  @media all and (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-xxs-down {
+  @media all and (max-width: 319px) {
+    @content;
+  }
+}
+
+@mixin transluscent-hover-effect {
+  border-bottom: 2px solid rgba($link-purple, 0.8) !important;
+  box-shadow: 0 4px 2px rgba($link-blue, 0.25),
+    0 5px 2px rgba($link-green, 0.15)  !important;
+  text-decoration: none  !important;
+
+
+  &:hover,
+  &:focus {
+    border-bottom: 1.5px solid $link-green !important;
+    box-shadow: 0 3px 1px rgba($border-purple-vivid, 0.25),
+      0 4px 1px rgba($border-red-vivid, 0.2)  !important;
+    text-decoration: none  !important;
+  }
+}

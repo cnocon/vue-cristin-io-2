@@ -14,12 +14,10 @@
         <font-awesome-icon :icon="['fas', 'rss']"></font-awesome-icon>
       </template>
     </SectionHeader>
-    <PostList
-      :posts="pagePosts"
-      column-classes="post-preview-container col-12 col-lg-6"
-    ></PostList>
 
-    <PrevNext
+    <PostList :posts="pagePosts" column-classes="col-12 col-lg-6"></PostList>
+
+    <LazyPrevNext
       name="blog-page"
       :prev="
         page - 1 >= 1
@@ -35,7 +33,7 @@
             }
           : null
       "
-    ></PrevNext>
+    ></LazyPrevNext>
   </div>
 </template>
 

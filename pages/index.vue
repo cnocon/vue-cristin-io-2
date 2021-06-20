@@ -36,7 +36,7 @@
             </p>
           </div>
           <div class="col-12 col-lg-6 quote-container">
-            <quote classes="subtle">
+            <LazyQuote classes="subtle">
               <template #quote>
                 Cristin O'Connor is a lifesaver! Being new to Gatsby.js, I was
                 having a difficult time finding a solution for a blocker. I
@@ -47,7 +47,7 @@
                 what a newbie like me needed."
               </template>
               <template #cite>– Mariah W., Freelance Web Developer</template>
-            </quote>
+            </LazyQuote>
           </div>
         </div>
       </LazySection>
@@ -60,7 +60,7 @@
       >
         <LazyPostList
           :posts="posts"
-          column-classes="post-preview-container col-12 col-md-6 col-xl-4"
+          column-classes="col-12 col-md-6 col-xl-4"
         ></LazyPostList>
       </LazySection>
 

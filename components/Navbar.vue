@@ -21,10 +21,7 @@
 
       <ul class="nav">
         <li class="nav-item">
-          <NuxtLink
-            :active="isActive('resume')"
-            to="/resume"
-            class="rounded nav-link"
+          <NuxtLink :active="isActive('resume')" to="/resume" class="nav-link"
             >Résumé</NuxtLink
           >
         </li>
@@ -32,7 +29,7 @@
           <NuxtLink
             :active="isActive('portfolio')"
             to="/portfolio"
-            class="rounded nav-link"
+            class="nav-link"
             >Portfolio</NuxtLink
           >
         </li>
@@ -40,9 +37,7 @@
           <NuxtLink
             :active="isActive('blog')"
             :to="{ name: 'blog-page', params: { slug: 'blog-page', page: 1 } }"
-            :class="`rounded nav-link ${
-              isActive('blog') ? 'nuxt-link-active' : ''
-            }`"
+            :class="`nav-link ${isActive('blog') ? 'nuxt-link-active' : ''}`"
             >Blog</NuxtLink
           >
         </li>
@@ -204,7 +199,7 @@ export default {
   .dropdown-menu.dropdown-menu-right {
     &.show {
       position: absolute;
-      border-top: 1px solid $white;
+      border-top: 1px solid lighten($link-green, 15%);
       margin-top: 1.25rem; // 25px
       width: 100%;
       right: 0;
@@ -218,11 +213,11 @@ export default {
         padding-bottom: 0.85rem;
         padding-top: 0.85rem;
         margin-bottom: 0;
-        border-bottom: 1px solid rgba($lightest-gray, 0.5);
+        border-bottom: 1px solid lighten($link-green, 15%);
 
         &:hover {
           background-color: $white;
-          border-bottom: 1px solid $dark;
+          border-bottom: 1px solid lighten($link-green, 15%);
 
           a {
             color: $dark;
@@ -406,7 +401,8 @@ export default {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: $rainbow-gradient-med;
+    // background-image: $rainbow-gradient-med;
+    background-image: $rainbow-text-angled-dark;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -536,5 +532,8 @@ export default {
   .dropdown-menu {
     position: static;
   }
+}
+#navbarDropdownLink {
+  color: $white;
 }
 </style>

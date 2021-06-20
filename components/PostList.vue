@@ -1,7 +1,11 @@
 <template>
   <div :class="`post-list ${classes}`">
     <div class="row">
-      <div v-for="post in posts" :key="post.slug" :class="columnClasses">
+      <div
+        v-for="post in posts"
+        :key="post.slug"
+        :class="`post-preview-container ${columnClasses}`"
+      >
         <PostPreview :post="post" />
       </div>
     </div>
@@ -17,15 +21,11 @@ export default {
     },
     columnClasses: {
       type: String,
-      default: 'post-preview-container col-12',
+      default: 'col-12',
     },
     classes: {
       type: String,
       default: '',
-    },
-    page: {
-      type: Number,
-      default: 1,
     },
   },
 }

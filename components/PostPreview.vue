@@ -13,9 +13,7 @@
 
       <NuxtLink
         :to="{ name: 'blog-articles-slug', params: { slug: post.slug } }"
-        class="text-primary"
-      >
-        {{ post.title }}</NuxtLink
+        >{{ post.title }}</NuxtLink
       >
 
       <div class="meta">
@@ -77,7 +75,7 @@ header {
     font-size: 1.5rem;
     font-family: $font-family-display;
     font-weight: 700;
-    border-bottom: 0;
+    @include transluscent-hover-effect;
   }
 
   .post-image {
@@ -90,16 +88,8 @@ header {
     }
   }
 
-  // img {
-  // display: inline-block;
-  // max-width: 3.75rem;
-  // flex-basis: 3.75rem;
-  // margin-right: 1.25rem;
-  // }
-
   time {
     display: block;
-    font-weight: 400;
     font-size: 1rem;
     margin-top: 0.5rem;
     font-family: $font-family-display;

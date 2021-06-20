@@ -85,16 +85,12 @@ export default {
   ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  // '@/assets/scss/main.scss'
-  // css: [],
+  // css: ['@/assets/scss/main.scss'],
 
   styleResources: {
     scss: [
-      '@/assets/scss/variables.scss',
+      '@/assets/scss/theme/_variables.scss', // Bootstrap Variable Overrides
       '@/assets/scss/main.scss',
-      '@/assets/scss/mixins.scss',
-      '@/assets/scss/theme/_utilities.scss',
-      '@/assets/scss/theme/_base.scss',
     ],
   },
 
