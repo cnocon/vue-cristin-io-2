@@ -7,11 +7,11 @@
 @import 'bootstrap-lite/mixins/border-radius'; // @import '~bootstrap/scss/mixins/border-radius';
 @import 'bootstrap-lite/mixins/utilities'; // @import '~bootstrap/scss/mixins/utilities';
 @import 'bootstrap-lite/mixins/container'; // @import '~bootstrap/scss/mixins/container';
-@import 'bootstrap-lite/mixins/gradients'; // @import '~bootstrap/scss/mixins/gradients';
+// @import 'bootstrap-lite/mixins/gradients'; // @import '~bootstrap/scss/mixins/gradients';
 @import 'bootstrap-lite/mixins/transition'; // @import '~bootstrap/scss/mixins/transition';
 @import 'bootstrap-lite/mixins/lists'; // @import '~bootstrap/scss/mixins/lists';
 @import 'bootstrap-lite/mixins/buttons'; // @import '~bootstrap/scss/mixins/buttons';
-@import 'bootstrap-lite/mixins/box-shadow'; // @import '~bootstrap/scss/mixins/box-shadow';
+// @import 'bootstrap-lite/mixins/box-shadow'; // @import '~bootstrap/scss/mixins/box-shadow';
 
 @import '~bootstrap/scss/vendor/rfs'; // Keep due to lack of Dart support for @use "sass:math"
 
