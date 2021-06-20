@@ -17,18 +17,19 @@
   }
 }
 
-@mixin transluscent-hover-effect {
-  border-bottom: 2px solid rgba($link-purple, 0.8) !important;
-  box-shadow: 0 4px 2px rgba($link-blue, 0.25),
-    0 5px 2px rgba($link-green, 0.15)  !important;
-  text-decoration: none  !important;
-
+@mixin rainbow-link-decoration {
+  text-decoration: none;
+  border-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 2px;
+  background-image: $pastel-rainbow-bar-dark;
 
   &:hover,
   &:focus {
-    border-bottom: 1.5px solid $link-green !important;
-    box-shadow: 0 3px 1px rgba($border-purple-vivid, 0.25),
-      0 4px 1px rgba($border-red-vivid, 0.2)  !important;
-    text-decoration: none  !important;
+    text-decoration: none;
+    border-bottom: 0;
+    background-size: 100% 2.5px;
+    background-image: $pastel-rainbow-bar;
   }
 }

@@ -1,3 +1,27 @@
+.text-primary {color: $primary;}
+.text-white { color: $white; }
+
+// Alignment
+.text-center {
+  text-align: center;
+}
+
+.flex-center-md-down {
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+}
+
+.text-center {
+  text-align: center;
+}
+
 html {
   font-family: $font-family-base;
   font-size: 16px;
@@ -350,17 +374,6 @@ pre code {
   &:focus {
     outline: 0;
     box-shadow: $btn-focus-box-shadow;
-  }
-
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active {
-    @include box-shadow($btn-active-box-shadow);
-
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-    }
   }
 
   &.btn-primary {
