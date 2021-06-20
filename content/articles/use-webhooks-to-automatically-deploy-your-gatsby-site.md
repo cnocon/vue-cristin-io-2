@@ -12,7 +12,7 @@ categories: [{name: Gatsby, slug: gatsby}, {name: Netlify, slug: netlify}, {name
 
 <quote>
   <template #quote>This is inconvenient and I hate doing it.</template>
-  <template #cite>&mdash; Cristin O'Connor</template>
+  <template #cite>Cristin O'Connor</template>
 </quote>
 
 I finally decided to look into using a Webhook to automatically trigger the build and deploy process. Thankfully, ButterCMS and Netlify make this relatively easy. You just have to follow the steps below.

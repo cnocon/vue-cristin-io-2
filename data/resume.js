@@ -210,52 +210,72 @@ const resume = {
     {
       "name": "JavaScript",
       "percent": "90",
-      "icon": "fab fa-js-square"
+      "icon": "fab fa-js-square",
+      "skillIcon": "faJsSquare",
+      "iconType": "fab"
     },
     {
       "name": "SCSS, LESS, CSS",
       "percent": "90",
-      "icon": "fab fa-sass"
+      "icon": "fab fa-sass",
+      "skillIcon": "faSass",
+      "iconType": "fab"
     },
     {
       "name": "React",
       "percent": "85",
-      "icon": "fab fa-react"
+      "icon": "fab fa-react",
+      "skillIcon": "faReact",
+      "iconType": "fab"
     },
     {
       "name": "Git",
       "percent": "80",
-      "icon": "fab fa-git"
+      "icon": "fab fa-git",
+      "skillIcon": "faGit",
+      "iconType": "fab"
     },
     {
       "name": "Vue",
       "percent": "65",
-      "icon": "fab fa-vuejs"
+      "icon": "fab fa-vuejs",
+      "skillIcon": "faVuejs",
+      "iconType": "fab"
     },
     {
       "name": "APIs",
       "percent": "60",
-      "icon": "fal fa-chart-network"
+      "icon": "fal fa-chart-network",
+      "skillIcon": "faChartNetwork",
+      "iconType": "fal"
     },
     {
       "name": "Ruby",
       "percent": "60",
-      "icon": "fal fa-gem"
+      "icon": "fal fa-gem",
+      "skillIcon": "faGem",
+      "iconType": "fal"
     },
     {
       "name": "Node, NPM",
       "percent": "55",
-      "icon": "fab fa-node-js"
+      "icon": "fab fa-node-js",
+      "skillIcon": "faNodeJs",
+      "iconType": "fab"
     },
     {
       "name": "Rails 5",
       "percent": "50",
-      "icon": "fal fa-subway"
+      "icon": "fal fa-subway",
+      "skillIcon": "faSubway",
+      "iconType": "fal"
     },
     {
       "name": "TypeScript",
       "percent": "45",
-      "icon": "fa fal fa-brackets"
+      "icon": "fa fal fa-brackets",
+      "skillIcon": "faBrackets",
+      "iconType": "fal"
     }
   ],
   "assets": [

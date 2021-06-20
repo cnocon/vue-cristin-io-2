@@ -17,12 +17,12 @@ $breakpoint-lg: 61.9375rem; // 991px
 $breakpoint-lg-min: 62rem; // 992px
 
 $font-family-heading: Lato, Verdana, sans-serif;
-// $font-family-sans-serif: 'Open Sans', sans-serif;
-// $font-family-base: $font-family-sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-base: $font-family-sans-serif;
 $font-family-sans-serif: $font-family-heading;
-$font-family-base: $font-family-heading;
+// $font-family-base: $font-family-heading;
 $font-family-display: Oswald, Impact, sans-serif;
-$font-family-brand: 'Poiret One', Lato, sans-serif;
+// $font-family-brand: 'Poiret One', Lato, sans-serif;
 
 $white: #fff;
 $black: hsl(210, 40%, 15%);

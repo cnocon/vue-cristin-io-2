@@ -1,12 +1,12 @@
 <template>
-  <div class="skill-unit">
+  <div class="skill">
     <h4>
-      <i :class="skill.icon"></i>
+      <slot name="skill-icon"></slot>
       {{ skill.name }}
     </h4>
-    <div class="bar" :data-percent="skill.percent">
-      <div class="progress" :style="progressStyle">
-        <span class="score">
+    <div class="skill-bar" :data-percent="skill.percent">
+      <div class="skill-progress" :style="progressStyle">
+        <span class="skill-score">
           {{ skill.percent }}
         </span>
       </div>
@@ -16,7 +16,6 @@
 
 <script>
 export default {
-  name: 'Skill',
   props: {
     skill: {
       type: Object,
@@ -32,7 +31,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.skill-unit {
+.skill {
   padding: 1rem 0 1rem 0.625rem;
 
   &:last-of-type {
@@ -60,7 +59,7 @@ export default {
     font-size: 1rem;
   }
 
-  .bar {
+  .skill-bar {
     position: relative;
     box-sizing: content-box;
     z-index: 0;
@@ -72,7 +71,7 @@ export default {
     display: block;
     outline: 0;
 
-    .progress {
+    .skill-progress {
       position: absolute;
       overflow: visible;
       display: block;
@@ -84,7 +83,6 @@ export default {
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px;
       background-color: $border-light-gray;
-      // background-image: $pastel-rainbow-bar;
       background-image: $rainbow-gradient-light;
       background-size: cover;
       background-position: center bottom;
@@ -92,7 +90,7 @@ export default {
     }
   }
 
-  .score {
+  .skill-score {
     position: absolute;
     display: block;
     z-index: 3;

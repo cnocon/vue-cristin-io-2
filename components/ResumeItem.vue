@@ -87,12 +87,12 @@ export default {
 <style scoped lang="scss">
 .item {
   border: 3px solid $border-light-gray;
-  padding: 1.875rem 1.875rem 0 2.625rem;
+  padding: 1.5rem 1.5rem 0.75rem;
   border-radius: 0.3125rem;
   position: relative;
 
-  @include media-breakpoint-down(md) {
-    padding: 0 1.5rem 1.5rem;
+  @include media-breakpoint-up(md) {
+    padding: 1.875rem 1.875rem 0 2.625rem;
   }
 
   .left-column & {

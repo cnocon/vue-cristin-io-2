@@ -1,7 +1,7 @@
 <template>
   <div class="index-page">
     <Head title="Home" />
-    <header class="text-center">
+    <header class="header">
       <h1 class="page-title">I&nbsp;L<span>&#9825;</span>VE&nbsp;CODE</h1>
     </header>
     <main>
@@ -18,7 +18,7 @@
         header-icon="concierge-bell"
         header-text="Services"
       >
-        <div class="row services-row d-flex align-items-center">
+        <div class="row services-row">
           <div class="col-12 col-sm-6 col-lg-3 text-center">
             <h4>WEB DEVELOPMENT</h4>
             <p>
@@ -46,7 +46,7 @@
                 knowledgeable. She was also kind and concise which was exactly
                 what a newbie like me needed."
               </template>
-              <template #cite>– Mariah W., Freelance Web Developer</template>
+              <template #cite>Mariah W., Freelance Web Developer</template>
             </LazyQuote>
           </div>
         </div>
@@ -139,10 +139,14 @@ header {
   color: $black;
   font-weight: 200;
   font-family: $font-family-display;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
+  font-size: 42px;
+  text-transform: lowercase;
 
   @include media-breakpoint-up(md) {
+    letter-spacing: 6px;
     font-size: 48px;
+    text-transform: uppercase;
   }
 
   span {
@@ -155,8 +159,8 @@ header {
     background-size: cover;
     line-height: inherit;
 
-    @include media-breakpoint-xxs-down {
-      font-size: 1.75rem; // 28px
+    @include media-breakpoint-xxs-up {
+      font-size: 2rem; // 32px
     }
 
     @include media-breakpoint-up(sm) {
@@ -169,6 +173,9 @@ header {
   }
 }
 .services-row {
+  display: flex;
+  align-items: center;
+
   .quote-container {
     margin-top: 3rem;
 

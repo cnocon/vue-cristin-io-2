@@ -79,6 +79,10 @@ export default {
       width: 100%;
       text-align: right;
       margin-top: 1.25rem;
+
+      &::before {
+        content: '\2014\00A0'; // em dash, nbsp
+      }
     }
   }
 

@@ -28,18 +28,22 @@ export default {
 .section-header {
   position: relative;
   height: 64px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 
   @include media-breakpoint-down(md) {
     text-align: center;
-    margin-bottom: 0.25rem;
+    margin-bottom: 1rem;
     display: block;
     left: 0;
     transform: none;
   }
 
-  @include media-breakpoint-down(md) {
-    text-align: center;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0.5rem;
+  }
+
+  @include media-breakpoint-xxs-down {
+    margin-bottom: 0.25rem;
   }
 
   span {

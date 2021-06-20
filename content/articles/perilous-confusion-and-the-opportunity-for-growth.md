@@ -27,7 +27,7 @@ Had I recognized that confusion was a gift in that moment, and simultaneously be
     Confusion is the first step towards wisdom... So when you’re confused, know that you’re facing experiences out of your comfort zone — and that spells growth.
   </template>
   <template #cite>
-    &mdash; The Luna, <a href='https://medium.com/the-ascent/confusion-is-a-blessing-in-disguise-70c3cde3bac2' target='_blank' rel='noopener noreferrer'>Medium.com</a>
+    The Ascent, <a href='https://medium.com/the-ascent/confusion-is-a-blessing-in-disguise-70c3cde3bac2' target='_blank' rel='noopener noreferrer'>Medium.com</a>
   </template>
 </quote>
 

@@ -55,7 +55,13 @@
             v-for="(skill, index) in data.skills"
             :key="index"
             :skill="skill"
-          />
+          >
+            <template #skill-icon>
+              <font-awesome-icon
+                :icon="[skill.skillIcon, skill.iconType]"
+              ></font-awesome-icon>
+            </template>
+          </LazySkill>
         </div>
 
         <h3>
@@ -94,7 +100,7 @@
             How we spend our days is, of course, how we spend our lives. What we
             do with this hour, and that one, is what we are doing.
           </template>
-          <template #cite>– Annie Dillard</template>
+          <template #cite>Annie Dillard</template>
         </LazyQuote>
 
         <LazyConnect />
@@ -127,6 +133,16 @@ import resumeData from '@/data/resume'
 import coursesData from '@/data/courses'
 
 export default {
+  props: {
+    skillIcon: {
+      default: null,
+      type: String,
+    },
+    skillIconType: {
+      default: null,
+      type: String,
+    },
+  },
   data() {
     return {
       data: resumeData,
@@ -153,8 +169,11 @@ export default {
   margin: 3rem auto 0;
 
   h1 {
-    margin-bottom: 4rem;
     margin-top: 0;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 4rem;
+    }
   }
 }
 .timeline {
@@ -318,10 +337,6 @@ export default {
         margin-right: 0.625rem;
         color: $link-green;
         display: inline-block;
-
-        @include media-breakpoint-down(md) {
-          // margin-top: 0.75rem;
-        }
       }
     }
 
@@ -334,19 +349,6 @@ export default {
       b {
         font-weight: 500;
       }
-    }
-  }
-}
-.section-header {
-  &.courses-section-header {
-    margin-bottom: 2rem;
-
-    @include media-breakpoint-up(sm) {
-      margin-bottom: 2.5rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      margin-bottom: 3rem;
     }
   }
 }

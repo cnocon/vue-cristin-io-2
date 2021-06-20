@@ -1,5 +1,3 @@
-// Lists
-// Unstyled keeps list items block level, just removes default browser padding and list-style
 @mixin list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -21,15 +19,16 @@
   text-decoration: none;
   border-bottom: 0;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: bottom left;
   background-size: 100% 2px;
   background-image: $pastel-rainbow-bar-dark;
+  transition: background-size 0.75s ease-in-out;
 
   &:hover,
   &:focus {
     text-decoration: none;
     border-bottom: 0;
-    background-size: 100% 2.5px;
+    background-size: 5px 4px;
     background-image: $pastel-rainbow-bar;
   }
 }
