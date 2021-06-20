@@ -40,13 +40,13 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxt/image', // https://image.nuxtjs.org/
+    '@nuxt/components',
+    '@nuxtjs/style-resources',
     '@nuxtjs/eslint-module', // https://go.nuxtjs.dev/eslint
     '@nuxtjs/google-fonts', // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-analytics', // https://google-analytics.nuxtjs.org/
-    '@nuxt/image', // https://image.nuxtjs.org/
-    '@nuxt/components',
     'nuxt-purgecss',
-    '@nuxtjs/style-resources',
   ],
 
   googleFonts: {
@@ -72,7 +72,8 @@ export default {
 
   // purgeCSS: https://purgecss.com/guides/nuxt.html
   purgeCSS: {
-    whitelistPatterns: [/svg.*/, /fa.*/], // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
+    styleExtensions: ['.scss'],
+    whitelistPatterns: [/svg.*/, /fa.*/, /nuxt-link.*/], // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -192,9 +193,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extractCSS: {
-      ignoreOrder: true, // critical CSS
-    },
+    // critical CSS
+    // extractCSS: {
+    //   ignoreOrder: true,
+    // },
     // analyze: true,
   },
 
