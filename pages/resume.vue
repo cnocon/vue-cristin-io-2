@@ -58,7 +58,7 @@
           >
             <template #skill-icon>
               <font-awesome-icon
-                :icon="[skill.skillIcon, skill.iconType]"
+                :icon="[skill.iconType, skill.skillIcon]"
               ></font-awesome-icon>
             </template>
           </LazySkill>

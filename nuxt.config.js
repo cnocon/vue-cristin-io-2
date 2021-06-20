@@ -129,6 +129,8 @@ export default {
           'faHandsHeart',
           'faPencil',
           'faBars',
+          'faGem',
+          'faBrackets',
         ],
       },
       {
@@ -143,6 +145,12 @@ export default {
           'faGithub',
           'faYoutube',
           'faLinkedinIn',
+          'faJsSquare',
+          'faSass',
+          'faReact',
+          'faGit',
+          'faVuejs',
+          'faNodeJs',
         ],
       },
       {
