@@ -32,3 +32,12 @@
     background-image: $pastel-rainbow-bar;
   }
 }
+
+@mixin perfect-rainbow-text {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $perfect-radial-rainbow;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

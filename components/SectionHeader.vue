@@ -69,8 +69,8 @@ export default {
       box-sizing: content-box;
       position: absolute;
       left: 50%;
-      bottom: 45px;
       height: 42px;
+      bottom: calc(50% - 2px);
       margin: 0;
       width: 100%;
       max-width: none;
@@ -78,9 +78,13 @@ export default {
       border-bottom: 1px solid $light-gray;
     }
 
+    @include media-breakpoint-down(sm) {
+      bottom: 25%;
+      transform: translate(-50%, -50%);
+    }
+
     @include media-breakpoint-up(md) {
       height: 64px;
-      bottom: 67px;
     }
   }
 
@@ -90,8 +94,9 @@ export default {
     white-space: nowrap;
     text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: 1.5px;
-    color: $primary-light;
+    letter-spacing: 2.5px;
+    color: $border-dark-gray;
+    margin-left: 0.5rem;
   }
 
   .icon-container {
