@@ -1,7 +1,8 @@
 // Bootstrap SCSS files
 @import '~bootstrap/scss/functions';
-@import 'bootstrap-lite/variables'; // @import '~bootstrap/scss/variables';
 
+// Trimmed down Bootstrap variables from '~bootstrap/scss/variables';
+@import 'bootstrap-lite/variables';
 
 /**
  * @functions-and-mixins
@@ -11,24 +12,24 @@
 // @import 'bootstrap-lite/mixins/box-shadow'; // @import '~bootstrap/scss/mixins/box-shadow';
 // @import 'bootstrap-lite/mixins/breakpoints'; // @import '~bootstrap/scss/mixins/breakpoints';
 // @import 'bootstrap-lite/mixins/border-radius'; // @import '~bootstrap/scss/mixins/border-radius';
+// @import 'bootstrap-lite/mixins/container'; // @import '~bootstrap/scss/mixins/container';
+// @import 'bootstrap-lite/mixins/transition'; // @import '~bootstrap/scss/mixins/transition';
+// @import 'bootstrap-lite/mixins/lists'; // @import '~bootstrap/scss/mixins/lists';
+// @import 'bootstrap-lite/utilities'; // @import '~bootstrap/scss/utilities';
 @import 'bootstrap-lite/mixins/functions-and-mixins';
 
-@import '~bootstrap/scss/mixins/grid'; // Keep due to lack of Dart support for @use "sass:math"
+// Keep due to lack of Dart support for @use "sass:math"
+@import '~bootstrap/scss/mixins/grid';
+// Keep due to lack of Dart support for @use "sass:math"
+@import '~bootstrap/scss/vendor/rfs';
+// Already small enough; lightweight
+@import '~bootstrap/scss/containers';
+// Already small enough; lightweight
+@import '~bootstrap/scss/grid';
 
-// @import 'bootstrap-lite/mixins/utilities'; // @import '~bootstrap/scss/mixins/utilities';
-@import 'bootstrap-lite/mixins/container'; // @import '~bootstrap/scss/mixins/container';
-// @import 'bootstrap-lite/mixins/gradients'; // @import '~bootstrap/scss/mixins/gradients';
-@import 'bootstrap-lite/mixins/transition'; // @import '~bootstrap/scss/mixins/transition';
-@import 'bootstrap-lite/mixins/lists'; // @import '~bootstrap/scss/mixins/lists';
+// @import '~bootstrap/scss/navbar';
 
-@import '~bootstrap/scss/vendor/rfs'; // Keep due to lack of Dart support for @use "sass:math"
-
-@import 'bootstrap-lite/utilities'; // @import '~bootstrap/scss/utilities';
-@import 'bootstrap-lite/reboot'; // @import '~bootstrap/scss/reboot';
-
-@import '~bootstrap/scss/containers'; // Already small enough; lightweight
-@import '~bootstrap/scss/grid'; // Already small enough; lightweight
-@import 'bootstrap-lite/components/navbar'; // @import '~bootstrap/scss/navbar';
+@import 'bootstrap-lite/components/navbar';
 
 // Theme Styles
 @import 'theme/mixins';

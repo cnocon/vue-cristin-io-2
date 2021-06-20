@@ -67,8 +67,10 @@ export default {
 
 <style scoped lang="scss">
 .rotate-header {
-  padding-top: 15px;
   position: relative;
+  padding-top: 0.9375rem; // 15px
+  margin-bottom: 0;
+  margin-top: 0;
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.5em;
@@ -76,7 +78,6 @@ export default {
   text-transform: none;
   color: $dark;
   font-weight: 300;
-  margin-bottom: 0;
   text-align: center;
 
   @include media-breakpoint-down(sm) {
@@ -90,23 +91,23 @@ export default {
 
   span {
     @include media-breakpoint-down(sm) {
-      min-width: 230px;
+      min-width: 14.375rem; // 230px
 
       &.rotate-in {
-        line-height: 34px;
+        line-height: 2.125rem; // 34px
       }
     }
   }
 
   .rotate-words {
-    line-height: 34px;
+    line-height: 2.125rem; // 34px
     display: inline-block;
-    min-width: 280px;
+    min-width: 17.5rem; // 280px
     text-align: left;
 
     @include media-breakpoint-down(sm) {
-      min-width: 215px;
-      line-height: 22px;
+      min-width: 13.4375rem; // 215px
+      line-height: 1.375rem; // 22px
     }
 
     span {

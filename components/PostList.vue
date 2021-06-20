@@ -56,11 +56,12 @@ export default {
 
     .post-preview {
       @include media-breakpoint-up(sm) {
-        max-width: 525px;
+        max-width: 32.8125rem; // 525px
         margin-left: auto;
         margin-right: auto;
-        border: 1px solid $border-light-gray;
         border-radius: 5px;
+        border: 1px solid $border-lightest-gray;
+        box-shadow: $box-shadow-lg;
         border-bottom: 0;
       }
     }

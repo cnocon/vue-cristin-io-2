@@ -8,7 +8,7 @@
       <Section
         header-icon-type="fal"
         header-icon="user-astronaut"
-        header-text="A Little About Me"
+        header-text="More About Me"
       >
         <RotatingHeader />
       </Section>
@@ -101,11 +101,26 @@ export default {
 
 <style lang="scss" scoped>
 .index-page {
+  margin-top: 2rem;
+
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
   }
   @include media-breakpoint-up(lg) {
     margin-top: 4rem;
+  }
+
+  .header {
+    padding: 2.5rem 0;
+
+    @include media-breakpoint-down(md) {
+      margin: 2.5rem auto;
+    }
+  }
+
+  .section {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 }
 p,
@@ -159,6 +174,12 @@ header {
 
     @include media-breakpoint-up(lg) {
       margin-top: 0;
+    }
+  }
+
+  > .col-12:first-of-type {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 2rem;
     }
   }
 }

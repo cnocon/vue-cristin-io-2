@@ -163,6 +163,11 @@ export default {
     margin-bottom: 1rem;
   }
 
+  @include media-breakpoint-up(md) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   @include media-breakpoint-up(sm) {
     margin-bottom: 0;
   }
@@ -374,7 +379,15 @@ export default {
     @include media-breakpoint-down(md) {
       width: 100%;
       align-items: center;
-      padding: 0.5rem 1rem;
+      padding: 1.75rem 1rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0.75rem 1rem;
+    }
+
+    @include media-breakpoint-xxs-down {
+      padding: 0.25rem 1rem;
     }
   }
 }
@@ -535,5 +548,11 @@ export default {
 }
 #navbarDropdownLink {
   color: $white;
+}
+#navbarDropdown {
+  @include media-breakpoint-down(md) {
+    position: relative;
+    right: 1.5rem;
+  }
 }
 </style>

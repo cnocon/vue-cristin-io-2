@@ -1,5 +1,5 @@
 <template>
-  <article class="shadow post-preview">
+  <article class="post-preview">
     <header>
       <div class="post-image">
         <nuxt-img

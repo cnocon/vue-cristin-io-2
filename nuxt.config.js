@@ -89,8 +89,9 @@ export default {
 
   styleResources: {
     scss: [
-      '@/assets/scss/theme/_variables.scss', // Bootstrap Variable Overrides
-      '@/assets/scss/main.scss',
+      '@/assets/scss/theme/_variables.scss', // My Theme Variables
+      '@/assets/scss/main.scss', // Barrel file
+      '@/assets/scss/theme/_reset.scss', // Reset
     ],
   },
 
