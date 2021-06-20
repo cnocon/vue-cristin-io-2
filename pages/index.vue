@@ -1,9 +1,9 @@
 <template>
   <div class="index-page">
     <Head title="Home" />
-    <header class="header">
+    <!-- <header class="header">
       <h1 class="page-title">I&nbsp;L<span>&#9825;</span>VE&nbsp;CODE</h1>
-    </header>
+    </header> -->
     <main>
       <Section
         header-icon-type="fal"
