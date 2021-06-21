@@ -210,9 +210,9 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // critical CSS
-    extractCSS: {
-      ignoreOrder: true,
-    },
+    // extractCSS: {
+    //   ignoreOrder: true,
+    // },
     // analyze: true,
   },
 

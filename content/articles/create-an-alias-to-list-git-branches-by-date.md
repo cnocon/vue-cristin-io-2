@@ -32,7 +32,7 @@ git for-each-ref --sort=-committerdate refs/heads/ --color --format=
 
 Your results should look something like this:
 
-<post-image src="/blog/gbl-alias.jpg" alt="list of git branches"></post-image>
+<lazy-post-image src="/blog/gbl-alias.jpg" alt="list of git branches"></lazy-post-image>
 
 If you're human, you'll never remember that whole command. I personally have it saved as an alias called `gbl` (like "git branch list") that you can create as well by following along below.
 

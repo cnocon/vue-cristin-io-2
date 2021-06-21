@@ -83,5 +83,5 @@ I tried to find good Cheatsheets that might be helpful to beginner and intermedi
 
 Please remember that it's ok to not know everything, and even the biggest stars in our industry, like <a href="https://wesbos.com/" target="_blank" rel="noopener noreferrer">Wes Bos</a>, doubt themselves sometimes.
 
-<post-image src="/blog/wes-bos-tweet.jpg" alt="Wes Bos Tweet"></post-image>
+<lazy-post-image src="/blog/wes-bos-tweet.jpg" alt="Wes Bos Tweet"></lazy-post-image>
 

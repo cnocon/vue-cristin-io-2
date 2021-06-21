@@ -33,7 +33,7 @@ git log --grep=fix
 
 This should output what looks like a normal `git log` except that only commit messages with some semblance of the word "style" show up.
 
-<post-image src="/blog/git-log.jpg" alt="Git log"></post-image>
+<lazy-post-image src="/blog/git-log.jpg" alt="Git log"></lazy-post-image>
 
 ## Searching for Multiple Words or a Phrase
 
