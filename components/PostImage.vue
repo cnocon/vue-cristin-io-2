@@ -1,7 +1,7 @@
 <template>
   <figure>
     <div>
-      <NuxtImg :src="src" :alt="alt" provider="static"></NuxtImg>
+      <NuxtImg :src="src" :alt="alt" provider="static" deefer></NuxtImg>
     </div>
     <figcaption v-show="caption">{{ caption }}</figcaption>
   </figure>
@@ -40,7 +40,7 @@ figure {
     display: flex;
     justify-content: center;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       max-width: 100%;
       justify-content: flex-start;
       overflow-x: scroll;

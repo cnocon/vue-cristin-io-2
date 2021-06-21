@@ -72,7 +72,7 @@ export default {
       /nuxt.*/,
       /language.*/,
       /line-numbers/,
-      /vue.*/,
+      // /vue.*/,
     ],
   },
 
@@ -82,7 +82,7 @@ export default {
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
     '@nuxtjs/sitemap', // https://sitemap.nuxtjs.org/guide/setup
-    '@nuxtjs/pwa', //
+    // '@nuxtjs/pwa', //
   ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -187,21 +187,21 @@ export default {
     ],
   },
 
-  pwa: {
-    manifest: {
-      name: `cristin.io | Software Engineer Cristin O'Connor`,
-      short_name: 'cristin.io',
-      lang: 'en',
-      description: `Cristin O'Connor is a Software Engineer specializing in the Front End, including JavaScript, SSR, SPA, and SSG frameworks, responsive web design, UI/UX, and web performance. Find her portfolio, résumé, and blog her on cristin.io.`,
-      theme_color: '#66d4ff',
-      display: 'standalone',
-    },
-    meta: {
-      author: `Cristin O'Connor`,
-      theme_color: `#5eede1`,
-      ogHost: 'https://cristin.io',
-    },
-  },
+  // pwa: {
+  //   manifest: {
+  //     name: `cristin.io | Software Engineer Cristin O'Connor`,
+  //     short_name: 'cristin.io',
+  //     lang: 'en',
+  //     description: `Cristin O'Connor is a Software Engineer specializing in the Front End, including JavaScript, SSR, SPA, and SSG frameworks, responsive web design, UI/UX, and web performance. Find her portfolio, résumé, and blog her on cristin.io.`,
+  //     theme_color: '#66d4ff',
+  //     display: 'standalone',
+  //   },
+  //   meta: {
+  //     author: `Cristin O'Connor`,
+  //     theme_color: `#5eede1`,
+  //     ogHost: 'https://cristin.io',
+  //   },
+  // },
 
   router: {},
 
