@@ -212,7 +212,7 @@ header {
 .no-toc-image {
   margin: 1.25rem 0 1.25rem 1.25rem;
   float: right;
-  dispay: block;
+  display: block;
 
   @include media-breakpoint-down(md) {
     margin: 1.25rem auto;
