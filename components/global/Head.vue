@@ -3,32 +3,48 @@
 </template>
 
 <script>
-// Test on: https://cards-dev.twitter.com/validator
-// Test on: https://developers.facebook.com/tools/debug/
 export default {
   props: {
     title: {
       type: String,
-      default: `Cristin O'Connor, Front End Software Engineer`,
+      default: `Cristin O'Connor, Frontend Software Engineer | CRISTIN.IO`,
     },
     description: {
       type: String,
-      default: `Front End Software Engineer specializing in Javascript and Javascript frameworks, LESS, SASS, and Responsive Web Design | Cristin O'Connor's portfolio, résumé, and blog.`,
+      default: `Cristin O'Connor is a Software Engineer specializing in the Front End, including JavaScript, SSR, SPA, and SSG frameworks, responsive web design, UI/UX, and web performance. Find her portfolio, résumé, and blog her on cristin.io.`,
     },
     image: {
       type: String,
       default: `https://cristin.io/sharing/codehands.jpg`,
     },
+    imageAlt: {
+      type: String,
+      default: `Sharing knowledge is an important part of software engineering`,
+    },
+    ogType: {
+      type: String,
+      default: `website`,
+    },
+    shareImgWidth: {
+      type: String,
+      default: '1200',
+    },
+    shareImgHeight: {
+      type: String,
+      default: '627',
+    },
   },
-  head() {
+  head(x) {
+    console.log(x)
+    console.log(`https://cristin.io${this.$route.path}`)
     return {
-      title: this.title,
-      titleTemplate: `${this.title} | Cristin O'Connor, Front End Software Engineer`,
+      title: `${this.title} | Cristin O'Connor`,
+      titleTemplate: `${this.title} | Cristin O'Connor`,
       meta: [
         {
           hid: 'twitter:title',
           name: 'twitter:title',
-          content: this.title,
+          content: `${this.title} | Cristin O'Connor`,
         },
         {
           hid: 'twitter:description',
@@ -43,7 +59,7 @@ export default {
         {
           hid: 'twitter:image:alt',
           name: 'twitter:image:alt',
-          content: this.title,
+          content: this.imageAlt,
         },
         {
           hid: 'og:image:secure_url',
@@ -53,7 +69,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.title,
+          content: `${this.title} | Cristin O'Connor`,
         },
         {
           hid: 'og:description',
@@ -73,12 +89,37 @@ export default {
         {
           hid: 'og:image:alt',
           property: 'og:image:alt',
-          content: this.title,
+          content: this.imageAlt,
         },
         {
           hid: 'twitter:card',
           property: 'twitter:card',
-          content: 'summary',
+          content: 'summary_large_image',
+        },
+        {
+          hid: 'twitter:creator',
+          property: 'twitter:creator',
+          content: '@cnocon',
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://cristin.io${this.$route.path}`,
+        },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'cristin.io',
+        },
+        {
+          hid: 'og:image:width',
+          propety: 'og:image:width',
+          content: this.shareImgWidth,
+        },
+        {
+          hid: 'og:image:height',
+          propety: 'og:image:height',
+          content: this.shareImgHeight,
         },
       ],
     }

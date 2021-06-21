@@ -5,13 +5,11 @@ export default {
   ssr: true,
 
   // CONFIG TARGET: https://go.nuxtjs.dev/config-target
-  // 'server': For server side rendering
-  // 'static': For static sites
+  // 'server': For server side rendering and 'static': For static sites
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: `Cristin O'Connor, Front End Software Engineer`,
     htmlAttrs: {
       lang: 'en',
     },
@@ -20,11 +18,6 @@ export default {
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: `Front End Software Engineer specializing in Javascript and Javascript frameworks, LESS, SASS, and Responsive Web Design | Cristin O'Connor's portfolio, résumé, and blog.`,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -49,10 +42,6 @@ export default {
     'nuxt-purgecss',
   ],
 
-  // {
-  //   prefetch: true,
-  //   preconnect: true,
-  // }
   googleFonts: {
     display: 'swap',
     preload: true,
@@ -93,7 +82,7 @@ export default {
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
     '@nuxtjs/sitemap', // https://sitemap.nuxtjs.org/guide/setup
-    '@nuxtjs/pwa', // https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa', //
   ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -143,6 +132,8 @@ export default {
           'faBars',
           'faGem',
           'faBrackets',
+          'faChartNetwork',
+          'faSubway',
         ],
       },
       {
@@ -198,12 +189,18 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'CRISTIN.IO',
-      short_name: 'CRISTIN.IO',
+      name: `cristin.io | Software Engineer Cristin O'Connor`,
+      short_name: 'cristin.io',
       lang: 'en',
-      description: `Cristin O'Connor's Front End Software Engineering Résumé, Blog and Portfolio Site`,
-      theme_color: '#345345',
-      start_url: 'https://cristin.io?standalone=true',
+      description: `Cristin O'Connor is a Software Engineer specializing in the Front End, including JavaScript, SSR, SPA, and SSG frameworks, responsive web design, UI/UX, and web performance. Find her portfolio, résumé, and blog her on cristin.io.`,
+      theme_color: '#66d4ff',
+      display: 'standalone',
+    },
+    meta: {
+      MobileWebAppCapable: true,
+      author: `Cristin O'Connor`,
+      theme_color: `#5eede1`,
+      ogHost: 'https://cristin.io',
     },
   },
 

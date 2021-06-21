@@ -1,15 +1,15 @@
 <template>
   <div class="index-page">
-    <Head title="Home" />
-    <!-- <header class="header">
-      <h1 class="page-title">I&nbsp;L<span>&#9825;</span>VE&nbsp;CODE</h1>
-    </header> -->
+    <Head
+      title="Home"
+      share-img-width="1200"
+      share-img-height="627"
+      og-type="website"
+      image="https://cristin.io/sharing/codehands.jpg"
+      image-alt="Cristin O'Connor shares her software engineering knowledge and experience"
+      description="Homepage of cristin.io, Cristin O'Connor's software engineering blog, portfolio, and résumé website."
+    ></Head>
     <main>
-      <!-- <Section
-        header-icon-type="fal"
-        header-icon="user-astronaut"
-        header-text="More About Me"
-      > -->
       <RotatingHeader />
 
       <LazySection
@@ -18,20 +18,30 @@
         header-text="Services"
       >
         <div class="row services-row">
-          <div class="col-12 col-sm-6 col-lg-3 text-center">
-            <h4>WEB DEVELOPMENT</h4>
+          <div class="col-12 col-sm-6 col-lg-3 service-offered">
+            <h3>WEB DEVELOPMENT</h3>
             <p>
               This is my primary area of expertise after 10+ years in the field.
-              <a href="mailto:her@cristin.io">Contact me</a> about web
-              development.
+              <a
+                href="mailto:her@cristin.io"
+                aria-role="link"
+                aria-label="Link to Email Me"
+                >Contact me</a
+              >
+              about web development.
             </p>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3 text-center">
-            <h4>CODE TUTORING</h4>
+          <div class="col-12 col-sm-6 col-lg-3 service-offered">
+            <h3>CODE TUTORING</h3>
             <p>
               I focus on teaching with compassion and work with all ages.
-              <a href="mailto:her@cristin.io">Contact me</a> about mentoring or
-              tutoring.
+              <a
+                href="mailto:her@cristin.io"
+                aria-role="link"
+                aria-label="Link to Email Me"
+                >Contact me</a
+              >
+              about mentoring or tutoring.
             </p>
           </div>
           <div class="col-12 col-lg-6 quote-container">
@@ -183,9 +193,23 @@ header {
     }
   }
 
-  > .col-12:first-of-type {
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 2rem;
+  .service-offered {
+    text-align: center;
+
+    h3 {
+      font-family: $font-family-heading;
+      font-weight: 700;
+      font-size: calc(1.275rem + 0.3vw);
+
+      @media (min-width: 1200px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &:first-of-type {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

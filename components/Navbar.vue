@@ -17,19 +17,12 @@
           >
             Cristin O'Connor
           </h2>
-
-          <!-- formerly .title -->
           <h3>Front End Engineer</h3>
         </div>
-
-        <!-- <div class="name-and-title-mobile">
-          <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
-          <div class="title">Front End Engineer</div>
-        </div> -->
       </NuxtLink>
 
       <!-- formerly .nav -->
-      <ul class="nav-item-list">
+      <ul class="nav-item-list" role="navigation">
         <li class="nav-item">
           <NuxtLink
             :active="isActiveNavItem('resume')"
@@ -63,8 +56,12 @@
             id="navbarDropdown"
             href="#dropdownMenu"
             role="button"
-            :aria-expanded="showMenu"
-            aria-haspopup="true"
+            :aria-label="`${
+              showMenu
+                ? 'Close Mobile Navigation Button'
+                : 'Mobile Navigation Button'
+            }`"
+            :aria-expanded="`${showMenu ? 'true' : 'false'}`"
             :class="`nav-link dropdown-toggle ${showMenu ? 'show' : ''}`"
             target="_self"
             data-bs-toggle="dropdown"
@@ -83,10 +80,12 @@
           <ul
             v-show="showMenu"
             id="dropdownMenu"
-            aria-labelledby="#navbarDropdown"
             :class="`dropdown-item-list dropdown-menu ${
               showMenu ? 'show' : ''
             }`"
+            role="navigation"
+            aria-label="Mobile Navigation Menu"
+            aria-labelledby="#navbarDropdown"
           >
             <li class="dropdown-nav-item" role="presentation">
               <NuxtLink
@@ -282,7 +281,6 @@ export default {
     width: 48px; // 48px
     height: 48px; // 48px
     border-radius: 50%;
-    // $rainbow-box-shadow-dark:
     box-shadow: hsl(175, 80%, 60%) 0 3px, hsl(58, 100%, 60%) -3px 0,
       hsl(240, 80%, 69%) 3px 0, hsl(355, 80%, 72.5%) 0 -3px 0;
     background-color: $lightest-gray;
@@ -365,7 +363,6 @@ export default {
   }
 
   @include media-breakpoint-up(lg) {
-    // padding-left: 1rem;
     padding-right: 0;
     letter-spacing: 0;
   }
@@ -442,32 +439,6 @@ export default {
     margin-bottom: 0;
     padding: 0;
     border-top: 3px solid $primary-light;
-    // right: calc(-50% - 15px);
-    // min-width: calc(100vw + 15px);
-    // width: 100%;
-    // padding: 3px 0 0;
-    // margin: 0;
-    // display: flex;
-    // flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-    // padding-left: 0;
-    // margin-bottom: 0;
-    // list-style: none;
-
-    // @include media-breakpoint-up(sm) {
-    //   position: absolute;
-    //   top: 74px;
-    //   z-index: 10;
-    //   right: calc(-100% - 56px);
-    //   min-width: calc(100vw + 15px);
-    //   width: 100%;
-    //   padding: 3px 0 0;
-    //   margin: 0;
-    //   box-shadow: $box-shadow-md;
-    //   @include rainbow-link-decoration;
-    //   background-size: 100% 3px;
-    //   background-position: top left;
-    //   transition: none !important;
-    // }
 
     &:hover,
     &:focus {

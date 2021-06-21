@@ -132,7 +132,6 @@ export default {
 
   &.prev,
   &.next {
-    // display: inline-block;
     display: flex;
     flex-wrap: wrap;
 

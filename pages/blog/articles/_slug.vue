@@ -5,6 +5,7 @@
       :title="`${post.title}`"
       :description="`${post.title} written by Cristin O'Connor, Front End Software Engineer`"
       :image="`https://cristin.io/${post.shareimg}`"
+      og-type="article"
     ></Head>
     <article>
       <header>

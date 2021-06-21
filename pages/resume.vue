@@ -1,9 +1,13 @@
 <template>
   <div class="resume-page container-fluid">
     <Head
-      title="Résumé &amp; Courses"
-      description="Résumé and recent coursework completed by Cristin O'Connor, a Utah-based Front End Software Engineer with 10 years of experience and a passion for Javascript and Javascript frameworks."
+      title="Résumé and Coursework"
       image="https://cristin.io/sharing/resume-screenshot.jpg"
+      image-alt="Screenshot of Cristin O'Connor's online résumé and courses webpage"
+      share-img-width="1200"
+      share-img-height="627"
+      description="Cristin O'Connor's online résumé, including recent coursework"
+      og-type="website"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1>Résumé &amp; Coursework</h1>

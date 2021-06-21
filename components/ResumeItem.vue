@@ -192,20 +192,6 @@ export default {
     }
   }
 
-  &.edu-item,
-  &.service-item,
-  &.work-item {
-    header {
-      > p {
-        // display: flex;
-        // justify-content: flex-start;
-        // align-items: center;
-        // flex-wrap: wrap;
-        // margin-top: 0;
-      }
-    }
-  }
-
   &.service-item {
     display: block;
     border: 0;
