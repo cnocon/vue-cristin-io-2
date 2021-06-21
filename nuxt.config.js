@@ -172,9 +172,6 @@ export default {
       lastmod: new Date(),
     },
     routes: [
-      '/blog/1',
-      '/blog/2',
-      '/blog/3',
       '/blog/articles/women-in-computing-are-losing-ground',
       '/blog/articles/a-curated-list-of-cheatsheets-for-web-developers',
       '/blog/articles/perilous-confusion-and-the-opportunity-for-growth',
@@ -184,6 +181,9 @@ export default {
       '/blog/articles/automatically-convert-pixels-to-rems-with-sass',
       '/blog/articles/create-an-alias-to-list-git-branches-by-date',
       '/blog/articles/search-git-history-for-certain-words-and-phrases',
+      '/blog/1',
+      '/blog/2',
+      '/blog/3',
     ],
   },
 
@@ -197,7 +197,6 @@ export default {
       display: 'standalone',
     },
     meta: {
-      MobileWebAppCapable: true,
       author: `Cristin O'Connor`,
       theme_color: `#5eede1`,
       ogHost: 'https://cristin.io',
