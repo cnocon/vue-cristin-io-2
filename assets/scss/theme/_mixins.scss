@@ -20,16 +20,36 @@
   border-bottom: 0;
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: 100% 2px;
   background-image: $pastel-rainbow-bar-dark;
+  background-size: 100% 2px;
   transition: background-size 0.75s ease-in-out;
 
   &:hover,
   &:focus {
     text-decoration: none;
     border-bottom: 0;
-    background-size: 5px 4px;
     background-image: $pastel-rainbow-bar;
+    background-size: 1px 2px;
+  }
+}
+
+@mixin rainbow-link-decoration-on-hover {
+  text-decoration: none;
+  border-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-image: $pastel-rainbow-bar;
+  background-size: 1px 2px;
+  transition: background-size 0.75s ease-in-out;
+
+  &:not(:hover),
+  &:not(:focus) {
+    text-decoration: none;
+    border-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-image: $pastel-rainbow-bar-dark;
+    background-size: 100% 2px;
   }
 }
 

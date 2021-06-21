@@ -1,5 +1,5 @@
 $primary: hsl(210, 25%, 25%);
-$primary-light: hsl(210, 15%, 45%);
+$primary-light: #8fa0b1;
 $secondary: hsl(210, 85%, 60%);
 $success: hsl(167, 90%, 44%);
 $warning: hsl(48, 100%, 55%);
@@ -25,7 +25,7 @@ $font-family-sans-serif: $font-family-heading;
 
 $font-family-display: Oswald, Impact, sans-serif;
 
-$font-family-brand: 'Poiret One', Lato, sans-serif;
+$font-family-brand: 'Poiret One', Oswald, Impact, sans-serif;
 
 $white: #fff;
 $black: hsl(210, 40%, 15%);
@@ -174,4 +174,14 @@ $perfect-radial-rainbow: radial-gradient(
   hsl(175, 92%, 67%) 50%,
   hsl(49, 100%, 80%) 60%,
   hsl(0, 80%, 75%) 75%
+);
+$perfect-radial-rainbow-two: radial-gradient(
+  ellipse at top right,
+  hsl(259, 93%, 55%) 15%,
+  hsl(259, 83%, 65%) 30%,
+  hsl(197, 100%, 70%) 42%,
+  hsl(175, 92%, 67%) 49%,
+  hsl(49, 100%, 70%) 54%,
+  hsl(0, 97%, 77%) 60%,
+  hsl(0, 85%, 72%) 77%
 );

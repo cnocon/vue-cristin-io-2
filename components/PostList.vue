@@ -54,6 +54,15 @@ export default {
       margin-right: auto;
     }
 
+    // Reduce article padding for narrow columns on large screens
+    &.col-lg-4 {
+      .post-preview {
+        @media all and (min-width: 992px) and (max-width: 1199px) {
+          padding: 1rem 0.75rem 0.75rem !important;
+        }
+      }
+    }
+
     .post-preview {
       @include media-breakpoint-up(sm) {
         max-width: 32.8125rem; // 525px

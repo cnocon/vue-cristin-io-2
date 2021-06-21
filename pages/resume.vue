@@ -169,9 +169,8 @@ export default {
   margin: 3rem auto 0;
 
   h1 {
-    margin-top: 0;
-
     @include media-breakpoint-up(lg) {
+      margin-top: 1rem;
       margin-bottom: 4rem;
     }
   }

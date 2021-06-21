@@ -75,7 +75,7 @@ header {
     font-size: 1.5rem;
     font-family: $font-family-display;
     font-weight: 700;
-    @include rainbow-link-decoration;
+    @include rainbow-link-decoration-on-hover;
   }
 
   .post-image {

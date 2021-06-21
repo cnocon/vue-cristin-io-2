@@ -58,6 +58,7 @@ export default {
       Oswald: [300, 400, 500, 700], // exhaustive
       Lato: [300, 400, 700], // 200
       'Open+Sans': [300, 400, 600, 700], // 800
+      'Poiret+One': [400],
     },
   },
 
@@ -72,7 +73,14 @@ export default {
 
   // purgeCSS: https://purgecss.com/guides/nuxt.html
   purgeCSS: {
-    whitelistPatterns: [/svg.*/, /fa.*/], // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
+    whitelistPatterns: [
+      /svg.*/,
+      /fa.*/,
+      /nuxt.*/,
+      /language.*/,
+      /line-numbers/,
+      /vue.*/,
+    ], // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -191,6 +199,7 @@ export default {
       lang: 'en',
       description: `Cristin O'Connor's Front End Software Engineering Résumé, Blog and Portfolio Site`,
       theme_color: '#345345',
+      start_url: 'https://cristin.io?standalone=true',
     },
   },
 

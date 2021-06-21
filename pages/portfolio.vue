@@ -362,9 +362,10 @@ export default {
   }
 
   h1 {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     text-align: left;
   }
+
   .section {
     padding-bottom: 2rem;
   }

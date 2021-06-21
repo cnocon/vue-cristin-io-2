@@ -13,7 +13,7 @@ categories: [{name: Accessibility, slug: accessibility}, {name: SCSS, slug: scss
 
 According to the <a href="http://www.w3.org/TR/2013/CR-css3-values-20130730/#font-relative-lengths" target="_blank" rel="noopener noreferrer">W3C spec</a> the definition for one rem unit is:
 
-<quote>
+<quote hide-citation="true">
   <template #quote>One rem is equal to the computed value of the font-size on the root element. When specified on the font-size property of the root element, the rem units refer to the property’s initial value.</template>
 </quote>
 

@@ -1,8 +1,8 @@
 <template>
-  <div :class="'quote ' + classes">
+  <div :class="`quote ${classes}`">
     <blockquote>
       <p><slot name="quote"></slot></p>
-      <cite><slot name="cite"></slot></cite>
+      <cite v-if="!hideCitation"><slot name="cite"></slot></cite>
     </blockquote>
   </div>
 </template>
@@ -10,6 +10,10 @@
 <script>
 export default {
   props: {
+    hideCitation: {
+      type: Boolean,
+      default: false,
+    },
     classes: {
       type: String,
       default: '',
@@ -20,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .quote {
-  padding: 2rem 3rem 1rem 1.5rem;
+  padding: 2rem 3rem 2rem 1.5rem;
   margin: 0 auto 1.5rem;
   border-radius: 4px;
   max-width: 600px;
@@ -79,6 +83,7 @@ export default {
       width: 100%;
       text-align: right;
       margin-top: 1.25rem;
+      margin-bottom: 0;
 
       &::before {
         content: '\2014\00A0'; // em dash, nbsp
