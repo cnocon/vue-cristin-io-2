@@ -187,8 +187,6 @@ export default {
 
 <style scoped lang="scss">
 .resume-page {
-  -webkit-animation: 1s appear;
-  animation: 1s appear;
   margin: 3rem auto 0;
 
   h1 {

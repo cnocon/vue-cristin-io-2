@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  animation: 1s appear;
+  animation: 0.4s appear;
   margin: auto auto 0;
 }
 </style>

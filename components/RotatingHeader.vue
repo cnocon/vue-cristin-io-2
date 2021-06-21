@@ -123,13 +123,13 @@ export default {
 
       &.active {
         opacity: 1;
-        animation: 1s appear;
+        animation: 0.4s reappear; // used to be 1s
         font-weight: 700;
       }
 
       &.fading {
         opacity: 0;
-        animation: 1s disappear;
+        animation: 0.4s disappear; // used to be 1s
       }
 
       &:not(.active):not(.fading) {
@@ -138,7 +138,7 @@ export default {
     }
   }
 
-  @keyframes appear {
+  @keyframes reappear {
     0% {
       opacity: 0;
       transform: translateY(39px);
