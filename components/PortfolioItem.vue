@@ -22,6 +22,7 @@
           :alt="title"
           :class="`summary-img ${screenshotClasses ? screenshotClasses : ''}`"
           provider="static"
+          defer
         ></NuxtImg>
       </div>
       <slot name="summary"></slot>

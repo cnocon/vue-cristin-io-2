@@ -12,7 +12,7 @@
     <main>
       <RotatingHeader />
 
-      <LazySection
+      <Section
         header-icon-type="fal"
         header-icon="concierge-bell"
         header-text="Services"
@@ -24,7 +24,7 @@
               This is my primary area of expertise after 10+ years in the field.
               <a
                 href="mailto:her@cristin.io"
-                aria-role="link"
+                role="link"
                 aria-label="Link to Email Me"
                 >Contact me</a
               >
@@ -37,7 +37,7 @@
               I focus on teaching with compassion and work with all ages.
               <a
                 href="mailto:her@cristin.io"
-                aria-role="link"
+                role="link"
                 aria-label="Link to Email Me"
                 >Contact me</a
               >
@@ -45,7 +45,7 @@
             </p>
           </div>
           <div class="col-12 col-lg-6 quote-container">
-            <LazyQuote classes="subtle">
+            <Quote classes="subtle">
               <template #quote>
                 Cristin O'Connor is a lifesaver! Being new to Gatsby.js, I was
                 having a difficult time finding a solution for a blocker. I
@@ -56,10 +56,10 @@
                 what a newbie like me needed."
               </template>
               <template #cite>Mariah W., Freelance Web Developer</template>
-            </LazyQuote>
+            </Quote>
           </div>
         </div>
-      </LazySection>
+      </Section>
 
       <LazySection
         v-if="posts"
