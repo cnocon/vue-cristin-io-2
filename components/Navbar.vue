@@ -277,7 +277,7 @@ export default {
 .navbar-logo {
   display: none;
 
-  @include media-breakpoint-xxs-up {
+  @include media-breakpoint-up(sm) {
     display: block;
     width: 48px; // 48px
     height: 48px; // 48px

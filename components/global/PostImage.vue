@@ -1,7 +1,7 @@
 <template>
   <figure>
     <div>
-      <nuxt-img :src="src" :alt="alt" defer></nuxt-img>
+      <NuxtImg :src="src" :alt="alt"></NuxtImg>
     </div>
     <figcaption v-show="caption">{{ caption }}</figcaption>
   </figure>

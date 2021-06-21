@@ -11,12 +11,14 @@
         <h1>{{ post.title }}</h1>
         <div class="meta">
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-          <span
-            v-for="(cat, index) in post.categories"
-            :key="cat + '-' + index"
-            class="badge badge-dark"
-            >{{ cat.name }}</span
-          >
+          <span class="categories">
+            <span
+              v-for="(cat, index) in post.categories"
+              :key="cat + '-' + index"
+              class="badge badge-dark"
+              >{{ cat.name }}</span
+            >
+          </span>
         </div>
       </header>
       <div v-if="post.toc.length > 0" class="row toc-row">
@@ -24,7 +26,7 @@
           <div class="toc-image">
             <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
           </div>
-          <h6>TABLE OF CONTENTS</h6>
+          <h5>TABLE OF CONTENTS</h5>
           <ul class="toc">
             <li
               v-for="item in post.toc"
@@ -115,7 +117,9 @@ export default {
 
 <style lang="scss" scoped>
 .blog-slug-page {
-  margin-top: 2rem;
+  @include media-breakpoint-up(sm) {
+    margin-top: 2rem;
+  }
 
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
@@ -126,7 +130,7 @@ export default {
   }
 
   h1 {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     line-height: 1.1em;
   }
 }
@@ -144,17 +148,6 @@ header {
       font-size: 3rem;
     }
   }
-
-  time {
-    display: block;
-    font-weight: 700;
-    font-size: 1.125rem;
-    font-family: $font-family-display;
-  }
-
-  .badge:not(:last-of-type) {
-    margin-right: 0.4em;
-  }
 }
 .toc-col {
   h6 {
@@ -167,8 +160,10 @@ header {
 
   h6,
   ul {
+    max-width: 72.5%;
+
     @include media-breakpoint-down(sm) {
-      max-width: 72.5%;
+      max-width: 90%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -208,6 +203,7 @@ header {
 .no-toc-image {
   margin: 1.25rem 0 1.25rem 1.25rem;
   float: right;
+  dispay: block;
 
   @include media-breakpoint-down(md) {
     margin: 1.25rem auto;
@@ -233,18 +229,42 @@ header {
   float: left;
   padding: 0 4px 0px 0;
 }
-
-.nuxt-content-container {
-  &.no-toc {
-    @include media-breakpoint-up(md) {
-      margin-top: 2rem;
-    }
-  }
-}
-.meta {
-  margin-bottom: 0.5rem;
-}
 .toc-row {
   margin-bottom: 2rem;
+}
+.no-toc {
+  @include media-breakpoint-up(md) {
+    margin-top: 2rem;
+  }
+}
+
+.meta {
+  margin-bottom: 0.25rem;
+
+  time {
+    display: block;
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: $font-family-display;
+    margin-bottom: 0.75rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.75rem;
+    }
+
+    &::before {
+      content: 'Published on ';
+      font-family: $font-family-base;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: darken($border-dark-gray, 10%);
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  .badge:not(:last-of-type) {
+    margin-right: 0.4em;
+  }
 }
 </style>

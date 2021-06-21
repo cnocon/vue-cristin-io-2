@@ -48,19 +48,10 @@ export default {
     background-color: $white;
     vertical-align: middle;
     padding: 0 1rem 0 0;
-    line-height: 64px;
-    height: 64px;
+    z-index: 10;
 
     @include media-breakpoint-down(md) {
       position: relative;
-      line-height: 42px;
-      height: 42px;
-      background-color: $white;
-      z-index: 1;
-    }
-
-    @include media-breakpoint-xxs-down {
-      line-height: 32px;
     }
   }
 
@@ -69,26 +60,15 @@ export default {
 
     @include media-breakpoint-xxs-up {
       content: '';
-      display: inline-block;
-      box-sizing: content-box;
+      display: block;
+      box-sizing: border-box;
       position: absolute;
-      left: 50%;
-      height: 42px;
-      bottom: calc(50% - 2px);
-      margin: 0;
+      left: 0;
+      background-color: $border-light-gray;
       width: 100%;
-      max-width: none;
-      transform: translateX(-50%);
-      border-bottom: 1px solid $light-gray;
-    }
-
-    @include media-breakpoint-down(sm) {
-      bottom: 25%;
-      transform: translate(-50%, -50%);
-    }
-
-    @include media-breakpoint-up(md) {
-      height: 64px;
+      height: 1px;
+      vertical-align: middle;
+      bottom: 50%;
     }
   }
 
@@ -97,7 +77,6 @@ export default {
     font-family: $font-family-display;
     white-space: nowrap;
     text-transform: uppercase;
-    // color: $border-dark-gray;
     margin-left: 0.5rem;
     // here
     font-weight: 500;
@@ -116,15 +95,15 @@ export default {
     color: lighten($border-med-gray, 5%);
 
     @include media-breakpoint-down(md) {
-      width: 2.625rem; // 42px
-      height: 2.625rem; // 42px
+      // width: 2.625rem; // 42px
+      // height: 2.625rem; // 42px
       margin-right: 0.25rem;
       margin-left: 12px;
     }
 
     @include media-breakpoint-xxs-down {
-      height: 2rem; // 32px
-      width: 2rem; // 32px
+      // height: 2rem; // 32px
+      // width: 2rem; // 32px
     }
 
     svg {
@@ -132,15 +111,6 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-  }
-
-  &.portfolio-section-header {
-    > span {
-      @include media-breakpoint-down(md) {
-        position: static;
-        transform: none;
-      }
     }
   }
   &.dark {
