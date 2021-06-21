@@ -1,15 +1,11 @@
 <template>
-  <div :class="itemClasses">
+  <div :class="`item ${itemClass}`">
     <div class="year">{{ item.year }}</div>
     <header>
       <h4>
         {{ item.position }}
-
         <span v-if="item.positionDetail" class="median-pipe">|</span>
-        <small
-          v-if="item.positionDetail"
-          class="nocase font-tertiary font-weight-300"
-        >
+        <small v-if="item.positionDetail" class="nocase">
           {{ item.positionDetail }}
         </small>
       </h4>
@@ -32,17 +28,17 @@
         </span>
       </p>
     </header>
-    <ul :class="descClass ? descClass : ''">
+    <ul :class="descClass">
       <li
         v-for="(desc, index) in item.descList"
-        :key="index"
-        :class="descItemClass ? descItemClass : ''"
+        :key="`desc-${index}`"
+        :class="descItemClass"
       >
         {{ desc }}
       </li>
     </ul>
     <ul v-if="item.awards.length > 0" class="awards list-style-none">
-      <li v-for="(award, index) in item.awards" :key="index">
+      <li v-for="(award, index) in item.awards" :key="`award-${index}`">
         <font-awesome-icon
           :icon="['fal', 'trophy-alt']"
           size="2x"
@@ -76,11 +72,6 @@ export default {
       default: '',
     },
   },
-  computed: {
-    itemClasses() {
-      return 'item ' + this.itemClass
-    },
-  },
 }
 </script>
 
@@ -106,6 +97,10 @@ export default {
 
     &.edu-item {
       margin-bottom: 2rem;
+
+      @include media-breakpoint-up(md) {
+        padding: 1.875rem 1.375rem 0 2.025rem;
+      }
 
       header {
         p {
@@ -151,7 +146,7 @@ export default {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1em;
-    color: $border-dark-gray;
+    color: lighten($primary, 5%);
   }
 
   &.edu-item {
@@ -229,31 +224,34 @@ export default {
 
     span {
       display: inline-block;
-      font-weight: 400;
       margin-bottom: 0;
+      font-weight: 500;
       font-family: $font-family-heading;
-      font-size: 0.875rem;
+
+      &.company,
+      &.location {
+        line-height: 2rem;
+        color: darken($border-dark-gray, 10%);
+      }
 
       &.company {
-        font-family: $font-family-heading;
         font-size: 1.15rem;
-        line-height: 2rem;
-        font-weight: 400;
 
-        @include media-breakpoint-down(md) {
-          display: inline-block;
-          font-size: 0.925rem;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.25rem;
         }
       }
 
       &.location {
-        font-family: $font-family-base;
-        font-size: 0.875rem;
+        font-weight: 300;
         line-height: 2rem;
         vertical-align: middle;
         text-transform: uppercase;
-        font-style: normal;
-        color: $border-dark-gray;
+        font-size: 0.875rem;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 0.925rem;
+        }
       }
 
       &.range {
@@ -261,7 +259,7 @@ export default {
         font-weight: 500;
         width: 100%;
         font-size: 0.9rem;
-        color: darken($border-dark-gray, 5%);
+        color: $primary;
         font-family: $font-family-base;
         line-height: 1.25em;
 
@@ -280,22 +278,11 @@ export default {
     }
 
     .fa-chevron-double-right {
-      color: $border-med-gray;
-    }
-
-    .fa-chevron-right,
-    .fa-chevron-double-right {
       display: inline-block;
       padding: 0 5px 0 7px;
-      line-height: 1rem;
-
-      &::before {
-        vertical-align: top;
-        line-height: 1rem;
-        color: $border-dark-gray;
-        font-size: 12px;
-        line-height: 15px;
-      }
+      line-height: 1em;
+      vertical-align: bottom;
+      color: lighten($primary, 5%);
     }
   }
   ul {

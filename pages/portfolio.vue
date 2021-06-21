@@ -72,7 +72,7 @@
       </PortfolioItem>
     </Section>
 
-    <Section
+    <LazySection
       header-text="GitHub Stats Card for React"
       header-icon-type="fab"
       header-icon="github"
@@ -80,6 +80,7 @@
       section-classes="section"
     >
       <LazyPortfolioItem
+        lazy="true"
         title="GitHub Stats Card for React"
         demo-link="https://react-github-stats-card-v2-demo.netlify.app"
         git-hub-link="https://github.com/cnocon/react-github-stats-card-v2"
@@ -122,16 +123,17 @@
           </p>
         </template>
       </LazyPortfolioItem>
-    </Section>
+    </LazySection>
 
-    <Section
+    <LazySection
       header-text="Front End  Dev Flash Cards App"
       header-icon-type="fad"
       header-icon="clipboard-list-check"
       header-classes="dark portfolio-section-header"
       section-classes="section"
     >
-      <PortfolioItem
+      <LazyPortfolioItem
+        lazy="true"
         title="Front End  Dev Flash Cards App"
         demo-link="https://fed-flash-cards.netlify.app"
         git-hub-link="https://github.com/cnocon/flash-cards"
@@ -155,8 +157,8 @@
             API and MongoDB database.
           </p>
         </template>
-      </PortfolioItem>
-    </Section>
+      </LazyPortfolioItem>
+    </LazySection>
 
     <LazySection
       header-text="Weather Charts/Forecast App"
@@ -166,6 +168,7 @@
       section-classes="section"
     >
       <LazyPortfolioItem
+        lazy="true"
         title="Weather Charts/Forecast App"
         demo-link="https://weather-charts-app.netlify.app"
         git-hub-link="https://github.com/cnocon/weather-charts-app-new"
@@ -200,6 +203,7 @@
       section-classes="section"
     >
       <LazyPortfolioItem
+        lazy="true"
         title="YouTube Search App"
         demo-link="https://youtube-search-new.netlify.app"
         git-hub-link="https://github.com/cnocon/youtube-search-new"
@@ -231,6 +235,7 @@
       section-classes="section"
     >
       <LazyPortfolioItem
+        lazy="true"
         title="CenturyLink Small Business Site"
         demo-link="https://business.centurylink.com/"
         screenshot="/portfolio/clq.jpg"
@@ -268,6 +273,7 @@
       section-classes="section"
     >
       <LazyPortfolioItem
+        lazy="true"
         title="CRISTIN.IO (Vue 3 Implementation)"
         demo-link="https://vue.cristin.io/"
         git-hub-link="https://github.com/cnocon/vue-cristin-io-2/tree/vue"
@@ -305,6 +311,7 @@
       section-classes="section"
     >
       <LazyPortfolioItem
+        lazy="true"
         title="CRISTIN.IO (Gatsby Implementation)"
         demo-link="https://cristin-io-gatsby.netlify.app/"
         git-hub-link="https://github.com/cnocon/cristin-io-gatsby"

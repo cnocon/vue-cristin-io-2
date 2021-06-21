@@ -17,7 +17,15 @@
     </p>
     <div class="portfolio-item-content">
       <div v-if="screenshot.length > 0" class="screenshot-container">
+        <LazyNuxtImg
+          v-if="lazy"
+          format="jpeg"
+          :src="screenshot"
+          :alt="title"
+          :class="`summary-img ${screenshotClasses ? screenshotClasses : ''}`"
+        ></LazyNuxtImg>
         <NuxtImg
+          v-else
           format="jpeg"
           :src="screenshot"
           :alt="title"
@@ -48,6 +56,10 @@
 <script>
 export default {
   props: {
+    lazy: {
+      type: Boolean,
+      default: false,
+    },
     title: {
       type: String,
       default: null,

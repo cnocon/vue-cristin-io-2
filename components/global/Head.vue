@@ -34,9 +34,7 @@ export default {
       default: '627',
     },
   },
-  head(x) {
-    console.log(x)
-    console.log(`https://cristin.io${this.$route.path}`)
+  head() {
     return {
       title: `${this.title} | Cristin O'Connor`,
       titleTemplate: `${this.title} | Cristin O'Connor`,

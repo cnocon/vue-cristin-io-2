@@ -26,12 +26,18 @@
             <span>Work History</span>
           </h3>
           <div class="timeline">
-            <ResumeItem
-              v-for="(job, index) in data.experience"
-              :key="index"
-              :item="job"
-              item-class="work-item"
-            ></ResumeItem>
+            <div v-for="(job, index) in data.experience" :key="`work-${index}`">
+              <ResumeItem
+                v-if="index < 2"
+                :item="job"
+                item-class="work-item"
+              ></ResumeItem>
+              <LazyResumeItem
+                v-else
+                :item="job"
+                item-class="work-item"
+              ></LazyResumeItem>
+            </div>
           </div>
         </div>
       </div>
@@ -41,14 +47,25 @@
           <span>Service</span>
         </h3>
         <div class="service">
-          <ResumeItem
+          <div
             v-for="(service, index) in data.volunteering"
-            :key="index"
-            item-class="service-item"
-            desc-item-class="list-style-none"
-            desc-class="list-style-none"
-            :item="service"
-          ></ResumeItem>
+            :key="`service-${index}`"
+          >
+            <ResumeItem
+              v-if="index < 2"
+              item-class="service-item"
+              desc-item-class="list-style-none"
+              desc-class="list-style-none"
+              :item="service"
+            ></ResumeItem>
+            <LazyResumeItem
+              v-else
+              item-class="service-item"
+              desc-item-class="list-style-none"
+              desc-class="list-style-none"
+              :item="service"
+            ></LazyResumeItem>
+          </div>
         </div>
 
         <h3>
@@ -92,7 +109,7 @@
         <div class="education">
           <LazyResumeItem
             v-for="(edu, index) in data.education"
-            :key="index"
+            :key="`edu-${index}`"
             :item="edu"
             item-class="edu-item"
             desc-item-class="list-style-none"
@@ -310,9 +327,9 @@ export default {
     padding-top: 2rem;
   }
 
-  .item {
-    padding-left: 2.625rem;
-  }
+  // .item {
+  //   padding-left: 2.625rem;
+  // }
 }
 .assets {
   padding-bottom: 1.25rem;
