@@ -105,8 +105,12 @@ export default {
     min-width: 17.5rem; // 280px
     text-align: left;
 
+    @include media-breakpoint-xxs-down {
+      min-width: 13.4375rem;
+    }
+
     @include media-breakpoint-down(sm) {
-      min-width: 13.4375rem; // 215px
+      min-width: 15.4375rem; // 215px
       line-height: 1.375rem; // 22px
     }
 

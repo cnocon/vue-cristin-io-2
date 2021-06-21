@@ -18,10 +18,17 @@ So instead of checkout out each branch one by one and looking at the commit hist
 
 It is possible to list your local git branches ordered by most recent commit date, while showing some extra information, like the abbreviated commit sha and commit message.
 
-_N.B. The following instructions are for Mac OSX command line users._
+_N.B. The following instructions are for Mac OSX command line users - be sure to add newlines where used below!. I just wanted to make the alias readable._
 
-<pre><code style="white-space: initial" class="language-shell">git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);%(color:green)%(committerdate:relative)%(color:reset);%(committerdate:format:'%m/%d/%Y\ %H:%M');%(color:cyan)%(authorname)%(color:reset);%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%(contents:subject)%(color:reset)" | column -t -s ";"
-</code></pre>
+```shell
+git for-each-ref --sort=-committerdate refs/heads/ --color --format=
+"%(HEAD)%(color:bold)%(refname:short)%(color:reset);
+%(color:green)%(committerdate:relative)%(color:reset);
+%(committerdate:format:"%m/%d/%Y\ %H:%M");
+%(color:cyan)%(authorname)%(color:reset);
+%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%
+(contents:subject)%(color:reset);" | column -t -s ";"
+```
 
 Your results should look something like this:
 
@@ -35,7 +42,16 @@ For this example, let’s use _~/.bash_profile_.
 
 On a new line in your profile file, lets create an alias called gbl for that command that lists out our branches by updated date:
 
-<pre><code class="language-shell" style="white-space: initial" >alias gbl='git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);%(color:green)%(committerdate:relative)%(color:reset);%(committerdate:format:'%m/%d/%Y\ %H:%M');%(color:cyan)%(authorname)%(color:reset);%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%(contents:subject)%(color:reset)" | column -t -s ";"'</code></pre>
+_N.B. Be sure to add newlines where used below!. I just wanted to make the alias readable._
+
+```bash
+alias gbl='git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);
+%(color:green)%(committerdate:relative)%(color:reset);
+%(committerdate:format:"%m/%d/%Y\ %H:%M");
+%(color:cyan)%(authorname)%(color:reset);
+%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%
+(contents:subject)%(color:reset);" | column -t -s ";"'
+```
 
 Great! Save the file and head back to your terminal app.
 

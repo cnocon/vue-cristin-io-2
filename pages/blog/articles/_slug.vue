@@ -126,7 +126,8 @@ export default {
   }
 
   h1 {
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    line-height: 1.1em;
   }
 }
 header {
@@ -137,6 +138,7 @@ header {
 
   h1 {
     margin-top: 0.5rem;
+    line-height: 1.1em;
 
     @include media-breakpoint-up(md) {
       font-size: 3rem;

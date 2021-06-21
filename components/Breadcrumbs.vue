@@ -102,6 +102,7 @@ export default {
 
   + h1 {
     margin-top: 0;
+    line-height: 1.1em;
   }
 }
 </style>

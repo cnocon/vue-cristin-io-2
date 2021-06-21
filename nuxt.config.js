@@ -19,7 +19,7 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
       },
       {
         hid: 'description',
@@ -49,15 +49,18 @@ export default {
     'nuxt-purgecss',
   ],
 
+  // {
+  //   prefetch: true,
+  //   preconnect: true,
+  // }
   googleFonts: {
     display: 'swap',
-    prefetch: true,
-    preconnect: true,
     preload: true,
     families: {
       Oswald: [300, 400, 500, 700], // exhaustive
       Lato: [300, 400, 700], // 200
       'Open+Sans': [300, 400, 600, 700], // 800
+      'Poiret+One': [400],
     },
   },
 
@@ -71,9 +74,17 @@ export default {
   components: true,
 
   // purgeCSS: https://purgecss.com/guides/nuxt.html
+  // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
   purgeCSS: {
     styleExtensions: ['.scss'],
-    whitelistPatterns: [/svg.*/, /fa.*/, /nuxt-link.*/], // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
+    whitelistPatterns: [
+      /svg.*/,
+      /fa.*/,
+      /nuxt.*/,
+      /language.*/,
+      /line-numbers/,
+      /vue.*/,
+    ],
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -130,6 +141,8 @@ export default {
           'faHandsHeart',
           'faPencil',
           'faBars',
+          'faGem',
+          'faBrackets',
         ],
       },
       {
@@ -144,6 +157,12 @@ export default {
           'faGithub',
           'faYoutube',
           'faLinkedinIn',
+          'faJsSquare',
+          'faSass',
+          'faReact',
+          'faGit',
+          'faVuejs',
+          'faNodeJs',
         ],
       },
       {
@@ -184,6 +203,7 @@ export default {
       lang: 'en',
       description: `Cristin O'Connor's Front End Software Engineering Résumé, Blog and Portfolio Site`,
       theme_color: '#345345',
+      start_url: 'https://cristin.io?standalone=true',
     },
   },
 

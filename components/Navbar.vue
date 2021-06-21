@@ -1,33 +1,46 @@
 <template>
-  <div class="navbar-container">
-    <div class="navbar-inner container">
-      <NuxtLink :to="{ name: 'index' }" class="navbar-brand">
-        <nuxt-img
+  <div class="navbar-wrapper">
+    <div class="navbar-wrapper-inner container">
+      <NuxtLink :to="{ name: 'index' }" class="navbar-brand-and-logo">
+        <NuxtImg
           src="/components/square-portrait-white.png"
           alt="Cristin O'Connor"
-          class="logo-img"
-        ></nuxt-img>
+          class="navbar-logo"
+        ></NuxtImg>
+        <div class="navbar-brand">
+          <h2
+            :class="`${
+              $route.name === 'index'
+                ? 'nuxt-link-active nuxt-link-exact-active'
+                : ''
+            }`"
+          >
+            Cristin O'Connor
+          </h2>
 
-        <div class="name-and-title">
-          <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
-          <div class="title">Front End Engineer</div>
+          <!-- formerly .title -->
+          <h3>Front End Engineer</h3>
         </div>
 
-        <div class="name-and-title-mobile">
+        <!-- <div class="name-and-title-mobile">
           <div :class="`name ${homepageClasses()}`">Cristin O'Connor</div>
           <div class="title">Front End Engineer</div>
-        </div>
+        </div> -->
       </NuxtLink>
 
-      <ul class="nav">
+      <!-- formerly .nav -->
+      <ul class="nav-item-list">
         <li class="nav-item">
-          <NuxtLink :active="isActive('resume')" to="/resume" class="nav-link"
+          <NuxtLink
+            :active="isActiveNavItem('resume')"
+            to="/resume"
+            class="nav-link"
             >Résumé</NuxtLink
           >
         </li>
         <li class="nav-item">
           <NuxtLink
-            :active="isActive('portfolio')"
+            :active="isActiveNavItem('portfolio')"
             to="/portfolio"
             class="nav-link"
             >Portfolio</NuxtLink
@@ -35,29 +48,24 @@
         </li>
         <li class="nav-item">
           <NuxtLink
-            :active="isActive('blog')"
+            :active="isActiveNavItem('blog-page')"
             :to="{ name: 'blog-page', params: { slug: 'blog-page', page: 1 } }"
-            :class="`nav-link ${isActive('blog') ? 'nuxt-link-active' : ''}`"
+            :class="navItemClasses(['blog-page'])"
             >Blog</NuxtLink
           >
         </li>
 
         <li
-          id="navbarDropdown"
-          :class="showMenu ? 'nav-item dropdown show' : 'nav-item dropdown'"
+          :class="`nav-item dropdown ${showMenu ? 'show' : ''}`"
           @click.stop.prevent="toggleMenu"
         >
-          <a
-            id="navbarDropdownLink"
+          <button
+            id="navbarDropdown"
             href="#dropdownMenu"
             role="button"
             :aria-expanded="showMenu"
             aria-haspopup="true"
-            :class="
-              showMenu
-                ? 'show nav-link dropdown-toggle'
-                : 'nav-link dropdown-toggle'
-            "
+            :class="`nav-link dropdown-toggle ${showMenu ? 'show' : ''}`"
             target="_self"
             data-bs-toggle="dropdown"
           >
@@ -70,46 +78,42 @@
               v-else
               :icon="['fal', 'bars']"
             ></font-awesome-icon>
-          </a>
+          </button>
 
           <ul
             v-show="showMenu"
             id="dropdownMenu"
-            :class="
-              showMenu
-                ? 'dropdown-menu dropdown-menu-right show'
-                : 'dropdown-menu dropdown-menu-right'
-            "
-            aria-labelledby="#navbarDropdownLink"
+            aria-labelledby="#navbarDropdown"
+            :class="`dropdown-item-list dropdown-menu ${
+              showMenu ? 'show' : ''
+            }`"
           >
-            <li class="nav-item" role="presentation">
+            <li class="dropdown-nav-item" role="presentation">
               <NuxtLink
                 to="/resume"
-                :active="isActive('resume')"
-                class="dropdown-item"
+                :active="isActiveNavItem('resume')"
+                class="dropdown-link"
                 role="menuitem"
                 >Résumé</NuxtLink
               >
             </li>
-            <li class="nav-item" role="presentation">
+            <li class="dropdown-nav-item" role="presentation">
               <NuxtLink
                 to="/portfolio"
-                :active="isActive('portfolio')"
-                class="dropdown-item"
+                :active="isActiveNavItem('portfolio')"
+                class="dropdown-link"
                 role="menuitem"
                 >Portfolio</NuxtLink
               >
             </li>
-            <li class="nav-item" role="presentation">
+            <li class="dropdown-nav-item" role="presentation">
               <NuxtLink
                 :to="{
                   name: 'blog-page',
                   params: { slug: 'blog-page', page: 1 },
                 }"
-                :active="isActive('blog')"
-                :class="`dropdown-item ${
-                  isActive('blog') ? 'nuxt-link-active' : ''
-                }`"
+                :active="isActiveNavItem('blog-page')"
+                :class="navItemClasses(['blog-page', true])"
                 role="menuitem"
                 >Blog</NuxtLink
               >
@@ -129,20 +133,31 @@ export default {
     }
   },
   methods: {
-    isActive(path) {
-      if (this.$route.name.match(/blog/)) {
-        return (
-          this.$route.name === 'blog-page' ||
-          this.$route.name === 'blog-articles-slug'
-        )
-      } else {
-        return this.$route.name === path
-      }
+    isExactActiveNavItem(linkedRouteName) {
+      return this.$route.name === linkedRouteName
     },
-    homepageClasses() {
-      return this.$route.name === 'index'
-        ? 'nuxt-link-active nuxt-link-exact-active'
-        : ''
+    isActiveNavItem(linkedRouteName) {
+      /**
+       * If its one of the special blog route cases check if its not a
+       * different not-nested blog route (blog-articles-slug)
+       */
+      return linkedRouteName.match(/blog/)
+        ? this.$route.name.match(/blog/)
+        : this.isExactActiveNavItem(linkedRouteName)
+    },
+    navItemClasses([linkedRouteName, isDropdown = false]) {
+      // This only has to determine classes if it's not an exact Route match, because Nuxt can do that on its own
+      const str = isDropdown ? 'dropdown-link' : 'nav-link'
+      if (this.isExactActiveNavItem(linkedRouteName)) {
+        return str
+      } else if (
+        linkedRouteName === 'blog-page' &&
+        this.$route.name === 'blog-articles-slug'
+      ) {
+        return `${str} nuxt-link-active`
+      } else {
+        return str
+      }
     },
     toggleMenu() {
       this.showMenu = !this.showMenu
@@ -152,7 +167,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbar-container {
+.navbar-wrapper {
   width: 100%;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -172,180 +187,166 @@ export default {
     margin-bottom: 0;
   }
 }
-.navbar-container-inner {
-  @include media-breakpoint-up(sm) {
-    max-width: 540px;
+
+.navbar-wrapper-inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9375rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 0.9375rem;
   }
 }
-.nav {
-  // min-width: 20.3125rem; // 325px
-  // margin-right: auto;
-  // justify-content: flex-end;
-  // width: 100%;
-  // flex-direction: row;
-  // align-items: center;
-  // margin-left: 0;
 
-  @include media-breakpoint-down(md) {
-    position: relative;
-    width: 100%;
+.navbar-brand-and-logo {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 0.9375rem;
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    justify-content: space-between;
-    margin-left: 0;
-  }
-
-  @include media-breakpoint-down(sm) {
-    position: absolute;
-    left: calc(100% - 42px + 7.5px);
-    width: 100%;
-    display: block;
+    min-width: unset;
     margin: 0;
-    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
   }
 
-  .dropdown-menu.dropdown-menu-right {
-    &.show {
-      background-color: darken($primary, 2.5%);
-      color: $white;
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1em;
+    font-family: $font-family-display;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0 0 0.5rem;
 
-      @include media-breakpoint-down(md) {
-        position: absolute;
-        top: 74px;
-        z-index: 10;
-        right: calc(-100% - 56px);
-        min-width: calc(100vw + 15px);
-        width: 100%;
-        padding: 3px 0 0;
-        margin: 0;
-        box-shadow: $box-shadow-md;
-        @include rainbow-link-decoration;
-        background-size: 100% 3px;
-        background-position: top left;
-        transition: none !important;
-
-        &:hover {
-          text-decoration: none;
-          border-bottom: 0;
-          background-repeat: no-repeat;
-          background-position: bottom left;
-          background-size: 100% 2px;
-          background-image: $rainbow-ellipse-bottom-right;
-        }
-      }
-
-      @include media-breakpoint-down(sm) {
-        right: calc(-50% - 15px);
-        min-width: calc(100vw + 15px);
-        width: 100%;
-        padding: 3px 0 0;
-        margin: 0;
-      }
-
-      li {
-        padding-bottom: 0.85rem;
-        padding-top: 0.85rem;
-        margin-bottom: 0;
-        border-bottom: 1px solid $white;
-
-        &:last-of-type {
-          border-bottom: 0;
-        }
-
-        a {
-          color: $white;
-          font-weight: 700;
-          text-transform: uppercase;
-          font-family: $font-family-heading;
-          letter-spacing: 2px;
-          text-align: center;
-          text-decoration: none;
-
-          &:hover,
-          &:focus {
-            text-decoration: none;
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-image: $rainbow-gradient-med;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-
-          &.nuxt-link-active,
-          &.nuxt-link-exact-active {
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-image: $rainbow-gradient-med;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-        }
-      }
-    }
-  }
-
-  .nav-item:not(.dropdown) {
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
-  }
-  .show .nav-item:not(.dropdown) {
-    @include media-breakpoint-down(md) {
-      display: block;
-    }
-  }
-
-  .dropdown-toggle {
-    @include media-breakpoint-up(lg) {
-      display: none;
+    @include media-breakpoint-xxs-up {
+      font-size: 1.5rem;
     }
 
-    &.nav-link {
-      color: $white;
-
-      &:hover {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: $rainbow-ellipse-bottom-left;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
-
-    &::after {
-      display: none;
-    }
-
-    .svg-inline--fa {
-      width: 2.625rem; // 42px
-      height: 2.625rem; // 42px
-    }
-  }
-
-  .nav-item:not(#navbarDropdown) {
-    margin-bottom: 0;
-
-    &:last-of-type {
-      .nav-link {
-        @include media-breakpoint-up(md) {
-          padding-right: 0;
-        }
-      }
-    }
-
-    a {
+    @include media-breakpoint-up(sm) {
+      font-size: 1.685rem; // 28px
+      line-height: 1.1em;
       font-family: $font-family-heading;
-      text-align: center;
-      font-weight: 700;
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size: 22px;
+      margin-bottom: 0.5rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 42px;
+    }
+  }
+
+  h3 {
+    font-family: $font-family-brand;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-size: 1.25rem;
+    line-height: 1em;
+    color: $white;
+    margin: 0;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.325rem;
+      line-height: 1.1em;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: 5px;
+      font-size: 1.5rem;
     }
   }
 }
 
-.nav-link:not(#navbarDropdownLink) {
+.navbar-logo {
+  display: none;
+
+  @include media-breakpoint-xxs-up {
+    display: block;
+    width: 48px; // 48px
+    height: 48px; // 48px
+    border-radius: 50%;
+    // $rainbow-box-shadow-dark:
+    box-shadow: hsl(175, 80%, 60%) 0 3px, hsl(58, 100%, 60%) -3px 0,
+      hsl(240, 80%, 69%) 3px 0, hsl(355, 80%, 72.5%) 0 -3px 0;
+    background-color: $lightest-gray;
+    margin: 0 0.9375rem 0 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 0.75rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 3.375rem; // 54px
+    height: 3.375rem; // 54px
+    margin: 1rem 0.5rem 1rem 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 0 1.25rem 0 0;
+    width: 4.875rem; // 78px
+    height: 4.875rem; // 78px
+  }
+}
+
+.nav-item-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 0;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+  }
+
+  .nav-item {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+      margin-bottom: 0;
+      padding-left: 0.45rem;
+      padding-right: 0.45rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &.dropdown {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      margin: 0;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+.nav-link {
+  font-family: $font-family-heading;
+  text-align: center;
   display: block;
   font-size: 1.125rem; // 18px
   color: $white;
@@ -357,18 +358,160 @@ export default {
   @include transition($nav-link-transition);
 
   @include media-breakpoint-up(md) {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-weight: 400;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.1875rem; // 19px
+    line-height: 1em;
   }
 
   @include media-breakpoint-up(lg) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    // padding-left: 1rem;
+    padding-right: 0;
+    letter-spacing: 0;
   }
 
-  &:hover {
-    @include perfect-rainbow-text;
+  &:not(.dropdown-toggle):hover,
+  &:not(.dropdown-toggle):focus {
+    @include rainbow-link-decoration-on-hover;
+    color: $white;
+  }
+}
+
+// The button
+.dropdown-toggle {
+  background-color: transparent;
+  color: $white;
+  outline-color: transparent;
+  border-color: transparent;
+  height: 48px; // 48px
+  width: 48px; // 48px
+  display: block;
+  padding: 0;
+  -webkit-appearance: none;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  .svg-inline--fa {
+    width: 2.625rem; // 42px
+    height: 2.625rem; // 42px
+  }
+}
+
+.dropdown-item-list {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  margin-left: 0;
+  background-color: darken($primary, 2.5%);
+  color: $white;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  &.show {
+    display: block;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: unset;
+    left: 0;
+    z-index: 2;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    border-top: 3px solid $primary-light;
+    // right: calc(-50% - 15px);
+    // min-width: calc(100vw + 15px);
+    // width: 100%;
+    // padding: 3px 0 0;
+    // margin: 0;
+    // display: flex;
+    // flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+    // padding-left: 0;
+    // margin-bottom: 0;
+    // list-style: none;
+
+    // @include media-breakpoint-up(sm) {
+    //   position: absolute;
+    //   top: 74px;
+    //   z-index: 10;
+    //   right: calc(-100% - 56px);
+    //   min-width: calc(100vw + 15px);
+    //   width: 100%;
+    //   padding: 3px 0 0;
+    //   margin: 0;
+    //   box-shadow: $box-shadow-md;
+    //   @include rainbow-link-decoration;
+    //   background-size: 100% 3px;
+    //   background-position: top left;
+    //   transition: none !important;
+    // }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-bottom: 0;
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: 100% 2px;
+      background-image: $rainbow-ellipse-bottom-right;
+    }
+  }
+
+  .dropdown-nav-item {
+    margin-bottom: 0;
+    border-bottom: 1px solid $primary-light;
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    a {
+      color: $white;
+      display: block;
+      text-transform: uppercase;
+      font-family: $font-family-base;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-align: center;
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        @include perfect-rainbow-text;
+        background-image: $perfect-radial-rainbow-two;
+      }
+    }
   }
 }
 
@@ -381,233 +524,29 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 
-  &.name {
+  &.nav-link,
+  &.dropdown-link {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: $rainbow-gradient-med;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-size: cover;
+    }
+  }
+
+  h2 {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     background-image: $rainbow-text-angled-dark;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-}
-
-.navbar-inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0.9375rem 0;
-
-  @include media-breakpoint-up(md) {
-    flex-wrap: nowrap;
-    padding: 0 1rem;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.name {
-  font-size: 1.25rem;
-  line-height: 1em;
-  font-family: $font-family-display;
-  text-transform: uppercase;
-  color: $white;
-  font-weight: 300;
-  letter-spacing: 2px;
-
-  @include media-breakpoint-xxs-up {
-    font-size: 1.5rem;
-  }
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1.685rem; // 28px
-    line-height: 1em;
-    font-family: $font-family-heading;
-    font-weight: 300;
-    letter-spacing: 3px;
-  }
-
-  @include media-breakpoint-up(md) {
-    letter-spacing: 4px;
-  }
-}
-
-.title {
-  font-family: $font-family-brand;
-  white-space: nowrap;
-  font-size: 1.25rem;
-  line-height: 1.725em;
-  font-weight: 700;
-  color: $white;
-  text-transform: lowercase;
-  text-indent: 2px;
-  letter-spacing: 1px;
-
-  @include media-breakpoint-up(sm) {
-    margin-top: 3px;
-    font-size: 1.325rem;
-    line-height: 1em;
-    letter-spacing: 3.5px;
-  }
-
-  @include media-breakpoint-up(md) {
-    margin-top: 5px;
-    font-size: 1.5rem;
-  }
-}
-
-.navbar-brand {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: calc(100% - 42px); // 42px for hamburger menu
-  max-width: unset;
-  margin: 0;
-  text-decoration: none;
-
-  @include media-breakpoint-xxs-up {
-    min-width: 100%; // 42px for hamburger menu
-  }
-
-  @include media-breakpoint-up(md) {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: unset;
-    margin: 0;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-  }
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  &:hover .name,
-  &:focus .name {
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: $rainbow-text-angled;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .name-and-title {
-    display: none;
-
-    @include media-breakpoint-up(md) {
-      display: inline-block;
-      max-width: 100%;
-      margin: 0 !important;
-    }
-
-    @include media-breakpoint-up(lg) {
-      max-width: 100%;
-    }
-  }
-
-  .name-and-title-mobile {
-    display: inline-flex;
-    flex-wrap: wrap;
-    max-width: 18rem; // 288px
-    justify-content: flex-start;
-    align-items: center;
-
-    @include media-breakpoint-xxs-up {
-      padding-left: 0.625rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
-
-    .name,
-    .title {
-      line-height: 1em;
-    }
-
-    .tile {
-      margin-top: 3px;
-      text-transform: capitalize;
-    }
-
-    .name {
-      letter-spacing: 3px;
-
-      @include media-breakpoint-down(md) {
-        letter-spacing: 1px;
-      }
-    }
-  }
-
-  .logo-img {
-    display: none;
-
-    @include media-breakpoint-xxs-up {
-      display: inline-block;
-      width: 2.625rem; // 42px
-      height: 2.625rem; // 42px
-      border-radius: 50%;
-      box-shadow: $rainbow-box-shadow-dark;
-      background-color: $lightest-gray;
-      margin-right: 0;
-    }
-
-    @include media-breakpoint-up(sm) {
-      margin-right: 0.75rem;
-      width: 3rem; // 48px
-      height: 3rem; // 48px
-      margin-top: 4px;
-    }
-
-    @include media-breakpoint-up(md) {
-      margin: 0 0.75rem 0 0;
-      width: 3.875rem; // 62px
-      height: 3.875rem; // 62px
-    }
-
-    @include media-breakpoint-up(lg) {
-      margin: 1rem 0.5rem 1rem 0;
-    }
-  }
-}
-.navbar-nav {
-  display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-
-  .dropdown-menu {
-    position: static;
-  }
-}
-
-#navbarDropdownLink {
-  color: $white;
-
-  @include media-breakpoint-down(sm) {
-    font-size: unset;
-    height: 2.625rem; // 42px
-    width: 2.625rem; // 42px
-    display: block;
-    padding: 0;
-  }
-}
-#navbarDropdown {
-  position: relative;
-  right: 0.9375rem; // 15px
-
-  @include media-breakpoint-up(md) {
-    display: none;
-  }
-
-  &.show {
-    @include media-breakpoint-down(md) {
-      text-align: center;
-    }
   }
 }
 </style>

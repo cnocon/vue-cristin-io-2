@@ -58,7 +58,7 @@
           >
             <template #skill-icon>
               <font-awesome-icon
-                :icon="[skill.skillIcon, skill.iconType]"
+                :icon="[skill.iconType, skill.skillIcon]"
               ></font-awesome-icon>
             </template>
           </LazySkill>
@@ -169,9 +169,10 @@ export default {
   margin: 3rem auto 0;
 
   h1 {
-    margin-top: 0;
+    line-height: 1.1em;
 
     @include media-breakpoint-up(lg) {
+      margin-top: 1rem;
       margin-bottom: 4rem;
     }
   }

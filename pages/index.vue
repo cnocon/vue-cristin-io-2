@@ -5,13 +5,12 @@
       <h1 class="page-title">I&nbsp;L<span>&#9825;</span>VE&nbsp;CODE</h1>
     </header> -->
     <main>
-      <Section
+      <!-- <Section
         header-icon-type="fal"
         header-icon="user-astronaut"
         header-text="More About Me"
-      >
-        <RotatingHeader />
-      </Section>
+      > -->
+      <RotatingHeader />
 
       <LazySection
         header-icon-type="fal"
@@ -60,7 +59,7 @@
       >
         <LazyPostList
           :posts="posts"
-          column-classes="col-12 col-md-6 col-xl-4"
+          column-classes="col-12 col-md-6 col-lg-4"
         ></LazyPostList>
       </LazySection>
 

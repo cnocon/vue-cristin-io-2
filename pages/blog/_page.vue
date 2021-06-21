@@ -85,7 +85,11 @@ export default {
   }
 
   h1 {
-    margin-top: 0;
+    line-height: 1.1em;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 1rem;
+    }
   }
 }
 .blog-page-header {
