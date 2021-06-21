@@ -32,10 +32,14 @@ export default {
 
   @include media-breakpoint-down(md) {
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     display: block;
     left: 0;
     transform: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0;
   }
 
   span {
@@ -90,13 +94,15 @@ export default {
 
   b {
     font-size: 1rem;
-    font-family: $font-family-heading;
+    font-family: $font-family-display;
     white-space: nowrap;
     text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 2.5px;
-    color: $border-dark-gray;
+    // color: $border-dark-gray;
     margin-left: 0.5rem;
+    // here
+    font-weight: 500;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
   }
 
   .icon-container {
@@ -107,7 +113,7 @@ export default {
     border-radius: 50%;
     width: 3.625rem; // 58px
     height: 3.625rem; // 58px
-    color: $border-med-gray;
+    color: lighten($border-med-gray, 5%);
 
     @include media-breakpoint-down(md) {
       width: 2.625rem; // 42px

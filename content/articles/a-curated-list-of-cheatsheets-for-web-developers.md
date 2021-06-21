@@ -14,7 +14,7 @@ categories: [{name: Reference, slug: reference}, {name: Docs, slug: docs}]
 
 Now, you might be thinking, "You fool, cheat sheets aren't helpful for actual learning. They're the StackOverflow of professional development." And that's fair. Who even knows what year something was created, let alone whether or not its correct.
 
-I tried to find good Cheatsheets that might be helpful to beginner and intermediate level developers and I was overwhelmed with results. This post topic is NOT an original idea. If you hate the list I made, definitely try your hand and finding some that you like, because they're valuable tools. Not only are these helpful if you're just starting out with a new technology or tool, but they may expose you to things you didn't know existed yet! I've been using Git for 10 years and I had no idea there was such a command as <code>git obliterate</code>. I'm excited to use that one.
+I tried to find good Cheatsheets that might be helpful to beginner and intermediate level developers and I was overwhelmed with results. This post topic is NOT an original idea. If you hate the list I made, definitely try your hand and finding some that you like, because they're valuable tools. Not only are these helpful if you're just starting out with a new technology or tool, but they may expose you to things you didn't know existed yet! I've been using Git for 10 years and I had no idea there was such a command as <pre>git obliterate</pre>. I'm excited to use that one.
 
 ## The List
 

@@ -45,7 +45,8 @@ On a new line in your profile file, lets create an alias called gbl for that com
 _N.B. Be sure to add newlines where used below!. I just wanted to make the alias readable._
 
 ```bash
-alias gbl='git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);
+alias gbl='git for-each-ref --sort=-committerdate refs/heads/
+--color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);
 %(color:green)%(committerdate:relative)%(color:reset);
 %(committerdate:format:"%m/%d/%Y\ %H:%M");
 %(color:cyan)%(authorname)%(color:reset);

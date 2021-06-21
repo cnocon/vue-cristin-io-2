@@ -95,13 +95,15 @@
           ></LazyResumeItem>
         </div>
 
-        <LazyQuote classes="subtle text-size-large text-center dark">
-          <template #quote>
-            How we spend our days is, of course, how we spend our lives. What we
-            do with this hour, and that one, is what we are doing.
-          </template>
-          <template #cite>Annie Dillard</template>
-        </LazyQuote>
+        <div class="xxl-margin-bottom">
+          <LazyQuote classes="subtle text-size-large text-center dark">
+            <template #quote>
+              How we spend our days is, of course, how we spend our lives. What
+              we do with this hour, and that one, is what we are doing.
+            </template>
+            <template #cite>Annie Dillard</template>
+          </LazyQuote>
+        </div>
 
         <LazyConnect />
       </div>
@@ -351,6 +353,13 @@ export default {
         font-weight: 500;
       }
     }
+  }
+}
+.xxl-margin-bottom {
+  margin-bottom: 2.5rem !important;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0.5rem !important;
   }
 }
 </style>

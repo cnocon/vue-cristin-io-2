@@ -184,7 +184,7 @@ header {
   }
 
   > .col-12:first-of-type {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       margin-bottom: 2rem;
     }
   }

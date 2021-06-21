@@ -381,6 +381,16 @@ pre code {
   color: #ffffff;
 }
 
+li code,
+p code {
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+  color: #d63384;
+  word-wrap: break-word;
+  font-family: 'Roboto Mono', Monaco, monospace;
+}
+
 .nuxt-content-highlight {
   margin: 1.25rem 0;
   border-radius: 0.25rem !important;

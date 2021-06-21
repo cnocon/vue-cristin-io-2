@@ -42,6 +42,7 @@ figure {
 
     @include media-breakpoint-down(sm) {
       max-width: 100%;
+      justify-content: flex-start;
       overflow-x: scroll;
     }
   }

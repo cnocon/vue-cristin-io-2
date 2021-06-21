@@ -1,6 +1,6 @@
 <template>
   <section :class="sectionClasses">
-    <SectionHeader :text="headerText">
+    <SectionHeader :text="headerText" :class="headerClasses">
       <template #section-header-icon>
         <font-awesome-icon
           :icon="[headerIconType, headerIcon]"
@@ -14,6 +14,10 @@
 <script>
 export default {
   props: {
+    headerClasses: {
+      default: '',
+      type: String,
+    },
     sectionClasses: {
       default: 'section',
       type: String,

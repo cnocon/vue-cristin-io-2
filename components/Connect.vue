@@ -112,7 +112,9 @@
   text-align: center;
 }
 .connect {
-  padding-top: 2rem;
+  @include media-breakpoint-down(sm) {
+    padding-top: 2rem;
+  }
 
   @media all and (max-width: $breakpoint-sm) {
     padding-bottom: 2rem;
@@ -172,11 +174,12 @@ a {
   }
 }
 .connect-item-inner {
+  line-height: 1em !important;
   border-radius: 50%;
   display: inline-block;
   margin-bottom: 1rem;
   box-shadow: $rainbow-box-shadow-dark;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .connect-item-text {
   display: block;
