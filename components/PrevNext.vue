@@ -1,5 +1,5 @@
 <template>
-  <div class="prev-next-container row">
+  <nav class="prev-next-container row" role="navigation">
     <div
       v-if="prev"
       :class="next ? 'col-6 btn-col prev' : 'col-12 btn-col prev'"
@@ -11,10 +11,12 @@
           params: prev.params || null,
           query: prev.query || null,
         }"
+        aria-label="Go to Previous Page"
       >
         <span class="prev-icon-wrapper">
           <font-awesome-icon
             :icon="['far', 'chevron-left']"
+            role="presentation"
           ></font-awesome-icon>
         </span>
         Prev
@@ -31,18 +33,20 @@
           params: next.params || null,
           query: next.query || null,
         }"
+        aria-label="Go to Next Page"
       >
         Next
         <span class="next-icon-wrapper">
           <font-awesome-icon
             :icon="['far', 'chevron-right']"
+            aria-role="presentation"
           ></font-awesome-icon>
         </span>
       </NuxtLink>
       <span v-if="next.title" class="next-title">{{ next.title }}</span>
     </div>
     <div v-else class="col-md-6 empty-next"></div>
-  </div>
+  </nav>
 </template>
 
 <script>

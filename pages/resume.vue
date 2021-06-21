@@ -326,10 +326,6 @@ export default {
   @media all and (max-width: $breakpoint-sm) {
     padding-top: 2rem;
   }
-
-  // .item {
-  //   padding-left: 2.625rem;
-  // }
 }
 .assets {
   padding-bottom: 1.25rem;

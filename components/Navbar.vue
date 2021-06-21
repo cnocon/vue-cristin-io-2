@@ -6,6 +6,7 @@
           src="/components/square-portrait-white.png"
           alt="Cristin O'Connor"
           class="navbar-logo"
+          provider="static"
         ></NuxtImg>
         <div class="navbar-brand">
           <h2
@@ -221,12 +222,12 @@ export default {
   h2 {
     font-size: 1.25rem;
     line-height: 1em;
-    font-family: $font-family-display;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: $white;
     font-weight: 300;
     letter-spacing: 1px;
     margin: 0 0 0.5rem;
+    font-family: $font-family-brand;
 
     @include media-breakpoint-xxs-up {
       font-size: 1.5rem;
@@ -235,7 +236,6 @@ export default {
     @include media-breakpoint-up(sm) {
       font-size: 1.685rem; // 28px
       line-height: 1.1em;
-      font-family: $font-family-heading;
       font-weight: 300;
       letter-spacing: 1px;
       font-size: 22px;
@@ -253,8 +253,8 @@ export default {
   }
 
   h3 {
-    font-family: $font-family-brand;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-family: $font-family-display;
     letter-spacing: 3px;
     font-size: 1.25rem;
     line-height: 1em;
@@ -343,7 +343,6 @@ export default {
 }
 
 .nav-link {
-  font-family: $font-family-heading;
   text-align: center;
   display: block;
   font-size: 1.125rem; // 18px
@@ -369,8 +368,7 @@ export default {
 
   &:not(.dropdown-toggle):hover,
   &:not(.dropdown-toggle):focus {
-    @include rainbow-link-decoration-on-hover;
-    color: $white;
+    @include perfect-rainbow-text;
   }
 }
 

@@ -20,7 +20,7 @@ export default {
   border-left: 10px solid lighten($primary, 15%);
   padding-left: 1.25rem;
   font-size: 1.35rem;
-  font-family: $font-family-heading;
+  font-family: $font-family-base;
   font-weight: 700;
 
   &.full {

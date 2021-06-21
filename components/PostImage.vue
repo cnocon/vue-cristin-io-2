@@ -1,7 +1,7 @@
 <template>
   <figure>
     <div>
-      <NuxtImg :src="src" :alt="alt"></NuxtImg>
+      <NuxtImg :src="src" :alt="alt" provider="static"></NuxtImg>
     </div>
     <figcaption v-show="caption">{{ caption }}</figcaption>
   </figure>
@@ -61,7 +61,7 @@ figure {
 
   figcaption {
     font-style: italic;
-    font-family: $font-family-heading;
+    font-family: $font-family-base;
     font-size: 0.875rem;
   }
 }

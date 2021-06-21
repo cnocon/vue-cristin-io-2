@@ -45,11 +45,11 @@ export default {
   googleFonts: {
     display: 'swap',
     preload: true,
+    prefetch: true,
     families: {
-      Oswald: [300, 400, 500, 700], // exhaustive
-      Lato: [300, 400, 700], // 200
-      'Open+Sans': [300, 400, 600, 700], // 800
-      'Poiret+One': [400],
+      Oswald: [300, 400, 500, 700], // 200
+      Lato: [300, 400, 700], // 100, 900
+      Pacifico: [400],
     },
   },
 

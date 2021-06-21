@@ -25,7 +25,11 @@
       <div v-if="post.toc.length > 0" class="row toc-row">
         <div class="col-12 toc-col">
           <div class="toc-image">
-            <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
+            <nuxt-img
+              :src="`/${post.img}`"
+              :alt="post.alt"
+              provider="static"
+            ></nuxt-img>
           </div>
           <h5>TABLE OF CONTENTS</h5>
           <ul class="toc">
@@ -42,7 +46,11 @@
         </div>
       </div>
       <div v-else class="no-toc-image">
-        <nuxt-img :src="`/${post.img}`" :alt="post.alt"></nuxt-img>
+        <nuxt-img
+          :src="`/${post.img}`"
+          :alt="post.alt"
+          provider="static"
+        ></nuxt-img>
       </div>
       <NuxtContent
         :document="post"
@@ -152,7 +160,7 @@ header {
 }
 .toc-col {
   h6 {
-    font-weight: 600;
+    font-weight: 700;
 
     @include media-breakpoint-down(sm) {
       text-align: center;

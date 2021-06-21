@@ -51,7 +51,7 @@ footer {
       font-size: 1.375rem;
 
       > span {
-        font-family: $font-family-heading;
+        font-family: $font-family-base;
         display: inline-block;
         font-family: inherit;
         font-size: inherit;

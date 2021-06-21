@@ -61,3 +61,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@mixin perfect-rainbow-text-dark {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $perfect-radial-rainbow-two;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin perfect-rainbow-text-light {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $perfect-radial-rainbow-three;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

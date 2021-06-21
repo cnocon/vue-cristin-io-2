@@ -17,19 +17,11 @@
     </p>
     <div class="portfolio-item-content">
       <div v-if="screenshot.length > 0" class="screenshot-container">
-        <LazyNuxtImg
-          v-if="lazy"
-          format="jpeg"
-          :src="screenshot"
-          :alt="title"
-          :class="`summary-img ${screenshotClasses ? screenshotClasses : ''}`"
-        ></LazyNuxtImg>
         <NuxtImg
-          v-else
-          format="jpeg"
           :src="screenshot"
           :alt="title"
           :class="`summary-img ${screenshotClasses ? screenshotClasses : ''}`"
+          provider="static"
         ></NuxtImg>
       </div>
       <slot name="summary"></slot>
@@ -56,10 +48,6 @@
 <script>
 export default {
   props: {
-    lazy: {
-      type: Boolean,
-      default: false,
-    },
     title: {
       type: String,
       default: null,
@@ -201,7 +189,7 @@ export default {
 
   p,
   li {
-    font-family: $font-family-heading;
+    font-family: $font-family-base;
     color: $black;
 
     a {

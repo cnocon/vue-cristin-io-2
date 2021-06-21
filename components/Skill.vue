@@ -42,7 +42,7 @@ export default {
     position: relative;
     z-index: 1;
     margin: 0 0 0.25rem;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.4em;
     vertical-align: baseline;
@@ -104,7 +104,7 @@ export default {
     line-height: 1.25rem;
     font-weight: 700;
     font-size: 0.875rem;
-    font-family: $font-family-heading;
+    font-family: $font-family-base;
     text-align: center;
     background-color: $primary;
   }

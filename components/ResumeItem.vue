@@ -226,8 +226,7 @@ export default {
       display: inline-block;
       margin-bottom: 0;
       font-weight: 500;
-      font-family: $font-family-heading;
-
+      font-family: $font-family-base;
       &.company,
       &.location {
         line-height: 2rem;
@@ -235,15 +234,23 @@ export default {
       }
 
       &.company {
-        font-size: 1.15rem;
+        color: $primary;
+        font-weight: 100;
+        font-size: 1rem;
+
+        @include media-breakpoint-up(md) {
+          font-size: 1.1rem;
+        }
 
         @include media-breakpoint-up(lg) {
-          font-size: 1.25rem;
+          font-size: 1.2rem;
         }
       }
 
       &.location {
         font-weight: 300;
+        color: $primary;
+        font-family: $font-family-display;
         line-height: 2rem;
         vertical-align: middle;
         text-transform: uppercase;
@@ -302,7 +309,7 @@ export default {
         position: relative;
         list-style: none;
         font-weight: 700;
-        font-family: $font-family-heading;
+        font-family: $font-family-base;
         text-transform: uppercase;
         display: flex;
         align-items: center;

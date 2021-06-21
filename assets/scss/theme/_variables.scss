@@ -1,5 +1,6 @@
 $primary: hsl(210, 25%, 25%);
 $primary-light: #8fa0b1;
+$gray-text: hsl(212, 15%, 46%);
 $secondary: hsl(210, 85%, 60%);
 $success: hsl(167, 90%, 44%);
 $warning: hsl(48, 100%, 55%);
@@ -16,16 +17,10 @@ $breakpoint-md-min: 48rem; // 768px
 $breakpoint-lg: 61.9375rem; // 991px
 $breakpoint-lg-min: 62rem; // 992px
 
-
-$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: Lato, Verdana, sans-serif;
 $font-family-base: $font-family-sans-serif;
-
-$font-family-heading: Lato, Verdana, sans-serif;
-$font-family-sans-serif: $font-family-heading;
-
 $font-family-display: Oswald, Impact, sans-serif;
-
-$font-family-brand: 'Poiret One', Oswald, Impact, sans-serif;
+$font-family-brand: Pacifico, sans-serif;
 
 $white: #fff;
 $black: hsl(210, 40%, 15%);
@@ -184,4 +179,13 @@ $perfect-radial-rainbow-two: radial-gradient(
   hsl(49, 100%, 70%) 54%,
   hsl(0, 97%, 77%) 60%,
   hsl(0, 85%, 72%) 77%
+);
+$perfect-radial-rainbow-three: radial-gradient(
+  ellipse at top right,
+  hsl(0, 97%, 77%) 25%,
+  hsl(49, 100%, 70%) 35%,
+  hsl(175, 100%, 60%) 50%,
+  hsl(197, 100%, 70%) 62%,
+  hsl(259, 89%, 70%) 88%,
+  hsl(0, 70%, 70%) 100%
 );

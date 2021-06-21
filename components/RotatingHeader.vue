@@ -74,8 +74,7 @@ export default {
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.5em;
-  font-family: $font-family-heading;
-  text-transform: none;
+  font-family: $font-family-base;  text-transform: none;
   color: $dark;
   font-weight: 300;
   text-align: center;

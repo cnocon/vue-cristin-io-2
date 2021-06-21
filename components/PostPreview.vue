@@ -7,7 +7,7 @@
           :alt="post.alt"
           :height="60"
           :width="60"
-          defer
+          provider="static"
         ></nuxt-img>
       </div>
 

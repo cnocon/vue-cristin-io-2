@@ -188,8 +188,7 @@ body {
 
 
 h1 {
-  font-family: $font-family-heading;
-  font-weight: 700;
+  font-family: $font-family-base;  font-weight: 700;
 }
 
 
@@ -253,8 +252,7 @@ h6 {
 
 h2,
 h3 {
-  font-family: $font-family-heading;
-  font-weight: 700;
+  font-family: $font-family-base;  font-weight: 700;
 }
 
 h4 {
@@ -270,8 +268,7 @@ h4 {
 
 h5,
 h6 {
-  font-family: $font-family-heading;
-  text-transform: uppercase;
+  font-family: $font-family-base;  text-transform: uppercase;
 }
 
 ol,
@@ -411,7 +408,7 @@ p code {
   display: inline-block;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   color: $white;
   text-align: center;
@@ -434,7 +431,7 @@ p code {
 .btn {
   display: inline-block;
   font-family: $font-family-base;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.5em;
   color: $primary;
   text-align: center;

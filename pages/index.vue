@@ -96,15 +96,6 @@ export default {
       posts,
     }
   },
-  head: {
-    link: [
-      {
-        rel: 'preload',
-        type: 'style',
-        href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap',
-      },
-    ],
-  },
 }
 </script>
 
@@ -197,7 +188,7 @@ header {
     text-align: center;
 
     h3 {
-      font-family: $font-family-heading;
+      font-family: $font-family-base;
       font-weight: 700;
       font-size: calc(1.275rem + 0.3vw);
 

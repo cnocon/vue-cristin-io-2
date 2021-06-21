@@ -1,13 +1,14 @@
 <template>
   <div v-if="courseData" :class="`course ${classes}`">
     <figure>
-      <nuxt-img
+      <NuxtImg
         :height="80"
+        :quality="80"
         :src="courseData.img"
         :alt="courseData.name"
         class="rounded"
-        defer
-      ></nuxt-img>
+        provider="static"
+      ></NuxtImg>
     </figure>
     <h3>
       <a :href="courseData.url" target="_blank" rel="noopener noreferrer">
@@ -95,7 +96,7 @@ export default {
   }
 
   h4 {
-    font-family: $font-family-heading;
+    font-family: $font-family-base;
     margin-top: 0;
     font-size: 1.125rem;
   }

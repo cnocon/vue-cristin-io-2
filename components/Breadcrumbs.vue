@@ -67,7 +67,7 @@ export default {
     font-size: 0.9375rem;
     color: $primary;
     font-weight: 400;
-    font-family: $font-family-heading;
+    font-family: $font-family-base;
 
     + .breadcrumb-item {
       padding-left: 0.5rem;
