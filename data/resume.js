@@ -2,8 +2,22 @@
 
 const resume = {
   "name": "Cristin O'Connor",
-  "jobTitle": "Front End Software Engineer",
+  "jobTitle": "Front End Engineer",
   "experience": [
+    {
+      "year": 2022,
+      "startDate": "Jan 2022",
+      "endDate": "Jun 2022",
+      "position": "Sr. Front End Engineer",
+      "company": "Nabis",
+      "location": "USA (Remote)",
+      "desc": "",
+      "descList": [
+        "Work with Product Managers and Graphic Designers to embark on an overhaul of the existing UI/UX with the goal of creating a single pristine user experience throughout the application ecosystem",
+        "Supervise two consultants in developing the reusable components for Nabis' new design system","Oversee the introduction of a new design system to the codebase using Chakra UI's component library, extending Chakra UI where needed for custom components using React, GraphQL, CSS and SCSS",
+      ],
+      "awards": []
+    },    
     {
       "year": 2021,
       "startDate": "Feb 2021",
