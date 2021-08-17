@@ -6,7 +6,7 @@ export default {
 
   // CONFIG TARGET: https://go.nuxtjs.dev/config-target
   // 'server': For server side rendering and 'static': For static sites
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
