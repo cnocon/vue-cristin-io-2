@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import Prism from '~/plugins/prism'
 export default {
   // asyncData method for fetching and rendering data on the server
   // $content and params from destructured context object
@@ -120,6 +121,10 @@ export default {
       }
       return new Date(date).toLocaleDateString('en', options)
     },
+  },
+  
+  mounted() {
+    Prism.highlightAll()
   },
 }
 </script>

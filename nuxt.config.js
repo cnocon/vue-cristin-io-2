@@ -29,7 +29,8 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/prism' }]
+
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -39,7 +40,7 @@ export default {
     '@nuxtjs/eslint-module', // https://go.nuxtjs.dev/eslint
     '@nuxtjs/google-fonts', // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-analytics', // https://google-analytics.nuxtjs.org/
-    'nuxt-purgecss',
+    // 'nuxt-purgecss',
   ],
 
   googleFonts: {
