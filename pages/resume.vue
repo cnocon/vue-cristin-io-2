@@ -314,6 +314,7 @@ export default {
   }
 }
 .service {
+  padding-top: 1rem;
   @media all and (max-width: $breakpoint-sm) {
     padding-bottom: 3rem;
   }

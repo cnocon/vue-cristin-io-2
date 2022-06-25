@@ -235,7 +235,7 @@ export default {
 
       &.company {
         color: $primary;
-        font-weight: 100;
+        font-weight: 400;
         font-size: 1rem;
 
         @include media-breakpoint-up(md) {
@@ -248,16 +248,24 @@ export default {
       }
 
       &.location {
-        font-weight: 300;
+        font-weight: 200;
         color: $primary;
-        font-family: $font-family-display;
-        line-height: 2rem;
-        vertical-align: middle;
-        text-transform: uppercase;
-        font-size: 0.875rem;
+        // font-family: $font-family-display;
+        // line-height: 2rem;
+        // vertical-align: middle;
+        // text-transform: uppercase;
+        // font-size: 0.875rem;
+        // font-size: 18px;
+        // line-height: 20px;
+        // vertical-align: text-bottom;
+        font-size: 1rem;
+
+        @include media-breakpoint-up(md) {
+          font-size: 1.1rem;
+        }
 
         @include media-breakpoint-up(lg) {
-          font-size: 0.925rem;
+          font-size: 1.2rem;
         }
       }
 

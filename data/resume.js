@@ -222,46 +222,67 @@ const resume = {
   ],
   "skills": [
     {
-      "name": "JavaScript",
+      "name": "Full Stack JavaScript",
       "percent": "90",
       "icon": "fab fa-js-square",
       "skillIcon": "js-square",
       "iconType": "fab"
     },
     {
-      "name": "SCSS, LESS, CSS",
+      "name": "Responsive Web Development",
       "percent": "90",
+      "icon": "far fa-phone-laptop",
+      "skillIcon": "phone-laptop",
+      "iconType": "far"
+    },
+    {
+      "name": "SCSS, LESS, CSS",
+      "percent": "85",
       "icon": "fab fa-sass",
       "skillIcon": "sass",
       "iconType": "fab"
     },
     {
       "name": "React",
-      "percent": "85",
+      "percent": "80",
       "icon": "fab fa-react",
       "skillIcon": "react",
       "iconType": "fab"
     },
     {
-      "name": "Git",
-      "percent": "80",
-      "icon": "fab fa-git",
-      "skillIcon": "git",
+      "name": "Gatsby",
+      "percent": "75",
+      "icon": "fab fa-react",
+      "skillIcon": "react",
       "iconType": "fab"
     },
     {
+      "name": "TypeScript",
+      "percent": "75",
+      "icon": "fa fal fa-brackets",
+      "skillIcon": "brackets",
+      "iconType": "fal"
+    },
+    {
       "name": "Vue",
-      "percent": "65",
+      "percent": "75",
       "icon": "fab fa-vuejs",
       "skillIcon": "vuejs",
       "iconType": "fab"
     },
     {
-      "name": "APIs",
-      "percent": "60",
-      "icon": "fal fa-chart-network",
-      "skillIcon": "chart-network",
-      "iconType": "fal"
+      "name": "Git",
+      "percent": "70",
+      "icon": "fab fa-git",
+      "skillIcon": "git",
+      "iconType": "fab"
+    },
+    {
+      "name": "Nuxt",
+      "percent": "70",
+      "icon": "fab fa-vuejs",
+      "skillIcon": "vuejs",
+      "iconType": "fab"
     },
     {
       "name": "Ruby",
@@ -271,7 +292,7 @@ const resume = {
       "iconType": "fal"
     },
     {
-      "name": "Node, NPM",
+      "name": "Node",
       "percent": "55",
       "icon": "fab fa-node-js",
       "skillIcon": "node-js",
@@ -282,13 +303,6 @@ const resume = {
       "percent": "50",
       "icon": "fal fa-subway",
       "skillIcon": "subway",
-      "iconType": "fal"
-    },
-    {
-      "name": "TypeScript",
-      "percent": "45",
-      "icon": "fa fal fa-brackets",
-      "skillIcon": "brackets",
       "iconType": "fal"
     }
   ],

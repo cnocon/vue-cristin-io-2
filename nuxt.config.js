@@ -31,7 +31,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: './plugins/prism.js', mode: 'client' }],
 
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxt/image', // https://image.nuxtjs.org/
@@ -110,7 +109,13 @@ export default {
     imports: [
       {
         set: '@fortawesome/pro-regular-svg-icons',
-        icons: ['faAdjust', 'faChevronLeft', 'faChevronRight', 'faFolders'],
+        icons: [
+          'faAdjust',
+          'faChevronLeft',
+          'faChevronRight',
+          'faFolders',
+          'faPhoneLaptop',
+        ],
       },
       {
         set: '@fortawesome/pro-light-svg-icons',
