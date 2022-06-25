@@ -13,8 +13,7 @@ const resume = {
       "location": "USA (Remote)",
       "desc": "",
       "descList": [
-        "Work with Product Managers and Graphic Designers to embark on an overhaul of the existing UI/UX with the goal of creating a single pristine user experience throughout the application ecosystem",
-        "Supervise two consultants in developing the reusable components for Nabis' new design system","Oversee the introduction of a new design system to the codebase using Chakra UI's component library, extending Chakra UI where needed for custom components using React, GraphQL, CSS and SCSS",
+        "Worked with product managers and graphic designers to overhaul the existing UI/UX with the goal of creating a single pristine user experience throughout the application ecosystem", "Oversaw the introduction of a new design system to the codebase using Chakra UI’s component library, extending Chakra UI where needed for custom components using React, GraphQL, CSS, and SCSS", "Supervised two consultants in developing reusable components for Nabis’ new design system"
       ],
       "awards": []
     },    
@@ -27,11 +26,15 @@ const resume = {
       "location": "Lehi, UT",
       "desc": "",
       "descList": [
-        "Implement the front end for multiple web applications within a sales funnel using technologies including Vue.js, Typescript and PHP",
-        "Maintain the front end order entry tool using the Ember.js framework",
-        "Assist in minor backend work using C#",
+        "Coded the front end for multiple JavaScript-based sales applications, leveraging technologies including Vue.js, Typescript, LESS, and Ember.js", "Spearheaded the creation of new documentation and code quality standards for front end development in sales", "Provided full stack on-call support for emergencies, leveraging logs and data from Splunk, Dynatrace, and AppDynamics to quickly identify and fix critical bugs under pressure (in a 24/7 rotation for a week each month)", "Created a new onboarding process for front end and full stack engineers in sales (for current employees and new hires) that aimed to reduce sales’ isolation from the company’s broader front end initiatives and practices"
       ],
-      "awards": []
+      
+      "awards": [
+        {
+          "name": "Innovation Week Presenter",
+          "detail": "Nov 2021"
+        },
+      ],
     },
     {
       "year": 2020,
@@ -42,9 +45,7 @@ const resume = {
       "location": "Salt Lake City, UT",
       "desc": "",
       "descList": [
-        "Use mockups to code responsive web pages using Handlebars, SCSS, and a proprietary component library",
-        "Assist in maintaining and extending applications using Javascript, NPM, and Node",
-        "Support a broad range of browsers and devices"
+        "Used mockups to code responsive websites using Handlebars, SCSS, JavaScript, and a proprietary component library", "Assisted in maintaining and extending applications using JavaScript", "Mentored and supported junior developers", "Extended functionality of component library core package", "Supported a broad range of browsers and devices with a focus on accessibility"
       ],
       "awards": [
         {
@@ -66,9 +67,7 @@ const resume = {
       "location": "Chicago, IL",
       "desc": "Our small team worked with a large number of APIs and data to populate a data warehouse stored in Snowflake. I worked heavily with tools like DataTables and HighCharts in order to help visualize meaning. The internal tool housing all the resulting insights is a Rails 5 App.",
       "descList": [
-        "Launch a new Rails-based business intelligence platform from scratch on a two person team responsible for decision making and planning from start to finish",
-        "Take ownership of front end maintenance and scaling using ERB, handcrafted SASS, HTML5, Javascript, Stimulus.js, ActionView, and a custom Bootstrap installation",
-        "Engineer services for consuming data from various 3rd party APIs"
+        "Increased average page load speed by a factor of four", "Updated in-house business intelligence software to use StimulusJS, DataTables, Highcharts, Rails 5, and data from multiple third party APIs including ADP, Entrata, Centro, and Chatmeter", "Redesigned UI/UX for a more modern, clean look and feel", "Aggregated over a dozen third party data sources into a data warehouse via an ETL application"
       ],
       "awards": []
     },
@@ -80,10 +79,7 @@ const resume = {
       "company": "Next College Student Athlete",
       "location": "Chicago, IL",
       "descList": [
-        "Serve simultaneously on both the UI and Software Engineering teams and float between teams as needed",
-        "Lead UI/UX design on project to build a tool for families to estimate federal loan amounts",
-        "Build and support existing Rails applications using TDD with RSPEC",
-        "Utilize Javascript, Slim, jQuery, CoffeeScript, and LESS for front end work"
+        "Increased communication among teams by researching and implementing department-wide workflow changes", "Converted Photoshop, InDesign, and InVision mockups accurately into device-agnostic web pages, taking care to consider accessibility requirements and cross-browser compatibility of implementations", "Served on both the UI Team and Software Engineering teams and floated between teams as needed", "Led UI/UX design on a project to build a tool for families to estimate federal loan amounts", "Utilized JavaScript, Slim, jQuery, CoffeeScript, and LESS to complete various front end work", "Wrote API documentation for internal and publicly available APIs"
       ],
       "awards": [
         {
@@ -105,24 +101,31 @@ const resume = {
       "location": "Chicago, IL",
       "desc": "As a member of the Front-End Engineering team worked on several applications to assist our clients’ marketing efforts, including phone routing, tracking, and analytics tools. The primary framework we used was Backbone, although at the end of my tenure there we started transitioning into a React and Node based implementation. I almost exclusively coded in vanilla Javascript (ES5), although we used used Underscore and jQuery occasionally. I built out mockups using LESS and a Handlebars.",
       "descList": [
-        "Code extensively in Javascript to extend and support several single page applications built in Backbone",
-        "Build mockups of new views to spec in Backbone with LESS, Mustache, Lodash, and Handlebars",
-        "Develop and deploy code in an all Javascript web stack: MongoDB, Node, Express and Backbone"
+        "Coded extensively in JavaScript to extend and support several single page applications built in Backbone, leveraging JavaScript libraries including JQuery, Underscore, and Lodash", "Built mockups of new views to spec with LESS, Mustache, and Handlebars", "Developed and deployed full stack JavaScript code in a stack composed of MongoDB, Node, Express and Backbone"
       ],
       "awards": []
     },
     {
       "year": "2014",
       "startDate": "2014",
-      "endDate": "2014",
       "position": "Rails Developer",
       "company": "Blueye Creative",
       "location": "Chicago, IL",
       "desc": "As a contractor, I worked on the MVC components for a Rails-based software application that would serve as an Airbnb-like product. Additionally, I was the sole developer responsible for building a database Wilson could use to track millions of racket purchases. This included writing a powerful algorithm to parse through years of inconsistently formatted records form Excel spreadsheets, as well as building out a front end for them to enter new purchase data efficiently in an aesthetically pleasing format.",
       "descList": [
-        "Assist in building an Airbnb-like web application using Rails 4",
-        "Build a new database for Wilson’s tennis racket inventory with a Microsoft Access front end",
-        "Parse through and import years of inconsistently formatted spreadsheet data with Ruby scripts"
+        "Assisted in buildinging an Airbnb-like web application using Rails 4", "Improved UI and query latency for Wilson’s tennis racket purchase history database", "Parsed through and imported years of inconsistently formatted spreadsheet data with Ruby scripts"
+      ],
+      "awards": []
+    },
+    {
+      "year": "2014",
+      "startDate": "2014",
+      "position": "Teaching Assistant (Intro to Web Development)",
+      "company": "University of Notre Dame",
+      "location": "Notre Dame, IN",
+      "desc": "TA for a college course introducing students to web development",
+      "descList": [
+        "Assisted with answering questions and explaining concepts to students in a course covering HTML, CSS, JavaScript, wireframing, and responsive design"
       ],
       "awards": []
     },
@@ -250,13 +253,6 @@ const resume = {
       "iconType": "fab"
     },
     {
-      "name": "Gatsby",
-      "percent": "75",
-      "icon": "fab fa-react",
-      "skillIcon": "react",
-      "iconType": "fab"
-    },
-    {
       "name": "TypeScript",
       "percent": "75",
       "icon": "fa fal fa-brackets",
@@ -268,6 +264,13 @@ const resume = {
       "percent": "75",
       "icon": "fab fa-vuejs",
       "skillIcon": "vuejs",
+      "iconType": "fab"
+    },
+    {
+      "name": "Gatsby",
+      "percent": "75",
+      "icon": "fab fa-react",
+      "skillIcon": "react",
       "iconType": "fab"
     },
     {

@@ -1,7 +1,7 @@
 <template>
   <div class="resume-page container-fluid">
     <Head
-      title="Résumé and Coursework"
+      title="Résumé"
       image="https://cristin.io/sharing/resume-screenshot.jpg"
       image-alt="Screenshot of Cristin O'Connor's online résumé and courses webpage"
       share-img-width="1200"
@@ -10,7 +10,7 @@
       og-type="website"
     ></Head>
     <Breadcrumbs :crumbs="breadcrumbs" />
-    <h1>Résumé &amp; Coursework</h1>
+    <h1>Résumé</h1>
     <div v-if="data.jobTitle" class="row resume-row">
       <div class="col-lg-7 col-md-12 left-column">
         <div class="first-icon">
@@ -117,7 +117,7 @@
         </div>
 
         <div class="xxl-margin-bottom">
-          <LazyQuote classes="subtle text-size-large text-center dark">
+          <LazyQuote classes="subtle text-size-large dark">
             <template #quote>
               How we spend our days is, of course, how we spend our lives. What
               we do with this hour, and that one, is what we are doing.
@@ -130,7 +130,7 @@
       </div>
     </div>
 
-    <LazySectionHeader
+    <!--<LazySectionHeader
       text="Recent Coursework"
       header-classes="courses-section-header"
     >
@@ -147,7 +147,7 @@
         :index="cIndex"
         classes="col-12 col-sm-6 col-lg-4"
       ></LazyCourse>
-    </div>
+    </div>-->
   </div>
 </template>
 

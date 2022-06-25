@@ -1,5 +1,5 @@
 <template>
-  <div :class="`quote ${classes}`">
+  <div :class="`quote quote-right ${classes}`">
     <blockquote>
       <p><slot name="quote"></slot></p>
       <cite v-if="!hideCitation"><slot name="cite"></slot></cite>
@@ -24,12 +24,20 @@ export default {
 
 <style lang="scss" scoped>
 .quote {
-  padding: 2rem 3rem 2rem 1.5rem;
+  padding: 2rem 3.5rem 2rem 2rem;
   margin: 0 auto 1.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
   max-width: 600px;
   box-shadow: $box-shadow-sm;
-  background-color: $border-lightest-gray;
+  // background-color: #1e2b38;
+  // color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  &.quote-right {
+    margin-left: 2rem;
+  }
 
   &.dark {
     background-color: $dark;
@@ -70,11 +78,13 @@ export default {
 
     p {
       flex-basis: calc(100% - 1.5rem - 10px);
-      line-height: 1.5;
       margin-bottom: 0;
       font-family: $font-family-sans-serif;
-      font-weight: 500;
-      font-size: 1.15rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-top: 1rem;
+      font-size: 1rem;
+      line-height: 1.75em;
     }
 
     cite {
@@ -82,8 +92,9 @@ export default {
       flex-basis: 100%;
       width: 100%;
       text-align: right;
-      margin-top: 1.25rem;
-      margin-bottom: 0;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
 
       &::before {
         content: '\2014\00A0'; // em dash, nbsp

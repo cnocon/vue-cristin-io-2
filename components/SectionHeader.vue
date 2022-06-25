@@ -27,15 +27,17 @@ export default {
 <style scoped lang="scss">
 .section-header {
   position: relative;
-  height: 64px;
-  margin-bottom: 2rem;
+  min-height: 64px;
+  margin-bottom: 0.5rem;
+  text-align: center;
 
   @include media-breakpoint-down(md) {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
     display: block;
     left: 0;
     transform: none;
+    min-height: unset;
   }
 
   @include media-breakpoint-down(sm) {
@@ -48,7 +50,9 @@ export default {
     background-color: $white;
     vertical-align: middle;
     padding: 0 1rem 0 0;
-    z-index: 10;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
 
     @include media-breakpoint-down(md) {
       position: relative;
@@ -80,6 +84,11 @@ export default {
     font-weight: 500;
     font-size: 1.125rem;
     letter-spacing: 2px;
+
+    @include media-breakpoint-down(md) {
+      white-space: initial;
+      margin-left: 0;
+    }
   }
 
   .icon-container {
@@ -93,8 +102,7 @@ export default {
     color: lighten($border-med-gray, 5%);
 
     @include media-breakpoint-down(md) {
-      margin-right: 0.25rem;
-      margin-left: 12px;
+      display: none;
     }
 
     svg {
