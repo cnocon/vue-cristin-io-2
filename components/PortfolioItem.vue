@@ -92,11 +92,10 @@ export default {
   .links {
     margin-bottom: 2rem;
     margin-top: 0.5rem;
-    text-align: center;
-    display: block;
 
     @include media-breakpoint-down(md) {
       text-align: center;
+      display: block;
     }
 
     a {

@@ -51,11 +51,12 @@ export default {
     vertical-align: middle;
     padding: 0 1rem 0 0;
     z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
 
     @include media-breakpoint-down(md) {
       position: relative;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
