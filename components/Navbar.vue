@@ -26,10 +26,10 @@
         <!-- formerly .nav -->
         <ul class="nav-item-list" role="navigation">
           <li class="nav-item">
-            <NuxtLink to="/resume" class="nav-link">Résumé</NuxtLink>
+            <NuxtLink to="resume" class="nav-link">Résumé</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/portfolio" class="nav-link">Portfolio</NuxtLink>
+            <NuxtLink to="portfolio" class="nav-link">Portfolio</NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink
@@ -84,7 +84,7 @@
             >
               <li class="dropdown-nav-item" role="presentation">
                 <NuxtLink
-                  to="/resume"
+                  to="resume/"
                   :active="isActiveNavItem('resume')"
                   class="dropdown-link"
                   role="menuitem"
@@ -136,7 +136,7 @@ export default {
        * If its one of the special blog route cases check if its not a
        * different not-nested blog route (blog-articles-slug)
        */
-      return linkedRouteName.match(/blog/)
+      return linkedRouteName.match(/blog/) !== null
         ? this.$route.name.match(/blog/)
         : this.isExactActiveNavItem(linkedRouteName)
     },
@@ -180,6 +180,10 @@ export default {
 
   @include media-breakpoint-up(sm) {
     margin-bottom: 0;
+  }
+
+  a[aria-current='page'] {
+    @include perfect-rainbow-text;
   }
 }
 
@@ -345,21 +349,22 @@ export default {
 }
 
 .nav-link {
+  font-family: $font-family-display;
   text-align: center;
   display: block;
-  font-size: 1.125rem; // 18px
+  font-size: 1.5rem; // 18px
   color: $white;
   text-decoration: none;
-  font-family: $font-family-base;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  // font-family: $font-family-base;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: lowercase;
   @include transition($nav-link-transition);
 
   @include media-breakpoint-up(md) {
     padding-left: 0;
     padding-right: 0;
-    font-size: 1.1875rem; // 19px
+    // font-size: 1.1875rem; // 19px
     line-height: 1em;
   }
 
@@ -467,11 +472,11 @@ export default {
     a {
       color: $white;
       display: block;
-      text-transform: uppercase;
-      font-family: $font-family-base;
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: 3px;
+      text-transform: lowercase;
+      font-family: $font-family-display;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 2px;
       text-align: center;
       padding-bottom: 1.5rem;
       padding-top: 1.5rem;

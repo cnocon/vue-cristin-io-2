@@ -78,13 +78,12 @@ export default {
   }
 
   b {
-    font-family: $font-family-display;
     white-space: nowrap;
     text-transform: uppercase;
     margin-left: 0.5rem;
-    font-weight: 500;
-    font-size: 1.125rem;
     letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 1rem;
 
     @include media-breakpoint-down(md) {
       white-space: initial;
@@ -101,10 +100,6 @@ export default {
     width: 3.625rem; // 58px
     height: 3.625rem; // 58px
     color: lighten($border-med-gray, 5%);
-
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
 
     svg {
       position: absolute;

@@ -1,5 +1,5 @@
 <template>
-  <div :class="`quote quote-right ${classes}`">
+  <div :class="`quote ${classes}`">
     <blockquote>
       <p><slot name="quote"></slot></p>
       <cite v-if="!hideCitation"><slot name="cite"></slot></cite>
@@ -37,6 +37,11 @@ export default {
 
   &.quote-right {
     margin-left: 2rem;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      padding: 1rem 1.5rem 1rem 1rem;
+    }
   }
 
   &.dark {

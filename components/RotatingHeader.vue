@@ -67,49 +67,45 @@ export default {
 
 <style scoped lang="scss">
 .rotate-header {
+  padding-bottom: 2rem;
   position: relative;
   padding-top: 0.9375rem; // 15px
   margin-bottom: 0;
   margin-top: 0;
   font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 1.5em;
+  font-size: 2rem;
+  line-height: 1.35em;
   font-family: $font-family-base;  text-transform: none;
   color: $dark;
   font-weight: 300;
   text-align: center;
 
-  @include media-breakpoint-down(sm) {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  @include media-breakpoint-xxs-down {
-    font-size: 1.25rem;
+  @include media-breakpoint-down(md) {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
 
   span {
-    @include media-breakpoint-down(sm) {
-      min-width: 14.375rem; // 230px
-
-      &.rotate-in {
-        line-height: 2.125rem; // 34px
-      }
+    @include media-breakpoint-down(md) {
+      min-width: 18.4375rem; // 295px
     }
+
+    &.rotate-in {
+        @include media-breakpoint-down(md) {
+          line-height: 2.125rem; // 34px
+        }
+      }
   }
 
   .rotate-words {
     line-height: 2.125rem; // 34px
     display: inline-block;
-    min-width: 17.5rem; // 280px
+    // min-width: 28.5rem; // 456px
+    min-width: 22.25rem; // 356px
     text-align: left;
 
-    @include media-breakpoint-xxs-down {
-      min-width: 13.4375rem;
-    }
-
-    @include media-breakpoint-down(sm) {
-      min-width: 15.4375rem; // 215px
+    @include media-breakpoint-down(md) {
+      min-width: 18.4375rem; // 295px
       line-height: 1.375rem; // 22px
     }
 

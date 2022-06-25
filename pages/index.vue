@@ -18,34 +18,45 @@
         header-text="Services"
       >
         <div class="row services-row">
-          <div class="col-12 col-sm-6 col-lg-3 service-offered">
-            <h3>WEB DEVELOPMENT</h3>
+          <div class="col-12 col-md-4 service-offered">
+            <h3>Web Development</h3>
             <p>
               This is my primary area of expertise after 10+ years in the field.
               <a
                 href="mailto:her@cristin.io"
                 role="link"
                 aria-label="Link to Email Me"
-                >Contact me</a
-              >
-              about web development.
+                >Contact me about web development</a
+              >.
             </p>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3 service-offered">
-            <h3>CODE TUTORING</h3>
+          <div class="col-12 col-md-4 service-offered">
+            <h3>Mentorship & Interview Prep</h3>
+            <p>
+              I can help you achieve your career goals and prepare you for job
+              interviews.
+              <a
+                href="mailto:her@cristin.io"
+                role="link"
+                aria-label="Link to Email Me"
+                >Contact me about mentorship and interview prep</a
+              >.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 service-offered">
+            <h3>Programming Tutor</h3>
             <p>
               I focus on teaching with compassion and work with all ages.
               <a
                 href="mailto:her@cristin.io"
                 role="link"
                 aria-label="Link to Email Me"
-                >Contact me</a
-              >
-              about mentoring or tutoring.
+                >Contact me about tutoring</a
+              >.
             </p>
           </div>
-          <div class="col-12 col-lg-6 quote-container">
-            <Quote classes="subtle">
+          <!--<div class="col-12 quote-container">
+            <Quote classes="subtle quote-right">
               <template #quote>
                 Cristin O'Connor is a lifesaver! Being new to Gatsby.js, I was
                 having a difficult time finding a solution for a blocker. I
@@ -57,7 +68,7 @@
               </template>
               <template #cite>Mariah W., Freelance Web Developer</template>
             </Quote>
-          </div>
+          </div>-->
         </div>
       </Section>
 
@@ -88,7 +99,7 @@
 export default {
   async asyncData({ $content, params, query }) {
     const posts = await $content('articles')
-      .limit(3)
+      .limit(6)
       .sortBy('date', 'desc')
       .fetch()
 
@@ -174,13 +185,22 @@ header {
 }
 .services-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   .quote-container {
     margin-top: 3rem;
+    width: 100%;
+    max-width: none;
+
+    .quote {
+      max-width: 1140px;
+      border: 0;
+    }
 
     @include media-breakpoint-up(lg) {
-      margin-top: 0;
+      // margin-top: 0;
+      // margin-left: auto;
+      // margin-right: auto;
     }
   }
 
@@ -199,7 +219,7 @@ header {
 
     &:first-of-type {
       @include media-breakpoint-down(sm) {
-        margin-bottom: 2rem;
+        // margin-bottom: 2rem;
       }
     }
   }

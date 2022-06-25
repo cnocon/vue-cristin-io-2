@@ -378,4 +378,9 @@ export default {
     margin-bottom: 0.5rem !important;
   }
 }
+.resume-page .icon-container {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
 </style>

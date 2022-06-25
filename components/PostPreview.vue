@@ -58,10 +58,17 @@ export default {
 article {
   padding: 2rem 2rem 1.5rem;
   height: 100%;
+  max-width: calc(100% - 15px);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid $border-light-gray;
+  border-radius: 8px;
   background-image: $pastel-rainbow-bar;
   background-size: 100% 4.5px;
   background-position: center bottom;
   background-repeat: no-repeat;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%),
+    0 10px 10px -5px rgb(0 0 0 / 4%);
 
   @include media-breakpoint-down(sm) {
     padding: 1.25rem 1.25rem 0.5rem;

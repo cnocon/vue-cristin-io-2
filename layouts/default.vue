@@ -11,7 +11,7 @@
 <style lang="scss">
 .container {
   @include media-breakpoint-up(md) {
-    max-width: 71.25rem !important; // 1140px
+    max-width: 1280px !important; // 1140px
   }
 }
 

@@ -21,7 +21,7 @@ This means that `1rem` equals the font size of the `html` element (which for mos
 
 Enter SASS! We can create a function to generate the rem value for us.
 
-```scss
+```css
 $base-font-size: 16px;
 
 @function calculate-rem($size) {
