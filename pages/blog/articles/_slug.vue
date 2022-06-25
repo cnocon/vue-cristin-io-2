@@ -1,6 +1,6 @@
 <template>
   <div v-if="post" class="blog-slug-page">
-    <Breadcrumbs :crumbs="breadcrumbs" classes="flex-center-md-down" />
+    <Breadcrumbs :crumbs="breadcrumbs" classes="hidden-md-down" />
     <Head
       :title="`${post.title}`"
       :description="`${post.title} written by Cristin O'Connor, Front End Software Engineer`"
@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import Prism from '~/plugins/prism'
+import Prism from '../../../plugins/prism.js'
 export default {
   // asyncData method for fetching and rendering data on the server
   // $content and params from destructured context object
@@ -111,6 +111,9 @@ export default {
       ],
     }
   },
+  mounted() {
+    Prism.highlightAll()
+  },
   methods: {
     formatDate(date) {
       const options = {
@@ -121,10 +124,6 @@ export default {
       }
       return new Date(date).toLocaleDateString('en', options)
     },
-  },
-  
-  mounted() {
-    Prism.highlightAll()
   },
 }
 </script>

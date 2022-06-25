@@ -85,7 +85,11 @@ a:not([href]):not([class]) {
 .text-center {
   text-align: center;
 }
-
+.hidden-md-down {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
 .flex-center-md-down {
   @include media-breakpoint-down(md) {
     flex-wrap: wrap;

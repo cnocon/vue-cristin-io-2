@@ -84,7 +84,7 @@ $color-contrast-light:     $white !default;
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-
+$enable-cssgrid:              true !default;
 $enable-caret:                true !default;
 $enable-rounded:              true !default;
 $enable-shadows:              false !default;
