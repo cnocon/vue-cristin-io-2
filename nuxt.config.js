@@ -78,12 +78,35 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@chakra-ui/nuxt',
+    '@nuxtjs/emotion',
     '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
     '@nuxtjs/sitemap', // https://sitemap.nuxtjs.org/guide/setup
     // '@nuxtjs/pwa', //
   ],
+
+  /**
+   * Add extend the plugin options under the `chakra` key.
+   **/
+  chakra: {
+    extendTheme: {
+      colors: {
+        brand: {
+          50: 'hsl(210deg 25% 75%)',
+          100: 'hsl(210deg 25% 60%)',
+          200: 'hsl(210deg 25% 50%)',
+          300: 'hsl(210deg 25% 40%)',
+          400: 'hsl(210deg 25% 27%)',
+          500: 'hsl(210deg, 30%, 22%)',
+          600: 'hsl(210deg, 30%, 18.5%)',
+          700: 'hsl(210deg, 30%, 15%)',
+          800: 'hsl(210deg, 30%, 12.5%)',
+        },
+      },
+    },
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   // css: ['@/assets/scss/main.scss'],

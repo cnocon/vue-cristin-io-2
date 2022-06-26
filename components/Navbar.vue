@@ -26,10 +26,10 @@
         <!-- formerly .nav -->
         <ul class="nav-item-list" role="navigation">
           <li class="nav-item">
-            <NuxtLink to="resume" class="nav-link">Résumé</NuxtLink>
+            <NuxtLink to="/resume" class="nav-link">Résumé</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink to="portfolio" class="nav-link">Portfolio</NuxtLink>
+            <NuxtLink to="/portfolio" class="nav-link">Portfolio</NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink

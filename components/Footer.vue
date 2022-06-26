@@ -25,7 +25,8 @@
 
 <style lang="scss" scoped>
 .footer-container {
-  background-color: $lightest-gray;
+  background-color: var(--chakra-colors-brand-50);
+  // border-top: 5px solid var(--chakra-colors-brand-200);
   justify-self: flex-end;
   margin-top: auto;
   padding-top: 1rem;
