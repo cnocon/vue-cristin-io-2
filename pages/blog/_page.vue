@@ -15,7 +15,7 @@
       </template>
     </SectionHeader>
 
-    <PostList :posts="pagePosts" column-classes="col-12 col-lg-6"></PostList>
+    <PostList :posts="pagePosts" column-classes="col-12 col-lg-4"></PostList>
 
     <LazyPrevNext
       name="blog-page"
@@ -41,7 +41,7 @@
 export default {
   async asyncData({ $content, query, params }) {
     const page = parseInt(params.page) || 1
-    const limit = 4
+    const limit = 6
     const posts = await $content('articles').sortBy('date', 'desc').fetch()
     const postsCount = posts.length
 

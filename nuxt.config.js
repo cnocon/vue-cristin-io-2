@@ -178,6 +178,7 @@ export default {
       lastmod: new Date(),
     },
     routes: [
+      '/blog/articles/best-professional-development-resources-online',
       '/blog/articles/women-in-computing-are-losing-ground',
       '/blog/articles/a-curated-list-of-cheatsheets-for-web-developers',
       '/blog/articles/perilous-confusion-and-the-opportunity-for-growth',

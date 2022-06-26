@@ -1,7 +1,7 @@
 <template>
   <article class="post-preview">
     <header>
-      <div class="post-image">
+      <!--<div class="post-image">
         <nuxt-img
           :src="`/${post.img}`"
           :alt="post.alt"
@@ -9,7 +9,7 @@
           :width="60"
           provider="static"
         ></nuxt-img>
-      </div>
+      </div>-->
 
       <NuxtLink
         :to="{ name: 'blog-articles-slug', params: { slug: post.slug } }"
