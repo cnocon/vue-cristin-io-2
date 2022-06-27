@@ -1,5 +1,5 @@
 <template>
-  <section :class="sectionClasses">
+  <section :class="`section ${sectionClasses}`">
     <SectionHeader :text="headerText" :class="headerClasses">
       <template #section-header-icon>
         <font-awesome-icon
@@ -37,3 +37,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+section {
+  display: block;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+</style>

@@ -112,12 +112,10 @@
   text-align: center;
 }
 .connect {
+  padding-top: 3rem;
+
   @include media-breakpoint-down(sm) {
     padding-top: 2rem;
-  }
-
-  @media all and (max-width: $breakpoint-sm) {
-    padding-bottom: 2rem;
   }
 
   [class^='col-'] {

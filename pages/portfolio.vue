@@ -376,6 +376,7 @@ export default {
 
   .section {
     padding-bottom: 2rem;
+    padding-top: 0;
   }
 }
 

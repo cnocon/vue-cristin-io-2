@@ -3,7 +3,7 @@
     <Breadcrumbs :crumbs="breadcrumbs" classes="hidden-md-down" />
     <Head
       :title="`${post.title}`"
-      :description="`${post.title} written by Cristin O'Connor, Front End Software Engineer`"
+      :description="`${post.title} written by Cristin O'Connor, Front End Engineer`"
       :image="`https://cristin.io/${post.shareimg}`"
       og-type="article"
     ></Head>
@@ -24,7 +24,7 @@
       </header>
       <div v-if="post.toc.length > 0" class="row toc-row">
         <div class="col-12 toc-col">
-          <div class="toc-image">
+          <div v-if="post.img" class="toc-image">
             <nuxt-img
               :src="`/${post.img}`"
               :alt="post.alt"
@@ -47,11 +47,13 @@
       </div>
       <div v-else class="no-toc-image">
         <nuxt-img
+          v-if="post.img"
           :src="`/${post.img}`"
           :alt="post.alt"
           provider="static"
         ></nuxt-img>
       </div>
+      <br />
       <NuxtContent
         :document="post"
         :class="post.toc.length > 0 ? 'has-toc' : 'no-toc'"

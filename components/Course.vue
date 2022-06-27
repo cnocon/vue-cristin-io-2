@@ -1,26 +1,30 @@
 <template>
   <div v-if="courseData" :class="`course ${classes}`">
-    <figure>
-      <NuxtImg
-        :height="80"
-        :quality="80"
-        :src="courseData.img"
-        :alt="courseData.name"
-        class="rounded"
-        provider="static"
-      ></NuxtImg>
-    </figure>
-    <h3>
-      <a :href="courseData.url" target="_blank" rel="noopener noreferrer">
-        {{ courseData.name }}
-      </a>
-    </h3>
-    <h4>
-      <span class="company">{{ courseData.company }}</span>
-      <span v-if="courseData.instructor">
-        <span class="instructor">&nbsp;|&nbsp;{{ courseData.instructor }}</span>
-      </span>
-    </h4>
+    <header>
+      <figure>
+        <NuxtImg
+          :height="80"
+          :quality="80"
+          :src="courseData.img"
+          :alt="courseData.name"
+          class="rounded"
+          provider="static"
+        ></NuxtImg>
+      </figure>
+      <h3>
+        <a :href="courseData.url" target="_blank" rel="noopener noreferrer">
+          {{ courseData.name }}
+        </a>
+      </h3>
+      <h4>
+        <span class="company">{{ courseData.company }}</span>
+        <span v-if="courseData.instructor">
+          <span class="instructor"
+            >&nbsp;|&nbsp;{{ courseData.instructor }}</span
+          >
+        </span>
+      </h4>
+    </header>
     <p class="description">
       {{ courseData.description }}
       <a
@@ -57,14 +61,19 @@ export default {
 
 <style lang="scss" scoped>
 .course {
-  margin-bottom: 4rem;
-  text-align: center;
+  margin: 0 auto 1rem;
+
+  header {
+    text-align: center;
+  }
 
   figure {
     display: inline-block;
     text-align: center;
     height: 80px;
+    max-width: 80px;
     padding-bottom: 1.5rem;
+    border-radius: 40px;
   }
   img {
     text-align: center;

@@ -138,10 +138,7 @@ const resume = {
       "location": "Notre Dame, IN",
       "desc": "I was the sole support developer for ~400 websites using our homegrown CMS, supporting the codebase for both the Rails app and the individual websites. Further, I trained clients to maintain their websites in our CMS with a focus on empowering them to generate content that would improve their search rankings and strive to reach the levels of accessibility/usability encouraged by WAI-ARIA.  I also created a series of responsive HTML email templates for brand-standards compliant email marketing for the Office of the Provost and the Office of the President, among others. I also had the occasional opportunity to build out custom designed mobile-first, responsive websites for university organizations.",
       "descList": [
-        "Sole support developer for ~400 websites using our homegrown CMS, providing support for both our Rails based CMS app and client websites",
-        "Train clients to maintain their websites in our CMS with a focus on improving search rankings and good accessibility",
-        "Build custom designs from PSDs into mobile-first, responsive websites",
-        "Excel at providing great customer service over the phone, in-person, and via email for clients"
+        "Served as the sole web support developer for approximately 400 websites in Notre Dame’s proprietary Rails-based CMS, providing support for both the CMS and existing client websites","Trained clients to maintain their websites in our CMS with a focus on improving search rankings and good accessibility","Built mobile-first, responsive websites from scratch using JavaScript, jQuery, HTML, and CSS based on provided Photoshop mockups","Excelled at providing great customer service over the phone, in-person, and via email for clients"
       ],
       "awards": [
         {
@@ -159,7 +156,7 @@ const resume = {
     {
       "year": 2021,
       "startDate": "March 2021",
-      "endDate": "Present",
+      "endDate": "June 2021",
       "position": "Coding Coach",
       "company": "RizeNext",
       "location": "Ogden, UT",

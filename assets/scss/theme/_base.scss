@@ -401,6 +401,12 @@ p code {
     overflow-x: scroll;
   }
 
+  pre {
+    border-radius: 8px;
+    box-shadow: var(--chakra-shadows-md);
+    display: block;
+  }
+
   code {
     @include media-breakpoint-down(sm) {
       min-width: 450px !important;

@@ -40,9 +40,37 @@
             </div>
           </div>
         </div>
+
+        <!--<div class="xxl-margin-bottom">
+          <LazyQuote classes="subtle text-size-large dark">
+            <template #quote>
+              How we spend our days is, of course, how we spend our lives. What
+              we do with this hour, and that one, is what we are doing.
+            </template>
+            <template #cite>Annie Dillard</template>
+          </LazyQuote>
+        </div>-->
+
+        <!--<LazyConnect />-->
       </div>
 
       <div class="col-lg-5 col-md-12 right-column">
+        <h3>
+          <span>Skills</span>
+        </h3>
+        <div class="skills">
+          <LazySkill
+            v-for="(skill, index) in data.skills"
+            :key="index"
+            :skill="skill"
+          >
+            <template #skill-icon>
+              <font-awesome-icon
+                :icon="[skill.iconType, skill.skillIcon]"
+              ></font-awesome-icon>
+            </template>
+          </LazySkill>
+        </div>
         <h3>
           <span>Service</span>
         </h3>
@@ -67,24 +95,6 @@
             ></LazyResumeItem>
           </div>
         </div>
-
-        <h3>
-          <span>Skills</span>
-        </h3>
-        <div class="skills">
-          <LazySkill
-            v-for="(skill, index) in data.skills"
-            :key="index"
-            :skill="skill"
-          >
-            <template #skill-icon>
-              <font-awesome-icon
-                :icon="[skill.iconType, skill.skillIcon]"
-              ></font-awesome-icon>
-            </template>
-          </LazySkill>
-        </div>
-
         <h3>
           <span>Assets</span>
         </h3>
@@ -116,17 +126,19 @@
           ></LazyResumeItem>
         </div>
 
-        <div class="xxl-margin-bottom">
-          <LazyQuote classes="subtle text-size-large dark">
-            <template #quote>
-              How we spend our days is, of course, how we spend our lives. What
-              we do with this hour, and that one, is what we are doing.
-            </template>
-            <template #cite>Annie Dillard</template>
-          </LazyQuote>
+        <span class="rule"></span>
+        <div v-if="coursesData" class="courses-row row">
+          <h3>
+            <span>Recent Coursework</span>
+          </h3>
+          <Course
+            v-for="(course, cIndex) in coursesData"
+            :key="cIndex"
+            :course-data="course"
+            :index="cIndex"
+            classes="col-12"
+          ></Course>
         </div>
-
-        <LazyConnect />
       </div>
     </div>
 
@@ -137,9 +149,9 @@
       <template #section-header-icon>
         <font-awesome-icon :icon="['fal', 'pencil']"></font-awesome-icon>
       </template>
-    </LazySectionHeader>
+    </LazySectionHeader>-->
 
-    <div v-if="coursesData" class="courses-row row">
+    <!--<div v-if="coursesData" class="courses-row row">
       <LazyCourse
         v-for="(course, cIndex) in coursesData"
         :key="cIndex"
@@ -148,6 +160,7 @@
         classes="col-12 col-sm-6 col-lg-4"
       ></LazyCourse>
     </div>-->
+    <LazyConnect />
   </div>
 </template>
 
@@ -225,6 +238,11 @@ export default {
     @include media-breakpoint-up(md) {
       display: block;
     }
+  }
+}
+.courses-row {
+  .course {
+    margin-top: 1rem;
   }
 }
 .resume-row {

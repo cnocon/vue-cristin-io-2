@@ -7,7 +7,7 @@
       og-type="website"
       image="https://cristin.io/sharing/codehands.jpg"
       image-alt="Cristin O'Connor shares her software engineering knowledge and experience"
-      description="Homepage of cristin.io, Cristin O'Connor's software engineering blog, portfolio, and résumé website."
+      description="Front end blog, portfolio, and résumé website for experienced software engineer, Cristin O'Connor."
     ></Head>
     <main>
       <RotatingHeader />
@@ -83,15 +83,15 @@
           column-classes="col-12 col-md-6 col-lg-4"
         ></LazyPostList>
       </LazySection>
-
-      <LazySection
-        header-icon-type="fal"
-        header-icon="handshake"
-        header-text="Connect"
-      >
-        <LazyConnect />
-      </LazySection>
     </main>
+
+    <LazySection
+      header-icon-type="fal"
+      header-icon="handshake"
+      header-text="Connect"
+    >
+      <LazyConnect />
+    </LazySection>
   </div>
 </template>
 
@@ -130,8 +130,8 @@ export default {
   }
 
   .section {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    // margin-top: 2rem;
+    // margin-bottom: 3rem;
   }
 }
 p,

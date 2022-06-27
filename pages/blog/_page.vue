@@ -41,7 +41,7 @@
 export default {
   async asyncData({ $content, query, params }) {
     const page = parseInt(params.page) || 1
-    const limit = 6
+    const limit = 12
     const posts = await $content('articles').sortBy('date', 'desc').fetch()
     const postsCount = posts.length
 

@@ -2,7 +2,7 @@
 title: What is Destructuring in JavaScript?
 summary: There are several ways to think about what destructuring is. One is in terms of assignment, the other in terms of parameters. Both perform the basic function of getting rid of repetitive code. First we'll talk about assignment, then parameters.
 date: 2020-06-21T13:28:00Z
-img: graphics/destructuring-sm.png
+#img: graphics/destructuring-sm.png
 shareimg: sharing/destructuring.jpg
 alt: JS
 categories: [{name: JavaScript, slug: 'javascript'}, {name: ES6, slug: 'es6'}]

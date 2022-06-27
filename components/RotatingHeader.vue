@@ -67,7 +67,7 @@ export default {
 
 <style scoped lang="scss">
 .rotate-header {
-  padding-bottom: 2rem;
+  // padding-bottom: 2rem;
   position: relative;
   padding-top: 0.9375rem; // 15px
   margin-bottom: 0;

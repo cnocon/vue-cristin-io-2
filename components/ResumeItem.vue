@@ -98,6 +98,10 @@ export default {
     &.edu-item {
       margin-bottom: 2rem;
 
+      &:last-of-type {
+        margin-bottom: 3rem;
+      }
+
       @include media-breakpoint-up(md) {
         padding: 1.875rem 1.375rem 0 2.025rem;
       }

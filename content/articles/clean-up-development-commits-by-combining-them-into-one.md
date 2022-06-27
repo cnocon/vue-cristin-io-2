@@ -2,7 +2,7 @@
 title: Clean Up Developments Commits By Combining Them Into One
 summary: This post demonstrates how you can clean up your commit history on a local branch prior to merging it into another branch. Often times the frequent commits we keep when develping on our local branches are rushed and or ill-thought out.
 date: 2020-07-19T17:42:00Z
-img: graphics/git-sm.png
+#img: graphics/git-sm.png
 shareimg: sharing/git.jpg
 alt: Git
 categories: [{name: Git, slug: git}, {name: Workflow, slug: workflow}]
