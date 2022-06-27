@@ -30,6 +30,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "bootstrap": "^5.0.1",
+    "bootstrap-vue": "^2.22.0",
     "core-js": "^3.9.1",
     "defu": "^6.0.0",
     "fs": "0.0.1-security",

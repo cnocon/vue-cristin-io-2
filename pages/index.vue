@@ -128,11 +128,6 @@ export default {
       margin: 2.5rem auto;
     }
   }
-
-  .section {
-    // margin-top: 2rem;
-    // margin-bottom: 3rem;
-  }
 }
 p,
 li {

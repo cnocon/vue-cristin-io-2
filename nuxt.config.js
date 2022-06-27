@@ -29,7 +29,10 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: './plugins/prism.js', mode: 'client' }],
+  plugins: [
+    { src: './plugins/prism.js', mode: 'client' },
+    { src: './plugins/bootstrap-vue.js' },
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -78,6 +81,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'bootstrap-vue/nuxt',
     '@nuxt/content', // https://go.nuxtjs.dev/content
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
@@ -208,6 +212,22 @@ export default {
   // },
 
   router: {},
+
+  // use these settings to use custom css
+  bootstrapVue: {
+    bootstrapCSS: false,
+    icons: true,
+  },
+
+  // specify module rules for css and scss
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
 
   serverMiddleware: ['~/server-middleware/seo.js'],
 
