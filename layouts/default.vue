@@ -1,25 +1,12 @@
 <template>
-  <CThemeProvider>
-    <div class="app-container">
-      <Navbar />
-      <div class="container content-container">
-        <Nuxt />
-      </div>
-      <LazyFooter></LazyFooter>
+  <div class="app-container">
+    <Navbar />
+    <div class="container content-container">
+      <Nuxt />
     </div>
-  </CThemeProvider>
+    <LazyFooter></LazyFooter>
+  </div>
 </template>
-
-<script>
-import { CThemeProvider } from '@chakra-ui/vue'
-
-export default {
-  name: 'DefaultLayout',
-  components: {
-    CThemeProvider,
-  },
-}
-</script>
 
 <style lang="scss">
 .container {
