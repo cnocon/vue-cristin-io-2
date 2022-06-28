@@ -203,8 +203,10 @@ header {
     text-align: center;
 
     h3 {
-      font-family: $font-family-base;
-      font-weight: 700;
+      // font-family: $font-family-base;
+      // text-transform: uppercase;
+      font-family: $font-family-display;
+      font-weight: 400;
       font-size: calc(1.275rem + 0.3vw);
 
       @media (min-width: 1200px) {

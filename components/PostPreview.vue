@@ -79,9 +79,9 @@ header {
   text-align: center;
 
   a {
-    font-size: 1.5rem;
     font-family: $font-family-display;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: calc(1.275rem + 0.3vw);
     @include rainbow-link-decoration-on-hover;
   }
 

@@ -67,17 +67,7 @@ export default {
 
   // purgeCSS: https://purgecss.com/guides/nuxt.html
   // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
-  // purgeCSS: {
-  //   styleExtensions: ['.scss'],
-  //   whitelistPatterns: [
-  //     /svg.*/,
-  //     /fa.*/,
-  //     /nuxt.*/,
-  //     /language.*/,
-  //     /line-numbers/,
-  //     // /vue.*/,
-  //   ],
-  // },
+  // purgeCSS: {}
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -88,12 +78,12 @@ export default {
     '@nuxtjs/sitemap', // https://sitemap.nuxtjs.org/guide/setup
     // '@nuxtjs/pwa', //
   ],
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   // css: ['@/assets/scss/main.scss'],
 
   styleResources: {
     scss: [
-      '@/assets/scss/theme/_variables.scss', // My theme variables
       '@/assets/scss/main.scss', // Barrel file
     ],
   },

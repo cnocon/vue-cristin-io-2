@@ -41,7 +41,7 @@ export default {
 <style lang="scss" scoped>
 section {
   display: block;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
 }
 </style>

@@ -346,6 +346,10 @@ a {
   &:hover {
     text-decoration: none;
   }
+  
+  body & {
+    color: $link-color;
+  }
 
   &.badge {
     border-bottom: 0;
