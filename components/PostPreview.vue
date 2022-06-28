@@ -1,34 +1,24 @@
 <template>
   <article class="post-preview">
-    <header>
-      <!--<div class="post-image">
-        <nuxt-img
-          :src="`/${post.img}`"
-          :alt="post.alt"
-          :height="60"
-          :width="60"
-          provider="static"
-        ></nuxt-img>
-      </div>-->
-
-      <NuxtLink
-        :to="{ name: 'blog-articles-slug', params: { slug: post.slug } }"
-        >{{ post.title }}</NuxtLink
-      >
-
-      <div class="meta">
-        <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-        <span
-          v-for="(cat, index) in post.categories"
-          :key="cat + '-' + index"
-          class="badge badge-dark"
-          >{{ cat.name }}</span
-        >
-      </div>
-    </header>
-    <section>
-      <p>{{ post.summary }}</p>
-    </section>
+    <NuxtLink
+      class="post-preview-link"
+      :to="{ name: 'blog-articles-slug', params: { slug: post.slug } }"
+    >
+      <div class="title text-center">{{ post.title }}</div>
+      <header>
+        <div class="meta">
+          <time :datetime="post.date">{{ formatDate(post.date) }}</time>
+          <b-badge
+            v-for="(cat, index) in post.categories"
+            :key="cat + '-' + index"
+            >{{ cat.name }}</b-badge
+          >
+        </div>
+      </header>
+      <section>
+        <p>{{ post.summary }}</p>
+      </section>
+    </NuxtLink>
   </article>
 </template>
 
@@ -63,46 +53,67 @@ article {
   margin-right: auto;
   border: 1px solid $border-light-gray;
   border-radius: 8px;
+  background-color: lighten($lightest-gray, 0.5%);
   background-image: $pastel-rainbow-bar;
   background-size: 100% 4.5px;
   background-position: center bottom;
   background-repeat: no-repeat;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%),
-    0 10px 10px -5px rgb(0 0 0 / 4%);
+  box-shadow: $box-shadow-lg;
+  transform: scale(1);
+  transition: scale 1s ease-in-out;
 
   @include media-breakpoint-down(sm) {
     padding: 1.25rem 1.25rem 0.5rem;
   }
-}
-header {
-  margin-bottom: 1.5rem;
-  text-align: center;
 
-  a {
-    font-family: $font-family-display;
-    font-weight: 400;
-    font-size: calc(1.275rem + 0.3vw);
-    @include rainbow-link-decoration-on-hover;
+  &:hover,
+  &:focus {
+    transform: scale(0.95);
+    background-color: darken($lightest-gray, 2.5%);
+    cursor: pointer;
   }
 
-  .post-image {
-    max-width: 3.75rem;
-    margin: 0 auto 1rem;
+  .post-preview-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
 
-    img {
+    .title {
+      font-weight: 400;
+      line-height: 1.35;
+      font-size: calc(1.275rem + 0.3vw);
+      font-family: $font-family-display;
+    }
+
+    header {
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: normal;
+      text-align: left;
+      text-decoration: none;
+    }
+
+    time {
       display: block;
-      max-width: 100%;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      font-family: $font-family-display;
+    }
+
+    .badge {
+      background-color: $primary;
+      color: $white;
+
+      &:not(:last-of-type) {
+        margin-right: 0.4em;
+      }
     }
   }
-
-  time {
-    display: block;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    font-family: $font-family-display;
-  }
-}
-.badge:not(:last-of-type) {
-  margin-right: 0.4em;
 }
 </style>
