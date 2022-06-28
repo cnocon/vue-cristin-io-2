@@ -231,10 +231,10 @@ export default {
       margin-bottom: 0;
       font-weight: 500;
       font-family: $font-family-base;
+
       &.company,
       &.location {
         line-height: 2rem;
-        color: darken($border-dark-gray, 10%);
       }
 
       &.company {
@@ -252,16 +252,7 @@ export default {
       }
 
       &.location {
-        font-weight: 200;
-        color: $primary;
-        // font-family: $font-family-display;
-        // line-height: 2rem;
-        // vertical-align: middle;
-        // text-transform: uppercase;
-        // font-size: 0.875rem;
-        // font-size: 18px;
-        // line-height: 20px;
-        // vertical-align: text-bottom;
+        font-weight: 300;
         font-size: 1rem;
 
         @include media-breakpoint-up(md) {

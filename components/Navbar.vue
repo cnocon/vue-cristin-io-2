@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-wrapper">
-    <div class="navbar-wrapper-inner container">
+    <b-container fluid="xl" class="navbar-wrapper-inner">
       <NuxtLink :to="{ name: 'index' }" class="navbar-brand-and-logo">
         <NuxtImg
           src="/components/square-portrait-white.png"
@@ -114,7 +114,7 @@
           </ul>
         </li>
       </ul>
-    </div>
+    </b-container>
   </div>
 </template>
 

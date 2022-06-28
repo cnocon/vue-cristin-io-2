@@ -26,15 +26,15 @@
 <style lang="scss" scoped>
 .footer-container {
   background-color: #efefef;
-  // border-top: 5px solid var(--chakra-colors-brand-200);
   justify-self: flex-end;
-  margin-top: auto;
+  margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
   @include media-breakpoint-up(sm) {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    margin-top: 4rem;
   }
 }
 footer {

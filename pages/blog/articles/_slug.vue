@@ -54,10 +54,12 @@
         ></nuxt-img>
       </div>
       <br />
-      <NuxtContent
-        :document="post"
-        :class="post.toc.length > 0 ? 'has-toc' : 'no-toc'"
-      ></NuxtContent>
+      <div class="nuxt-content">
+        <NuxtContent
+          :document="post"
+          :class="post.toc.length > 0 ? 'has-toc' : 'no-toc'"
+        ></NuxtContent>
+      </div>
       <LazyPrevNext
         name="blog-articles-slug"
         :prev="
@@ -138,10 +140,6 @@ export default {
 
   @include media-breakpoint-up(md) {
     margin-top: 3rem;
-  }
-
-  a {
-    text-decoration: none;
   }
 
   h1 {
@@ -228,11 +226,12 @@ header {
 
 .toc {
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
 
     &.depth-3 {
       list-style-type: circle;
       margin-left: 2rem;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -280,6 +279,13 @@ header {
 
   .badge:not(:last-of-type) {
     margin-right: 0.4em;
+  }
+}
+
+.nuxt-content {
+  * {
+    font-size: 18px;
+    line-height: 1.62;
   }
 }
 </style>

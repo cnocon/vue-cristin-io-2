@@ -11,6 +11,7 @@
           <b-badge
             v-for="(cat, index) in post.categories"
             :key="cat + '-' + index"
+            variant="primary"
             >{{ cat.name }}</b-badge
           >
         </div>
@@ -101,14 +102,16 @@ article {
 
     time {
       display: block;
-      font-size: 1rem;
+      font-size: 0.825rem;
       margin-top: 0.5rem;
-      font-family: $font-family-display;
+      font-weight: 600;
+      text-transform: uppercase;
+      // font-family: $font-family-display;
     }
 
     .badge {
-      background-color: $primary;
-      color: $white;
+      // background-color: $primary;
+      // color: $white;
 
       &:not(:last-of-type) {
         margin-right: 0.4em;

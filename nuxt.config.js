@@ -1,12 +1,9 @@
 export default {
   // SERVER-SIDE RENDERING MODE: https://go.nuxtjs.dev/ssr-mode
-  // true: Server-side rendering enabled
-  // false: No server-side rendering (only client-side rendering)
-  ssr: true,
+  ssr: true, // true: Server-side rendering enabled, false: No server-side rendering (only client-side rendering)
 
   // CONFIG TARGET: https://go.nuxtjs.dev/config-target
-  // 'server': For server side rendering and 'static': For static sites
-  target: 'static',
+  target: 'static', // 'server': For server side rendering and 'static': For static sites
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -37,12 +34,11 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxt/image', // https://image.nuxtjs.org/
-    '@nuxt/components',
-    '@nuxtjs/style-resources',
+    '@nuxt/components', // https://github.com/nuxt/components#readme
+    '@nuxtjs/style-resources', // https://github.com/nuxt-community/style-resources-module#readme
     '@nuxtjs/eslint-module', // https://go.nuxtjs.dev/eslint
     '@nuxtjs/google-fonts', // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-analytics', // https://google-analytics.nuxtjs.org/
-    // 'nuxt-purgecss',
   ],
 
   googleFonts: {
@@ -50,8 +46,8 @@ export default {
     preload: true,
     prefetch: true,
     families: {
-      Oswald: [300, 400, 500, 700], // 200
-      Lato: [300, 400, 700], // 100, 900
+      Oswald: [200, 300, 400, 500, 700],
+      Lato: [100, 300, 400, 700, 900],
       Pacifico: [400],
     },
   },
@@ -65,10 +61,6 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components w/@nuxt/components https://github.com/nuxt/components
   components: true,
 
-  // purgeCSS: https://purgecss.com/guides/nuxt.html
-  // PurgeCSS will treat fontawesome classes inserted on render as unused and remove them unless whitelisted.
-  // purgeCSS: {}
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'bootstrap-vue/nuxt',
@@ -76,15 +68,11 @@ export default {
     'nuxt-fontawesome',
     '@nuxtjs/robots', // https://www.npmjs.com/package/@nuxtjs/robots
     '@nuxtjs/sitemap', // https://sitemap.nuxtjs.org/guide/setup
-    // '@nuxtjs/pwa', //
   ],
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  // css: ['@/assets/scss/main.scss'],
 
   styleResources: {
     scss: [
-      '@/assets/scss/main.scss', // Barrel file
+      '@/assets/scss/index.scss', // Barrel file
     ],
   },
 
@@ -125,7 +113,6 @@ export default {
           'faTrophyAlt',
           'faThunderstormMoon',
           'faBriefcase',
-          'faEnvelope',
           'faHandsHeart',
           'faPencil',
           'faBars',
@@ -133,6 +120,7 @@ export default {
           'faBrackets',
           'faChartNetwork',
           'faSubway',
+          'faEnvelope',
         ],
       },
       {
@@ -166,7 +154,7 @@ export default {
     hostname: 'https://cristin.io',
     gzip: true,
     defaults: {
-      changefreq: 'weekly',
+      changefreq: 'monthly',
       priority: 1,
       lastmod: new Date(),
     },
@@ -182,30 +170,15 @@ export default {
       '/blog/articles/create-an-alias-to-list-git-branches-by-date',
       '/blog/articles/search-git-history-for-certain-words-and-phrases',
       '/blog/1',
+      '/blog/2',
     ],
   },
-
-  // pwa: {
-  //   manifest: {
-  //     name: `cristin.io | Software Engineer Cristin O'Connor`,
-  //     short_name: 'cristin.io',
-  //     lang: 'en',
-  //     description: `Cristin O'Connor is a Software Engineer specializing in the Front End, including JavaScript, SSR, SPA, and SSG frameworks, responsive web design, UI/UX, and web performance. Find her portfolio, résumé, and blog her on cristin.io.`,
-  //     theme_color: '#66d4ff',
-  //     display: 'standalone',
-  //   },
-  //   meta: {
-  //     author: `Cristin O'Connor`,
-  //     theme_color: `#5eede1`,
-  //     ogHost: 'https://cristin.io',
-  //   },
-  // },
 
   router: {},
 
   // use these settings to use custom css
   bootstrapVue: {
-    bootstrapCSS: false,
+    bootstrapCSS: true,
     icons: true,
   },
 
@@ -222,13 +195,7 @@ export default {
   serverMiddleware: ['~/server-middleware/seo.js'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    // critical CSS
-    // extractCSS: {
-    //   ignoreOrder: true,
-    // },
-    // analyze: true,
-  },
+  build: {},
 
   // fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
   generate: {

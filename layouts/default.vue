@@ -1,9 +1,9 @@
 <template>
   <div class="app-container">
     <Navbar />
-    <div class="container content-container">
+    <b-container fluid="xl">
       <Nuxt />
-    </div>
+    </b-container>
     <LazyFooter></LazyFooter>
   </div>
 </template>
@@ -81,11 +81,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9375rem;
-
-  @include media-breakpoint-up(md) {
-    padding: 0 0.9375rem;
-  }
 }
 
 .navbar-brand-and-logo {

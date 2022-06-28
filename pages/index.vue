@@ -11,7 +11,6 @@
     ></Head>
     <main>
       <RotatingHeader />
-
       <Section
         header-icon-type="fal"
         header-icon="concierge-bell"
@@ -22,38 +21,39 @@
             <h3>Web Development</h3>
             <p>
               This is my primary area of expertise after 10+ years in the field.
-              <a
-                href="mailto:her@cristin.io"
-                role="link"
-                aria-label="Link to Email Me"
-                >Contact me about web development</a
-              >.
             </p>
+            <b-button
+              variant="primary"
+              href="mailto:her@cristin.io?subject=Web Development Inquiry"
+            >
+              <font-awesome-icon :icon="['fal', 'envelope']"></font-awesome-icon
+              >&nbsp;Web Development</b-button
+            >.
           </div>
           <div class="col-12 col-md-4 service-offered">
             <h3>Mentorship & Interview Prep</h3>
             <p>
               I can help you achieve your career goals and prepare you for job
               interviews.
-              <a
-                href="mailto:her@cristin.io"
-                role="link"
-                aria-label="Link to Email Me"
-                >Contact me about mentorship and interview prep</a
-              >.
             </p>
+            <b-button
+              href="mailto:her@cristin.io?subject=Mentorship and/or Interview Help Inquiry"
+              variant="primary"
+            >
+              <font-awesome-icon :icon="['fal', 'envelope']"></font-awesome-icon
+              >&nbsp;Mentorship and Interview Help</b-button
+            >.
           </div>
           <div class="col-12 col-md-4 service-offered">
             <h3>Programming Tutor</h3>
-            <p>
-              I focus on teaching with compassion and work with all ages.
-              <a
-                href="mailto:her@cristin.io"
-                role="link"
-                aria-label="Link to Email Me"
-                >Contact me about tutoring</a
-              >.
-            </p>
+            <p>I focus on teaching with compassion and work with all ages.</p>
+            <b-button
+              variant="primary"
+              href="mailto:her@cristin.io?subject=Programming Tutor Inquiry"
+            >
+              <font-awesome-icon :icon="['fal', 'envelope']"></font-awesome-icon
+              >&nbsp;Tutoring</b-button
+            >
           </div>
           <!--<div class="col-12 quote-container">
             <Quote classes="subtle quote-right">
@@ -129,12 +129,6 @@ export default {
     }
   }
 }
-p,
-li {
-  a {
-    text-decoration: none;
-  }
-}
 
 header {
   text-align: center;
@@ -156,7 +150,7 @@ header {
   }
 
   span {
-    font-size: 1.75rem; // 28px
+    font-size: 1.75rem;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -191,16 +185,14 @@ header {
       max-width: 1140px;
       border: 0;
     }
-
-    @include media-breakpoint-up(lg) {
-      // margin-top: 0;
-      // margin-left: auto;
-      // margin-right: auto;
-    }
   }
 
   .service-offered {
     text-align: center;
+
+    > * {
+      max-width: 30.8125rem;
+    }
 
     h3 {
       // font-family: $font-family-base;

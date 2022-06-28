@@ -92,11 +92,6 @@ export default {
     a,
     span {
       color: $primary;
-      text-decoration: none;
-    }
-
-    a {
-      border-bottom-color: $primary;
     }
   }
 

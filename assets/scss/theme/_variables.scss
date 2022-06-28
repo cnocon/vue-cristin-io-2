@@ -1,4 +1,6 @@
-$primary: hsl(210, 25%, 25%);
+$color-primary: #345;
+$primary: #345;
+$color-primary-dark: hsl(210, 25%, 25%);
 $primary-light: #8fa0b1;
 $gray-text: hsl(212, 15%, 46%);
 $secondary: hsl(210, 85%, 60%);
@@ -189,3 +191,4 @@ $perfect-radial-rainbow-three: radial-gradient(
   hsl(259, 89%, 70%) 88%,
   hsl(0, 70%, 70%) 100%
 );
+$teal: #5eede1;
