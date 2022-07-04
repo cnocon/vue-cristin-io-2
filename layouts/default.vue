@@ -108,8 +108,8 @@
     color: $white;
     font-weight: 300;
     letter-spacing: 1px;
-    margin: 0 0 0.5rem;
-    font-family: $font-family-brand;
+    margin: 0 0 0 0.5rem !important;
+    font-family: $font-family-brand !important;
     @include perfect-rainbow-text;
     background-image: $rainbow-ellipse-bottom-right;
 
@@ -138,12 +138,13 @@
 
   h3 {
     text-transform: uppercase;
-    font-family: $font-family-display;
+    font-family: $font-family-display !important;
+    font-weight: 500 !important;
     letter-spacing: 3px;
     font-size: 1.25rem;
     line-height: 1em;
     color: $white;
-    margin: 0;
+    margin: 0 0 0 0.5rem !important;
 
     @include media-breakpoint-up(sm) {
       font-size: 1.325rem;
@@ -151,7 +152,7 @@
     }
 
     @include media-breakpoint-up(md) {
-      margin-top: 5px;
+      // margin-top: 5px;
       font-size: 1.5rem;
     }
   }
@@ -167,7 +168,7 @@
     border-radius: 50%;
     box-shadow: hsl(175, 80%, 60%) 0 3px, hsl(58, 100%, 60%) -3px 0,
       hsl(240, 80%, 69%) 3px 0, hsl(355, 80%, 72.5%) 0 -3px 0;
-    background-color: $lightest-gray;
+    background-color: transparent !important;
     margin: 0 0.9375rem 0 0;
   }
 
@@ -239,13 +240,13 @@
   background-color: transparent;
   display: block;
   font-size: 1rem;
-  color: $white;
   text-decoration: none;
   max-width: calc(100% - 2px);
   text-transform: uppercase;
   font-weight: 800;
   border-radius: 4px;
   padding: 0 0.5rem;
+  color: $white !important;
   @include transition($nav-link-transition);
 
   &:hover,
@@ -253,18 +254,18 @@
   &:active,
   &.nuxt-link-active {
     @include media-breakpoint-up(md) {
-      color: var(--chakra-colors-brand-800);
+      color: var(--chakra-colors-brand-800) !important;
       background-color: $white;
       vertical-align: baseline;
       line-height: 2rem;
     }
   }
 
-  &.nuxt-link-active:not(:hover),
-  &.nuxt-link-active:not(:focus) {
-    @include perfect-rainbow-text;
-    background-image: $rainbow-ellipse-bottom-right;
-  }
+  // &.nuxt-link-active:not(:hover),
+  // &.nuxt-link-active:not(:focus) {
+  //   @include perfect-rainbow-text;
+  //   background-image: $rainbow-ellipse-bottom-right;
+  // }
 }
 
 // The button
