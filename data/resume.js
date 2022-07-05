@@ -162,7 +162,7 @@ const resume = {
       "location": "Ogden, UT",
       "positionDetail": "Tech-Moms Program",
       "descList": [
-        "Assist students with coding questions and provide mentorship to mothers looking to become web developers"
+        "Assisted students with coding questions and provided mentorship in a program that helps mothers start careers as web developers"
       ],
       "awards": [],
     },
@@ -175,7 +175,7 @@ const resume = {
       "location": "Lehi, UT",
       "positionDetail": "SheTech Summit",
       "descList": [
-        "Provided mentorship to participants in an industry-centered, hands-on interactive STEM competition held across the country for 9th through 12th grade high school girls"
+        "Provided mentorship to 9-12th grade girls participating in an industry-centered, hands-on interactive STEM competition held across the country"
       ],
       "awards": [],
     }

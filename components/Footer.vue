@@ -25,11 +25,12 @@
 
 <style lang="scss" scoped>
 .footer-container {
-  background-color: #efefef;
+  background-color: #f5f7f8;
   justify-self: flex-end;
   margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border-top: 1px solid $border-light-gray;
 
   @include media-breakpoint-up(sm) {
     padding-top: 2rem;
@@ -66,15 +67,16 @@ footer {
         }
 
         &.copyright-year {
-          font-weight: 500;
-          letter-spacing: 0;
+          font-weight: 300;
           color: $primary;
         }
 
         &.copyright-owner {
-          color: $primary;
-          font-weight: 500;
-          letter-spacing: -1px;
+          font-family: $font-family-brand;
+          text-shadow: 1px 0 rgba(0, 0, 0, 1);
+          font-weight: 400;
+          @include perfect-rainbow-text;
+          background-image: $rainbow-ellipse-bottom-left-dark;
         }
       }
     }
@@ -85,7 +87,6 @@ footer {
       font-size: 1.25rem; // 20px
       line-height: 1.3125rem; // 21px
       color: $primary;
-      font-family: $font-family-display;
       font-weight: 300;
 
       a {
@@ -95,7 +96,6 @@ footer {
         vertical-align: top;
         color: $primary;
         text-decoration: underline;
-        letter-spacing: 1px;
         font-family: inherit;
         font-weight: 300;
 

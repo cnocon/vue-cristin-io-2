@@ -138,9 +138,6 @@ export default {
     }
   },
   methods: {
-    handleClick(e) {
-      console.log(e)
-    },
     isExactActiveNavItem(linkedRouteName) {
       return this.$route.name === linkedRouteName
     },
@@ -183,7 +180,8 @@ export default {
   // padding-bottom: 0.3125rem;
   padding: 1rem 0.5rem 1rem 0;
   background-color: $dark;
-  box-shadow: $box-shadow-sm;
+  // box-shadow: $box-shadow-sm;
+  box-shadow: 0 3px 5px 0 hsl(0deg 0% 0% / 11%);
 
   @include media-breakpoint-xxs-up {
     margin-bottom: 1rem;
