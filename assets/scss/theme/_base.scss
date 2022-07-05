@@ -500,3 +500,23 @@ p code {
     opacity: 0;
   }
 }
+.container {
+  max-width: $breakpoint-lg-min !important; // 1200px
+}
+
+.drop-cap:first-letter {
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 0.8;
+  float: left;
+  padding: 0 4px 0px 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: 0.4s appear;
+  margin: auto auto 0;
+  position: relative;
+}
