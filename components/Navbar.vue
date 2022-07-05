@@ -83,6 +83,16 @@
           >
             <li class="dropdown-nav-item" role="presentation">
               <NuxtLink
+                to="/"
+                exact="true"
+                :active="isActiveNavItem('home')"
+                class="dropdown-link"
+                role="menuitem"
+                >Home</NuxtLink
+              >
+            </li>
+            <li class="dropdown-nav-item" role="presentation">
+              <NuxtLink
                 to="/resume"
                 :active="isActiveNavItem('resume')"
                 class="dropdown-link"
@@ -203,8 +213,11 @@ export default {
   align-items: center;
   justify-content: flex-start;
   text-decoration: none;
+  position: relative;
+  z-index: 1000;
 
   @include media-breakpoint-up(md) {
+    position: static;
     padding: 0 0.9375rem;
     display: flex;
     flex-wrap: wrap;
@@ -246,7 +259,7 @@ export default {
     }
 
     @include media-breakpoint-up(sm) {
-      font-size: 1.685rem; // 28px
+      font-size: 1.685rem;
       line-height: 1.1em;
       font-weight: 300;
       letter-spacing: 1px;
@@ -255,12 +268,12 @@ export default {
     }
 
     @include media-breakpoint-up(md) {
-      font-size: 30px;
+      font-size: 1.875rem; // 30px
       letter-spacing: 2px;
     }
 
     @include media-breakpoint-up(lg) {
-      font-size: 42px;
+      font-size: 2.625rem; // 42px
     }
   }
 
