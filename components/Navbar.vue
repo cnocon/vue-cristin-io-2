@@ -215,6 +215,20 @@ export default {
     text-align: left;
   }
 
+  &:hover {
+    img {
+      @include media-breakpoint-up(md) {
+        transform: scale(1.05);
+        transition: scale 0.5s ease-in-out;
+      }
+    }
+
+    h2 {
+      @include perfect-rainbow-text;
+      background-image: $rainbow-ellipse-bottom-left;
+    }
+  }
+
   h2 {
     font-size: 1.25rem;
     line-height: 1em;
@@ -225,7 +239,7 @@ export default {
     margin: 0 0 0 0.5rem !important;
     font-family: $font-family-brand !important;
     @include perfect-rainbow-text;
-    background-image: $rainbow-ellipse-bottom-right;
+    background-image: $perfect-radial-rainbow;
 
     @include media-breakpoint-xxs-up {
       font-size: 1.5rem;

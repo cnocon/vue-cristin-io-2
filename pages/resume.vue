@@ -12,7 +12,7 @@
     <Breadcrumbs :crumbs="breadcrumbs" />
     <h1>Résumé</h1>
     <div v-if="data.jobTitle" class="row resume-row">
-      <div class="col-lg-8 col-md-6 col-12 left-column">
+      <div class="col-lg-8 col-md-12 col-12 left-column">
         <div class="first-icon">
           <font-awesome-icon
             :icon="['fal', 'briefcase']"
@@ -54,7 +54,7 @@
         <!--<LazyConnect />-->
       </div>
 
-      <div class="col-lg-4 col-md-6 col-12 right-column">
+      <div class="col-lg-4 col-md-12 col-12 right-column">
         <h3>
           <span>Skills</span>
         </h3>

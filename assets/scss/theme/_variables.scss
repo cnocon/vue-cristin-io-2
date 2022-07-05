@@ -163,8 +163,18 @@ $rainbow-ellipse-bottom-right: radial-gradient(
   hsl(175, 100%, 81%) 45%,
   hsl(175, 100%, 85%) 55%,
   hsl(197, 100%, 80%) 65%,
-  hsl(240, 100%, 82.5%) 72.5%,
+  hsl(240, 100%, 82.5%) 82.5%,
   hsl(355, 100%, 90%) 100%
+);
+$rainbow-ellipse-bottom-right-dark: radial-gradient(
+  ellipse at bottom right,
+  hsl(355, 100%, 78%) 10%,
+  hsl(58, 100%, 70%) 35%,
+  hsl(175, 100%, 71%) 45%,
+  hsl(175, 100%, 75%) 55%,
+  hsl(197, 100%, 70%) 65%,
+  hsl(240, 100%, 75%) 75%
+  hsl(240, 100%, 70%) 100%
 );
 $perfect-radial-rainbow: radial-gradient(
   ellipse at bottom left,
@@ -175,7 +185,7 @@ $perfect-radial-rainbow: radial-gradient(
   hsl(0, 80%, 75%) 75%
 );
 $perfect-radial-rainbow-two: radial-gradient(
-  ellipse at top right,
+  ellipse at bottom left,
   hsl(259, 93%, 55%) 15%,
   hsl(259, 83%, 65%) 30%,
   hsl(197, 100%, 70%) 42%,

@@ -460,11 +460,16 @@ p code {
   box-shadow: $box-shadow-sm;
   @include button-size(0.375rem, 0.75rem, 1rem, 4px);
   @include transition($btn-transition);
+  transition: all .2s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: $body-color;
     box-shadow: none;
     text-decoration: if($link-hover-decoration == underline, none, null);
+    transform: scale(1.01);
+    box-shadow: $box-shadow-lg;
   }
 
   .btn-check:focus + &,
