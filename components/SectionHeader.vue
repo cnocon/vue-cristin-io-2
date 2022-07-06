@@ -101,6 +101,10 @@ export default {
     height: 3.625rem; // 58px
     color: lighten($border-med-gray, 5%);
 
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
     svg {
       position: absolute;
       top: 50%;

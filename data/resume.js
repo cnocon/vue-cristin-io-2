@@ -3,7 +3,19 @@
 const resume = {
   "name": "Cristin O'Connor",
   "jobTitle": "Front End Engineer",
+
   "experience": [
+    {
+      "year": 2022,
+      "startDate": "Aug 2022",
+      "endDate": "Present",
+      "position": "Software Engineer (Front End)",
+      "company": "CityBase, Inc.",
+      "location": "Chicago, IL (Remote)",
+      "desc": "",
+      "descList": [],
+      "awards": []
+    },
     {
       "year": 2022,
       "startDate": "Jan 2022",
@@ -16,7 +28,7 @@ const resume = {
         "Worked with product managers and graphic designers to overhaul the existing UI/UX with the goal of creating a single pristine user experience throughout the application ecosystem", "Oversaw the introduction of a new design system to the codebase using Chakra UI’s component library, extending Chakra UI where needed for custom components using React, GraphQL, CSS, and SCSS", "Supervised two consultants in developing reusable components for Nabis’ new design system"
       ],
       "awards": []
-    },    
+    },
     {
       "year": 2021,
       "startDate": "Feb 2021",
@@ -28,7 +40,7 @@ const resume = {
       "descList": [
         "Coded the front end for multiple JavaScript-based sales applications, leveraging technologies including Vue.js, Typescript, LESS, and Ember.js", "Spearheaded the creation of new documentation and code quality standards for front end development in sales", "Provided full stack on-call support for emergencies, leveraging logs and data from Splunk, Dynatrace, and AppDynamics to quickly identify and fix critical bugs under pressure (in a 24/7 rotation for a week each month)", "Created a new onboarding process for front end and full stack engineers in sales (for current employees and new hires) that aimed to reduce sales’ isolation from the company’s broader front end initiatives and practices"
       ],
-      
+
       "awards": [
         {
           "name": "Innovation Week Presenter",

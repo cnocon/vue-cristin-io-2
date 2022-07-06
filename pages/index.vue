@@ -1,7 +1,7 @@
 <template>
   <div class="index-page">
     <Head
-      title="Home"
+      title="Cristin O'Connor, Front End Software Engineer"
       share-img-width="1200"
       share-img-height="627"
       og-type="website"
@@ -122,16 +122,13 @@ export default {
   }
 
   .header {
+    text-align: center;
     padding: 2.5rem 0;
 
     @include media-breakpoint-down(md) {
       margin: 2.5rem auto;
     }
   }
-}
-
-header {
-  text-align: center;
 }
 
 .page-title {
@@ -176,27 +173,16 @@ header {
   display: flex;
   align-items: flex-start;
 
-  .quote-container {
-    margin-top: 3rem;
-    width: 100%;
-    max-width: none;
-
-    .quote {
-      max-width: 1140px;
-      border: 0;
-    }
-  }
-
   .service-offered {
     text-align: center;
+    max-width: 30.8125rem;
 
-    > * {
-      max-width: 30.8125rem;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 2rem;
+      max-width: none;
     }
 
     h3 {
-      // font-family: $font-family-base;
-      // text-transform: uppercase;
       font-family: $font-family-display;
       font-weight: 400;
       font-size: calc(1.275rem + 0.3vw);

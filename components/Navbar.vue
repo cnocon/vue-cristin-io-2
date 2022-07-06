@@ -84,7 +84,7 @@
             <li class="dropdown-nav-item" role="presentation">
               <NuxtLink
                 to="/"
-                exact="true"
+                :exact="true"
                 :active="isActiveNavItem('home')"
                 class="dropdown-link"
                 role="menuitem"

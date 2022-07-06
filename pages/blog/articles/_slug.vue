@@ -8,7 +8,7 @@
       og-type="article"
     ></Head>
     <article>
-      <header>
+      <header class="text-center">
         <h1>{{ post.title }}</h1>
         <div class="meta">
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
@@ -22,38 +22,8 @@
           </span>
         </div>
       </header>
-      <div v-if="post.toc.length > 0" class="row toc-row">
-        <div class="col-12 toc-col">
-          <div v-if="post.img" class="toc-image">
-            <nuxt-img
-              :src="`/${post.img}`"
-              :alt="post.alt"
-              provider="static"
-            ></nuxt-img>
-          </div>
-          <h5>TABLE OF CONTENTS</h5>
-          <ul class="toc">
-            <li
-              v-for="item in post.toc"
-              :key="item.id"
-              :class="{
-                'depth-3': item.depth === 3,
-              }"
-            >
-              <NuxtLink :to="`#${item.id}`">{{ item.text }}</NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div v-else class="no-toc-image">
-        <nuxt-img
-          v-if="post.img"
-          :src="`/${post.img}`"
-          :alt="post.alt"
-          provider="static"
-        ></nuxt-img>
-      </div>
-      <br />
+      <!--TableOfContents v-if="post.toc.length > 0" :contents="post.toc" />
+      <br />-->
       <div class="nuxt-content">
         <NuxtContent
           :document="post"
@@ -79,7 +49,12 @@
 
 <script>
 import Prism from '../../../plugins/prism.js'
+// import TableOfContents from '../../../components/shared/TableOfContents.vue'
+
 export default {
+  // components: {
+  //   TableOfContents,
+  // },
   // asyncData method for fetching and rendering data on the server
   // $content and params from destructured context object
   // $content: Content module -> articles
@@ -162,95 +137,6 @@ header {
     }
   }
 }
-.toc-col {
-  h6 {
-    font-weight: 700;
-
-    @include media-breakpoint-down(sm) {
-      text-align: center;
-    }
-  }
-
-  h6,
-  ul {
-    max-width: 72.5%;
-
-    @include media-breakpoint-down(sm) {
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-.toc-image-col {
-  display: flex;
-  align-items: center;
-
-  @include media-breakpoint-down(sm) {
-    margin-top: 1.25rem;
-  }
-}
-.toc-image,
-.no-toc-image {
-  border-radius: 50%;
-  max-width: 180px;
-  overflow: hidden;
-  border: 2px solid $border-light-gray;
-  margin-left: auto;
-  margin-right: auto;
-
-  img {
-    padding: 1.25rem;
-    max-width: 100%;
-  }
-}
-.toc-image {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-
-  @include media-breakpoint-up(md) {
-    float: right;
-    margin: 0;
-  }
-}
-.no-toc-image {
-  margin: 1.25rem 0 1.25rem 1.25rem;
-  float: right;
-  display: block;
-
-  @include media-breakpoint-down(md) {
-    margin: 1.25rem auto;
-    float: none;
-  }
-}
-
-.toc {
-  li {
-    margin-bottom: 0.25rem;
-
-    &.depth-3 {
-      list-style-type: circle;
-      margin-left: 2rem;
-      margin-bottom: 1rem;
-    }
-  }
-}
-
-.drop-cap:first-letter {
-  font-size: 3.125rem;
-  font-weight: 700;
-  line-height: 0.8;
-  float: left;
-  padding: 0 4px 0px 0;
-}
-.toc-row {
-  margin-bottom: 2rem;
-}
-.no-toc {
-  @include media-breakpoint-up(md) {
-    margin-top: 2rem;
-  }
-}
 
 .meta {
   margin-bottom: 0.25rem;
@@ -261,17 +147,16 @@ header {
     font-size: 1.125rem;
     font-family: $font-family-display;
     margin-bottom: 0.75rem;
-
-    @include media-breakpoint-up(md) {
-      font-size: 1.75rem;
-    }
+    font-size: 1.5rem;
+    font-family: $font-family-display;
+    font-weight: 500;
+    text-transform: uppercase;
 
     &::before {
       content: 'Published on ';
       font-family: $font-family-base;
       font-weight: 400;
       text-transform: uppercase;
-      color: darken($border-dark-gray, 10%);
       font-size: 1rem;
       display: block;
     }
@@ -283,6 +168,8 @@ header {
 }
 
 .nuxt-content {
+  margin-top: 1rem;
+
   * {
     font-size: 18px;
     line-height: 1.62;

@@ -1,6 +1,6 @@
-$color-primary: #345;
+$color-primary: #334455;
 $primary: #345;
-$color-primary-dark: hsl(210, 25%, 25%);
+$color-primary-dark: hsl(210deg, 30%, 17%);
 $primary-light: #8fa0b1;
 $gray-text: hsl(212, 15%, 46%);
 $secondary: hsl(210, 85%, 60%);
@@ -11,6 +11,9 @@ $info: hsl(253, 98%, 62%);
 $light: hsl(200, 14%, 92%);
 $lightest: hsl(200, 16%, 96%);
 $dark: hsl(210, 30%, 17%);
+$primary-dark: hsl(210deg, 30%, 17%);
+$primary-light: hsl(210, 25%, 47%);
+
 
 $breakpoint-sm: 35.9375rem; // 575px
 $breakpoint-sm-min: 36rem; // 576px
